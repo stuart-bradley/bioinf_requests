@@ -3,4 +3,5 @@ Since LDAP changes a few things, the website will need to be booted up again usi
 sudo bundle install
 
 rake db:reset db:migrate
+rake db:seed
 rake db:data:load
