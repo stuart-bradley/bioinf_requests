@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<p>			
+			The request: <%= @request.title %>, has now been assigned to: <%= @request.assignment %>
+		</p>
+		<p>
+			To view the change go to: <%= link_to @request.title, root_url + "requests" %>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<p> 
+			A new request has been submitted by <%= @request.name %>.
+		</p>
+		<h3>Title:</h3>
+		<p>
+			<%= @request.title %>
+		</p>
+		<h3>Description:</h3>
+		<p>
+			<%= @request.description %>
+		</p>
+		<p>
+			To view the new request go to: <%= link_to @request.title, root_url + "requests" %>
+		</p>
+	</body>
+</html>

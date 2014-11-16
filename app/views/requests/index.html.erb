@@ -1,0 +1,73 @@
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% else %>
+  <br />
+  <br />
+  <br />
+<% end %>
+
+<div style="text-align: center;">
+  <%= link_to "New bioinformatics requests", new_request_path, class: "btn btn-default btn-lg " %>
+  <%= link_to "Modeling requests", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
+  <!--<%= link_to "New modeling request", new_modelling_path, class: "btn btn-warning btn-lg" %>-->
+</div>
+
+<br />
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Submitted By</th>
+      <th>Description</th>
+      <th>Download Attachment</th>
+      <th>Results</th>
+      <th>Result Files</th>
+      <th>Status</th>
+      <th>Job Assignment</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @requests.reverse.each do |request| %>
+      <tr>
+        <td><%= request.id %></td>
+      	<td><%= request.title %></td>
+        <td><%= request.get_name %></td>
+        <td style="white-space: pre-wrap;"><%= request.description %></td>
+        <td>
+        <% request.data_files.each do |p| %>
+          <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %><br />
+        <% end %>
+        </td>
+        <td style="white-space: pre-wrap;"><%= request.result %></td>
+        <td>
+        <% request.result_files.each do |p| %>
+          <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %><br />
+        <% end %>
+        </td>
+        <% if request.status == "Complete" %>
+          <td style="background-color:#4CAE4C;color:white"><%= request.status %></td>
+        <% elsif request.status == "Ongoing" %> 
+          <td style="background-color:#46B8DA;color:white"><%= request.status %></td>
+        <% else %>
+          <td style="background-color:#EEA236;color:white"><%= request.status %></td>
+        <% end %>
+        <td><%= request.get_users_for_view %></td>
+        <td>
+        <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
+        <%= button_to "Delete", request, method: :delete, class: "btn btn-default", confirm: "Are you sure that you wish to delete #{request.title}?" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div style="text-align: center;">
+  <%= link_to "New bioinformatics requests", new_request_path, class: "btn btn-default btn-lg " %>
+  <%= link_to "New modeling request", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
+  <!--<%= link_to "Modeling requests", new_modelling_path, class: "btn btn-warning btn-lg" %>-->
+</div>
+

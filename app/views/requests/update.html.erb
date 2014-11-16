@@ -1,0 +1,22 @@
+<% if !@request.errors.empty? %>
+  <div class="alert alert-error">
+    <ul>
+      <% @request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+ 
+<div class="well">
+  <%= form_for @request, html: { multipart: true } do |f| %>
+  	<%= f.label :title %><br />
+    <%= f.text_field :title %><br /><br />
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br /><br />
+    <%= f.label :description %><br />
+    <%= f.text_area :description %><br /><br />
+    <%= f.label :attachment %><%= f.file_field :attachment %><br />
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  <% end %>
+</div>

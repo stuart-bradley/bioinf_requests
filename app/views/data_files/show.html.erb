@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Request:</strong>
+  <%= @data_file.request_id %>
+</p>
+
+<p>
+  <strong>Attachment uploader:</strong>
+  <%= @data_file.attachment_uploader %>
+</p>
+
+<%= link_to 'Edit', edit_data_file_path(@data_file) %> |
+<%= link_to 'Back', data_files_path %>

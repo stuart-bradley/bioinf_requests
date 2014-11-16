@@ -1,0 +1,12 @@
+A new request has been submitted by <%= @request.name %>.
+
+Title: 
+
+<%= @request.title %>
+
+Description: 
+
+<%= @request.description %>
+
+To view the new request go to: <%= link_to @request.title, root_url + "requests" %>
+

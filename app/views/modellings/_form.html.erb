@@ -1,0 +1,17 @@
+<%= form_for(@modelling) do |f| %>
+  <% if @modelling.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modelling.errors.count, "error") %> prohibited this modelling from being saved:</h2>
+
+      <ul>
+      <% @modelling.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

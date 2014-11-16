@@ -1,0 +1,6 @@
+An edit has been made to: <%= @request.title %>.
+
+The following fields have been edited:
+<%= @request.get_versions[0] %>
+
+To view the change go to: <%= link_to @request.title, root_url + "requests" %>

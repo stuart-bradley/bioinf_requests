@@ -1,0 +1,6 @@
+Since LDAP changes a few things, the website will need to be booted up again using:
+
+sudo bundle install
+
+rake db:reset db:migrate
+rake db:data:load

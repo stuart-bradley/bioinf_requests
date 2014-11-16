@@ -1,0 +1,2993 @@
+
+---
+data_files:
+  columns:
+  - id
+  - request_id
+  - attachment_uploader
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 14
+    - CautoDiolDehydtaseNuc.txt
+    - '2014-05-12 04:49:53.688888'
+    - '2014-05-12 04:49:53.688888'
+  - - 2
+    - 14
+    - CautoDiolDehydtasePep.txt
+    - '2014-05-12 04:49:53.851843'
+    - '2014-05-12 04:49:53.851843'
+  - - 3
+    - 38
+    - alphabetized-list-of-recognition-specificities.pdf
+    - '2014-07-29 23:26:27.085817'
+    - '2014-07-29 23:26:27.085817'
+  - - 4
+    - 40
+    - CRISPR_Scanner.txt
+    - '2014-08-07 16:42:30.533057'
+    - '2014-08-07 16:42:30.533057'
+  - - 5
+    - 54
+    - inferred_Methioine_Biosynthesis_DSM10061.pptx
+    - '2014-10-05 21:03:03.542356'
+    - '2014-10-05 21:03:03.542356'
+  - - 6
+    - 10
+    - Vini_Bref_Seq.zip
+    - '2014-10-05 21:09:01.670764'
+    - '2014-10-05 21:09:01.670764'
+  - - 7
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsSummary.txt
+    - '2014-10-05 21:12:17.700194'
+    - '2014-10-05 21:12:17.700194'
+  - - 8
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsSummary.txt
+    - '2014-10-05 21:12:36.845473'
+    - '2014-10-05 21:12:36.845473'
+  - - 9
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsSummary.txt
+    - '2014-10-05 21:13:06.166336'
+    - '2014-10-05 21:13:06.166336'
+  - - 10
+    - 57
+    - LZ11561_CPAi_for_gene_design_bounds.pdf
+    - '2014-10-16 23:08:41.207668'
+    - '2014-10-16 23:08:41.207668'
+
+---
+requests:
+  columns:
+  - id
+  - title
+  - name
+  - description
+  - attachment
+  - created_at
+  - updated_at
+  - status
+  - assignment
+  - result
+  records: 
+  - - 3
+    - budA KO genome inspection
+    - Micheal Koepke
+    - look for genome structure clues to observation that budA KO strain metabolises
+      exogenous acetoin only after a 2 hour time lag as compared to WTwhich metabolises
+      the added compound immediately -- suggests possible  Tx regulation of acetoin
+      to BDO step. budA catalysed acetate to acetoin step.
+    - 
+    - '2014-04-11 00:58:07.308574'
+    - '2014-04-11 01:02:48.418717'
+    - Ongoing
+    - Wayne
+    - 
+  - - 5
+    - Potassium membrane transport
+    - Jared Prinsloo
+    - I am interested in finding out the mechanism by which the cells regulate their
+      potassium gradient. I have done some KCl experiments which show that low KCl
+      results in low biomass but does not affect gas uptake and metabolite production.
+      Instead the cells become more productive due to the lowering in biomass.
+    - 
+    - '2014-04-15 20:57:28.882599'
+    - '2014-10-17 01:24:19.914989'
+    - Complete
+    - Wayne
+    - ''
+  - - 7
+    - Install Interproscan and do scan of  of DSM10061  LZ1561
+    - Wayne Mitchell
+    - Install Interproscan on Reilly (download software from https://code.google.com/p/interproscan/wiki/InstallationRequirements
+    - 
+    - '2014-04-27 22:27:18.199568'
+    - '2014-04-29 23:23:22.413175'
+    - Complete
+    - Asela
+    - 
+  - - 10
+    - Check 454 and Illumina discrepancies with PacBio DSM10061 assembly
+    - Wayne Mitchell
+    - Check if 454 and Illumina find the amse discrepancies viz PacBio assembly as
+      Ion Torrent
+    - 
+    - '2014-04-27 22:29:17.249941'
+    - '2014-10-05 21:08:09.202477'
+    - Complete
+    - Vini
+    - over 200 discrepancies identified in preliminary analysis by BreSeq haploid
+      genome NGS SNP pipeline
+  - - 11
+    - dummy annotation pages in wiki
+    - Michael Koepke
+    - Make 2-3 dummy annotation pages in Wiki for demo purposes
+    - 
+    - '2014-05-01 21:47:13.379697'
+    - '2014-05-09 03:34:55.268007'
+    - Complete
+    - Asela
+    - 
+  - - 12
+    - move wiki strain and plasmid info to freezer pro
+    - Michael Koepke
+    - move temp strain and plasmid info to permanent home in freezer pro
+    - 
+    - '2014-05-02 04:37:38.244665'
+    - '2014-05-14 03:35:25.121484'
+    - Complete
+    - Asela
+    - 
+  - - 13
+    - Acetolactate decarboxylase tree
+    - Alex Mueller
+    - I would like to see a tree of all known acetolactate decarboxylases (based on
+      amino acid sequence) including that of our bug, to get an idea of which are
+      most closely related, and which more distantly related to ours
+    - 
+    - '2014-05-05 23:22:25.587087'
+    - '2014-05-09 03:34:38.437888'
+    - Complete
+    - Stuart
+    - 
+  - - 14
+    - Diol dehydratase tree
+    - Alex Mueller
+    - BLAST for homologous proteins and assemble tree.
+    - 
+    - '2014-05-12 04:49:42.151265'
+    - '2014-05-22 01:05:27.295548'
+    - Complete
+    - Asela
+    - The MSA and Tree files are in a folder named "Diol_dehydratase" in the shared
+      Geneious folder. LZ1561 is colored red on the tree and can be found towards
+      the bottom.
+  - - 15
+    - C.auto release factor 3
+    - Wayne Mitchell
+    - "There are three translation Release Factors annotated in C.auto. Normal complement
+      is two.\r\nPlease align the three at protein level to see if its a duplication
+      or a possible new function.\r\n\r\nResults - http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome"
+    - 
+    - '2014-05-18 21:29:11.143064'
+    - '2014-05-19 02:02:15.741493'
+    - Complete
+    - Asela
+    - 
+  - - 16
+    - tRNA modification in LZ1561
+    - Wayne Mitchell
+    - tRNA anticodon modification impacts codon choice. Use the predicted tRNA modification
+      enzymes to infer modifications on tRNAs.
+    - 
+    - '2014-05-19 23:19:22.906970'
+    - '2014-05-26 03:48:21.152811'
+    - Complete
+    - Asela
+    - ''
+  - - 17
+    - CODH/ACS spilt in C.auto
+    - Eric Liew
+    - The CAETHG_1620,1621 off pair (C.auto) is a single frame in C.jundhalii. Does
+      the IonTorrent sequencing and polishing reunite these offs in C.auto ?
+    - 
+    - '2014-05-21 23:37:53.027923'
+    - '2014-05-21 23:38:36.068392'
+    - Complete
+    - Wayne
+    - 
+  - - 18
+    - Ion Torrent Resequencing of C.auto analysis
+    - Wayne Mitchell
+    - 'Analysis of impact of Sanger Confirmed Ion Torrent discrepancies of the Pac
+      Bio Assembly of C.auto. '
+    - 
+    - '2014-05-21 23:42:41.317140'
+    - '2014-05-21 23:42:41.317140'
+    - Complete
+    - Wayne
+    - 
+  - - 19
+    - Ion torrent Resequencing of C.auto (Phase II) analysis
+    - Wayne Mitchell
+    - Additional C.auto Pac Bio -Ion Torrent discrepancies detected with new IT chemistry;
+      analysis
+    - 
+    - '2014-05-21 23:43:18.215442'
+    - '2014-09-06 00:59:08.331516'
+    - Complete
+    - Wayne
+    - need to regenerate IT  data
+  - - 21
+    - HIBA RNASeq
+    - Asela Dassanayake
+    - Perform Differential Expression analysis on the RNA Seq Sample of the HIBA experiment
+    - 
+    - '2014-06-10 21:02:55.385311'
+    - '2014-06-10 21:02:55.385311'
+    - Complete
+    - Asela
+    - ''
+  - - 22
+    - sequence analysis 5' to start site
+    - Wayne Mitchell
+    - Examined 20 bases 5' to ORF starts for 100 most abundenty by  proteomics, all
+      detectable by proteomics and all detectable.
+    - 
+    - '2014-06-11 21:17:27.674376'
+    - '2014-06-11 21:18:31.455163'
+    - Complete
+    - Wayne
+    - ''
+  - - 23
+    - pIPA RNASeq Analysis
+    - Rasmus Jensen
+    - Analyse the RNA Seq Data form the Isopropanol strain
+    - 
+    - '2014-06-23 04:13:58.475356'
+    - '2014-06-23 04:15:44.403032'
+    - Complete
+    - Asela
+    - The three replicates are in three different sheets. The FPKM value is the normalised
+      expression level. The CDS of the Plasmid are colored light blue towards the
+      end of each sheet.
+  - - 24
+    - RNASeq Analysis
+    - Christophe Mihalcea
+    - Carry out Differential Expression Analysis on RNASeq Data from sample from EtOH
+      producing and Non Producing strains
+    - 
+    - '2014-07-02 02:27:27.811287'
+    - '2014-07-02 02:28:38.721722'
+    - Complete
+    - Asela
+    - The final analysis is on Sheet 2 of the excel file.
+  - - 28
+    - LZ1561 Vs Kalashnikova
+    - Asela Dassanayake
+    - Identify the variants between the two strains from gDNA
+    - 
+    - '2014-07-04 03:51:08.356042'
+    - '2014-07-30 00:25:17.855607'
+    - Complete
+    - Asela
+    - ''
+  - - 29
+    - LZ1561 30C Vs 37C
+    - Katie Smart
+    - RNA Seq Differential Expression Analysis of LZ1561 growth at 30C and 37C
+    - 
+    - '2014-07-04 04:10:20.917751'
+    - '2014-07-06 21:45:07.675397'
+    - Complete
+    - Asela
+    - Results in the Excel file. I have filtered out the genes that show less than
+      1.5 differential expression either way.
+  - - 30
+    - RNASeq Analysis of high H2 uptake strain
+    - Christophe Mihalcea
+    - 'Differential expression analysis of RNA Seq data from high H2 uptake strain
+      from the 4 reactor system against LZ1561. Sample taken by Thiemo for sequencing. '
+    - 
+    - '2014-07-11 03:09:09.798219'
+    - '2014-07-11 03:25:27.329421'
+    - Complete
+    - Asela
+    - "RNA Seq data from BioControl Run number 14516\r\n was compared with BioControl
+      Run Number 14573\r\n"
+  - - 33
+    - Contamination Alalysis
+    - Katie Smart
+    - Analyse the DNA sequences from the F12 reactor that started producing butanol
+    - 
+    - '2014-07-24 22:01:52.935221'
+    - '2014-09-24 00:53:01.949854'
+    - Ongoing
+    - Asela;Vini
+    - ''
+  - - 36
+    - LZ1561 - Terminators
+    - Shilpa Nagaraju
+    - Identify Terminator sequences on the LZ1561 genome.
+    - 
+    - '2014-07-24 22:58:43.357361'
+    - '2014-07-24 22:58:43.357361'
+    - Ongoing
+    - Asela
+    - ''
+  - - 37
+    - Analyse the mutations of the Kalashnikova strain
+    - Bjorn Heijstra
+    - Analyse the effects at the protein level for the mutations identified on the
+      Kalashnikova strain
+    - 
+    - '2014-07-25 00:18:33.473994'
+    - '2014-07-25 00:19:21.426556'
+    - Ongoing
+    - Asela
+    - ''
+  - - 38
+    - RE not in LZ
+    - James Behrendorff
+    - Find RE sites that are not present in LZ1561
+    - 
+    - '2014-07-29 23:26:20.720691'
+    - '2014-08-13 00:55:10.468254'
+    - Ongoing
+    - Stuart
+    - "REs of the format: NNN or (a/b)NNN or NNN(a/b) have been searched, only one
+      RE is missing from LZ1561:\r\n- GG/CGCGCC - AscI AscI RE-Mix®\r\nREs of the
+      format: (-a/-b)NNN or NNN(-a/-b) are to be done upon further clarification.
+      \r\n\r\nOutput CSV and source code attached."
+  - - 39
+    - RBS Investigation
+    - Asela Dassanayake
+    - Look into RBS sequences in the RNA Seq data
+    - 
+    - '2014-07-30 22:11:07.916214'
+    - '2014-07-30 22:12:15.002507'
+    - Pending
+    - 
+    - 
+  - - 40
+    - CRISPR Scaner
+    - Wayne Mitchell
+    - Scan Genome for CRISPR targets then check for multiple instances of target;
+      see specificatin
+    - 
+    - '2014-08-07 16:42:03.807218'
+    - '2014-08-12 23:08:44.229309'
+    - Ongoing
+    - Stuart
+    - ''
+  - - 41
+    - Design 4 Construct Sequences
+    - Rasmus Jensen
+    - 4 AA sequences submitted; need DNA sequence generated with good chance of expression
+    - 
+    - '2014-09-06 01:02:48.131660'
+    - '2014-09-06 01:02:48.131660'
+    - Ongoing
+    - Wayne
+    - ''
+  - - 43
+    - Tx Factor Survey DSM10061
+    - Wayne Mitchell
+    - Identify Tx Factors present in DSM10061; group by predicted activator/ repressor/
+      and info about homologs
+    - 
+    - '2014-09-25 23:46:31.809863'
+    - '2014-09-25 23:50:52.648934'
+    - Complete
+    - Wayne
+    - ''
+  - - 44
+    - Tx Factor Binding Sites DSM10061
+    - Wayne Mitchell
+    - 'Tx FActor Binding site candidates -- tough one. '
+    - 
+    - '2014-09-25 23:54:18.489342'
+    - '2014-09-26 00:03:10.758168'
+    - Ongoing
+    - Wayne
+    - ''
+  - - 45
+    - Invista Report Genomics Update
+    - Michael Koepke
+    - Add section on Genomics Results
+    - 
+    - '2014-09-25 23:58:43.459608'
+    - '2014-09-26 00:04:43.250178'
+    - Ongoing
+    - Wayne
+    - ''
+  - - 46
+    - Computational localization predicitons for DSM10061
+    - Wayne Mitchell
+    - PDSORTb localization for DSM10061 proteins
+    - 
+    - '2014-09-26 00:07:37.014554'
+    - '2014-10-05 21:12:19.598162'
+    - Complete
+    - Wayne
+    - 'complete '
+  - - 54
+    - Methionine Metabolism in DSM10061
+    - Sean Simpson
+    - Determine if there is  there a plausible complete set of emymes for methioine
+      synthesis
+    - 
+    - '2014-10-05 20:19:15.393380'
+    - '2014-10-05 21:01:42.345151'
+    - Complete
+    - Wayne
+    - 2 routes proposed (see MKoepke for possible 3rd route)
+  - - 55
+    - Gene Designer Pipeline
+    - Wayne Mitchell
+    - input a DNA or Protein sequence, output candidate sequences filtered for codon
+      extreams, stop context, patches
+    - 
+    - '2014-10-06 02:07:41.325481'
+    - '2014-10-06 02:07:41.325481'
+    - Ongoing
+    - Wayne
+    - ''
+  - - 56
+    - Genetic Tools Handbook
+    - Michael Koepke
+    - Set up a new wiki for the Genetic Tools handbook.
+    - 
+    - '2014-10-07 20:41:59.498009'
+    - '2014-10-07 20:43:08.686738'
+    - Pending
+    - Asela
+    - ''
+  - - 57
+    - Unusual features in LZ1561 high CPAI genes
+    - Wayne Mitchell
+    - CPAI valuses for the 100 most detectable proteins in a single proteomics experiment
+      have some outliers. Is there anything about them that links them other then
+      the CPAI anomaly
+    - 
+    - '2014-10-16 23:08:09.801956'
+    - '2014-10-16 23:11:32.367867'
+    - Pending
+    - Wayne
+    - ''
+  - - 58
+    - Pathway Tools
+    - Michael Koepke
+    - Download and install pathway tools Pathway Tools 18.5
+    - 
+    - '2014-11-16 00:14:46.903904'
+    - '2014-11-16 00:14:46.903904'
+    - Pending
+    - 
+    - 
+
+---
+result_files:
+  columns:
+  - id
+  - request_id
+  - attachment_uploader
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 16
+    - tRNA_modification_enzymes.xlsx
+    - '2014-05-26 03:48:26.729853'
+    - '2014-05-26 03:48:26.729853'
+  - - 2
+    - 21
+    - Analysis.xlsx
+    - '2014-06-10 21:03:03.348683'
+    - '2014-06-10 21:03:03.348683'
+  - - 3
+    - 23
+    - Expression_results.xlsx
+    - '2014-06-23 04:16:01.470690'
+    - '2014-06-23 04:16:01.470690'
+  - - 4
+    - 24
+    - Analysis_reports.xlsx
+    - '2014-07-02 02:28:54.241580'
+    - '2014-07-02 02:28:54.241580'
+  - - 5
+    - 28
+    - Variants_Analysis.xlsx
+    - '2014-07-04 04:01:20.471680'
+    - '2014-07-04 04:01:20.471680'
+  - - 6
+    - 29
+    - DE_analysis.xlsx
+    - '2014-07-06 21:40:16.072549'
+    - '2014-07-06 21:40:16.072549'
+  - - 7
+    - 30
+    - DE_Analysis.xlsx
+    - '2014-07-11 03:09:16.807283'
+    - '2014-07-11 03:09:16.807283'
+  - - 8
+    - 38
+    - RE_Sites.csv
+    - '2014-08-13 00:54:19.025166'
+    - '2014-08-13 00:54:19.025166'
+  - - 9
+    - 38
+    - reNotInLZ.py
+    - '2014-08-13 00:54:19.196196'
+    - '2014-08-13 00:54:19.196196'
+  - - 10
+    - 46
+    - DSM10061_PSORTb_localizationPredictions.txt
+    - '2014-10-05 21:12:17.951621'
+    - '2014-10-05 21:12:17.951621'
+  - - 11
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGene.txt
+    - '2014-10-05 21:12:18.254456'
+    - '2014-10-05 21:12:18.254456'
+  - - 12
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCellWall.txt
+    - '2014-10-05 21:12:18.447564'
+    - '2014-10-05 21:12:18.447564'
+  - - 13
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCytoplasmic.txt
+    - '2014-10-05 21:12:18.617251'
+    - '2014-10-05 21:12:18.617251'
+  - - 14
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCytoplasmicMembrane.txt
+    - '2014-10-05 21:12:18.807868'
+    - '2014-10-05 21:12:18.807868'
+  - - 15
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneExtracellular.txt
+    - '2014-10-05 21:12:18.998168'
+    - '2014-10-05 21:12:18.998168'
+  - - 16
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneUnknown.txt
+    - '2014-10-05 21:12:19.166205'
+    - '2014-10-05 21:12:19.166205'
+  - - 17
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsSummary.txt
+    - '2014-10-05 21:12:19.339517'
+    - '2014-10-05 21:12:19.339517'
+  - - 18
+    - 46
+    - DSM10061_PSORTb_localizationPredictions.txt
+    - '2014-10-05 21:12:37.101257'
+    - '2014-10-05 21:12:37.101257'
+  - - 19
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGene.txt
+    - '2014-10-05 21:12:37.397788'
+    - '2014-10-05 21:12:37.397788'
+  - - 20
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCellWall.txt
+    - '2014-10-05 21:12:37.591127'
+    - '2014-10-05 21:12:37.591127'
+  - - 21
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCytoplasmic.txt
+    - '2014-10-05 21:12:37.744560'
+    - '2014-10-05 21:12:37.744560'
+  - - 22
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCytoplasmicMembrane.txt
+    - '2014-10-05 21:12:37.911552'
+    - '2014-10-05 21:12:37.911552'
+  - - 23
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneExtracellular.txt
+    - '2014-10-05 21:12:38.075464'
+    - '2014-10-05 21:12:38.075464'
+  - - 24
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneUnknown.txt
+    - '2014-10-05 21:12:38.235517'
+    - '2014-10-05 21:12:38.235517'
+  - - 25
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsSummary.txt
+    - '2014-10-05 21:12:38.401910'
+    - '2014-10-05 21:12:38.401910'
+  - - 26
+    - 46
+    - DSM10061_PSORTb_localizationPredictions.txt
+    - '2014-10-05 21:13:06.414288'
+    - '2014-10-05 21:13:06.414288'
+  - - 27
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGene.txt
+    - '2014-10-05 21:13:06.712023'
+    - '2014-10-05 21:13:06.712023'
+  - - 28
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCellWall.txt
+    - '2014-10-05 21:13:06.887377'
+    - '2014-10-05 21:13:06.887377'
+  - - 29
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCytoplasmic.txt
+    - '2014-10-05 21:13:07.040635'
+    - '2014-10-05 21:13:07.040635'
+  - - 30
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneCytoplasmicMembrane.txt
+    - '2014-10-05 21:13:07.246965'
+    - '2014-10-05 21:13:07.246965'
+  - - 31
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneExtracellular.txt
+    - '2014-10-05 21:13:07.413402'
+    - '2014-10-05 21:13:07.413402'
+  - - 32
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsParsedByGeneUnknown.txt
+    - '2014-10-05 21:13:07.579790'
+    - '2014-10-05 21:13:07.579790'
+  - - 33
+    - 46
+    - DSM10061_PSORTb_localizationPredictionsSummary.txt
+    - '2014-10-05 21:13:07.744998'
+    - '2014-10-05 21:13:07.744998'
+
+
+---
+versions:
+  columns:
+  - id
+  - item_type
+  - item_id
+  - event
+  - whodunnit
+  - object
+  - created_at
+  - object_changes
+  records: 
+  - - 1
+    - Request
+    - 1
+    - create
+    - 
+    - 
+    - '2014-04-06 23:41:23.345018'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- Testing version 1.2\ndescription:\n- \n- testing
+      version 1.2\ncreated_at:\n- \n- 2014-04-06 23:41:23.296177437 Z\nupdated_at:\n-
+      \n- 2014-04-06 23:41:23.296177437 Z\nid:\n- \n- 1\n"
+  - - 2
+    - Request
+    - 1
+    - update
+    - '2'
+    - "---\nid: 1\ntitle: Testing version 1.2\nname: Asela Dassanayake\ndescription:
+      testing version 1.2\nattachment: \ncreated_at: 2014-04-06 23:41:23.296177000
+      Z\nupdated_at: 2014-04-06 23:41:23.296177000 Z\nstatus: Pending\nassignment:
+      \n"
+    - '2014-04-06 23:48:08.643106'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Stuart\nupdated_at:\n- 2014-04-06 23:41:23.296177000
+      Z\n- 2014-04-06 23:48:08.634796005 Z\n"
+  - - 3
+    - Request
+    - 2
+    - create
+    - 
+    - 
+    - '2014-04-06 23:51:37.383708'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- SNPs on Acyl CoA Synthase\ndescription:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-04-06 23:51:37.378182858 Z\nupdated_at:\n- \n- 2014-04-06 23:51:37.378182858
+      Z\nid:\n- \n- 2\n"
+  - - 4
+    - Request
+    - 1
+    - update
+    - '2'
+    - "---\nid: 1\ntitle: Testing version 1.2\nname: Asela Dassanayake\ndescription:
+      testing version 1.2\nattachment: \ncreated_at: 2014-04-06 23:41:23.296177000
+      Z\nupdated_at: 2014-04-06 23:48:08.634796000 Z\nstatus: Complete\nassignment:
+      Stuart\n"
+    - '2014-04-06 23:52:16.019254'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Asela
+      updated_at:
+      - 2014-04-06 23:48:08.634796000 Z
+      - 2014-04-06 23:52:16.013358105 Z
+  - - 5
+    - Request
+    - 2
+    - update
+    - '2'
+    - "---\nid: 2\ntitle: SNPs on Acyl CoA Synthase\nname: Asela Dassanayake\ndescription:
+      ''\nattachment: \ncreated_at: 2014-04-06 23:51:37.378182000 Z\nupdated_at: 2014-04-06
+      23:51:37.378182000 Z\nstatus: Pending\nassignment: \n"
+    - '2014-04-06 23:52:30.058747'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Asela\nupdated_at:\n- 2014-04-06 23:51:37.378182000
+      Z\n- 2014-04-06 23:52:30.051706174 Z\n"
+  - - 6
+    - Request
+    - 3
+    - create
+    - 
+    - 
+    - '2014-04-11 00:58:07.414363'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Micheal
+      Koepke\ntitle:\n- \n- budA KO genome inspection\ndescription:\n- \n- look for
+      genome structure clues to observation that budA KO strain metabolises exogenous\n
+      \ acetoin only after a 2 hour time lag as compared to WTwhich metabolises the
+      added\n  compound immediately -- suggests possible  Tx regulation of acetoin
+      to BDO step.\n  budA catalysed acetate to acetoin step.\ncreated_at:\n- \n-
+      2014-04-11 00:58:07.308574855 Z\nupdated_at:\n- \n- 2014-04-11 00:58:07.308574855
+      Z\nid:\n- \n- 3\n"
+  - - 7
+    - Request
+    - 4
+    - create
+    - 
+    - 
+    - '2014-04-11 00:58:14.300371'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Micheal
+      Koepke\ntitle:\n- \n- budA KO genome inspection\ndescription:\n- \n- look for
+      genome structure clues to observation that budA KO strain metabolises exogenous\n
+      \ acetoin only after a 2 hour time lag as compared to WTwhich metabolises the
+      added\n  compound immediately -- suggests possible  Tx regulation of acetoin
+      to BDO step.\n  budA catalysed acetate to acetoin step.\ncreated_at:\n- \n-
+      2014-04-11 00:58:14.294444923 Z\nupdated_at:\n- \n- 2014-04-11 00:58:14.294444923
+      Z\nid:\n- \n- 4\n"
+  - - 8
+    - Request
+    - 4
+    - destroy
+    - 
+    - "---\nid: 4\ntitle: budA KO genome inspection\nname: Micheal Koepke\ndescription:
+      look for genome structure clues to observation that budA KO strain metabolises\n
+      \ exogenous acetoin only after a 2 hour time lag as compared to WTwhich metabolises\n
+      \ the added compound immediately -- suggests possible  Tx regulation of acetoin
+      to\n  BDO step. budA catalysed acetate to acetoin step.\nattachment: \ncreated_at:
+      2014-04-11 00:58:14.294444000 Z\nupdated_at: 2014-04-11 00:58:14.294444000 Z\nstatus:
+      Pending\nassignment: \n"
+    - '2014-04-11 00:58:34.813826'
+    - 
+  - - 9
+    - Request
+    - 3
+    - update
+    - '3'
+    - "---\nid: 3\ntitle: budA KO genome inspection\nname: Micheal Koepke\ndescription:
+      look for genome structure clues to observation that budA KO strain metabolises\n
+      \ exogenous acetoin only after a 2 hour time lag as compared to WTwhich metabolises\n
+      \ the added compound immediately -- suggests possible  Tx regulation of acetoin
+      to\n  BDO step. budA catalysed acetate to acetoin step.\nattachment: \ncreated_at:
+      2014-04-11 00:58:07.308574000 Z\nupdated_at: 2014-04-11 00:58:07.308574000 Z\nstatus:
+      Pending\nassignment: \n"
+    - '2014-04-11 01:02:48.425601'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Wayne\nupdated_at:\n- 2014-04-11 00:58:07.308574000
+      Z\n- 2014-04-11 01:02:48.418717304 Z\n"
+  - - 10
+    - Request
+    - 5
+    - create
+    - 
+    - 
+    - '2014-04-15 20:57:28.936641'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Jared
+      Prinsloo\ntitle:\n- \n- Potassium membrane transport\ndescription:\n- \n- I
+      am interested in finding out the mechanism by which the cells regulate their
+      potassium\n  gradient. I have done some KCl experiments which show that low
+      KCl results in low\n  biomass but does not affect gas uptake and metabolite
+      production. Instead the cells\n  become more productive due to the lowering
+      in biomass.\ncreated_at:\n- \n- 2014-04-15 20:57:28.882599022 Z\nupdated_at:\n-
+      \n- 2014-04-15 20:57:28.882599022 Z\nid:\n- \n- 5\n"
+  - - 11
+    - Request
+    - 1
+    - destroy
+    - '3'
+    - "---\nid: 1\ntitle: Testing version 1.2\nname: Asela Dassanayake\ndescription:
+      testing version 1.2\nattachment: \ncreated_at: 2014-04-06 23:41:23.296177000
+      Z\nupdated_at: 2014-04-06 23:52:16.013358000 Z\nstatus: Complete\nassignment:
+      Asela\n"
+    - '2014-04-15 21:10:35.635857'
+    - 
+  - - 12
+    - Request
+    - 2
+    - destroy
+    - '3'
+    - "---\nid: 2\ntitle: SNPs on Acyl CoA Synthase\nname: Asela Dassanayake\ndescription:
+      ''\nattachment: \ncreated_at: 2014-04-06 23:51:37.378182000 Z\nupdated_at: 2014-04-06
+      23:52:30.051706000 Z\nstatus: Complete\nassignment: Asela\n"
+    - '2014-04-15 21:10:39.699375'
+    - 
+  - - 13
+    - Request
+    - 5
+    - update
+    - '3'
+    - "---\nid: 5\ntitle: Potassium membrane transport\nname: Jared Prinsloo\ndescription:
+      I am interested in finding out the mechanism by which the cells regulate\n  their
+      potassium gradient. I have done some KCl experiments which show that low KCl\n
+      \ results in low biomass but does not affect gas uptake and metabolite production.\n
+      \ Instead the cells become more productive due to the lowering in biomass.\nattachment:
+      \ncreated_at: 2014-04-15 20:57:28.882599000 Z\nupdated_at: 2014-04-15 20:57:28.882599000
+      Z\nstatus: Pending\nassignment: \n"
+    - '2014-04-15 21:13:10.944897'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Wayne\nupdated_at:\n- 2014-04-15 20:57:28.882599000
+      Z\n- 2014-04-15 21:13:10.920622042 Z\n"
+  - - 14
+    - Request
+    - 6
+    - create
+    - 
+    - 
+    - '2014-04-16 01:04:20.826055'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- Testing Email\ndescription:\n- \n- Yo Yo email\ncreated_at:\n-
+      \n- 2014-04-16 01:04:20.819546103 Z\nupdated_at:\n- \n- 2014-04-16 01:04:20.819546103
+      Z\nid:\n- \n- 6\n"
+  - - 15
+    - Request
+    - 6
+    - update
+    - '2'
+    - "---\nid: 6\ntitle: Testing Email\nname: Asela Dassanayake\ndescription: Yo
+      Yo email\nattachment: \ncreated_at: 2014-04-16 01:04:20.819546000 Z\nupdated_at:
+      2014-04-16 01:04:20.819546000 Z\nstatus: Pending\nassignment: \n"
+    - '2014-04-16 01:05:09.923423'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nupdated_at:\n- 2014-04-16 01:04:20.819546000
+      Z\n- 2014-04-16 01:05:09.916655046 Z\n"
+  - - 16
+    - Request
+    - 6
+    - update
+    - '2'
+    - "---\nid: 6\ntitle: Testing Email\nname: Asela Dassanayake\ndescription: Yo
+      Yo email\nattachment: \ncreated_at: 2014-04-16 01:04:20.819546000 Z\nupdated_at:
+      2014-04-16 01:05:09.916655000 Z\nstatus: Ongoing\nassignment: Asela\n"
+    - '2014-04-16 01:05:39.883016'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-04-16 01:05:09.916655000 Z
+      - 2014-04-16 01:05:39.877343840 Z
+  - - 17
+    - Request
+    - 6
+    - destroy
+    - 
+    - "---\nid: 6\ntitle: Testing Email\nname: Asela Dassanayake\ndescription: Yo
+      Yo email\nattachment: \ncreated_at: 2014-04-16 01:04:20.819546000 Z\nupdated_at:
+      2014-04-16 01:05:39.877343000 Z\nstatus: Complete\nassignment: Asela\n"
+    - '2014-04-17 05:17:58.618062'
+    - 
+  - - 18
+    - Request
+    - 7
+    - create
+    - '3'
+    - 
+    - '2014-04-27 22:27:18.210082'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Install Interproscan and do scan of  of DSM10061  LZ1561\ndescription:\n-
+      \n- Install Interproscan on Reilly (download software from https://code.google.com/p/interproscan/wiki/InstallationRequirements\nassignment:\n-
+      \n- Asela\ncreated_at:\n- \n- 2014-04-27 22:27:18.199568081 Z\nupdated_at:\n-
+      \n- 2014-04-27 22:27:18.199568081 Z\nid:\n- \n- 7\n"
+  - - 19
+    - Request
+    - 8
+    - create
+    - '3'
+    - 
+    - '2014-04-27 22:29:03.962912'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\ndescription:\n- \n- Cehck if 454 and Illumina find the amse discrepancies
+      viz PacBio assembly as Ion\n  Torrent\nassignment:\n- \n- Wayne\ncreated_at:\n-
+      \n- 2014-04-27 22:29:03.954948060 Z\nupdated_at:\n- \n- 2014-04-27 22:29:03.954948060
+      Z\nid:\n- \n- 8\n"
+  - - 20
+    - Request
+    - 9
+    - create
+    - '3'
+    - 
+    - '2014-04-27 22:29:11.125790'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\ndescription:\n- \n- Cehck if 454 and Illumina find the amse discrepancies
+      viz PacBio assembly as Ion\n  Torrent\nassignment:\n- \n- Wayne\ncreated_at:\n-
+      \n- 2014-04-27 22:29:11.117686055 Z\nupdated_at:\n- \n- 2014-04-27 22:29:11.117686055
+      Z\nid:\n- \n- 9\n"
+  - - 21
+    - Request
+    - 10
+    - create
+    - '3'
+    - 
+    - '2014-04-27 22:29:17.258752'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\ndescription:\n- \n- Cehck if 454 and Illumina find the amse discrepancies
+      viz PacBio assembly as Ion\n  Torrent\nassignment:\n- \n- Wayne\ncreated_at:\n-
+      \n- 2014-04-27 22:29:17.249941217 Z\nupdated_at:\n- \n- 2014-04-27 22:29:17.249941217
+      Z\nid:\n- \n- 10\n"
+  - - 22
+    - Request
+    - 10
+    - update
+    - '3'
+    - "---\nid: 10\ntitle: Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\nname: Wayne Mitchell\ndescription: Cehck if 454 and Illumina find
+      the amse discrepancies viz PacBio assembly\n  as Ion Torrent\nattachment: \ncreated_at:
+      2014-04-27 22:29:17.249941000 Z\nupdated_at: 2014-04-27 22:29:17.249941000 Z\nstatus:
+      Pending\nassignment: Wayne\n"
+    - '2014-04-27 22:31:09.425418'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - Cehck if 454 and Illumina find the amse discrepancies viz PacBio assembly as Ion
+        Torrent
+      - Check if 454 and Illumina find the amse discrepancies viz PacBio assembly as Ion
+        Torrent
+      updated_at:
+      - 2014-04-27 22:29:17.249941000 Z
+      - 2014-04-27 22:31:09.414947707 Z
+  - - 23
+    - Request
+    - 9
+    - destroy
+    - '3'
+    - "---\nid: 9\ntitle: Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\nname: Wayne Mitchell\ndescription: Cehck if 454 and Illumina find
+      the amse discrepancies viz PacBio assembly\n  as Ion Torrent\nattachment: \ncreated_at:
+      2014-04-27 22:29:11.117686000 Z\nupdated_at: 2014-04-27 22:29:11.117686000 Z\nstatus:
+      Pending\nassignment: Wayne\n"
+    - '2014-04-27 22:31:21.880835'
+    - 
+  - - 24
+    - Request
+    - 8
+    - destroy
+    - '3'
+    - "---\nid: 8\ntitle: Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\nname: Wayne Mitchell\ndescription: Cehck if 454 and Illumina find
+      the amse discrepancies viz PacBio assembly\n  as Ion Torrent\nattachment: \ncreated_at:
+      2014-04-27 22:29:03.954948000 Z\nupdated_at: 2014-04-27 22:29:03.954948000 Z\nstatus:
+      Pending\nassignment: Wayne\n"
+    - '2014-04-27 22:31:27.163550'
+    - 
+  - - 25
+    - Request
+    - 7
+    - update
+    - '2'
+    - "---\nid: 7\ntitle: Install Interproscan and do scan of  of DSM10061  LZ1561\nname:
+      Wayne Mitchell\ndescription: Install Interproscan on Reilly (download software
+      from https://code.google.com/p/interproscan/wiki/InstallationRequirements\nattachment:
+      \ncreated_at: 2014-04-27 22:27:18.199568000 Z\nupdated_at: 2014-04-27 22:27:18.199568000
+      Z\nstatus: Pending\nassignment: Asela\n"
+    - '2014-04-28 20:33:38.381315'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2014-04-27 22:27:18.199568000 Z
+      - 2014-04-28 20:33:38.375884211 Z
+  - - 26
+    - Request
+    - 7
+    - update
+    - '2'
+    - "---\nid: 7\ntitle: Install Interproscan and do scan of  of DSM10061  LZ1561\nname:
+      Wayne Mitchell\ndescription: Install Interproscan on Reilly (download software
+      from https://code.google.com/p/interproscan/wiki/InstallationRequirements\nattachment:
+      \ncreated_at: 2014-04-27 22:27:18.199568000 Z\nupdated_at: 2014-04-28 20:33:38.375884000
+      Z\nstatus: Ongoing\nassignment: Asela\n"
+    - '2014-04-29 02:04:38.003370'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-04-28 20:33:38.375884000 Z
+      - 2014-04-29 02:04:37.993844690 Z
+  - - 27
+    - Request
+    - 7
+    - update
+    - '2'
+    - "---\nid: 7\ntitle: Install Interproscan and do scan of  of DSM10061  LZ1561\nname:
+      Wayne Mitchell\ndescription: Install Interproscan on Reilly (download software
+      from https://code.google.com/p/interproscan/wiki/InstallationRequirements\nattachment:
+      \ncreated_at: 2014-04-27 22:27:18.199568000 Z\nupdated_at: 2014-04-29 02:04:37.993844000
+      Z\nstatus: Complete\nassignment: Asela\n"
+    - '2014-04-29 23:22:51.075277'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Complete
+      - Ongoing
+      updated_at:
+      - 2014-04-29 02:04:37.993844000 Z
+      - 2014-04-29 23:22:51.066775047 Z
+  - - 28
+    - Request
+    - 7
+    - update
+    - '2'
+    - "---\nid: 7\ntitle: Install Interproscan and do scan of  of DSM10061  LZ1561\nname:
+      Wayne Mitchell\ndescription: Install Interproscan on Reilly (download software
+      from https://code.google.com/p/interproscan/wiki/InstallationRequirements\nattachment:
+      \ncreated_at: 2014-04-27 22:27:18.199568000 Z\nupdated_at: 2014-04-29 23:22:51.066775000
+      Z\nstatus: Ongoing\nassignment: Asela\n"
+    - '2014-04-29 23:23:22.421634'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-04-29 23:22:51.066775000 Z
+      - 2014-04-29 23:23:22.413175120 Z
+  - - 29
+    - Request
+    - 11
+    - create
+    - 
+    - 
+    - '2014-05-01 21:47:13.390420'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Michael
+      Koepke\ntitle:\n- \n- dummy annotation pages in wiki\ndescription:\n- \n- Make
+      2-3 dummy annotation pages in Wiki for demo pourposes\ncreated_at:\n- \n- 2014-05-01
+      21:47:13.379697406 Z\nupdated_at:\n- \n- 2014-05-01 21:47:13.379697406 Z\nid:\n-
+      \n- 11\n"
+  - - 30
+    - Request
+    - 11
+    - update
+    - 
+    - "---\nid: 11\ntitle: dummy annotation pages in wiki\nname: Michael Koepke\ndescription:
+      Make 2-3 dummy annotation pages in Wiki for demo pourposes\nattachment: \ncreated_at:
+      2014-05-01 21:47:13.379697000 Z\nupdated_at: 2014-05-01 21:47:13.379697000 Z\nstatus:
+      Pending\nassignment: \n"
+    - '2014-05-01 21:47:31.738705'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - Make 2-3 dummy annotation pages in Wiki for demo pourposes
+      - Make 2-3 dummy annotation pages in Wiki for demo porposes
+      updated_at:
+      - 2014-05-01 21:47:13.379697000 Z
+      - 2014-05-01 21:47:31.729518204 Z
+  - - 31
+    - Request
+    - 11
+    - update
+    - '2'
+    - "---\nid: 11\ntitle: dummy annotation pages in wiki\nname: Michael Koepke\ndescription:
+      Make 2-3 dummy annotation pages in Wiki for demo porposes\nattachment: \ncreated_at:
+      2014-05-01 21:47:13.379697000 Z\nupdated_at: 2014-05-01 21:47:31.729518000 Z\nstatus:
+      Pending\nassignment: \n"
+    - '2014-05-01 21:54:06.646458'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nupdated_at:\n- 2014-05-01 21:47:31.729518000
+      Z\n- 2014-05-01 21:54:06.636939988 Z\n"
+  - - 32
+    - Request
+    - 11
+    - update
+    - 
+    - "---\nid: 11\ntitle: dummy annotation pages in wiki\nname: Michael Koepke\ndescription:
+      Make 2-3 dummy annotation pages in Wiki for demo porposes\nattachment: \ncreated_at:
+      2014-05-01 21:47:13.379697000 Z\nupdated_at: 2014-05-01 21:54:06.636939000 Z\nstatus:
+      Ongoing\nassignment: Asela\n"
+    - '2014-05-02 04:36:31.292452'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - Make 2-3 dummy annotation pages in Wiki for demo porposes
+      - Make 2-3 dummy annotation pages in Wiki for demo purposes
+      updated_at:
+      - 2014-05-01 21:54:06.636939000 Z
+      - 2014-05-02 04:36:31.284109272 Z
+  - - 33
+    - Request
+    - 12
+    - create
+    - 
+    - 
+    - '2014-05-02 04:37:38.253850'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Michael
+      Koepke\ntitle:\n- \n- move wiki strain and polamid info to freezer pro\ndescription:\n-
+      \n- move temp strain and plasmid info to permanent home in freezer pro\ncreated_at:\n-
+      \n- 2014-05-02 04:37:38.244665946 Z\nupdated_at:\n- \n- 2014-05-02 04:37:38.244665946
+      Z\nid:\n- \n- 12\n"
+  - - 34
+    - Request
+    - 12
+    - update
+    - '3'
+    - "---\nid: 12\ntitle: move wiki strain and polamid info to freezer pro\nname:
+      Michael Koepke\ndescription: move temp strain and plasmid info to permanent
+      home in freezer pro\nattachment: \ncreated_at: 2014-05-02 04:37:38.244665000
+      Z\nupdated_at: 2014-05-02 04:37:38.244665000 Z\nstatus: Pending\nassignment:
+      \n"
+    - '2014-05-02 04:39:09.617783'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      Asela\nupdated_at:\n- 2014-05-02 04:37:38.244665000 Z\n- 2014-05-02 04:39:09.608568906
+      Z\n"
+  - - 35
+    - Request
+    - 12
+    - update
+    - '3'
+    - "---\nid: 12\ntitle: move wiki strain and polamid info to freezer pro\nname:
+      Michael Koepke\ndescription: move temp strain and plasmid info to permanent
+      home in freezer pro\nattachment: \ncreated_at: 2014-05-02 04:37:38.244665000
+      Z\nupdated_at: 2014-05-02 04:39:09.608568000 Z\nstatus: Pending\nassignment:
+      Asela\n"
+    - '2014-05-02 04:40:30.673700'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      title:
+      - move wiki strain and polamid info to freezer pro
+      - move wiki strain and plasmid info to freezer pro
+      updated_at:
+      - 2014-05-02 04:39:09.608568000 Z
+      - 2014-05-02 04:40:30.663877252 Z
+  - - 36
+    - Request
+    - 13
+    - create
+    - 
+    - 
+    - '2014-05-05 23:22:25.596587'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Alex
+      Mueller\ntitle:\n- \n- Acetolactate decarboxylase tree\ndescription:\n- \n-
+      I would like to see a tree of all known acetolactate decarboxylases (based on
+      amino\n  acid sequence) including that of our bug, to get an idea of which are
+      most closely\n  related, and which more distantly related to ours\ncreated_at:\n-
+      \n- 2014-05-05 23:22:25.587087937 Z\nupdated_at:\n- \n- 2014-05-05 23:22:25.587087937
+      Z\nid:\n- \n- 13\n"
+  - - 37
+    - Request
+    - 13
+    - update
+    - '3'
+    - "---\nid: 13\ntitle: Acetolactate decarboxylase tree\nname: Alex Mueller\ndescription:
+      I would like to see a tree of all known acetolactate decarboxylases (based\n
+      \ on amino acid sequence) including that of our bug, to get an idea of which
+      are most\n  closely related, and which more distantly related to ours\nattachment:
+      \ncreated_at: 2014-05-05 23:22:25.587087000 Z\nupdated_at: 2014-05-05 23:22:25.587087000
+      Z\nstatus: Pending\nassignment: \n"
+    - '2014-05-06 03:37:47.920520'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      Asela\nupdated_at:\n- 2014-05-05 23:22:25.587087000 Z\n- 2014-05-06 03:37:47.910718217
+      Z\n"
+  - - 38
+    - Request
+    - 12
+    - update
+    - '2'
+    - "---\nid: 12\ntitle: move wiki strain and plasmid info to freezer pro\nname:
+      Michael Koepke\ndescription: move temp strain and plasmid info to permanent
+      home in freezer pro\nattachment: \ncreated_at: 2014-05-02 04:37:38.244665000
+      Z\nupdated_at: 2014-05-02 04:40:30.663877000 Z\nstatus: Pending\nassignment:
+      Asela\n"
+    - '2014-05-06 21:05:05.678882'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2014-05-02 04:40:30.663877000 Z
+      - 2014-05-06 21:05:05.671296483 Z
+  - - 39
+    - Request
+    - 13
+    - update
+    - '2'
+    - "---\nid: 13\ntitle: Acetolactate decarboxylase tree\nname: Alex Mueller\ndescription:
+      I would like to see a tree of all known acetolactate decarboxylases (based\n
+      \ on amino acid sequence) including that of our bug, to get an idea of which
+      are most\n  closely related, and which more distantly related to ours\nattachment:
+      \ncreated_at: 2014-05-05 23:22:25.587087000 Z\nupdated_at: 2014-05-06 03:37:47.910718000
+      Z\nstatus: Pending\nassignment: Asela\n"
+    - '2014-05-07 20:52:58.741461'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Stuart
+      updated_at:
+      - 2014-05-06 03:37:47.910718000 Z
+      - 2014-05-07 20:52:58.733498072 Z
+  - - 40
+    - Request
+    - 13
+    - update
+    - '2'
+    - "---\nid: 13\ntitle: Acetolactate decarboxylase tree\nname: Alex Mueller\ndescription:
+      I would like to see a tree of all known acetolactate decarboxylases (based\n
+      \ on amino acid sequence) including that of our bug, to get an idea of which
+      are most\n  closely related, and which more distantly related to ours\nattachment:
+      \ncreated_at: 2014-05-05 23:22:25.587087000 Z\nupdated_at: 2014-05-07 20:52:58.733498000
+      Z\nstatus: Pending\nassignment: Stuart\n"
+    - '2014-05-07 21:07:30.655633'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2014-05-07 20:52:58.733498000 Z
+      - 2014-05-07 21:07:30.647117351 Z
+  - - 41
+    - Request
+    - 13
+    - update
+    - '2'
+    - "---\nid: 13\ntitle: Acetolactate decarboxylase tree\nname: Alex Mueller\ndescription:
+      I would like to see a tree of all known acetolactate decarboxylases (based\n
+      \ on amino acid sequence) including that of our bug, to get an idea of which
+      are most\n  closely related, and which more distantly related to ours\nattachment:
+      \ncreated_at: 2014-05-05 23:22:25.587087000 Z\nupdated_at: 2014-05-07 21:07:30.647117000
+      Z\nstatus: Ongoing\nassignment: Stuart\n"
+    - '2014-05-09 03:34:38.447060'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-05-07 21:07:30.647117000 Z
+      - 2014-05-09 03:34:38.437888606 Z
+  - - 42
+    - Request
+    - 11
+    - update
+    - '2'
+    - "---\nid: 11\ntitle: dummy annotation pages in wiki\nname: Michael Koepke\ndescription:
+      Make 2-3 dummy annotation pages in Wiki for demo purposes\nattachment: \ncreated_at:
+      2014-05-01 21:47:13.379697000 Z\nupdated_at: 2014-05-02 04:36:31.284109000 Z\nstatus:
+      Ongoing\nassignment: Asela\n"
+    - '2014-05-09 03:34:55.276630'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-05-02 04:36:31.284109000 Z
+      - 2014-05-09 03:34:55.268007203 Z
+  - - 43
+    - Request
+    - 14
+    - create
+    - 
+    - 
+    - '2014-05-12 04:49:42.160319'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Alex
+      Mueller\ntitle:\n- \n- Diol dehydratase tree\ndescription:\n- \n- BLAST for
+      homologous proteins and assemble tree.\ncreated_at:\n- \n- 2014-05-12 04:49:42.151265612
+      Z\nupdated_at:\n- \n- 2014-05-12 04:49:42.151265612 Z\nid:\n- \n- 14\n"
+  - - 44
+    - Request
+    - 14
+    - update
+    - '2'
+    - "---\nid: 14\ntitle: Diol dehydratase tree\nname: Alex Mueller\ndescription:
+      BLAST for homologous proteins and assemble tree.\nattachment: \ncreated_at:
+      2014-05-12 04:49:42.151265000 Z\nupdated_at: 2014-05-12 04:49:42.151265000 Z\nstatus:
+      Pending\nassignment: \n"
+    - '2014-05-14 03:34:59.038456'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nupdated_at:\n- 2014-05-12 04:49:42.151265000
+      Z\n- 2014-05-14 03:34:59.029545802 Z\n"
+  - - 45
+    - Request
+    - 12
+    - update
+    - '2'
+    - "---\nid: 12\ntitle: move wiki strain and plasmid info to freezer pro\nname:
+      Michael Koepke\ndescription: move temp strain and plasmid info to permanent
+      home in freezer pro\nattachment: \ncreated_at: 2014-05-02 04:37:38.244665000
+      Z\nupdated_at: 2014-05-06 21:05:05.671296000 Z\nstatus: Ongoing\nassignment:
+      Asela\n"
+    - '2014-05-14 03:35:25.129600'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-05-06 21:05:05.671296000 Z
+      - 2014-05-14 03:35:25.121484143 Z
+  - - 46
+    - Request
+    - 15
+    - create
+    - 
+    - 
+    - '2014-05-18 21:29:11.170098'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- C.auto release factor 3\ndescription:\n- \n- \"There
+      are three translation Release Factors annotated in C.auto. Normal complement\n
+      \ is two.\\r\\nPlease align the three at protein level to see if its a duplication
+      or\n  a possible new function.\"\ncreated_at:\n- \n- 2014-05-18 21:29:11.143064397
+      Z\nupdated_at:\n- \n- 2014-05-18 21:29:11.143064397 Z\nid:\n- \n- 15\n"
+  - - 47
+    - Request
+    - 15
+    - update
+    - '3'
+    - "---\nid: 15\ntitle: C.auto release factor 3\nname: Wayne Mitchell\ndescription:
+      \"There are three translation Release Factors annotated in C.auto. Normal\n
+      \ complement is two.\\r\\nPlease align the three at protein level to see if
+      its a duplication\n  or a possible new function.\"\nattachment: \ncreated_at:
+      2014-05-18 21:29:11.143064000 Z\nupdated_at: 2014-05-18 21:29:11.143064000 Z\nstatus:
+      Pending\nassignment: \n"
+    - '2014-05-18 21:29:48.738190'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      Asela\nupdated_at:\n- 2014-05-18 21:29:11.143064000 Z\n- 2014-05-18 21:29:48.729285324
+      Z\n"
+  - - 48
+    - Request
+    - 15
+    - update
+    - '2'
+    - "---\nid: 15\ntitle: C.auto release factor 3\nname: Wayne Mitchell\ndescription:
+      \"There are three translation Release Factors annotated in C.auto. Normal\n
+      \ complement is two.\\r\\nPlease align the three at protein level to see if
+      its a duplication\n  or a possible new function.\"\nattachment: \ncreated_at:
+      2014-05-18 21:29:11.143064000 Z\nupdated_at: 2014-05-18 21:29:48.729285000 Z\nstatus:
+      Pending\nassignment: Asela\n"
+    - '2014-05-19 02:02:15.750842'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - "There are three translation Release Factors annotated in C.auto. Normal complement
+        is two.\r\nPlease align the three at protein level to see if its a duplication or
+        a possible new function."
+      - "There are three translation Release Factors annotated in C.auto. Normal complement
+        is two.\r\nPlease align the three at protein level to see if its a duplication or
+        a possible new function.\r\n\r\nResults - http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome"
+      status:
+      - Pending
+      - Complete
+      updated_at:
+      - 2014-05-18 21:29:48.729285000 Z
+      - 2014-05-19 02:02:15.741493640 Z
+  - - 49
+    - Request
+    - 16
+    - create
+    - 
+    - 
+    - '2014-05-19 23:19:22.937871'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- tRNA modification in LZ1561\ndescription:\n- \n- tRNA
+      anticodon modification impacts codon choice. Use the predicted tRNA modification\n
+      \ enzymes to infer modifications on tRNAs.\ncreated_at:\n- \n- 2014-05-19 23:19:22.906970990
+      Z\nupdated_at:\n- \n- 2014-05-19 23:19:22.906970990 Z\nid:\n- \n- 16\n"
+  - - 50
+    - Request
+    - 16
+    - update
+    - '3'
+    - "---\nid: 16\ntitle: tRNA modification in LZ1561\nname: Wayne Mitchell\ndescription:
+      tRNA anticodon modification impacts codon choice. Use the predicted tRNA\n  modification
+      enzymes to infer modifications on tRNAs.\nattachment: \ncreated_at: 2014-05-19
+      23:19:22.906970000 Z\nupdated_at: 2014-05-19 23:19:22.906970000 Z\nstatus: Pending\nassignment:
+      \n"
+    - '2014-05-19 23:20:24.732221'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      Asela\nupdated_at:\n- 2014-05-19 23:19:22.906970000 Z\n- 2014-05-19 23:20:24.722057869
+      Z\n"
+  - - 51
+    - Request
+    - 17
+    - create
+    - 
+    - 
+    - '2014-05-21 23:37:53.032221'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Eric
+      Liew\ntitle:\n- \n- CODH/ACS spilt in C.auto\ndescription:\n- \n- The CAETHG_1620,1621
+      off pair (C.auto) is a single frame in C.jundhalii. Does the\n  IonTorrent sequencing
+      and polishing reunite these offs in C.auto ?\ncreated_at:\n- \n- 2014-05-21
+      23:37:53.027923960 Z\nupdated_at:\n- \n- 2014-05-21 23:37:53.027923960 Z\nid:\n-
+      \n- 17\n"
+  - - 52
+    - Request
+    - 17
+    - update
+    - '3'
+    - "---\nid: 17\ntitle: CODH/ACS spilt in C.auto\nname: Eric Liew\ndescription:
+      The CAETHG_1620,1621 off pair (C.auto) is a single frame in C.jundhalii.\n  Does
+      the IonTorrent sequencing and polishing reunite these offs in C.auto ?\nattachment:
+      \ncreated_at: 2014-05-21 23:37:53.027923000 Z\nupdated_at: 2014-05-21 23:37:53.027923000
+      Z\nstatus: Pending\nassignment: \n"
+    - '2014-05-21 23:38:36.073097'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Wayne\nupdated_at:\n- 2014-05-21 23:37:53.027923000
+      Z\n- 2014-05-21 23:38:36.068392534 Z\n"
+  - - 53
+    - Request
+    - 18
+    - create
+    - '3'
+    - 
+    - '2014-05-21 23:42:41.321505'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Ion Torrent Resequencing of C.auto analysis\ndescription:\n-
+      \n- 'Analysis of impact of Sanger Confirmed Ion Torrent discrepancies of the
+      Pac Bio\n  Assembly of C.auto. '\nstatus:\n- Pending\n- Complete\nassignment:\n-
+      \n- Wayne\ncreated_at:\n- \n- 2014-05-21 23:42:41.317140555 Z\nupdated_at:\n-
+      \n- 2014-05-21 23:42:41.317140555 Z\nid:\n- \n- 18\n"
+  - - 54
+    - Request
+    - 19
+    - create
+    - '3'
+    - 
+    - '2014-05-21 23:43:18.219366'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Tanus
+      Abdalla\ntitle:\n- \n- Ion torrent Resequencing of C.auto analysis\ndescription:\n-
+      \n- ''\nassignment:\n- \n- Stuart\ncreated_at:\n- \n- 2014-05-21 23:43:18.215442990
+      Z\nupdated_at:\n- \n- 2014-05-21 23:43:18.215442990 Z\nid:\n- \n- 19\n"
+  - - 55
+    - Request
+    - 19
+    - update
+    - '3'
+    - "---\nid: 19\ntitle: Ion torrent Resequencing of C.auto analysis\nname: Tanus
+      Abdalla\ndescription: ''\nattachment: \ncreated_at: 2014-05-21 23:43:18.215442000
+      Z\nupdated_at: 2014-05-21 23:43:18.215442000 Z\nstatus: Pending\nassignment:
+      Stuart\n"
+    - '2014-05-21 23:44:53.444636'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      title:
+      - Ion torrent Resequencing of C.auto analysis
+      - Ion torrent Resequencing of C.auto (Phase II) analysis
+      name:
+      - Tanus Abdalla
+      - Wayne Mitchell
+      description:
+      - ''
+      - Additional discrepancies detected with new chemistry; analysis
+      assignment:
+      - Stuart
+      - Wayne
+      updated_at:
+      - 2014-05-21 23:43:18.215442000 Z
+      - 2014-05-21 23:44:53.439850672 Z
+  - - 56
+    - Request
+    - 19
+    - update
+    - '3'
+    - "---\nid: 19\ntitle: Ion torrent Resequencing of C.auto (Phase II) analysis\nname:
+      Wayne Mitchell\ndescription: Additional discrepancies detected with new chemistry;
+      analysis\nattachment: \ncreated_at: 2014-05-21 23:43:18.215442000 Z\nupdated_at:
+      2014-05-21 23:44:53.439850000 Z\nstatus: Pending\nassignment: Wayne\n"
+    - '2014-05-21 23:46:41.547443'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - Additional discrepancies detected with new chemistry; analysis
+      - Additional C.auto Pac Bio -Ion Torrent discrepancies detected with new IT chemistry;
+        analysis
+      updated_at:
+      - 2014-05-21 23:44:53.439850000 Z
+      - 2014-05-21 23:46:41.543095568 Z
+  - - 57
+    - Request
+    - 14
+    - update
+    - '2'
+    - "---\nid: 14\ntitle: Diol dehydratase tree\nname: Alex Mueller\ndescription:
+      BLAST for homologous proteins and assemble tree.\nattachment: \ncreated_at:
+      2014-05-12 04:49:42.151265000 Z\nupdated_at: 2014-05-14 03:34:59.029545000 Z\nstatus:
+      Ongoing\nassignment: Asela\nresult: \n"
+    - '2014-05-22 01:05:27.309379'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Ongoing\n-
+      Complete\nresult:\n- \n- The MSA and Tree files are in a folder named \"Diol_dehydratase\"
+      in the shared Geneious\n  folder. LZ1561 is colored red on the tree and can
+      be found towards the bottom.\nupdated_at:\n- 2014-05-14 03:34:59.029545000 Z\n-
+      2014-05-22 01:05:27.295548547 Z\n"
+  - - 58
+    - Request
+    - 16
+    - update
+    - '2'
+    - "---\nid: 16\ntitle: tRNA modification in LZ1561\nname: Wayne Mitchell\ndescription:
+      tRNA anticodon modification impacts codon choice. Use the predicted tRNA\n  modification
+      enzymes to infer modifications on tRNAs.\nattachment: \ncreated_at: 2014-05-19
+      23:19:22.906970000 Z\nupdated_at: 2014-05-19 23:20:24.722057000 Z\nstatus: Pending\nassignment:
+      Asela\nresult: \n"
+    - '2014-05-22 01:07:43.655951'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nresult:\n- \n- ''\nupdated_at:\n- 2014-05-19 23:20:24.722057000 Z\n-
+      2014-05-22 01:07:43.646887372 Z\n"
+  - - 59
+    - Request
+    - 16
+    - update
+    - '2'
+    - "---\nid: 16\ntitle: tRNA modification in LZ1561\nname: Wayne Mitchell\ndescription:
+      tRNA anticodon modification impacts codon choice. Use the predicted tRNA\n  modification
+      enzymes to infer modifications on tRNAs.\nattachment: \ncreated_at: 2014-05-19
+      23:19:22.906970000 Z\nupdated_at: 2014-05-22 01:07:43.646887000 Z\nstatus: Ongoing\nassignment:
+      Asela\nresult: ''\n"
+    - '2014-05-26 03:48:21.161426'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-05-22 01:07:43.646887000 Z
+      - 2014-05-26 03:48:21.152811679 Z
+  - - 60
+    - Request
+    - 20
+    - create
+    - 
+    - 
+    - '2014-06-03 02:42:00.971936'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- asasasa\ndescription:\n- \n- finger prints\ncreated_at:\n-
+      \n- 2014-06-03 02:42:00.962091286 Z\nupdated_at:\n- \n- 2014-06-03 02:42:00.962091286
+      Z\nid:\n- \n- 20\n"
+  - - 61
+    - Request
+    - 20
+    - destroy
+    - 
+    - "---\nid: 20\ntitle: asasasa\nname: Wayne Mitchell\ndescription: finger prints\nattachment:
+      \ncreated_at: 2014-06-03 02:42:00.962091000 Z\nupdated_at: 2014-06-03 02:42:00.962091000
+      Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-06-03 02:42:43.173868'
+    - 
+  - - 62
+    - Request
+    - 21
+    - create
+    - '2'
+    - 
+    - '2014-06-10 21:02:55.439404'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- HIBA RNASeq\ndescription:\n- \n- Perform Differential
+      Expression analysis on the RNA Seq Sample of the HIBA experiment\nstatus:\n-
+      Pending\n- Complete\nassignment:\n- \n- Asela\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-06-10 21:02:55.385311487 Z\nupdated_at:\n- \n- 2014-06-10 21:02:55.385311487
+      Z\nid:\n- \n- 21\n"
+  - - 63
+    - Request
+    - 22
+    - create
+    - 
+    - 
+    - '2014-06-11 21:17:27.704396'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- sequence analysis 5' to start site\ndescription:\n-
+      \n- Examined 20 bases 5' to ORF starts for 100 most abundenty by  proteomics,
+      all detectable\n  by proteomics and all detectable.\ncreated_at:\n- \n- 2014-06-11
+      21:17:27.674376415 Z\nupdated_at:\n- \n- 2014-06-11 21:17:27.674376415 Z\nid:\n-
+      \n- 22\n"
+  - - 64
+    - Request
+    - 22
+    - update
+    - '3'
+    - "---\nid: 22\ntitle: sequence analysis 5' to start site\nname: Wayne Mitchell\ndescription:
+      Examined 20 bases 5' to ORF starts for 100 most abundenty by  proteomics,\n
+      \ all detectable by proteomics and all detectable.\nattachment: \ncreated_at:
+      2014-06-11 21:17:27.674376000 Z\nupdated_at: 2014-06-11 21:17:27.674376000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2014-06-11 21:18:31.466471'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Wayne\nresult:\n- \n- ''\nupdated_at:\n- 2014-06-11
+      21:17:27.674376000 Z\n- 2014-06-11 21:18:31.455163153 Z\n"
+  - - 65
+    - Request
+    - 23
+    - create
+    - 
+    - 
+    - '2014-06-23 04:13:58.668689'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Rasmus
+      Jensen\ntitle:\n- \n- pIPA RNASeq Analysis\ndescription:\n- \n- Analyse the
+      RNA Seq Data form the Isopropanol strain\ncreated_at:\n- \n- 2014-06-23 04:13:58.475356516
+      Z\nupdated_at:\n- \n- 2014-06-23 04:13:58.475356516 Z\nid:\n- \n- 23\n"
+  - - 66
+    - Request
+    - 23
+    - update
+    - '2'
+    - "---\nid: 23\ntitle: pIPA RNASeq Analysis\nname: Rasmus Jensen\ndescription:
+      Analyse the RNA Seq Data form the Isopropanol strain\nattachment: \ncreated_at:
+      2014-06-23 04:13:58.475356000 Z\nupdated_at: 2014-06-23 04:13:58.475356000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2014-06-23 04:15:44.431944'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Asela\nresult:\n- \n- The three replicates are
+      in three different sheets. The FPKM value is the normalised\n  expression level.
+      The CDS of the Plasmid are colored light blue towards the end\n  of each sheet.\nupdated_at:\n-
+      2014-06-23 04:13:58.475356000 Z\n- 2014-06-23 04:15:44.403032044 Z\n"
+  - - 67
+    - Request
+    - 24
+    - create
+    - 
+    - 
+    - '2014-07-02 02:27:27.862164'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Christophe
+      Mihalcea\ntitle:\n- \n- RNASeq Analysis\ndescription:\n- \n- Carry out Differential
+      Expression Analysis on RNASeq Data from sample from EtOH\n  producing and Non
+      Producing strains\ncreated_at:\n- \n- 2014-07-02 02:27:27.811287455 Z\nupdated_at:\n-
+      \n- 2014-07-02 02:27:27.811287455 Z\nid:\n- \n- 24\n"
+  - - 68
+    - Request
+    - 24
+    - update
+    - '2'
+    - "---\nid: 24\ntitle: RNASeq Analysis\nname: Christophe Mihalcea\ndescription:
+      Carry out Differential Expression Analysis on RNASeq Data from sample\n  from
+      EtOH producing and Non Producing strains\nattachment: \ncreated_at: 2014-07-02
+      02:27:27.811287000 Z\nupdated_at: 2014-07-02 02:27:27.811287000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-07-02 02:28:38.729604'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Asela\nresult:\n- \n- The final analysis is on
+      Sheet 2 of the excel file.\nupdated_at:\n- 2014-07-02 02:27:27.811287000 Z\n-
+      2014-07-02 02:28:38.721722853 Z\n"
+  - - 69
+    - Request
+    - 25
+    - create
+    - 
+    - 
+    - '2014-07-02 22:15:27.905273'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- URL check\ndescription:\n- \n- Check if URL is present
+      in the emails\ncreated_at:\n- \n- 2014-07-02 22:15:27.896390840 Z\nupdated_at:\n-
+      \n- 2014-07-02 22:15:27.896390840 Z\nid:\n- \n- 25\n"
+  - - 70
+    - Request
+    - 25
+    - update
+    - '2'
+    - "---\nid: 25\ntitle: URL check\nname: Asela Dassanayake\ndescription: Check
+      if URL is present in the emails\nattachment: \ncreated_at: 2014-07-02 22:15:27.896390000
+      Z\nupdated_at: 2014-07-02 22:15:27.896390000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-07-02 22:16:25.807158'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nresult:\n- \n- ''\nupdated_at:\n- 2014-07-02
+      22:15:27.896390000 Z\n- 2014-07-02 22:16:25.798056896 Z\n"
+  - - 71
+    - Request
+    - 25
+    - update
+    - '2'
+    - "---\nid: 25\ntitle: URL check\nname: Asela Dassanayake\ndescription: Check
+      if URL is present in the emails\nattachment: \ncreated_at: 2014-07-02 22:15:27.896390000
+      Z\nupdated_at: 2014-07-02 22:16:25.798056000 Z\nstatus: Ongoing\nassignment:
+      Asela\nresult: ''\n"
+    - '2014-07-02 22:18:52.297283'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Stuart
+      updated_at:
+      - 2014-07-02 22:16:25.798056000 Z
+      - 2014-07-02 22:18:52.287862334 Z
+  - - 72
+    - Request
+    - 25
+    - update
+    - '2'
+    - "---\nid: 25\ntitle: URL check\nname: Asela Dassanayake\ndescription: Check
+      if URL is present in the emails\nattachment: \ncreated_at: 2014-07-02 22:15:27.896390000
+      Z\nupdated_at: 2014-07-02 22:18:52.287862000 Z\nstatus: Ongoing\nassignment:
+      Stuart\nresult: ''\n"
+    - '2014-07-02 22:19:12.083969'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      name:
+      - Asela Dassanayake
+      - Sashini De Tissera
+      updated_at:
+      - 2014-07-02 22:18:52.287862000 Z
+      - 2014-07-02 22:19:12.075325641 Z
+  - - 73
+    - Request
+    - 26
+    - create
+    - '2'
+    - 
+    - '2014-07-02 22:25:29.947196'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Sashini
+      De Tissera\ntitle:\n- \n- URL check 2\ndescription:\n- \n- URL check 2\nassignment:\n-
+      \n- Stuart\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-07-02 22:25:29.939008212
+      Z\nupdated_at:\n- \n- 2014-07-02 22:25:29.939008212 Z\nid:\n- \n- 26\n"
+  - - 74
+    - Request
+    - 26
+    - update
+    - '2'
+    - "---\nid: 26\ntitle: URL check 2\nname: Sashini De Tissera\ndescription: URL
+      check 2\nattachment: \ncreated_at: 2014-07-02 22:25:29.939008000 Z\nupdated_at:
+      2014-07-02 22:25:29.939008000 Z\nstatus: Pending\nassignment: Stuart\nresult:
+      ''\n"
+    - '2014-07-02 22:27:05.369947'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Asela
+      updated_at:
+      - 2014-07-02 22:25:29.939008000 Z
+      - 2014-07-02 22:27:05.361152347 Z
+  - - 75
+    - Request
+    - 25
+    - update
+    - '2'
+    - "---\nid: 25\ntitle: URL check\nname: Sashini De Tissera\ndescription: Check
+      if URL is present in the emails\nattachment: \ncreated_at: 2014-07-02 22:15:27.896390000
+      Z\nupdated_at: 2014-07-02 22:19:12.075325000 Z\nstatus: Ongoing\nassignment:
+      Stuart\nresult: ''\n"
+    - '2014-07-02 22:39:33.238101'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Wayne
+      updated_at:
+      - 2014-07-02 22:19:12.075325000 Z
+      - 2014-07-02 22:39:33.229911723 Z
+  - - 76
+    - Request
+    - 26
+    - destroy
+    - '2'
+    - "---\nid: 26\ntitle: URL check 2\nname: Sashini De Tissera\ndescription: URL
+      check 2\nattachment: \ncreated_at: 2014-07-02 22:25:29.939008000 Z\nupdated_at:
+      2014-07-02 22:27:05.361152000 Z\nstatus: Pending\nassignment: Asela\nresult:
+      ''\n"
+    - '2014-07-02 22:43:51.952438'
+    - 
+  - - 77
+    - Request
+    - 25
+    - destroy
+    - '2'
+    - "---\nid: 25\ntitle: URL check\nname: Sashini De Tissera\ndescription: Check
+      if URL is present in the emails\nattachment: \ncreated_at: 2014-07-02 22:15:27.896390000
+      Z\nupdated_at: 2014-07-02 22:39:33.229911000 Z\nstatus: Ongoing\nassignment:
+      Wayne\nresult: ''\n"
+    - '2014-07-02 22:43:58.172803'
+    - 
+  - - 78
+    - Request
+    - 27
+    - create
+    - '2'
+    - 
+    - '2014-07-02 22:44:25.912518'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- URL Check 3\ndescription:\n- \n- URL Test 3\nstatus:\n-
+      Pending\n- Ongoing\nassignment:\n- \n- Stuart\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-07-02 22:44:25.903043684 Z\nupdated_at:\n- \n- 2014-07-02 22:44:25.903043684
+      Z\nid:\n- \n- 27\n"
+  - - 79
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-02
+      22:44:25.903043000 Z\nstatus: Ongoing\nassignment: Stuart\nresult: ''\n"
+    - '2014-07-02 22:44:40.916436'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Wayne
+      updated_at:
+      - 2014-07-02 22:44:25.903043000 Z
+      - 2014-07-02 22:44:40.906978284 Z
+  - - 80
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-02
+      22:44:40.906978000 Z\nstatus: Ongoing\nassignment: Wayne\nresult: ''\n"
+    - '2014-07-02 23:02:55.220869'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Wayne
+      - Asela
+      updated_at:
+      - 2014-07-02 22:44:40.906978000 Z
+      - 2014-07-02 23:02:55.215414718 Z
+  - - 81
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-02
+      23:02:55.215414000 Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-02 23:11:50.491550'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Stuart
+      updated_at:
+      - 2014-07-02 23:02:55.215414000 Z
+      - 2014-07-02 23:11:50.483112289 Z
+  - - 82
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-02
+      23:11:50.483112000 Z\nstatus: Ongoing\nassignment: Stuart\nresult: ''\n"
+    - '2014-07-02 23:41:53.981792'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Asela
+      updated_at:
+      - 2014-07-02 23:11:50.483112000 Z
+      - 2014-07-02 23:41:53.977074571 Z
+  - - 83
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-02
+      23:41:53.977074000 Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-02 23:48:32.282709'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Stuart
+      updated_at:
+      - 2014-07-02 23:41:53.977074000 Z
+      - 2014-07-02 23:48:32.278051258 Z
+  - - 84
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-02
+      23:48:32.278051000 Z\nstatus: Ongoing\nassignment: Stuart\nresult: ''\n"
+    - '2014-07-03 00:04:29.032317'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Asela
+      updated_at:
+      - 2014-07-02 23:48:32.278051000 Z
+      - 2014-07-03 00:04:29.025872324 Z
+  - - 85
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-03
+      00:04:29.025872000 Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-03 00:29:33.206470'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Stuart
+      updated_at:
+      - 2014-07-03 00:04:29.025872000 Z
+      - 2014-07-03 00:29:33.196511719 Z
+  - - 86
+    - Request
+    - 27
+    - update
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-03
+      00:29:33.196511000 Z\nstatus: Ongoing\nassignment: Stuart\nresult: ''\n"
+    - '2014-07-03 00:39:23.673302'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Asela
+      updated_at:
+      - 2014-07-03 00:29:33.196511000 Z
+      - 2014-07-03 00:39:23.668160817 Z
+  - - 87
+    - Request
+    - 28
+    - create
+    - 
+    - 
+    - '2014-07-04 03:51:08.367272'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- LZ1561 Vs Kalashnikova\ndescription:\n- \n- Check
+      the variants between the two strains from gDNA\ncreated_at:\n- \n- 2014-07-04
+      03:51:08.356042066 Z\nupdated_at:\n- \n- 2014-07-04 03:51:08.356042066 Z\nid:\n-
+      \n- 28\n"
+  - - 88
+    - Request
+    - 28
+    - update
+    - '2'
+    - "---\nid: 28\ntitle: LZ1561 Vs Kalashnikova\nname: Asela Dassanayake\ndescription:
+      Check the variants between the two strains from gDNA\nattachment: \ncreated_at:
+      2014-07-04 03:51:08.356042000 Z\nupdated_at: 2014-07-04 03:51:08.356042000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2014-07-04 03:51:37.352035'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Complete\nassignment:\n- \n- Asela\nresult:\n- \n- ''\nupdated_at:\n- 2014-07-04
+      03:51:08.356042000 Z\n- 2014-07-04 03:51:37.342199132 Z\n"
+  - - 89
+    - Request
+    - 27
+    - destroy
+    - '2'
+    - "---\nid: 27\ntitle: URL Check 3\nname: Wayne Mitchell\ndescription: URL Test
+      3\nattachment: \ncreated_at: 2014-07-02 22:44:25.903043000 Z\nupdated_at: 2014-07-03
+      00:39:23.668160000 Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-04 04:00:51.476907'
+    - 
+  - - 90
+    - Request
+    - 29
+    - create
+    - '2'
+    - 
+    - '2014-07-04 04:10:20.923617'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Katie
+      Smart\ntitle:\n- \n- LZ1561 30C Vs 37C\ndescription:\n- \n- RNA Seq Differential
+      Expression Analysis of LZ1561 growth on 30C and 37C\nstatus:\n- Pending\n- Ongoing\nassignment:\n-
+      \n- Asela\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-07-04 04:10:20.917751262
+      Z\nupdated_at:\n- \n- 2014-07-04 04:10:20.917751262 Z\nid:\n- \n- 29\n"
+  - - 91
+    - Request
+    - 29
+    - update
+    - '2'
+    - "---\nid: 29\ntitle: LZ1561 30C Vs 37C\nname: Katie Smart\ndescription: RNA
+      Seq Differential Expression Analysis of LZ1561 growth on 30C and\n  37C\nattachment:
+      \ncreated_at: 2014-07-04 04:10:20.917751000 Z\nupdated_at: 2014-07-04 04:10:20.917751000
+      Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-04 04:11:14.410488'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - RNA Seq Differential Expression Analysis of LZ1561 growth on 30C and 37C
+      - RNA Seq Differential Expression Analysis of LZ1561 growth at 30C and 37C
+      updated_at:
+      - 2014-07-04 04:10:20.917751000 Z
+      - 2014-07-04 04:11:14.406556284 Z
+  - - 92
+    - Request
+    - 29
+    - update
+    - '2'
+    - "---\nid: 29\ntitle: LZ1561 30C Vs 37C\nname: Katie Smart\ndescription: RNA
+      Seq Differential Expression Analysis of LZ1561 growth at 30C and\n  37C\nattachment:
+      \ncreated_at: 2014-07-04 04:10:20.917751000 Z\nupdated_at: 2014-07-04 04:11:14.406556000
+      Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-06 21:40:09.685317'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - ''
+      - Results in the Excel file. I have filtered out the genes that show less than 1.5
+        differential expression either way.
+      updated_at:
+      - 2014-07-04 04:11:14.406556000 Z
+      - 2014-07-06 21:40:09.675914694 Z
+  - - 93
+    - Request
+    - 29
+    - update
+    - '2'
+    - "---\nid: 29\ntitle: LZ1561 30C Vs 37C\nname: Katie Smart\ndescription: RNA
+      Seq Differential Expression Analysis of LZ1561 growth at 30C and\n  37C\nattachment:
+      \ncreated_at: 2014-07-04 04:10:20.917751000 Z\nupdated_at: 2014-07-06 21:40:09.675914000
+      Z\nstatus: Ongoing\nassignment: Asela\nresult: Results in the Excel file. I
+      have filtered out the genes that show less than\n  1.5 differential expression
+      either way.\n"
+    - '2014-07-06 21:45:07.683519'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-07-06 21:40:09.675914000 Z
+      - 2014-07-06 21:45:07.675397613 Z
+  - - 94
+    - Request
+    - 30
+    - create
+    - '2'
+    - 
+    - '2014-07-11 03:09:09.807957'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Christophe
+      Mihalcea\ntitle:\n- \n- RNASeq Analysis of high H2 uptake strain\ndescription:\n-
+      \n- 'Differential expression analysis of RNA Seq data from high H2 uptake strain
+      from\n  the 4 reactor system against LZ1561. Sample taken by Thiemo for sequencing.
+      '\nstatus:\n- Pending\n- Complete\nassignment:\n- \n- Asela\nresult:\n- \n-
+      ''\ncreated_at:\n- \n- 2014-07-11 03:09:09.798219201 Z\nupdated_at:\n- \n- 2014-07-11
+      03:09:09.798219201 Z\nid:\n- \n- 30\n"
+  - - 95
+    - Request
+    - 30
+    - update
+    - '2'
+    - "---\nid: 30\ntitle: RNASeq Analysis of high H2 uptake strain\nname: Christophe
+      Mihalcea\ndescription: 'Differential expression analysis of RNA Seq data from
+      high H2 uptake\n  strain from the 4 reactor system against LZ1561. Sample taken
+      by Thiemo for sequencing. '\nattachment: \ncreated_at: 2014-07-11 03:09:09.798219000
+      Z\nupdated_at: 2014-07-11 03:09:09.798219000 Z\nstatus: Complete\nassignment:
+      Asela\nresult: ''\n"
+    - '2014-07-11 03:25:27.337088'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - ''
+      - "RNA Seq data from BioControl Run number 14516\r\n was compared with BioControl
+        Run Number 14573\r\n"
+      updated_at:
+      - 2014-07-11 03:09:09.798219000 Z
+      - 2014-07-11 03:25:27.329421372 Z
+  - - 96
+    - Request
+    - 31
+    - create
+    - 
+    - 
+    - '2014-07-18 03:12:21.871921'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- URL check\ndescription:\n- \n- URL checking\ncreated_at:\n-
+      \n- 2014-07-18 03:12:21.763197155 Z\nupdated_at:\n- \n- 2014-07-18 03:12:21.763197155
+      Z\nid:\n- \n- 31\n"
+  - - 97
+    - Request
+    - 31
+    - destroy
+    - 
+    - "---\nid: 31\ntitle: URL check\nname: Asela Dassanayake\ndescription: URL checking\nattachment:
+      \ncreated_at: 2014-07-18 03:12:21.763197000 Z\nupdated_at: 2014-07-18 03:12:21.763197000
+      Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-07-18 03:15:15.090011'
+    - 
+  - - 98
+    - Request
+    - 32
+    - create
+    - 
+    - 
+    - '2014-07-22 23:40:41.798976'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- test URL\ndescription:\n- \n- checking URL\ncreated_at:\n-
+      \n- 2014-07-22 23:40:41.688808834 Z\nupdated_at:\n- \n- 2014-07-22 23:40:41.688808834
+      Z\nid:\n- \n- 32\n"
+  - - 99
+    - Request
+    - 32
+    - destroy
+    - '2'
+    - "---\nid: 32\ntitle: test URL\nname: Asela Dassanayake\ndescription: checking
+      URL\nattachment: \ncreated_at: 2014-07-22 23:40:41.688808000 Z\nupdated_at:
+      2014-07-22 23:40:41.688808000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-07-22 23:42:11.808346'
+    - 
+  - - 100
+    - Request
+    - 33
+    - create
+    - 
+    - 
+    - '2014-07-24 22:01:53.000892'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Katie
+      Smart\ntitle:\n- \n- Contamination Alalysis\ndescription:\n- \n- Analyse the
+      DNA sequences from the F12 reactor that started producing butanol\ncreated_at:\n-
+      \n- 2014-07-24 22:01:52.935221503 Z\nupdated_at:\n- \n- 2014-07-24 22:01:52.935221503
+      Z\nid:\n- \n- 33\n"
+  - - 101
+    - Request
+    - 33
+    - update
+    - '2'
+    - "---\nid: 33\ntitle: Contamination Alalysis\nname: Katie Smart\ndescription:
+      Analyse the DNA sequences from the F12 reactor that started producing\n  butanol\nattachment:
+      \ncreated_at: 2014-07-24 22:01:52.935221000 Z\nupdated_at: 2014-07-24 22:01:52.935221000
+      Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-07-24 22:03:24.812651'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nresult:\n- \n- ''\nupdated_at:\n- 2014-07-24
+      22:01:52.935221000 Z\n- 2014-07-24 22:03:24.804629695 Z\n"
+  - - 102
+    - Request
+    - 34
+    - create
+    - '2'
+    - 
+    - '2014-07-24 22:50:55.266753'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Tanus
+      Abdalla\ntitle:\n- \n- 'Kalanshikova Strain Mutation Analysis '\ndescription:\n-
+      \n- Identify the effects of the mutations at the protein level in the Kalashnikova
+      strain\nstatus:\n- Pending\n- Ongoing\nassignment:\n- \n- Asela\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2014-07-24 22:50:55.257341497 Z\nupdated_at:\n- \n-
+      2014-07-24 22:50:55.257341497 Z\nid:\n- \n- 34\n"
+  - - 103
+    - Request
+    - 34
+    - destroy
+    - '2'
+    - "---\nid: 34\ntitle: 'Kalanshikova Strain Mutation Analysis '\nname: Tanus Abdalla\ndescription:
+      Identify the effects of the mutations at the protein level in the Kalashnikova\n
+      \ strain\nattachment: \ncreated_at: 2014-07-24 22:50:55.257341000 Z\nupdated_at:
+      2014-07-24 22:50:55.257341000 Z\nstatus: Ongoing\nassignment: Asela\nresult:
+      ''\n"
+    - '2014-07-24 22:51:24.713791'
+    - 
+  - - 104
+    - Request
+    - 35
+    - create
+    - '2'
+    - 
+    - '2014-07-24 22:53:11.395260'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing email functionality\ndescription:\n- \n-
+      testing the email functionality when changing status\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-07-24
+      22:53:11.388851293 Z\nupdated_at:\n- \n- 2014-07-24 22:53:11.388851293 Z\nid:\n-
+      \n- 35\n"
+  - - 105
+    - Request
+    - 35
+    - update
+    - '2'
+    - "---\nid: 35\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      testing the email functionality when changing status\nattachment: \ncreated_at:
+      2014-07-24 22:53:11.388851000 Z\nupdated_at: 2014-07-24 22:53:11.388851000 Z\nstatus:
+      Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-07-24 22:53:27.765639'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-07-24 22:53:11.388851000 Z
+      - 2014-07-24 22:53:27.757061578 Z
+  - - 106
+    - Request
+    - 35
+    - destroy
+    - '2'
+    - "---\nid: 35\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      testing the email functionality when changing status\nattachment: \ncreated_at:
+      2014-07-24 22:53:11.388851000 Z\nupdated_at: 2014-07-24 22:53:27.757061000 Z\nstatus:
+      Complete\nassignment: Asela\nresult: ''\n"
+    - '2014-07-24 22:57:30.491784'
+    - 
+  - - 107
+    - Request
+    - 36
+    - create
+    - '2'
+    - 
+    - '2014-07-24 22:58:43.366337'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Shilpa
+      Nagaraju\ntitle:\n- \n- LZ1561 - Terminators\ndescription:\n- \n- Identify Terminator
+      sequences on the LZ1561 genome.\nstatus:\n- Pending\n- Ongoing\nassignment:\n-
+      \n- Asela\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-07-24 22:58:43.357361321
+      Z\nupdated_at:\n- \n- 2014-07-24 22:58:43.357361321 Z\nid:\n- \n- 36\n"
+  - - 108
+    - Request
+    - 37
+    - create
+    - 
+    - 
+    - '2014-07-25 00:18:33.519742'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Bjorn
+      Heijstra\ntitle:\n- \n- Analyse the mutations of the Kalashnikova strain\ndescription:\n-
+      \n- Analyse the effects at the protein level for the mutations identified on
+      the Kalashnikova\n  strain\ncreated_at:\n- \n- 2014-07-25 00:18:33.473994392
+      Z\nupdated_at:\n- \n- 2014-07-25 00:18:33.473994392 Z\nid:\n- \n- 37\n"
+  - - 109
+    - Request
+    - 37
+    - update
+    - '2'
+    - "---\nid: 37\ntitle: Analyse the mutations of the Kalashnikova strain\nname:
+      Bjorn Heijstra\ndescription: Analyse the effects at the protein level for the
+      mutations identified\n  on the Kalashnikova strain\nattachment: \ncreated_at:
+      2014-07-25 00:18:33.473994000 Z\nupdated_at: 2014-07-25 00:18:33.473994000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2014-07-25 00:19:21.435019'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Asela\nresult:\n- \n- ''\nupdated_at:\n- 2014-07-25
+      00:18:33.473994000 Z\n- 2014-07-25 00:19:21.426556137 Z\n"
+  - - 110
+    - Request
+    - 38
+    - create
+    - 
+    - 
+    - '2014-07-29 23:26:20.791034'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- James
+      Behrendorff\ntitle:\n- \n- RE not in LZ\ndescription:\n- \n- Find RE sites that
+      are not present in LZ1561\ncreated_at:\n- \n- 2014-07-29 23:26:20.720691814
+      Z\nupdated_at:\n- \n- 2014-07-29 23:26:20.720691814 Z\nid:\n- \n- 38\n"
+  - - 111
+    - Request
+    - 28
+    - update
+    - '2'
+    - "---\nid: 28\ntitle: LZ1561 Vs Kalashnikova\nname: Asela Dassanayake\ndescription:
+      Check the variants between the two strains from gDNA\nattachment: \ncreated_at:
+      2014-07-04 03:51:08.356042000 Z\nupdated_at: 2014-07-04 03:51:37.342199000 Z\nstatus:
+      Complete\nassignment: Asela\nresult: ''\n"
+    - '2014-07-30 00:25:17.867278'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - Check the variants between the two strains from gDNA
+      - Identify the variants between the two strains from gDNA
+      updated_at:
+      - 2014-07-04 03:51:37.342199000 Z
+      - 2014-07-30 00:25:17.855607484 Z
+  - - 112
+    - Request
+    - 39
+    - create
+    - 
+    - 
+    - '2014-07-30 22:11:07.925804'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- RBS Investigation\ndescription:\n- \n- Look into
+      RBD sequences in the RNA Seq data\ncreated_at:\n- \n- 2014-07-30 22:11:07.916214605
+      Z\nupdated_at:\n- \n- 2014-07-30 22:11:07.916214605 Z\nid:\n- \n- 39\n"
+  - - 113
+    - Request
+    - 39
+    - update
+    - 
+    - "---\nid: 39\ntitle: RBS Investigation\nname: Asela Dassanayake\ndescription:
+      Look into RBD sequences in the RNA Seq data\nattachment: \ncreated_at: 2014-07-30
+      22:11:07.916214000 Z\nupdated_at: 2014-07-30 22:11:07.916214000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-07-30 22:12:15.011313'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - Look into RBD sequences in the RNA Seq data
+      - Look into RBS sequences in the RNA Seq data
+      updated_at:
+      - 2014-07-30 22:11:07.916214000 Z
+      - 2014-07-30 22:12:15.002507476 Z
+  - - 114
+    - Request
+    - 40
+    - create
+    - 
+    - 
+    - '2014-08-07 16:42:03.830133'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- CRISPR Scaner\ndescription:\n- \n- Scan Genome for CRISPR
+      targets then check for multiple instances of target; see\n  specificatin\ncreated_at:\n-
+      \n- 2014-08-07 16:42:03.807218911 Z\nupdated_at:\n- \n- 2014-08-07 16:42:03.807218911
+      Z\nid:\n- \n- 40\n"
+  - - 115
+    - Request
+    - 40
+    - update
+    - '1'
+    - "---\nid: 40\ntitle: CRISPR Scaner\nname: Wayne Mitchell\ndescription: Scan
+      Genome for CRISPR targets then check for multiple instances of target;\n  see
+      specificatin\nattachment: \ncreated_at: 2014-08-07 16:42:03.807218000 Z\nupdated_at:
+      2014-08-07 16:42:03.807218000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-08-12 23:08:44.239535'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Stuart\nresult:\n- \n- ''\nupdated_at:\n- 2014-08-07
+      16:42:03.807218000 Z\n- 2014-08-12 23:08:44.229309450 Z\n"
+  - - 116
+    - Request
+    - 38
+    - update
+    - '1'
+    - "---\nid: 38\ntitle: RE not in LZ\nname: James Behrendorff\ndescription: Find
+      RE sites that are not present in LZ1561\nattachment: \ncreated_at: 2014-07-29
+      23:26:20.720691000 Z\nupdated_at: 2014-07-29 23:26:20.720691000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-08-12 23:21:23.854592'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Stuart\nresult:\n- \n- ''\nupdated_at:\n- 2014-07-29
+      23:26:20.720691000 Z\n- 2014-08-12 23:21:23.830936306 Z\n"
+  - - 117
+    - Request
+    - 38
+    - update
+    - '1'
+    - "---\nid: 38\ntitle: RE not in LZ\nname: James Behrendorff\ndescription: Find
+      RE sites that are not present in LZ1561\nattachment: \ncreated_at: 2014-07-29
+      23:26:20.720691000 Z\nupdated_at: 2014-08-12 23:21:23.830936000 Z\nstatus: Ongoing\nassignment:
+      Stuart\nresult: ''\n"
+    - '2014-08-13 00:53:58.443656'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - ''
+      - "REs of the format:\r\n\r\nNNN or (a/b)NNN or NNN(a/b)\r\n\r\nHave been searched,
+        only one RE is missing from LZ1561:\r\n\r\nGG/CGCGCC - AscI AscI RE-Mix®\r\n\r\nREs
+        of the format:\r\n\r\n(-a/-b)NNN or NNN(-a/-b) are to be done upon further clarification.
+        \r\n\r\nOutput CSV and source code attached."
+      updated_at:
+      - 2014-08-12 23:21:23.830936000 Z
+      - 2014-08-13 00:53:58.433026526 Z
+  - - 118
+    - Request
+    - 38
+    - update
+    - '1'
+    - "---\nid: 38\ntitle: RE not in LZ\nname: James Behrendorff\ndescription: Find
+      RE sites that are not present in LZ1561\nattachment: \ncreated_at: 2014-07-29
+      23:26:20.720691000 Z\nupdated_at: 2014-08-13 00:53:58.433026000 Z\nstatus: Ongoing\nassignment:
+      Stuart\nresult: \"REs of the format:\\r\\n\\r\\nNNN or (a/b)NNN or NNN(a/b)\\r\\n\\r\\nHave
+      been searched,\n  only one RE is missing from LZ1561:\\r\\n\\r\\nGG/CGCGCC -
+      AscI AscI RE-Mix®\\r\\n\\r\\nREs\n  of the format:\\r\\n\\r\\n(-a/-b)NNN or
+      NNN(-a/-b) are to be done upon further clarification.\n  \\r\\n\\r\\nOutput
+      CSV and source code attached.\"\n"
+    - '2014-08-13 00:55:10.475300'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - "REs of the format:\r\n\r\nNNN or (a/b)NNN or NNN(a/b)\r\n\r\nHave been searched,
+        only one RE is missing from LZ1561:\r\n\r\nGG/CGCGCC - AscI AscI RE-Mix®\r\n\r\nREs
+        of the format:\r\n\r\n(-a/-b)NNN or NNN(-a/-b) are to be done upon further clarification.
+        \r\n\r\nOutput CSV and source code attached."
+      - "REs of the format: NNN or (a/b)NNN or NNN(a/b) have been searched, only one RE
+        is missing from LZ1561:\r\n- GG/CGCGCC - AscI AscI RE-Mix®\r\nREs of the format:
+        (-a/-b)NNN or NNN(-a/-b) are to be done upon further clarification. \r\n\r\nOutput
+        CSV and source code attached."
+      updated_at:
+      - 2014-08-13 00:53:58.433026000 Z
+      - 2014-08-13 00:55:10.468254161 Z
+  - - 119
+    - Request
+    - 33
+    - update
+    - '2'
+    - "---\nid: 33\ntitle: Contamination Alalysis\nname: Katie Smart\ndescription:
+      Analyse the DNA sequences from the F12 reactor that started producing\n  butanol\nattachment:
+      \ncreated_at: 2014-07-24 22:01:52.935221000 Z\nupdated_at: 2014-07-24 22:03:24.804629000
+      Z\nstatus: Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-08-21 01:32:06.257673'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Vini
+      updated_at:
+      - 2014-07-24 22:03:24.804629000 Z
+      - 2014-08-21 01:32:06.245219957 Z
+  - - 120
+    - Request
+    - 19
+    - update
+    - '3'
+    - "---\nid: 19\ntitle: Ion torrent Resequencing of C.auto (Phase II) analysis\nname:
+      Wayne Mitchell\ndescription: Additional C.auto Pac Bio -Ion Torrent discrepancies
+      detected with new\n  IT chemistry; analysis\nattachment: \ncreated_at: 2014-05-21
+      23:43:18.215442000 Z\nupdated_at: 2014-05-21 23:46:41.543095000 Z\nstatus: Pending\nassignment:
+      Wayne\nresult: \n"
+    - '2014-09-06 00:58:11.358415'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nresult:\n- \n- need
+      to regenerated data\nupdated_at:\n- 2014-05-21 23:46:41.543095000 Z\n- 2014-09-06
+      00:58:11.346044848 Z\n"
+  - - 121
+    - Request
+    - 19
+    - update
+    - '3'
+    - "---\nid: 19\ntitle: Ion torrent Resequencing of C.auto (Phase II) analysis\nname:
+      Wayne Mitchell\ndescription: Additional C.auto Pac Bio -Ion Torrent discrepancies
+      detected with new\n  IT chemistry; analysis\nattachment: \ncreated_at: 2014-05-21
+      23:43:18.215442000 Z\nupdated_at: 2014-09-06 00:58:11.346044000 Z\nstatus: Pending\nassignment:
+      Wayne\nresult: need to regenerated data\n"
+    - '2014-09-06 00:59:08.340584'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Complete
+      result:
+      - need to regenerated data
+      - need to regenerate IT  data
+      updated_at:
+      - 2014-09-06 00:58:11.346044000 Z
+      - 2014-09-06 00:59:08.331516098 Z
+  - - 122
+    - Request
+    - 41
+    - create
+    - '3'
+    - 
+    - '2014-09-06 01:02:48.142241'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Rasmus
+      Jensen\ntitle:\n- \n- Design 4 Construct Sequences\ndescription:\n- \n- 4 AA
+      sequences submitted; need DNA sequence generated with good chance of expression\nstatus:\n-
+      Pending\n- Ongoing\nassignment:\n- \n- Wayne\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-09-06 01:02:48.131660735 Z\nupdated_at:\n- \n- 2014-09-06 01:02:48.131660735
+      Z\nid:\n- \n- 41\n"
+  - - 123
+    - Request
+    - 10
+    - update
+    - '3'
+    - "---\nid: 10\ntitle: Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\nname: Wayne Mitchell\ndescription: Check if 454 and Illumina find
+      the amse discrepancies viz PacBio assembly\n  as Ion Torrent\nattachment: \ncreated_at:
+      2014-04-27 22:29:17.249941000 Z\nupdated_at: 2014-04-27 22:31:09.414947000 Z\nstatus:
+      Pending\nassignment: Wayne\nresult: \n"
+    - '2014-09-06 01:04:14.759875'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- Wayne\n- Asela\nresult:\n- \n- ''\nupdated_at:\n- 2014-04-27
+      22:31:09.414947000 Z\n- 2014-09-06 01:04:14.750668316 Z\n"
+  - - 124
+    - Request
+    - 33
+    - update
+    - '2'
+    - "---\nid: 33\ntitle: Contamination Alalysis\nname: Katie Smart\ndescription:
+      Analyse the DNA sequences from the F12 reactor that started producing\n  butanol\nattachment:
+      \ncreated_at: 2014-07-24 22:01:52.935221000 Z\nupdated_at: 2014-08-21 01:32:06.245219000
+      Z\nstatus: Ongoing\nassignment: Vini\nresult: ''\n"
+    - '2014-09-24 00:53:01.962154'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Vini
+      - Asela;Vini
+      updated_at:
+      - 2014-08-21 01:32:06.245219000 Z
+      - 2014-09-24 00:53:01.949854492 Z
+  - - 125
+    - Request
+    - 42
+    - create
+    - '2'
+    - 
+    - '2014-09-25 21:03:53.333127'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing\ndescription:\n- \n- ''\nassignment:\n- \n-
+      Asela\nresult:\n- \n- testing\ncreated_at:\n- \n- 2014-09-25 21:03:53.305416959
+      Z\nupdated_at:\n- \n- 2014-09-25 21:03:53.305416959 Z\nid:\n- \n- 42\n"
+  - - 126
+    - Request
+    - 42
+    - destroy
+    - '2'
+    - "---\nid: 42\ntitle: testing\nname: Asela Dassanayake\ndescription: ''\nattachment:
+      \ncreated_at: 2014-09-25 21:03:53.305416000 Z\nupdated_at: 2014-09-25 21:03:53.305416000
+      Z\nstatus: Pending\nassignment: Asela\nresult: testing\n"
+    - '2014-09-25 21:04:42.986810'
+    - 
+  - - 127
+    - Request
+    - 43
+    - create
+    - 
+    - 
+    - '2014-09-25 23:46:31.814955'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Tx Factor Survey DSM10061\ndescription:\n- \n- Identify
+      Tx Factors present in DSM10061; group by predicted activator/ repressor/\n  and
+      info about homologs\ncreated_at:\n- \n- 2014-09-25 23:46:31.809863258 Z\nupdated_at:\n-
+      \n- 2014-09-25 23:46:31.809863258 Z\nid:\n- \n- 43\n"
+  - - 128
+    - Request
+    - 43
+    - update
+    - '3'
+    - "---\nid: 43\ntitle: Tx Factor Survey DSM10061\nname: Wayne Mitchell\ndescription:
+      Identify Tx Factors present in DSM10061; group by predicted activator/\n  repressor/
+      and info about homologs\nattachment: \ncreated_at: 2014-09-25 23:46:31.809863000
+      Z\nupdated_at: 2014-09-25 23:46:31.809863000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-09-25 23:47:43.815568'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- Wayne\nresult:\n- \n- ''\nupdated_at:\n- 2014-09-25
+      23:46:31.809863000 Z\n- 2014-09-25 23:47:43.740547381 Z\n"
+  - - 129
+    - Request
+    - 43
+    - update
+    - '3'
+    - "---\nid: 43\ntitle: Tx Factor Survey DSM10061\nname: Wayne Mitchell\ndescription:
+      Identify Tx Factors present in DSM10061; group by predicted activator/\n  repressor/
+      and info about homologs\nattachment: \ncreated_at: 2014-09-25 23:46:31.809863000
+      Z\nupdated_at: 2014-09-25 23:47:43.740547000 Z\nstatus: Ongoing\nassignment:
+      Wayne\nresult: ''\n"
+    - '2014-09-25 23:50:52.657740'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-09-25 23:47:43.740547000 Z
+      - 2014-09-25 23:50:52.648934929 Z
+  - - 130
+    - Request
+    - 44
+    - create
+    - '3'
+    - 
+    - '2014-09-25 23:54:18.498349'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Tx Factor Binding Sites DSM10061\ndescription:\n- \n-
+      'Tx FActor Binding site candidates -- tough one. '\nassignment:\n- \n- Wayne\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2014-09-25 23:54:18.489342371 Z\nupdated_at:\n- \n-
+      2014-09-25 23:54:18.489342371 Z\nid:\n- \n- 44\n"
+  - - 131
+    - Request
+    - 45
+    - create
+    - '3'
+    - 
+    - '2014-09-25 23:58:43.468228'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Michael
+      Koepke\ntitle:\n- \n- Invista Report Genomics Update\ndescription:\n- \n- Add
+      section on Genomics Results\nassignment:\n- \n- Wayne\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-09-25 23:58:43.459608438 Z\nupdated_at:\n- \n- 2014-09-25 23:58:43.459608438
+      Z\nid:\n- \n- 45\n"
+  - - 132
+    - Request
+    - 44
+    - update
+    - '3'
+    - "---\nid: 44\ntitle: Tx Factor Binding Sites DSM10061\nname: Wayne Mitchell\ndescription:
+      'Tx FActor Binding site candidates -- tough one. '\nattachment: \ncreated_at:
+      2014-09-25 23:54:18.489342000 Z\nupdated_at: 2014-09-25 23:54:18.489342000 Z\nstatus:
+      Pending\nassignment: Wayne\nresult: ''\n"
+    - '2014-09-26 00:03:10.766737'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2014-09-25 23:54:18.489342000 Z
+      - 2014-09-26 00:03:10.758168224 Z
+  - - 133
+    - Request
+    - 45
+    - update
+    - '3'
+    - "---\nid: 45\ntitle: Invista Report Genomics Update\nname: Michael Koepke\ndescription:
+      Add section on Genomics Results\nattachment: \ncreated_at: 2014-09-25 23:58:43.459608000
+      Z\nupdated_at: 2014-09-25 23:58:43.459608000 Z\nstatus: Pending\nassignment:
+      Wayne\nresult: ''\n"
+    - '2014-09-26 00:04:43.258818'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2014-09-25 23:58:43.459608000 Z
+      - 2014-09-26 00:04:43.250178642 Z
+  - - 134
+    - Request
+    - 46
+    - create
+    - '3'
+    - 
+    - '2014-09-26 00:07:37.023276'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Computational localization predicitons for DSM10061\ndescription:\n-
+      \n- PDSORTb localization for DSM10061 proteins\nstatus:\n- Pending\n- Ongoing\nassignment:\n-
+      \n- Stuart\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-09-26 00:07:37.014554002
+      Z\nupdated_at:\n- \n- 2014-09-26 00:07:37.014554002 Z\nid:\n- \n- 46\n"
+  - - 135
+    - Request
+    - 10
+    - update
+    - '3'
+    - "---\nid: 10\ntitle: Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\nname: Wayne Mitchell\ndescription: Check if 454 and Illumina find
+      the amse discrepancies viz PacBio assembly\n  as Ion Torrent\nattachment: \ncreated_at:
+      2014-04-27 22:29:17.249941000 Z\nupdated_at: 2014-09-06 01:04:14.750668000 Z\nstatus:
+      Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-09-26 00:09:36.072848'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - Vini
+      updated_at:
+      - 2014-09-06 01:04:14.750668000 Z
+      - 2014-09-26 00:09:36.064216966 Z
+  - - 136
+    - Request
+    - 47
+    - create
+    - 
+    - 
+    - '2014-10-01 01:59:07.386384'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing mail\ndescription:\n- \n- trying to get mail
+      to work\ncreated_at:\n- \n- 2014-10-01 01:59:07.377730970 Z\nupdated_at:\n-
+      \n- 2014-10-01 01:59:07.377730970 Z\nid:\n- \n- 47\n"
+  - - 137
+    - Request
+    - 47
+    - destroy
+    - 
+    - "---\nid: 47\ntitle: testing mail\nname: Asela Dassanayake\ndescription: trying
+      to get mail to work\nattachment: \ncreated_at: 2014-10-01 01:59:07.377730000
+      Z\nupdated_at: 2014-10-01 01:59:07.377730000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-10-01 02:02:01.304589'
+    - 
+  - - 138
+    - Request
+    - 48
+    - create
+    - 
+    - 
+    - '2014-10-01 02:02:22.607282'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing email functionality\ndescription:\n- \n-
+      testing office 365\ncreated_at:\n- \n- 2014-10-01 02:02:22.601719446 Z\nupdated_at:\n-
+      \n- 2014-10-01 02:02:22.601719446 Z\nid:\n- \n- 48\n"
+  - - 139
+    - Request
+    - 48
+    - destroy
+    - 
+    - "---\nid: 48\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      testing office 365\nattachment: \ncreated_at: 2014-10-01 02:02:22.601719000
+      Z\nupdated_at: 2014-10-01 02:02:22.601719000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-10-01 02:04:32.980999'
+    - 
+  - - 140
+    - Request
+    - 49
+    - create
+    - 
+    - 
+    - '2014-10-01 02:04:48.123914'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing email functionality\ndescription:\n- \n-
+      WTF\ncreated_at:\n- \n- 2014-10-01 02:04:48.115808245 Z\nupdated_at:\n- \n-
+      2014-10-01 02:04:48.115808245 Z\nid:\n- \n- 49\n"
+  - - 141
+    - Request
+    - 49
+    - destroy
+    - 
+    - "---\nid: 49\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      WTF\nattachment: \ncreated_at: 2014-10-01 02:04:48.115808000 Z\nupdated_at:
+      2014-10-01 02:04:48.115808000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-10-01 02:09:02.968766'
+    - 
+  - - 142
+    - Request
+    - 50
+    - create
+    - 
+    - 
+    - '2014-10-01 02:09:17.342217'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing email functionality\ndescription:\n- \n-
+      WTF\ncreated_at:\n- \n- 2014-10-01 02:09:17.333607582 Z\nupdated_at:\n- \n-
+      2014-10-01 02:09:17.333607582 Z\nid:\n- \n- 50\n"
+  - - 143
+    - Request
+    - 50
+    - destroy
+    - 
+    - "---\nid: 50\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      WTF\nattachment: \ncreated_at: 2014-10-01 02:09:17.333607000 Z\nupdated_at:
+      2014-10-01 02:09:17.333607000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-10-01 02:14:20.100555'
+    - 
+  - - 144
+    - Request
+    - 51
+    - create
+    - 
+    - 
+    - '2014-10-01 02:14:34.775595'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing email functionality\ndescription:\n- \n-
+      WTF3\ncreated_at:\n- \n- 2014-10-01 02:14:34.767319787 Z\nupdated_at:\n- \n-
+      2014-10-01 02:14:34.767319787 Z\nid:\n- \n- 51\n"
+  - - 145
+    - Request
+    - 51
+    - destroy
+    - 
+    - "---\nid: 51\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      WTF3\nattachment: \ncreated_at: 2014-10-01 02:14:34.767319000 Z\nupdated_at:
+      2014-10-01 02:14:34.767319000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-10-01 02:19:56.295240'
+    - 
+  - - 146
+    - Request
+    - 52
+    - create
+    - 
+    - 
+    - '2014-10-01 23:00:26.542711'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing sysbio admin\ndescription:\n- \n- testing
+      email\ncreated_at:\n- \n- 2014-10-01 23:00:26.504103982 Z\nupdated_at:\n- \n-
+      2014-10-01 23:00:26.504103982 Z\nid:\n- \n- 52\n"
+  - - 147
+    - Request
+    - 53
+    - create
+    - 
+    - 
+    - '2014-10-01 23:03:27.859029'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Asela
+      Dassanayake\ntitle:\n- \n- testing email functionality\ndescription:\n- \n-
+      feefe\ncreated_at:\n- \n- 2014-10-01 23:03:27.761433645 Z\nupdated_at:\n- \n-
+      2014-10-01 23:03:27.761433645 Z\nid:\n- \n- 53\n"
+  - - 148
+    - Request
+    - 52
+    - destroy
+    - 
+    - "---\nid: 52\ntitle: testing sysbio admin\nname: Asela Dassanayake\ndescription:
+      testing email\nattachment: \ncreated_at: 2014-10-01 23:00:26.504103000 Z\nupdated_at:
+      2014-10-01 23:00:26.504103000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-10-01 23:04:32.614586'
+    - 
+  - - 149
+    - Request
+    - 53
+    - destroy
+    - 
+    - "---\nid: 53\ntitle: testing email functionality\nname: Asela Dassanayake\ndescription:
+      feefe\nattachment: \ncreated_at: 2014-10-01 23:03:27.761433000 Z\nupdated_at:
+      2014-10-01 23:03:27.761433000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-10-01 23:04:36.992898'
+    - 
+  - - 150
+    - Request
+    - 54
+    - create
+    - 
+    - 
+    - '2014-10-05 20:19:15.401670'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Sean
+      Simpson\ntitle:\n- \n- Methionine Metabolism in DSM10061\ndescription:\n- \n-
+      Getermin if there is  there a plausible complete set of emymes for methioine
+      synthesis\ncreated_at:\n- \n- 2014-10-05 20:19:15.393380441 Z\nupdated_at:\n-
+      \n- 2014-10-05 20:19:15.393380441 Z\nid:\n- \n- 54\n"
+  - - 151
+    - Request
+    - 54
+    - update
+    - '3'
+    - "---\nid: 54\ntitle: Methionine Metabolism in DSM10061\nname: Sean Simpson\ndescription:
+      Getermin if there is  there a plausible complete set of emymes for methioine\n
+      \ synthesis\nattachment: \ncreated_at: 2014-10-05 20:19:15.393380000 Z\nupdated_at:
+      2014-10-05 20:19:15.393380000 Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2014-10-05 21:01:42.356107'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\ndescription:\n- Getermin
+      if there is  there a plausible complete set of emymes for methioine synthesis\n-
+      Determine if there is  there a plausible complete set of emymes for methioine
+      synthesis\nstatus:\n- Pending\n- Complete\nassignment:\n- \n- Wayne\nresult:\n-
+      \n- 2 routes proposed (see MKoepke for possible 3rd route)\nupdated_at:\n- 2014-10-05
+      20:19:15.393380000 Z\n- 2014-10-05 21:01:42.345151908 Z\n"
+  - - 152
+    - Request
+    - 10
+    - update
+    - '3'
+    - "---\nid: 10\ntitle: Check 454 and Illumina discrepancies with PacBio DSM10061
+      assembly\nname: Wayne Mitchell\ndescription: Check if 454 and Illumina find
+      the amse discrepancies viz PacBio assembly\n  as Ion Torrent\nattachment: \ncreated_at:
+      2014-04-27 22:29:17.249941000 Z\nupdated_at: 2014-09-26 00:09:36.064216000 Z\nstatus:
+      Ongoing\nassignment: Vini\nresult: ''\n"
+    - '2014-10-05 21:08:09.206558'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - over 200 discrepancies identified in preliminary analysis by BreSeq haploid genome
+        NGS SNP pipeline
+      updated_at:
+      - 2014-09-26 00:09:36.064216000 Z
+      - 2014-10-05 21:08:09.202477929 Z
+  - - 153
+    - Request
+    - 46
+    - update
+    - '3'
+    - "---\nid: 46\ntitle: Computational localization predicitons for DSM10061\nname:
+      Wayne Mitchell\ndescription: PDSORTb localization for DSM10061 proteins\nattachment:
+      \ncreated_at: 2014-09-26 00:07:37.014554000 Z\nupdated_at: 2014-09-26 00:07:37.014554000
+      Z\nstatus: Ongoing\nassignment: Stuart\nresult: ''\n"
+    - '2014-10-05 21:11:27.127724'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Stuart
+      - Wayne
+      result:
+      - ''
+      - 'complete '
+      updated_at:
+      - 2014-09-26 00:07:37.014554000 Z
+      - 2014-10-05 21:11:27.118865310 Z
+  - - 154
+    - Request
+    - 46
+    - update
+    - '3'
+    - "---\nid: 46\ntitle: Computational localization predicitons for DSM10061\nname:
+      Wayne Mitchell\ndescription: PDSORTb localization for DSM10061 proteins\nattachment:
+      \ncreated_at: 2014-09-26 00:07:37.014554000 Z\nupdated_at: 2014-10-05 21:11:27.118865000
+      Z\nstatus: Ongoing\nassignment: Wayne\nresult: 'complete '\n"
+    - '2014-10-05 21:12:19.606299'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-10-05 21:11:27.118865000 Z
+      - 2014-10-05 21:12:19.598162760 Z
+  - - 155
+    - Request
+    - 55
+    - create
+    - '3'
+    - 
+    - '2014-10-06 02:07:41.329930'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Gene Designer Pipeline\ndescription:\n- \n- input a
+      DNA or Protein sequence, output candidate sequences filtered for codon extreams,\n
+      \ stop context, patches\nstatus:\n- Pending\n- Ongoing\nassignment:\n- \n- Wayne\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2014-10-06 02:07:41.325481152 Z\nupdated_at:\n- \n-
+      2014-10-06 02:07:41.325481152 Z\nid:\n- \n- 55\n"
+  - - 156
+    - Request
+    - 56
+    - create
+    - 
+    - 
+    - '2014-10-07 20:41:59.505810'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Michael
+      Koepke\ntitle:\n- \n- Genetic Tools Handbook\ndescription:\n- \n- Set up a new
+      wiki for the Genetic Tools handbook.\ncreated_at:\n- \n- 2014-10-07 20:41:59.498009567
+      Z\nupdated_at:\n- \n- 2014-10-07 20:41:59.498009567 Z\nid:\n- \n- 56\n"
+  - - 157
+    - Request
+    - 56
+    - update
+    - '2'
+    - "---\nid: 56\ntitle: Genetic Tools Handbook\nname: Michael Koepke\ndescription:
+      Set up a new wiki for the Genetic Tools handbook.\nattachment: \ncreated_at:
+      2014-10-07 20:41:59.498009000 Z\nupdated_at: 2014-10-07 20:41:59.498009000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2014-10-07 20:43:08.692920'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      Asela\nresult:\n- \n- ''\nupdated_at:\n- 2014-10-07 20:41:59.498009000 Z\n-
+      2014-10-07 20:43:08.686738410 Z\n"
+  - - 158
+    - Request
+    - 57
+    - create
+    - 
+    - 
+    - '2014-10-16 23:08:09.810118'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Wayne
+      Mitchell\ntitle:\n- \n- Unusual features in LZ1561 high CPAI genes\ndescription:\n-
+      \n- CPAI valuses for the 100 most detectable proteins in a single proteomics
+      experiment\n  have some outliers. Is there anything about them that links them
+      other then the\n  CPAI anomaly\ncreated_at:\n- \n- 2014-10-16 23:08:09.801956154
+      Z\nupdated_at:\n- \n- 2014-10-16 23:08:09.801956154 Z\nid:\n- \n- 57\n"
+  - - 159
+    - Request
+    - 57
+    - update
+    - '3'
+    - "---\nid: 57\ntitle: Unusual features in LZ1561 high CPAI genes\nname: Wayne
+      Mitchell\ndescription: CPAI valuses for the 100 most detectable proteins in
+      a single proteomics\n  experiment have some outliers. Is there anything about
+      them that links them other\n  then the CPAI anomaly\nattachment: \ncreated_at:
+      2014-10-16 23:08:09.801956000 Z\nupdated_at: 2014-10-16 23:08:09.801956000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2014-10-16 23:11:32.372778'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      Wayne\nresult:\n- \n- ''\nupdated_at:\n- 2014-10-16 23:08:09.801956000 Z\n-
+      2014-10-16 23:11:32.367867989 Z\n"
+  - - 160
+    - Request
+    - 5
+    - update
+    - '3'
+    - "---\nid: 5\ntitle: Potassium membrane transport\nname: Jared Prinsloo\ndescription:
+      I am interested in finding out the mechanism by which the cells regulate\n  their
+      potassium gradient. I have done some KCl experiments which show that low KCl\n
+      \ results in low biomass but does not affect gas uptake and metabolite production.\n
+      \ Instead the cells become more productive due to the lowering in biomass.\nattachment:
+      \ncreated_at: 2014-04-15 20:57:28.882599000 Z\nupdated_at: 2014-04-15 21:13:10.920622000
+      Z\nstatus: Ongoing\nassignment: Wayne\nresult: \n"
+    - '2014-10-17 01:24:19.923800'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Ongoing\n-
+      Complete\nresult:\n- \n- ''\nupdated_at:\n- 2014-04-15 21:13:10.920622000 Z\n-
+      2014-10-17 01:24:19.914989587 Z\n"
+  - - 161
+    - Request
+    - 58
+    - create
+    - 
+    - 
+    - '2014-11-16 00:14:46.966646'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- Michael
+      Koepke\ntitle:\n- \n- Pathway Tools\ndescription:\n- \n- Download and install
+      pathway tools Pathway Tools 18.5\ncreated_at:\n- \n- 2014-11-16 00:14:46.903904393
+      Z\nupdated_at:\n- \n- 2014-11-16 00:14:46.903904393 Z\nid:\n- \n- 58\n"

@@ -1,0 +1,60 @@
+<%= javascript_include_tag :defaults, "nested_form" %>
+<div class="request_form">
+<% if !@request.errors.empty? %>
+  <div class="alert alert-error">
+    <ul>
+      <% @request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="well">
+  <%= nested_form_for @request, html: { multipart: true } do |f| %>
+  	<%= f.label :title %><br />
+    <%= f.text_field :title %><br /><br />
+    <%= f.hidden_field :name %> 
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :size => "50x10" %><br /><br />
+    <%= f.label :attachment_uploader, 'Attachments' %><%= f.file_field :attachment_uploader, :multiple => true, name: "data_files[attachment_uploader][]" %><br />
+    <% unless @request.data_files.empty? %>
+      <%= f.label :attachment_uploader, 'Current Attachments:' %><br />
+    <% end %>
+    <%= f.fields_for :data_files do |attachment| %>
+      <% if !attachment.object.new_record? %>
+        <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
+        <%= attachment.check_box :_destroy %>
+      <% end %>
+    <% end %>
+
+    <% if can? :read, request %>
+      <br />
+      <%= f.label :status %><br />
+      <%= f.select :status, [['Pending','Pending'],['Ongoing','Ongoing'],['Complete','Complete']] %><br /><br />
+      <%= f.label :assignment %><br />
+      <%= f.select :assignment, options_from_collection_for_select(User.all, :login, :login, {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]'} %><br /><br />
+      <%= f.label :result %><br />
+      <%= f.text_area :result, :size => "50x10" %><br /><br />
+      <%= f.label :attachment_uploader, 'Results' %><%= f.file_field :attachment_uploader, :multiple => true, name: "result_files[attachment_uploader][]" %><br />
+      <% unless @request.result_files.empty? %>
+         <%= f.label :attachment_uploader, 'Current Results:' %><br />
+      <% end %>
+      <%= f.fields_for :result_files do |attachment| %>
+        <% if !attachment.object.new_record? %>
+          <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
+          <%= attachment.check_box :_destroy %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <br />
+    <%= f.submit "Submit", class: "btn btn-default" %>
+    <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
+    <br /><br />
+    <hr style="background-color:black;color:black;border-color:black">
+    <%= f.label :version, 'Versions:' %>
+    <% @request.get_versions.each do |v| %>
+     <td style="white-space: pre-wrap;"><%= simple_format(v) %></td>
+    <% end %>
+  <% end %>
+</div>
+</div>
