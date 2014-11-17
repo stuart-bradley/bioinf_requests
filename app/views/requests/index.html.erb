@@ -58,8 +58,10 @@
         <% end %>
         <td><%= request.get_users_for_view %></td>
         <td>
+        <% if request.name == current_user.login || current_user.admin %> 
         <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
         <%= button_to "Delete", request, method: :delete, class: "btn btn-default", confirm: "Are you sure that you wish to delete #{request.title}?" %>
+       	<% end %>
         </td>
       </tr>
     <% end %>
