@@ -12,7 +12,7 @@ class RequestsController < ApplicationController
   	@request = Request.new(request_params)
     @request.name = current_user.login
   	if @request.save
-      Emailer.new_request(@request.id).deliver
+      Emailer.delay.new_request(@request.id)
       if params[:data_files]
         params[:data_files]['attachment_uploader'].each do |a|
           @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)
@@ -43,9 +43,9 @@ class RequestsController < ApplicationController
     params.permit!
     @request = Request.find(params[:id])
     if @request.update_attributes(params[:request])
-      Emailer.edit_request(@request.id).deliver
-      Emailer.edit_status(@request.id).deliver
-      Emailer.edit_assignment(@request.id).deliver
+      Emailer.delay.edit_request(@request.id)
+      Emailer.delay.edit_status(@request.id)
+      Emailer.delay.edit_assignment(@request.id)
       if params[:data_files]
         params[:data_files]['attachment_uploader'].each do |a|
           @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)

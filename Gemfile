@@ -56,3 +56,4 @@ gem 'delayed_job_active_record'
 gem 'net-ldap'
 gem "devise_ldap_authenticatable"
 gem 'yaml_db'
+gem "daemons"
