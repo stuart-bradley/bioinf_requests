@@ -22,3 +22,10 @@ function toggle_visibility(id) {
    else
       e.style.display = 'none';
 }
+
+$("form").submit(function() {
+    $(this).submit(function() {
+        return false;
+    });
+    return true;
+});
