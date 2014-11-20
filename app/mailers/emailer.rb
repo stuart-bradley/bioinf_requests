@@ -1,6 +1,6 @@
 class Emailer < ActionMailer::Base
 
-  ActionMailer::Base.default_url_options[:host] = "http://reilly.lt.local:3000/" 
+  ActionMailer::Base.default_url_options[:host] = "http://blunt.lt.local:3000/" 
 
   ActionMailer::Base.default_url_options[:port] = 3000
   
