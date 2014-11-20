@@ -37,3 +37,17 @@
   margin-bottom: 15px;
   padding: 7px 9px;
 }
+
+.mandatory {}
+
+.mandatory:after {
+   /* Empty content, but required for pseudo element to display */
+   content: "*  ";
+   padding-top: 1px
+
+   /* Size of star within sprite */
+    vertical-align: top;
+    margin-right: -4px;
+    font-size: 20px;
+    color: #d35400;
+}
