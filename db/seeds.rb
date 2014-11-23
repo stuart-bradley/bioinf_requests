@@ -6,12 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.delete_all
+
 # Admins
 User.create!({:login => "stuart.bradley", :admin => true})
 User.create!({:login => "asela.dassanayake", :admin => true})
 User.create!({:login => "wayne.mitchell", :admin => true})
 User.create!({:login => "james.daniell", :admin => true})
-User.create!({:login => "vini.reynoso", :admin => true})
+User.create!({:login => "vinicio.reynoso", :admin => true})
 
 User.create!({:login => "michael.koepke", :admin => false})
 User.create!({:login => "sean.simpson", :admin => false})
