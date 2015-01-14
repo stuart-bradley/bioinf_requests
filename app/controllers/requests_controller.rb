@@ -12,8 +12,10 @@ class RequestsController < ApplicationController
   	@request = Request.new(request_params)
     @request.name = current_user.login
   	if @request.save
+  	  # Emails are placed Async.
       Emailer.delay.new_request(@request.id)
       if params[:data_files]
+      	# Attachments are created from the nested attributes.
         params[:data_files]['attachment_uploader'].each do |a|
           @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)
         end
@@ -43,6 +45,8 @@ class RequestsController < ApplicationController
     params.permit!
     @request = Request.find(params[:id])
     if @request.update_attributes(params[:request])
+      # The email send logic is contained within each edit type, as to 
+      # avoid sending emails where no changes have occured. 
       Emailer.delay.edit_request(@request.id)
       Emailer.delay.edit_status(@request.id)
       Emailer.delay.edit_assignment(@request.id)
@@ -62,6 +66,7 @@ class RequestsController < ApplicationController
     end
   end
 
+  # Allowed params include nested attachments, results, and employee names. 
   private 
     def request_params
       params.require(:request).permit(:name, :title,:description, :status, :assignment, :result, data_files_attributes: [:id, :request_id, :attachment_uploader], result_files_attributes: [:id, :request_id, :attachment_uploader], employee_attributes: [:id, :request_id, :name, :email])
