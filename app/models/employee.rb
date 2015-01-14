@@ -2,6 +2,7 @@ class Employee < ActiveRecord::Base
 	validates :name, presence: true 
 	belongs_to :request
 
+	# Sorts employees by last name. 
 	def self.sorted_employees_list
 		employees_unsorted = Employee.all
 		employees_sorted = employees_unsorted.sort_by do |emp|
