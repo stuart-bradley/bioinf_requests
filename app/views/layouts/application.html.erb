@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<%= javascript_include_tag :defaults, "nested_form" %>
 <p class="navbar-text pull-right">
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.get_name %></strong>.
@@ -11,7 +10,7 @@
   <title>BioinfRequests</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag :defaults, "nested_form" %>
+  <%= javascript_include_tag "nested_form" %>
   <%= csrf_meta_tags %>
 </head>
 <body>

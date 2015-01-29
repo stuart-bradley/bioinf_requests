@@ -1,0 +1,7 @@
+PSORTb localization summary DSM10061
+
+cytoplasmicMembraneTotal: 1001
+cytoplasmicTotal: 1988
+cellWallTotal: 38
+extracellularTotal: 75
+unknownTotal: 922

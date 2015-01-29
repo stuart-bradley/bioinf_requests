@@ -1,0 +1,51 @@
+Goal:
+Scan genome for: NGGNNNNNNNNNNNNNNNNNNNN
+
+Input:
+FASTA file + strand 
+
+The Fasta file will provide the + strand, the - strand will be created from the + strand and then reversed (to preserve antiparallel 5' -> 3' reading).
+
+Actions:
+
+If a set of bases == NGGNNNNNNNNNNNNNNNNNNNN:
+	extract all length 14 subsequences. E.g:
+	NGGatgccgtaaagctagctacg
+
+	extract:
+	1. NGGatgccgtaaag
+	2. GGatgccgtaaagc
+	3. Gatgccgtaaagct
+	4. atgccgtaaagcta
+	5  tgccgtaaagctag
+	6. gccgtaaagctagc
+	7. ccgtaaagctagct
+	8. cgtaaagctagcta
+	9. gtaaagctagctac
+	10 taaagctagctacg
+
+Then scan + and - for matches to 14bp extractions,
+
+Output:
+
+3_mer	starting_base_in_geneome	Matching_14mer	Seq?	starting base matches	strand
+NGGN20_sequence_1	10235				yes/no						750875			+/-
+14mer1 											GGatgccgtaaagc
+14mer2
+14mer3
+14mer4
+14mer5
+14mer6
+14mer7
+14mer8
+14mer9
+14mer10
+
+Changes to initial Spec:
+	- Make starting base matches delimited to allow for multiple matches. 
+	- Remove 'Seq?' field and just put sequence in '3mer' column:
+	
+	
+Issues: The genome fasta file is linear, but the genome is circular, so scann has to 
+take account of overlapping matches which start at the end of the file span the gap and 
+finish at the start.
