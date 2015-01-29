@@ -22,6 +22,7 @@ class AttachmentUploader < CarrierWave::Uploader::Base
     "documents/#{model.file_name[0, 2]}"
   end
 
+  # Deletes folders that contain deleted attachments. 
   def delete_empty_upstream_dirs
     path = ::File.expand_path(store_dir, root)
     Dir.delete(path) # fails if path not empty dir

@@ -12262,3 +12262,1234 @@ Processing by RequestsController#edit as HTML
   [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 94]]
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
   [1m[35mResultFile Exists (0.0ms)[0m  SELECT 1 AS one FROM "result_files" WHERE "result_files"."request_id" = ? LIMIT 1  [["request_id", 94]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 94]]
+  [1m[35mPaperTrail::Version Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? ORDER BY created_at ASC  [["item_id", 94], ["item_type", "Request"]]
+  Rendered requests/_request_form.html.erb (18.8ms)
+  Rendered requests/edit.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:01:52 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:01:52 +1300
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:01:52 +1300
+
+
+Started GET "/" for 192.168.47.17 at 2015-01-30 10:02:37 +1300
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.4ms)[0m  SELECT "requests".* FROM "requests"
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 96]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 96]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 95]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 95]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 94]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 94]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 93]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 93]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 92]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 92]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 91]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 91]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 90]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 90]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 89]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 89]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 88]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 88]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 86]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 86]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 85]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 85]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 84]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 84]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 83]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 83]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 82]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 82]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 81]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 81]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 80]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 80]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 79]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 79]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 78]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 78]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 77]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 77]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 76]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 76]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 75]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 75]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 74]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 74]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 73]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 73]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 72]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 72]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 71]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 71]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 70]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 70]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 69]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 69]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 67]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 67]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 58]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 58]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 57]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 57]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 56]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 56]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 55]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 55]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 54]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 54]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 46]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 46]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 45]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 45]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 44]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 44]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 43]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 43]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 41]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 41]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 40]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 40]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 39]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 39]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 38]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 38]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 37]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 37]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 36]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 36]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 33]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 33]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 30]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 30]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 29]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 29]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 28]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 28]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 24]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 24]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 23]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 23]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 22]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 22]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 21]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 21]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 19]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 19]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 18]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 18]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 17]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 17]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 16]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 16]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 15]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 15]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 14]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 14]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 13]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 13]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 12]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 12]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 11]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 11]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 10]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 10]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 7]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 5]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 5]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 3]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  Rendered requests/index.html.erb within layouts/application (162.8ms)
+Completed 200 OK in 173ms (Views: 166.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:37 +1300
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/employees.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/modellings.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/data_files.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/requests.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/assets/application.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:38 +1300
+
+
+Started GET "/" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.3ms)[0m  SELECT "requests".* FROM "requests"
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 96]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 96]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 95]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 95]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 94]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 94]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 93]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 93]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 92]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 92]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 91]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 91]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 90]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 90]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 89]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 89]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 88]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 88]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 86]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 86]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 85]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 85]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 84]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 84]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 83]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 83]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 82]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 82]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 81]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 81]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 80]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 80]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 79]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 79]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 78]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 78]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 77]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 77]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 76]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 76]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 75]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 75]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 74]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 74]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 73]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 73]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 72]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 72]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 71]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 71]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 70]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 70]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 69]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 69]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 67]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 67]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 58]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 58]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 57]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 57]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 56]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 56]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 55]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 55]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 54]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 54]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 46]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 46]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 45]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 45]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 44]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 44]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 43]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 43]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 41]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 41]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 40]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 40]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 39]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 39]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 38]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 38]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 37]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 37]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 36]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 36]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 33]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 33]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 30]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 30]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 29]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 29]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 28]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 28]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 24]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 24]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 23]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 23]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 22]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 22]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 21]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 21]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 19]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 19]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 18]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 18]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 17]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 17]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 16]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 16]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 15]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 15]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 14]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 14]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 13]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 13]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 12]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 12]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 11]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 11]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 10]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 10]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 7]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 5]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 5]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 3]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  Rendered requests/index.html.erb within layouts/application (130.0ms)
+Completed 200 OK in 141ms (Views: 134.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/data_files.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:57 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:02:58 +1300
+
+
+Started GET "/assets/modellings.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:58 +1300
+
+
+Started GET "/assets/requests.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:58 +1300
+
+
+Started GET "/assets/employees.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:58 +1300
+
+
+Started GET "/assets/application.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:58 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.168.47.17 at 2015-01-30 10:02:58 +1300
+
+
+Started GET "/requests/94/edit" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+Processing by RequestsController#edit as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRequest Load (0.1ms)[0m  SELECT "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", "94"]]
+  [1m[36mDataFile Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "data_files" WHERE "data_files"."request_id" = ? LIMIT 1[0m  [["request_id", 94]]
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 94]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mResultFile Exists (0.0ms)[0m  SELECT 1 AS one FROM "result_files" WHERE "result_files"."request_id" = ? LIMIT 1  [["request_id", 94]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 94]]
+  [1m[35mPaperTrail::Version Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? ORDER BY created_at ASC  [["item_id", 94], ["item_type", "Request"]]
+  Rendered requests/_request_form.html.erb (45.8ms)
+  Rendered requests/edit.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/requests.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/employees.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/modellings.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/data_files.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started GET "/javascripts/defaults.js" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/asela/.rvm/rubies/ruby-2.0.0-p594/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/asela/.rvm/rubies/ruby-2.0.0-p594/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/asela/.rvm/rubies/ruby-2.0.0-p594/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:01 +1300
+
+
+Started PATCH "/requests/94" for 192.168.47.17 at 2015-01-30 10:03:04 +1300
+Processing by RequestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tnoIvU1jHjlNsEvWiGlKXE3f5/kLS0zt0l80QRS+A0M=", "request"=>{"title"=>"Results Retrieval Issue in BuRP", "name"=>"wayne.mitchell", "description"=>"James B reports issues retrieving results file", "data_files_attributes"=>{"0"=>{"_destroy"=>"0", "id"=>"17"}}, "status"=>"Ongoing", "assignment"=>["", "stuart.bradley", "asela.dassanayake"], "result"=>""}, "commit"=>"Submit", "id"=>"94"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRequest Load (0.1ms)[0m  SELECT "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", "94"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mDataFile Load (0.1ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ? AND "data_files"."id" IN (17)  [["request_id", 94]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "requests" SET "assignment" = ?, "updated_at" = ? WHERE "requests"."id" = 94[0m  [["assignment", "stuart.bradley;asela.dassanayake"], ["updated_at", Thu, 29 Jan 2015 21:03:04 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "versions" ("created_at", "event", "item_id", "item_type", "object", "object_changes", "whodunnit") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 29 Jan 2015 21:03:04 UTC +00:00], ["event", "update"], ["item_id", 94], ["item_type", "Request"], ["object", "---\nid: 94\ntitle: Results Retrieval Issue in BuRP\nname: wayne.mitchell\ndescription: James B reports issues retrieving results file\nattachment: \ncreated_at: 2015-01-29 16:04:56.963350000 Z\nupdated_at: 2015-01-29 16:05:08.559537000 Z\nstatus: Ongoing\nassignment: asela.dassanayake\nresult: ''\n"], ["object_changes", "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- asela.dassanayake\n- stuart.bradley;asela.dassanayake\nupdated_at:\n- 2015-01-29 16:05:08.559537000 Z\n- 2015-01-29 21:03:04.825814565 Z\n"], ["whodunnit", #<User id: 17, login: "stuart.bradley", remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2015-01-28 19:55:36", last_sign_in_at: "2014-11-19 22:19:29", current_sign_in_ip: "192.168.47.17", last_sign_in_ip: "192.168.47.124", created_at: "2014-11-17 00:52:49", updated_at: "2015-01-28 19:55:36", admin: true>]]
+  [1m[36m (123.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "delayed_jobs" ("created_at", "handler", "run_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 29 Jan 2015 21:03:04 UTC +00:00], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'Emailer'\nmethod_name: :edit_request\nargs:\n- 94\n"], ["run_at", Thu, 29 Jan 2015 21:03:04 UTC +00:00], ["updated_at", Thu, 29 Jan 2015 21:03:04 UTC +00:00]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "delayed_jobs" ("created_at", "handler", "run_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 29 Jan 2015 21:03:05 UTC +00:00], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'Emailer'\nmethod_name: :edit_status\nargs:\n- 94\n"], ["run_at", Thu, 29 Jan 2015 21:03:05 UTC +00:00], ["updated_at", Thu, 29 Jan 2015 21:03:05 UTC +00:00]]
+  [1m[36m (123.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "delayed_jobs" ("created_at", "handler", "run_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 29 Jan 2015 21:03:05 UTC +00:00], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'Emailer'\nmethod_name: :edit_assignment\nargs:\n- 94\n"], ["run_at", Thu, 29 Jan 2015 21:03:05 UTC +00:00], ["updated_at", Thu, 29 Jan 2015 21:03:05 UTC +00:00]]
+  [1m[35m (123.3ms)[0m  commit transaction
+Redirected to http://blunt.local:3000/requests
+Completed 302 Found in 507ms (ActiveRecord: 494.5ms)
+
+
+Started GET "/requests" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRequest Load (0.7ms)[0m  SELECT "requests".* FROM "requests"
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 96]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 96]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 95]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 95]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 94]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 94]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 93]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 93]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 92]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 92]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 91]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 91]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 90]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 90]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 89]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 89]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 88]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 88]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 86]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 86]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 85]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 85]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 84]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 84]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 83]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 83]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 82]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 82]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 81]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 81]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 80]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 80]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 79]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 79]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 78]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 78]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 77]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 77]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 76]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 76]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 75]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 75]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 74]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 74]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 73]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 73]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 72]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 72]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 71]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 71]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 70]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 70]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 69]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 69]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 67]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 67]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 58]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 58]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 57]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 57]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 56]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 56]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 55]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 55]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 54]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 54]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 46]]
+  [1m[35mResultFile Load (0.1ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 46]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 45]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 45]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 44]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 44]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 43]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 43]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 41]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 41]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 40]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 40]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 39]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 39]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 38]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 38]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 37]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 37]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 36]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 36]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 33]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 33]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 30]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 30]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 29]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 29]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 28]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 28]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 24]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 24]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 23]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 23]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 22]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 22]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 21]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 21]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 19]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 19]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 18]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 18]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 17]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 17]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.1ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 16]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 16]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 15]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 15]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 14]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 14]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 13]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 13]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 12]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 12]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 11]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 11]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 10]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 10]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 7]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 5]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 5]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 3]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_45068320 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  Rendered requests/index.html.erb within layouts/application (181.7ms)
+Completed 200 OK in 194ms (Views: 186.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/data_files.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/employees.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/requests.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/modellings.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/assets/application.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:05 +1300
+
+
+Started GET "/requests/89/edit" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+Processing by RequestsController#edit as HTML
+  Parameters: {"id"=>"89"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRequest Load (0.1ms)[0m  SELECT "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", "89"]]
+  [1m[36mDataFile Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "data_files" WHERE "data_files"."request_id" = ? LIMIT 1[0m  [["request_id", 89]]
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 89]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mResultFile Exists (0.0ms)[0m  SELECT 1 AS one FROM "result_files" WHERE "result_files"."request_id" = ? LIMIT 1  [["request_id", 89]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 89]]
+  [1m[35mPaperTrail::Version Load (0.1ms)[0m  SELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? ORDER BY created_at ASC  [["item_id", 89], ["item_type", "Request"]]
+  Rendered requests/_request_form.html.erb (20.7ms)
+  Rendered requests/edit.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/data_files.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/modellings.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/employees.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/assets/requests.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started GET "/javascripts/defaults.js" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/asela/.rvm/rubies/ruby-2.0.0-p594/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/asela/.rvm/rubies/ruby-2.0.0-p594/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/asela/.rvm/rubies/ruby-2.0.0-p594/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/asela/.rvm/gems/ruby-2.0.0-p594/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:14 +1300
+
+
+Started PATCH "/requests/89" for 192.168.47.17 at 2015-01-30 10:03:52 +1300
+Processing by RequestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tnoIvU1jHjlNsEvWiGlKXE3f5/kLS0zt0l80QRS+A0M=", "request"=>{"title"=>"CRISPR Documentation", "name"=>"stuart.bradley", "description"=>"The CRISPR webapp requires limited documentation to remind users of its functionality. ", "status"=>"Complete", "assignment"=>["", "stuart.bradley"], "result"=>"There is now a help button next to the input box. This produces a small popup explaining the purpose of the site, and how to use it. "}, "commit"=>"Submit", "id"=>"89"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRequest Load (0.1ms)[0m  SELECT "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", "89"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "requests" SET "status" = ?, "result" = ?, "updated_at" = ? WHERE "requests"."id" = 89  [["status", "Complete"], ["result", "There is now a help button next to the input box. This produces a small popup explaining the purpose of the site, and how to use it. "], ["updated_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "versions" ("created_at", "event", "item_id", "item_type", "object", "object_changes", "whodunnit") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["event", "update"], ["item_id", 89], ["item_type", "Request"], ["object", "---\nid: 89\ntitle: CRISPR Documentation\nname: stuart.bradley\ndescription: 'The CRISPR webapp requires limited documentation to remind users of\n  its functionality. '\nattachment: \ncreated_at: 2015-01-28 20:03:28.313872000 Z\nupdated_at: 2015-01-28 20:05:13.354616000 Z\nstatus: Ongoing\nassignment: stuart.bradley\nresult: ''\n"], ["object_changes", "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Ongoing\n- Complete\nresult:\n- ''\n- 'There is now a help button next to the input box. This produces a small popup explaining\n  the purpose of the site, and how to use it. '\nupdated_at:\n- 2015-01-28 20:05:13.354616000 Z\n- 2015-01-29 21:03:52.481437241 Z\n"], ["whodunnit", #<User id: 17, login: "stuart.bradley", remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2015-01-28 19:55:36", last_sign_in_at: "2014-11-19 22:19:29", current_sign_in_ip: "192.168.47.17", last_sign_in_ip: "192.168.47.124", created_at: "2014-11-17 00:52:49", updated_at: "2015-01-28 19:55:36", admin: true>]]
+  [1m[35m (147.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "delayed_jobs" ("created_at", "handler", "run_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'Emailer'\nmethod_name: :edit_request\nargs:\n- 89\n"], ["run_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["updated_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00]]
+  [1m[36m (109.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "delayed_jobs" ("created_at", "handler", "run_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'Emailer'\nmethod_name: :edit_status\nargs:\n- 89\n"], ["run_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["updated_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00]]
+  [1m[35m (106.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "delayed_jobs" ("created_at", "handler", "run_at", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["handler", "--- !ruby/object:Delayed::PerformableMailer\nobject: !ruby/class 'Emailer'\nmethod_name: :edit_assignment\nargs:\n- 89\n"], ["run_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00], ["updated_at", Thu, 29 Jan 2015 21:03:52 UTC +00:00]]
+  [1m[36m (106.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://blunt.local:3000/requests
+Completed 302 Found in 524ms (ActiveRecord: 473.2ms)
+
+
+Started GET "/requests" for 192.168.47.17 at 2015-01-30 10:03:52 +1300
+Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRequest Load (0.4ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  [1m[35mDataFile Load (179.1ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 96]]
+  [1m[36mResultFile Load (0.1ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 96]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 95]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 95]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 94]]
+  [1m[36mResultFile Load (0.1ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 94]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 93]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 93]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 92]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 92]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 91]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 91]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 90]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 90]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 89]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 89]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 88]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 88]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 86]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 86]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 85]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 85]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 84]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 84]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 83]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 83]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.1ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 82]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 82]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 81]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 81]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 80]]
+  [1m[36mResultFile Load (0.1ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 80]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 79]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 79]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 78]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 78]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 77]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 77]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 76]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 76]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 75]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 75]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 74]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 74]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 73]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 73]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 72]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 72]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 71]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 71]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 70]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 70]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 69]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 69]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 67]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 67]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 58]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 58]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 57]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 57]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 56]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 56]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 55]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 55]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 54]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 54]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 46]]
+  [1m[36mResultFile Load (0.1ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 46]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.1ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 45]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 45]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 44]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 44]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 43]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 43]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 41]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 41]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 40]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 40]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 39]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 39]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 38]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 38]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 37]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 37]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 36]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 36]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 33]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 33]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 30]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 30]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 29]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 29]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 28]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 28]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 24]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 24]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 23]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 23]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 22]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 22]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 21]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 21]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 19]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 19]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 18]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 18]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 17]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 17]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 16]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 16]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 15]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 15]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 14]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 14]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 13]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 13]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 12]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 12]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 11]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 11]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 10]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 10]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 7]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 5]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 5]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  [1m[35mDataFile Load (0.0ms)[0m  SELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?  [["request_id", 3]]
+  [1m[36mResultFile Load (0.0ms)[0m  [1mSELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?[0m  [["request_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_requests_index_html_erb__2226914045671790629_47092140 at /data1/bioinf_requests/app/views/requests/index.html.erb:63)
+  Rendered requests/index.html.erb within layouts/application (365.4ms)
+Completed 200 OK in 438ms (Views: 251.1ms | ActiveRecord: 185.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/data_files.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/modellings.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/employees.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/requests.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/application.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/assets/BurP.png" for 192.168.47.17 at 2015-01-30 10:03:53 +1300
+
+
+Started GET "/requests/88/edit" for 192.168.47.17 at 2015-01-30 10:04:02 +1300
+Processing by RequestsController#edit as HTML
+  Parameters: {"id"=>"88"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", "88"]]
+  [1m[35mDataFile Exists (0.1ms)[0m  SELECT 1 AS one FROM "data_files" WHERE "data_files"."request_id" = ? LIMIT 1  [["request_id", 88]]
+  [1m[36mDataFile Load (0.0ms)[0m  [1mSELECT "data_files".* FROM "data_files" WHERE "data_files"."request_id" = ?[0m  [["request_id", 88]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mResultFile Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "result_files" WHERE "result_files"."request_id" = ? LIMIT 1[0m  [["request_id", 88]]
+  [1m[35mResultFile Load (0.0ms)[0m  SELECT "result_files".* FROM "result_files" WHERE "result_files"."request_id" = ?  [["request_id", 88]]
+  [1m[36mPaperTrail::Version Load (0.1ms)[0m  [1mSELECT "versions".* FROM "versions" WHERE "versions"."item_id" = ? AND "versions"."item_type" = ? ORDER BY created_at ASC[0m  [["item_id", 88], ["item_type", "Request"]]
+  Rendered requests/_request_form.html.erb (51.7ms)
+  Rendered requests/edit.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/data_files.css?body=1" for 192.168.47.17 at 2015-01-30 10:04:02 +1300
+
+
+Started GET "/assets/application.css?body=1" for 192.168.47.17 at 2015-01-30 10:04:02 +1300
+
+
+Started GET "/assets/requests.css?body=1" for 192.168.47.17 at 2015-01-30 10:04:02 +1300
+
+
+Started GET "/assets/modellings.css?body=1" for 192.168.47.17 at 2015-01-30 10:04:02 +1300
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.47.17 at 2015-01-30 10:04:02 +1300
+
+
+Started GET "/assets/employees.css?body=1" for 192.168.47.17 at 2015-01-30 10:04:02 +1300

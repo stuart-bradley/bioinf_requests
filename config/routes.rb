@@ -18,12 +18,7 @@ BioinfRequests::Application.routes.draw do
   resources :requests, only: [:index, :new, :create, :destroy, :update, :edit]
   resources :modellings
 
-  #root "requests#index"
-
-  authenticated :user do
-    root :to => 'requests#index', :as => :authenticated_root
-  end
-  root :to => redirect('/users/sign_in')
+  root "requests#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

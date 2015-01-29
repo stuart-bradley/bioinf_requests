@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+//= Hides and shows elements based on click. 
 function toggle_visibility(id) {
    var e = document.getElementById(id);
    if(e.style.display == 'none')
@@ -23,6 +24,7 @@ function toggle_visibility(id) {
       e.style.display = 'none';
 }
 
+//= I can't remember what this does. 
 $("form").submit(function() {
     $(this).submit(function() {
         return false;

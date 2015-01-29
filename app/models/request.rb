@@ -10,18 +10,21 @@ class Request < ActiveRecord::Base
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
   accepts_nested_attributes_for :employee
 
-   def handle_assignment
+  # Deals with the multiple user assignment, joins user array into string.
+  def handle_assignment
     if assignment
       self.assignment = self.assignment.select(&:present?).join(';') 
     end
   end
 
+  # Splits user string into array.
   def get_users
     if self.assignment
       self.assignment.split(';')
     end
   end
 
+  # Gets users in a view ready format. Adds captitalisation etc.
   def get_users_for_view
     if self.assignment
       assign = self.assignment.split(';')
@@ -37,6 +40,8 @@ class Request < ActiveRecord::Base
     self.name.sub('.', ' ').split.map(&:capitalize).join(' ')
   end
 
+  # Determines whether a true edit has been made, as opposed
+  # to just a modified or updated change. 
   def check_for_edits_email
     latest_version = get_versions[0]
     number_of_edits_total = latest_version.lines.count
@@ -57,6 +62,8 @@ class Request < ActiveRecord::Base
     end
   end
 
+  # Checks to see if the change is a new addition or not.
+  # New additions are defined by prev_version "NO VALUE".
   def check_version_attribute_change(attribute)
     latest_version = get_versions[0]
     if latest_version.match(/^#{attribute}/i)
