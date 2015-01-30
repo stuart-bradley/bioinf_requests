@@ -3,6 +3,7 @@ class Request < ActiveRecord::Base
 	has_paper_trail
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
+  validates_with OngoingValidator
   has_many :data_files
   has_many :result_files
   has_one :employee

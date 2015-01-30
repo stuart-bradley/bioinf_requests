@@ -24,7 +24,7 @@ function toggle_visibility(id) {
       e.style.display = 'none';
 }
 
-//= I can't remember what this does. 
+//= Helps to correctly handle nested models. 
 $("form").submit(function() {
     $(this).submit(function() {
         return false;
@@ -32,6 +32,7 @@ $("form").submit(function() {
     return true;
 });
 
+//= Handles DataTable bootup function. 
 $(document).ready( function () {
     $('#main_table').DataTable({
 	    "paging": false,
