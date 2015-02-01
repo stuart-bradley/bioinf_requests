@@ -36,12 +36,13 @@ $("form").submit(function() {
 $(document).ready( function () {
     $('#main_table').DataTable({
 	    "paging": false,
-      "columnDefs": [
-      { "width": "8%", "targets": 2 },
-      { "width": "11%", "targets": 4 },
-      { "width": "7%", "targets": 6 },
-      { "width": "8%", "targets": 8 },
-      { "width": "8%", "targets": 9 }
-    ]
+      	"columnDefs": [
+      		{ "width": "8%", "targets": 2 },
+      		{ "width": "11%", "targets": 4 },
+      		{ "width": "7%", "targets": 6 },
+      		{ "width": "8%", "targets": 8 },
+      		{ "width": "8%", "targets": 9 }
+      	],
+      	"order": [[ 0, "desc" ]]
     });
 } );
