@@ -70,6 +70,6 @@ class RequestsController < ApplicationController
   # Allowed params include nested attachments, results, and employee names. 
   private 
     def request_params
-      params.require(:request).permit(:name, :title,:description, :status, {:assignment =>[]}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader], result_files_attributes: [:id, :request_id, :attachment_uploader], employee_attributes: [:id, :request_id, :name, :email])
+      params.require(:request).permit(:name, :title,:description, :status, :stathist ,{:assignment =>[]}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader], result_files_attributes: [:id, :request_id, :attachment_uploader], employee_attributes: [:id, :request_id, :name, :email])
     end
 end

@@ -1,5 +1,6 @@
 class Request < ActiveRecord::Base
   before_save :handle_assignment
+  before_save :set_stathist
 	has_paper_trail
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
@@ -10,6 +11,16 @@ class Request < ActiveRecord::Base
   accepts_nested_attributes_for :data_files, :allow_destroy => true
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
   accepts_nested_attributes_for :employee
+
+  # Updates the versioning for the status.
+  def set_stathist
+    if self.stathist.nil?
+      self.stathist = self.status + ": " + Date.today.to_s + "\n"
+    end 
+    if self.status_changed? 
+      self.stathist += self.status + ": " + Date.today.to_s + "\n"
+    end
+  end
 
   # Deals with the multiple user assignment, joins user array into string.
   def handle_assignment

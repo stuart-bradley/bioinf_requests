@@ -31,6 +31,7 @@
       <th>Results</th>
       <th>Result Files</th>
       <th>Status</th>
+      <th>Status History</th>
       <th>Job Assignment</th>
       <th>&nbsp;</th>
     </tr>
@@ -60,6 +61,7 @@
         <% else %>
           <td style="background-color:#EEA236;color:white"><%= request.status %></td>
         <% end %>
+        <td><%= request.stathist %></td>
         <td><%= request.get_users_for_view %></td>
         <td>
         <% if request.name == current_user.login || current_user.admin %> 
