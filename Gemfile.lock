@@ -76,6 +76,7 @@ GEM
     minitest (4.7.5)
     mono_logger (1.1.0)
     multi_json (1.8.4)
+    mysql (2.9.1)
     nested_form (0.3.2)
     net-ldap (0.8.0)
     orm_adapter (0.5.0)
@@ -173,6 +174,7 @@ DEPENDENCIES
   devise_ldap_authenticatable
   jbuilder (~> 1.2)
   jquery-rails
+  mysql
   nested_form
   net-ldap
   paper_trail
