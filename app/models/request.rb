@@ -16,6 +16,7 @@ class Request < ActiveRecord::Base
   def set_stathist
     if self.stathist.nil?
       self.stathist = self.status + ": " + Date.today.to_s + "\n"
+      return
     end 
     if self.status_changed? 
       self.stathist += self.status + ": " + Date.today.to_s + "\n"
