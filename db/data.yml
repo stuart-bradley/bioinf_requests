@@ -58,6 +58,41 @@ data_files:
     - LZ11561_CPAi_for_gene_design_bounds.pdf
     - '2014-10-16 23:08:41.207668'
     - '2014-10-16 23:08:41.207668'
+  - - 11
+    - 69
+    - PPases.txt
+    - '2014-11-21 16:13:24.927192'
+    - '2014-11-21 16:13:24.927192'
+  - - 12
+    - 71
+    - DSM10061_GlimmerProt_fasta.2014-11-20.txt
+    - '2014-11-23 06:47:07.085568'
+    - '2014-11-23 06:47:07.085568'
+  - - 13
+    - 81
+    - Shilpa_LeuA_and_LeuBCD_Reports.7z
+    - '2015-01-22 03:30:01.494664'
+    - '2015-01-22 03:30:01.494664'
+  - - 14
+    - 83
+    - nphT7_fasta.txt
+    - '2015-01-26 23:13:16.735647'
+    - '2015-01-26 23:13:16.735647'
+  - - 15
+    - 83
+    - nphT7.txt
+    - '2015-01-28 12:25:26.281374'
+    - '2015-01-28 12:25:26.281374'
+  - - 16
+    - 85
+    - BurP.png
+    - '2015-01-28 22:59:11.186600'
+    - '2015-01-28 22:59:11.186600'
+  - - 17
+    - 94
+    - blunt_portal_error.jpg
+    - '2015-01-29 16:04:57.214671'
+    - '2015-01-29 16:04:57.214671'
 
 ---
 requests:
@@ -170,13 +205,13 @@ requests:
     - Wayne Mitchell
     - "There are three translation Release Factors annotated in C.auto. Normal complement
       is two.\r\nPlease align the three at protein level to see if its a duplication
-      or a possible new function.\r\n\r\nResults - http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome"
+      or a possible new function.\r\n"
     - 
     - '2014-05-18 21:29:11.143064'
-    - '2014-05-19 02:02:15.741493'
+    - '2014-12-01 02:13:50.672177'
     - Complete
-    - Asela
-    - 
+    - ''
+    - https://blunt.lt.local/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome
   - - 16
     - tRNA modification in LZ1561
     - Wayne Mitchell
@@ -271,9 +306,9 @@ requests:
     - Identify the variants between the two strains from gDNA
     - 
     - '2014-07-04 03:51:08.356042'
-    - '2014-07-30 00:25:17.855607'
+    - '2014-11-30 23:05:56.986224'
     - Complete
-    - Asela
+    - asela.dassanayake;vini.reynoso
     - ''
   - - 29
     - LZ1561 30C Vs 37C
@@ -304,9 +339,9 @@ requests:
     - Analyse the DNA sequences from the F12 reactor that started producing butanol
     - 
     - '2014-07-24 22:01:52.935221'
-    - '2014-09-24 00:53:01.949854'
-    - Ongoing
-    - Asela;Vini
+    - '2014-11-30 23:05:32.851515'
+    - Complete
+    - ''
     - ''
   - - 36
     - LZ1561 - Terminators
@@ -314,9 +349,9 @@ requests:
     - Identify Terminator sequences on the LZ1561 genome.
     - 
     - '2014-07-24 22:58:43.357361'
-    - '2014-07-24 22:58:43.357361'
-    - Ongoing
-    - Asela
+    - '2015-01-26 19:50:12.734205'
+    - Complete
+    - asela.dassanayake
     - ''
   - - 37
     - Analyse the mutations of the Kalashnikova strain
@@ -325,9 +360,9 @@ requests:
       Kalashnikova strain
     - 
     - '2014-07-25 00:18:33.473994'
-    - '2014-07-25 00:19:21.426556'
-    - Ongoing
-    - Asela
+    - '2014-11-30 23:04:59.806399'
+    - Complete
+    - ''
     - ''
   - - 38
     - RE not in LZ
@@ -335,9 +370,9 @@ requests:
     - Find RE sites that are not present in LZ1561
     - 
     - '2014-07-29 23:26:20.720691'
-    - '2014-08-13 00:55:10.468254'
-    - Ongoing
-    - Stuart
+    - '2015-01-28 19:56:00.168123'
+    - Complete
+    - stuart.bradley
     - "REs of the format: NNN or (a/b)NNN or NNN(a/b) have been searched, only one
       RE is missing from LZ1561:\r\n- GG/CGCGCC - AscI AscI RE-Mix®\r\nREs of the
       format: (-a/-b)NNN or NNN(-a/-b) are to be done upon further clarification.
@@ -359,9 +394,9 @@ requests:
       see specificatin
     - 
     - '2014-08-07 16:42:03.807218'
-    - '2014-08-12 23:08:44.229309'
-    - Ongoing
-    - Stuart
+    - '2014-12-10 01:35:47.455609'
+    - Complete
+    - ''
     - ''
   - - 41
     - Design 4 Construct Sequences
@@ -369,9 +404,9 @@ requests:
     - 4 AA sequences submitted; need DNA sequence generated with good chance of expression
     - 
     - '2014-09-06 01:02:48.131660'
-    - '2014-09-06 01:02:48.131660'
-    - Ongoing
-    - Wayne
+    - '2014-12-10 01:37:17.427495'
+    - Complete
+    - ''
     - ''
   - - 43
     - Tx Factor Survey DSM10061
@@ -400,9 +435,9 @@ requests:
     - Add section on Genomics Results
     - 
     - '2014-09-25 23:58:43.459608'
-    - '2014-09-26 00:04:43.250178'
-    - Ongoing
-    - Wayne
+    - '2015-01-29 23:05:40.213835'
+    - Complete
+    - ''
     - ''
   - - 46
     - Computational localization predicitons for DSM10061
@@ -442,9 +477,9 @@ requests:
     - Set up a new wiki for the Genetic Tools handbook.
     - 
     - '2014-10-07 20:41:59.498009'
-    - '2014-10-07 20:43:08.686738'
-    - Pending
-    - Asela
+    - '2014-11-23 04:06:32.227984'
+    - Complete
+    - asela.dassanayake
     - ''
   - - 57
     - Unusual features in LZ1561 high CPAI genes
@@ -464,10 +499,392 @@ requests:
     - Download and install pathway tools Pathway Tools 18.5
     - 
     - '2014-11-16 00:14:46.903904'
-    - '2014-11-16 00:14:46.903904'
+    - '2015-01-28 21:31:23.809355'
+    - Ongoing
+    - asela.dassanayake
+    - ''
+  - - 67
+    - annotate two C.auto offs
+    - wayne.mitchell
+    - Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586
+    - 
+    - '2014-11-20 17:09:07.845623'
+    - '2014-11-20 17:09:07.845623'
+    - Ongoing
+    - 
+    - ''
+  - - 69
+    - Genomes lacking soluble inorganic pyrophosphatase
+    - james.behrendorff
+    - "Looking for completed genomes that do NOT have the soluble inorganic pyrophosphatase
+      (and therefore may rely on an efficient membrane-bound proton-pumping pyrophosphatase).\r\nSoluble
+      inorganic pyrophosphatase is often labelled ppaC in genome annotations. I've
+      attached a FASTA file with some sequences, including some membrane-bound proton-pumping
+      forms.\r\nAlso here is a link to one of the NCBI CDD pages. The soluble PPases
+      can vary a lot in length (~150-~500 amino acids) http://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi?INPUT_TYPE=precalc&SEQUENCE=11056044\r\nUnfortunately
+      you may not be able to just exclude the pyrophosphatase superfamily - we want
+      to exclude the common soluble form and enrich for genomes with only the membrane-bound
+      proton-pumping form.\r\nThe membrane-bound form is always larger (~600 amino
+      acids) and contains several transmembrane domains identifiable by a Kyte-Doolittle
+      hydropathy plot but shares some conserved catalytic residues related to the
+      PPi hydrolysis.\r\nLet me know if there is something else I can provide."
+    - 
+    - '2014-11-21 16:13:24.671647'
+    - '2015-01-30 15:05:27.593064'
+    - Complete
+    - asela.dassanayake
+    - "James B no longer requires this result at this time\r\n30.02.2015"
+  - - 70
+    - Model ORFs
+    - asela.dassanayake
+    - Build models for CAETH_0420 and CAETHG_1586 using template 4KUG
+    - 
+    - '2014-11-23 06:44:20.357299'
+    - '2014-12-04 01:13:45.956658'
+    - Complete
+    - asela.dassanayake
+    - Results attached
+  - - 71
+    - Set up BLAST server
+    - asela.dassanayake
+    - Set up an internal BLAST server and BLAST the attached proteins against all
+      bacterial genomes
+    - 
+    - '2014-11-23 06:47:06.818524'
+    - '2014-12-10 01:36:05.924019'
+    - Complete
+    - asela.dassanayake
+    - ''
+  - - 72
+    - Optimized Cre Coding sequences
+    - wayne.mitchell
+    - 'DNA sequences encoding Cre output from Gene Designer, '
+    - 
+    - '2014-12-10 01:28:16.287401'
+    - '2014-12-10 01:33:45.018186'
+    - Complete
+    - wayne.mitchell
+    - 'Best Two Sequences Delivered to Ching. '
+  - - 73
+    - optimized Sce Sequences
+    - wayne.mitchell
+    - Sce coding sequences as output by GeneDesigner
+    - 
+    - '2014-12-10 01:29:53.791910'
+    - '2014-12-10 01:34:09.957918'
+    - Complete
+    - wayne.mitchell
+    - Best 2 candidate sequences delivered to Ching
+  - - 74
+    - Optimized GusA  Sequences
+    - wayne.mitchell
+    - "GusA coding sequences output from Gene Designer. Two 5' UTR contexts. \r\n5_UTR_pMTL82254-tetR-gusA\r\nbgaR-PgaL"
+    - 
+    - '2014-12-10 01:33:25.533390'
+    - '2015-01-22 03:24:03.901460'
+    - Complete
+    - wayne.mitchell
+    - ''
+  - - 75
+    - Optimized and anti-optimized CatP
+    - wayne.mitchell
+    - 'Test Gene Designer by creating ''good/ and ''bad'' CatP coding sequences -- '
+    - 
+    - '2014-12-10 01:39:28.599620'
+    - '2014-12-10 01:39:28.599620'
+    - Ongoing
+    - 
+    - ''
+  - - 76
+    - PerR sequence in LZ1561
+    - wayne.mitchell
+    - Confirm existence and location of PerR in LZ1561.
+    - 
+    - '2014-12-10 01:40:52.690375'
+    - '2014-12-10 01:40:52.690375'
+    - Ongoing
+    - 
+    - ''
+  - - 77
+    - DSM10061 gDNA prep
+    - wayne.mitchell
+    - isolate DSM10061 genomics DNA for sequencing
+    - 
+    - '2014-12-10 01:50:21.584220'
+    - '2015-01-29 18:27:01.270836'
+    - Complete
+    - vini.reynoso
+    - ''
+  - - 78
+    - LZ1561 genomics DNA prep
+    - wayne.mitchell
+    - isolate gDNA from LZ1561 for sequencing
+    - 
+    - '2014-12-10 01:51:32.073589'
+    - '2015-01-29 18:26:05.037384'
+    - Complete
+    - vini.reynoso
+    - ''
+  - - 79
+    - Reanalysis of LZ1561 assembly
+    - wayne.mitchell
+    - Sequencne analysis and Illumine read map back LZ1561 assembly
+    - 
+    - '2014-12-10 01:53:18.530965'
+    - '2014-12-10 01:54:57.631681'
+    - Complete
+    - vini.reynoso
+    - approximate 20 kb region with no significant Illumina coverage -- probably indicates
+      an assembly error in Pac Bio assembly of LZ1561
+  - - 80
+    - 3-hydroxybutylryl-CoA dehydrogenase genes in DSM10061
+    - wayne.mitchell
+    - "A. CAETHG_0420\r\nB. CAETHG_1586\r\nAre they 3-hydroxybutylryl-CoA dehydrogenase
+      ?"
+    - 
+    - '2014-12-10 02:01:01.444211'
+    - '2014-12-10 02:01:01.444211'
+    - Complete
+    - 
+    - "CAETHG_0420 & CAETHG_1586 have conserved prosite motif -- possibel active site
+      -- very similar to   PDB 4KUG 3-hydroxybutylryl-CoA dehydrogenase from  C. butyricum;\r\n\r\nhomology
+      models of CAETHG_0420 & CAETHG_1586 on PDB 4KUG 3-hydroxybutylryl-CoA have low
+      RMSD ."
+  - - 81
+    - C. Auto Codon Adapted LeuA variants
+    - wayne.mitchell
+    - 'Using E.coli LeuA as template, create C. auto codon adapted wild type sequence.
+      Then, modify the wild type codon adapted  sequence to introduce three different
+      amino acid variants. '
+    - 
+    - '2015-01-22 03:30:01.194237'
+    - '2015-01-22 03:31:34.309765'
+    - Complete
+    - wayne.mitchell
+    - Four sequences delivered to Shilpa.
+  - - 82
+    - LeuBCD C auto codon adapted sequences
+    - wayne.mitchell
+    - C. auto codon adapted sequences LeuB LeuC LeuD E. coli wildtype, adapted for
+      expression in C. aout
+    - 
+    - '2015-01-22 03:33:34.641170'
+    - '2015-01-22 03:33:34.641170'
+    - Complete
+    - 
+    - three sequences, one each for LeuB, LeuC, LeuD wild type (E.coli) codon adapted
+      for C. auto delivered to Shilpa
+  - - 83
+    - codon optimisation nphT7
+    - james.behrendorff
+    - "codon optimisation with Wayne's calculator. FASTA file of peptide sequence
+      attached\r\nCheers!"
+    - 
+    - '2015-01-26 23:13:16.451017'
+    - '2015-01-29 03:11:34.837155'
+    - Complete
+    - wayne.mitchell
+    - 1000 nphT7 DNA sequences codon adapted to C. autoethanogenum, best (by free
+      energy of folding) to James B.
+  - - 84
+    - Crickit.pl 2.1
+    - wayne.mitchell
+    - 'Add capability to cricket to allow specific amino acid changes and correlated
+      codon changes to a a template with minimum alteration of the underlying DNA
+      template. EG a wild type gene xyzA might be codon adapted to C.auto to produce
+      xyzA_ca. Then specific AA changes introduced such s G10A. A new DNA template
+      will be output that latest on the minimum number of codons that to encode the
+      new AA sequence with "reasonable" coon pair features. '
+    - 
+    - '2015-01-28 12:38:28.927058'
+    - '2015-01-28 12:39:16.281469'
+    - Ongoing
+    - wayne.mitchell
+    - ''
+  - - 85
+    - BuRP 2.0
+    - wayne.mitchell
+    - "updates and fixes to BuRP (Bioinformatics request Portal):\r\n\r\n1. make the
+      table sortable by column?\r\n2. add  columns for dates for status change\r\n
+      \       requested (firsts ‘pending'\r\n        status changed to ongoing\r\n
+      \       states changed to complete\r\nand automatically populate these columns
+      as status changes\r\n3. make it impossible to change status to ongoing w/out
+      assigning a job to someone. \r\n4. Add Banner to pages "
+    - 
+    - '2015-01-28 13:24:26.262727'
+    - '2015-02-02 00:27:57.551586'
+    - Complete
+    - stuart.bradley
+    - 'Complete, this awaits testing on Reily before deployment to Blunt. '
+  - - 86
+    - Assist with 2-HIB tolerant strain patent application
+    - vinicio.reynoso
+    - Add new sequencing data to the provisional application for the 2-HIB tolerant
+      strain (LT100). Request involved making an excel file listing which functional
+      elements in the 2-HIB tolerant strain are mutated relative to the LZ1561 pac
+      bio reference. For each element, both the reference and mutated sequences (DNA
+      and protein) were listed.
+    - 
+    - '2015-01-28 16:08:14.615805'
+    - '2015-01-29 16:02:42.141317'
+    - Ongoing
+    - vini.reynoso
+    - ''
+  - - 88
+    - Crickit Frontend
+    - stuart.bradley
+    - 'Create a web portal front-end for Wayne''s Gene Designer script. '
+    - 
+    - '2015-01-28 20:02:32.235299'
+    - '2015-01-29 21:06:04.718725'
+    - Complete
+    - stuart.bradley
+    - 'Front end is ready for final perl script. '
+  - - 89
+    - CRISPR Documentation
+    - stuart.bradley
+    - 'The CRISPR webapp requires limited documentation to remind users of its functionality. '
+    - 
+    - '2015-01-28 20:03:28.313872'
+    - '2015-01-29 21:03:52.481437'
+    - Complete
+    - stuart.bradley
+    - 'There is now a help button next to the input box. This produces a small popup
+      explaining the purpose of the site, and how to use it. '
+  - - 90
+    - Email debugging
+    - stuart.bradley
+    - Email system needs to be debugged to return to automatic sending of emails.
+    - 
+    - '2015-01-28 20:31:01.104695'
+    - '2015-01-28 20:33:09.248865'
+    - Complete
+    - stuart.bradley;asela.dassanayake
+    - "The Javascript :default hook appeared to be blocking the routing table.\r\n\r\nAdditionally
+      delayed_job has to be running!\r\n\r\n> bin/delayed_job start\r\n\r\nIt can
+      be cleared to stop a million emails at once by running:\r\n\r\n> rake jobs:clear\r\n\r\n"
+  - - 91
+    - Start up script for blunt
+    - asela.dassanayake
+    - Write start up script using Expect and Bash to mount the logical drive, start
+      mysql, apache and ssh daemons, start rails server and start rails delayed_jobs
+      script
+    - 
+    - '2015-01-28 20:48:06.600166'
+    - '2015-01-29 00:48:26.834804'
+    - Complete
+    - asela.dassanayake
+    - ''
+  - - 92
+    - Geneious DB connection for AlexJ
+    - asela.dassanayake
+    - 'AlexJ is unable to connect to the Geneious shared DB. '
+    - 
+    - '2015-01-29 00:53:00.231002'
+    - '2015-01-29 03:26:18.916579'
+    - Complete
+    - asela.dassanayake
+    - ''
+  - - 93
+    - Blunt Security breach
+    - asela.dassanayake
+    - Blunt suffered a security breach. Investigate.
+    - 
+    - '2015-01-29 00:58:46.967490'
+    - '2015-01-29 03:26:10.427522'
+    - Complete
+    - asela.dassanayake
+    - "​Starting on 18-01-2015 7.40am an intruder was successful in getting through
+      an open port on the company firewall.\r\nThen started attacking the Blunt server
+      and trying to get access into the server.\r\nThis blunt server is administered
+      by asela and host confidential information pertaining to research of SynBio
+      group. These include, Geneious shared databases and Genetic Tools hand book.\r\nThe
+      attack went on till 21-01-2015 5.30pm\r\nDue to the security measures put into
+      place on the blunt server the intruder was UNsuccessful in gaining access into
+      or to any data on the server.\r\nBut the intruder was grabbing packets that
+      were going in and out from the server with the hope of using information in
+      those packets to get access to the server.\r\nThis of course interrupted  communication
+      between the server and the other computers at Skokie giving rise to the \"Link
+      Failure errors\" faced by Michael, AlexJ and Ryan.\r\nI brought this to the
+      attention of the IT team and they were able to close the open port on the firewall."
+  - - 94
+    - Results Retrieval Issue in BuRP
+    - wayne.mitchell
+    - James B reports issues retrieving results file
+    - 
+    - '2015-01-29 16:04:56.963350'
+    - '2015-01-29 21:08:42.746579'
+    - Complete
+    - stuart.bradley;asela.dassanayake
+    - 'Site wide authentication and redirecting is now in place for any url on requests. '
+  - - 95
+    - Off by one print issue in cricket output
+    - wayne.mitchell
+    - 'First line of sequence output has 59 not 60 chars, while other lines have 60
+      chars. This makes it hard to locate sites for hand mutagenesis. '
+    - 
+    - '2015-01-29 18:39:09.611900'
+    - '2015-01-29 19:40:33.253877'
+    - Complete
+    - wayne.mitchell
+    - "Change order  print statements in loop to:\r\n    for (my $i = 0; $i < @{$ra_seq};
+      $i++){\r\n      if (($i+1) % 60 == 0){\r\n        print $OUT ($ra_seq->[$i]);\r\n
+      \       print $OUT \"\\n\";\r\n      }else{\r\n        print $OUT ($ra_seq->[$i]);\r\n
+      \     }\r\n    }\r\ni"
+  - - 96
+    - Review server specs
+    - asela.dassanayake
+    - Review new server specs from the quotations sent by Brian Brehart
+    - 
+    - '2015-01-29 20:59:19.622329'
+    - '2015-01-29 22:54:13.644792'
+    - Complete
+    - ''
+    - ''
+  - - 97
+    - BLAST2GO analysis DSM10061
+    - wayne.mitchell
+    - 'Run BLAST2GO on DSM10061 '
+    - 
+    - '2015-01-31 16:51:49.862146'
+    - '2015-01-31 16:52:36.897139'
+    - Ongoing
+    - wayne.mitchell
+    - ''
+  - - 98
+    - quickGO Client
+    - wayne.mitchell
+    - "Local web app rthat allows user to paste in ';' separated GO terms, which submits
+      these to the EMBL quickGO web service and displays the response.\r\n\r\nquickGO
+      @ https://www.google.com/#q=quiqqckGO\r\n\r\nweb service described @ \r\nhttp://www.ebi.ac.uk/QuickGO/WebServices.html"
+    - 
+    - '2015-01-31 21:14:28.143438'
+    - '2015-01-31 21:14:28.143438'
     - Pending
+    - wayne.mitchell
+    - ''
+  - - 99
+    - BuRP Feature
+    - wayne.mitchell
+    - Add am option "Customer" field for cases where ModelSystemian launches a project
+      on behalf of someone else (the customer)
     - 
+    - '2015-02-01 22:54:01.119672'
+    - '2015-02-01 23:32:49.066754'
+    - Ongoing
+    - stuart.bradley
+    - ''
+  - - 100
+    - Migrate BuRP to MySQL
+    - stuart.bradley
+    - 'BuRP is currently on SQL lite, being on MySQL would bring it in-line with the
+      other services we use, as well as help it scale properly. '
     - 
+    - '2015-02-01 23:35:00.051023'
+    - '2015-02-01 23:50:07.298301'
+    - Ongoing
+    - stuart.bradley;asela.dassanayake
+    - ''
 
 ---
 result_files:
@@ -643,7 +1060,249 @@ result_files:
     - DSM10061_PSORTb_localizationPredictionsSummary.txt
     - '2014-10-05 21:13:07.744998'
     - '2014-10-05 21:13:07.744998'
+  - - 34
+    - 70
+    - CAETHG_0420_2014-11-23.zip
+    - '2014-11-23 06:44:20.647216'
+    - '2014-11-23 06:44:20.647216'
+  - - 35
+    - 70
+    - CAETHG_1586_2014-11-23.zip
+    - '2014-11-23 06:44:20.804022'
+    - '2014-11-23 06:44:20.804022'
+  - - 36
+    - 72
+    - Cre_Best_candidates.txt
+    - '2014-12-10 01:28:16.614055'
+    - '2014-12-10 01:28:16.614055'
+  - - 37
+    - 73
+    - Sce_Best_candidates.txt
+    - '2014-12-10 01:29:54.099957'
+    - '2014-12-10 01:29:54.099957'
+  - - 38
+    - 82
+    - Shilpa_LeuA_and_LeuBCD_Reports.7z
+    - '2015-01-22 03:33:34.911671'
+    - '2015-01-22 03:33:34.911671'
+  - - 39
+    - 81
+    - Shilpa_LeuA_and_LeuBCD_Reports.zip
+    - '2015-01-22 03:33:58.675538'
+    - '2015-01-22 03:33:58.675538'
+  - - 40
+    - 36
+    - TopTerminators.xlsx
+    - '2015-01-26 19:50:13.271864'
+    - '2015-01-26 19:50:13.271864'
+  - - 41
+    - 83
+    - Report_nphT7_wt_codon_adapted_to_Clostridium_1561.docx
+    - '2015-01-29 03:11:35.368937'
+    - '2015-01-29 03:11:35.368937'
 
+---
+users:
+  columns:
+  - id
+  - login
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - admin
+  records: 
+  - - 17
+    - stuart.bradley
+    - 
+    - 4
+    - '2015-02-01 19:37:54.909416'
+    - '2015-01-28 19:55:36.641485'
+    - 192.168.47.17
+    - 192.168.47.17
+    - '2014-11-17 00:52:49.878614'
+    - '2015-02-01 19:37:54.910332'
+    - true
+  - - 18
+    - asela.dassanayake
+    - 
+    - 63
+    - '2015-02-02 00:59:35.576519'
+    - '2015-02-01 22:23:35.768693'
+    - 192.168.47.140
+    - 192.168.47.140
+    - '2014-11-17 00:52:50.008909'
+    - '2015-02-02 00:59:35.577382'
+    - true
+  - - 19
+    - wayne.mitchell
+    - 
+    - 7
+    - '2015-02-01 22:52:06.198090'
+    - '2015-01-28 02:16:41.621577'
+    - 10.10.32.191
+    - 10.10.32.191
+    - '2014-11-17 00:52:50.133783'
+    - '2015-02-01 22:52:06.198967'
+    - true
+  - - 20
+    - james.daniell
+    - 
+    - 7
+    - '2015-01-21 21:40:49.273740'
+    - '2015-01-12 05:01:17.096798'
+    - 192.168.47.102
+    - 192.168.47.16
+    - '2014-11-17 00:52:50.250736'
+    - '2015-01-21 21:40:49.274682'
+    - true
+  - - 21
+    - vini.reynoso
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:50.359318'
+    - '2014-11-17 00:52:50.359318'
+    - true
+  - - 22
+    - michael.koepke
+    - 
+    - 2
+    - '2014-12-10 17:55:26.189551'
+    - '2014-12-08 16:47:21.298890'
+    - 10.10.32.31
+    - 10.10.32.31
+    - '2014-11-17 00:52:50.467962'
+    - '2014-12-10 17:55:26.190401'
+    - false
+  - - 23
+    - sean.simpson
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:50.576544'
+    - '2014-11-17 00:52:50.576544'
+    - false
+  - - 24
+    - rasmus.jensen
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:50.693544'
+    - '2014-11-17 00:52:50.693544'
+    - false
+  - - 25
+    - james.behrendorff
+    - 
+    - 4
+    - '2015-01-29 19:25:17.455435'
+    - '2015-01-29 19:25:13.084165'
+    - 10.10.32.230
+    - 10.10.32.230
+    - '2014-11-17 00:52:50.802116'
+    - '2015-01-29 19:25:17.456309'
+    - false
+  - - 26
+    - bjorn.heijstra
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:50.910714'
+    - '2014-11-17 00:52:50.910714'
+    - false
+  - - 27
+    - shilpa.nagaraju
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:51.052768'
+    - '2014-11-17 00:52:51.052768'
+    - false
+  - - 28
+    - katie.smart
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:51.161315'
+    - '2014-11-17 00:52:51.161315'
+    - false
+  - - 29
+    - christophe.mihalcea
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:51.269855'
+    - '2014-11-17 00:52:51.269855'
+    - false
+  - - 30
+    - eric.liew
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:51.386792'
+    - '2014-11-17 00:52:51.386792'
+    - false
+  - - 31
+    - alex.mueller
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:51.503757'
+    - '2014-11-17 00:52:51.503757'
+    - false
+  - - 32
+    - jared.prinsloo
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2014-11-17 00:52:51.620719'
+    - '2014-11-17 00:52:51.620719'
+    - false
+  - - 33
+    - vinicio.reynoso
+    - 
+    - 1
+    - '2015-01-28 15:59:03.235034'
+    - '2015-01-28 15:59:03.235034'
+    - 10.10.32.167
+    - 10.10.32.167
+    - '2015-01-28 15:59:03.080064'
+    - '2015-01-29 20:42:09.589760'
+    - true
 
 ---
 versions:
@@ -2991,3 +3650,1991 @@ versions:
       Koepke\ntitle:\n- \n- Pathway Tools\ndescription:\n- \n- Download and install
       pathway tools Pathway Tools 18.5\ncreated_at:\n- \n- 2014-11-16 00:14:46.903904393
       Z\nupdated_at:\n- \n- 2014-11-16 00:14:46.903904393 Z\nid:\n- \n- 58\n"
+  - - 162
+    - Request
+    - 59
+    - create
+    - '18'
+    - 
+    - '2014-11-17 00:55:23.620274'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- testing ldap\ndescription:\n- \n- testing the ldap login\nresult:\n- \n-
+      ''\ncreated_at:\n- \n- 2014-11-17 00:55:23.575191226 Z\nupdated_at:\n- \n- 2014-11-17
+      00:55:23.575191226 Z\nid:\n- \n- 59\n"
+  - - 163
+    - Request
+    - 59
+    - destroy
+    - '18'
+    - "---\nid: 59\ntitle: testing ldap\nname: asela.dassanayake\ndescription: testing
+      the ldap login\nattachment: \ncreated_at: 2014-11-17 00:55:23.575191000 Z\nupdated_at:
+      2014-11-17 00:55:23.575191000 Z\nstatus: Pending\nassignment: \nresult: ''\n"
+    - '2014-11-17 00:58:24.587696'
+    - 
+  - - 164
+    - Request
+    - 58
+    - update
+    - '18'
+    - "---\nid: 58\ntitle: Pathway Tools\nname: Michael Koepke\ndescription: Download
+      and install pathway tools Pathway Tools 18.5\nattachment: \ncreated_at: 2014-11-16
+      00:14:46.903904000 Z\nupdated_at: 2014-11-16 00:14:46.903904000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2014-11-17 20:55:24.049931'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      asela.dassanayake\nresult:\n- \n- ''\nupdated_at:\n- 2014-11-16 00:14:46.903904000
+      Z\n- 2014-11-17 20:55:24.047217865 Z\n"
+  - - 165
+    - Request
+    - 60
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:06:01.881772'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:06:01.868081375 Z\nupdated_at:\n- \n- 2014-11-20 17:06:01.868081375
+      Z\nid:\n- \n- 60\n"
+  - - 166
+    - Request
+    - 61
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:06:33.885860'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:06:33.883641282 Z\nupdated_at:\n- \n- 2014-11-20 17:06:33.883641282
+      Z\nid:\n- \n- 61\n"
+  - - 167
+    - Request
+    - 62
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:07:03.023236'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:07:03.021012660 Z\nupdated_at:\n- \n- 2014-11-20 17:07:03.021012660
+      Z\nid:\n- \n- 62\n"
+  - - 168
+    - Request
+    - 63
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:07:30.218113'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:07:30.214015130 Z\nupdated_at:\n- \n- 2014-11-20 17:07:30.214015130
+      Z\nid:\n- \n- 63\n"
+  - - 169
+    - Request
+    - 64
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:07:55.322097'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:07:55.317986572 Z\nupdated_at:\n- \n- 2014-11-20 17:07:55.317986572
+      Z\nid:\n- \n- 64\n"
+  - - 170
+    - Request
+    - 65
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:08:21.335819'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:08:21.333507273 Z\nupdated_at:\n- \n- 2014-11-20 17:08:21.333507273
+      Z\nid:\n- \n- 65\n"
+  - - 171
+    - Request
+    - 66
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:08:47.988334'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:08:47.986377370 Z\nupdated_at:\n- \n- 2014-11-20 17:08:47.986377370
+      Z\nid:\n- \n- 66\n"
+  - - 172
+    - Request
+    - 67
+    - create
+    - '19'
+    - 
+    - '2014-11-20 17:09:07.849332'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- annotate two C.auto offs\ndescription:\n- \n- Annotate C.auto DSM10061 CAETHG
+      0402 and CAETHG1586\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 17:09:07.845623963 Z\nupdated_at:\n- \n- 2014-11-20 17:09:07.845623963
+      Z\nid:\n- \n- 67\n"
+  - - 173
+    - Request
+    - 68
+    - create
+    - '18'
+    - 
+    - '2014-11-20 22:20:10.860920'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Email daemon\ndescription:\n- \n- Testing email Daemon\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-11-20 22:20:10.845554114 Z\nupdated_at:\n- \n- 2014-11-20 22:20:10.845554114
+      Z\nid:\n- \n- 68\n"
+  - - 174
+    - Request
+    - 69
+    - create
+    - '25'
+    - 
+    - '2014-11-21 16:13:24.675662'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- james.behrendorff\ntitle:\n-
+      \n- Genomes lacking soluble inorganic pyrophosphatase\ndescription:\n- \n- \"Looking
+      for completed genomes that do NOT have the soluble inorganic pyrophosphatase\n
+      \ (and therefore may rely on an efficient membrane-bound proton-pumping pyrophosphatase).\\r\\nSoluble\n
+      \ inorganic pyrophosphatase is often labelled ppaC in genome annotations. I've
+      attached\n  a FASTA file with some sequences, including some membrane-bound
+      proton-pumping forms.\\r\\nAlso\n  here is a link to one of the NCBI CDD pages.
+      The soluble PPases can vary a lot in\n  length (~150-~500 amino acids) http://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi?INPUT_TYPE=precalc&SEQUENCE=11056044\\r\\nUnfortunately\n
+      \ you may not be able to just exclude the pyrophosphatase superfamily - we want
+      to\n  exclude the common soluble form and enrich for genomes with only the membrane-bound\n
+      \ proton-pumping form.\\r\\nThe membrane-bound form is always larger (~600 amino
+      acids)\n  and contains several transmembrane domains identifiable by a Kyte-Doolittle
+      hydropathy\n  plot but shares some conserved catalytic residues related to the
+      PPi hydrolysis.\\r\\nLet\n  me know if there is something else I can provide.\"\ncreated_at:\n-
+      \n- 2014-11-21 16:13:24.671647182 Z\nupdated_at:\n- \n- 2014-11-21 16:13:24.671647182
+      Z\nid:\n- \n- 69\n"
+  - - 175
+    - Request
+    - 56
+    - update
+    - '18'
+    - "---\nid: 56\ntitle: Genetic Tools Handbook\nname: Michael Koepke\ndescription:
+      Set up a new wiki for the Genetic Tools handbook.\nattachment: \ncreated_at:
+      2014-10-07 20:41:59.498009000 Z\nupdated_at: 2014-10-07 20:43:08.686738000 Z\nstatus:
+      Pending\nassignment: Asela\nresult: ''\n"
+    - '2014-11-23 04:06:19.005518'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Complete
+      assignment:
+      - Asela
+      - ''
+      updated_at:
+      - 2014-10-07 20:43:08.686738000 Z
+      - 2014-11-23 04:06:19.002825924 Z
+  - - 176
+    - Request
+    - 56
+    - update
+    - '18'
+    - "---\nid: 56\ntitle: Genetic Tools Handbook\nname: Michael Koepke\ndescription:
+      Set up a new wiki for the Genetic Tools handbook.\nattachment: \ncreated_at:
+      2014-10-07 20:41:59.498009000 Z\nupdated_at: 2014-11-23 04:06:19.002825000 Z\nstatus:
+      Complete\nassignment: ''\nresult: ''\n"
+    - '2014-11-23 04:06:32.230050'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - ''
+      - asela.dassanayake
+      updated_at:
+      - 2014-11-23 04:06:19.002825000 Z
+      - 2014-11-23 04:06:32.227984150 Z
+  - - 177
+    - Request
+    - 68
+    - destroy
+    - '18'
+    - "---\nid: 68\ntitle: Email daemon\nname: asela.dassanayake\ndescription: Testing
+      email Daemon\nattachment: \ncreated_at: 2014-11-20 22:20:10.845554000 Z\nupdated_at:
+      2014-11-20 22:20:10.845554000 Z\nstatus: Pending\nassignment: \nresult: ''\n"
+    - '2014-11-23 04:06:47.422080'
+    - 
+  - - 178
+    - Request
+    - 70
+    - create
+    - '18'
+    - 
+    - '2014-11-23 06:44:20.359386'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Model ORFs\ndescription:\n- \n- Build models for CAETH_0420 and CAETHG_1586
+      using template 4KUG\nstatus:\n- Pending\n- Complete\nresult:\n- \n- Results
+      attached\ncreated_at:\n- \n- 2014-11-23 06:44:20.357299104 Z\nupdated_at:\n-
+      \n- 2014-11-23 06:44:20.357299104 Z\nid:\n- \n- 70\n"
+  - - 179
+    - Request
+    - 71
+    - create
+    - '18'
+    - 
+    - '2014-11-23 06:47:06.821207'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Set up BLAST server\ndescription:\n- \n- Set up an internal BLAST server
+      and BLAST the attached proteins against all bacterial\n  genomes\nstatus:\n-
+      Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-11-23 06:47:06.818524847
+      Z\nupdated_at:\n- \n- 2014-11-23 06:47:06.818524847 Z\nid:\n- \n- 71\n"
+  - - 180
+    - Request
+    - 70
+    - update
+    - '18'
+    - "---\nid: 70\ntitle: Model ORFs\nname: asela.dassanayake\ndescription: Build
+      models for CAETH_0420 and CAETHG_1586 using template 4KUG\nattachment: \ncreated_at:
+      2014-11-23 06:44:20.357299000 Z\nupdated_at: 2014-11-23 06:44:20.357299000 Z\nstatus:
+      Complete\nassignment: \nresult: Results attached\n"
+    - '2014-11-24 02:53:17.699590'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Complete\n-
+      Ongoing\nassignment:\n- \n- ''\nupdated_at:\n- 2014-11-23 06:44:20.357299000
+      Z\n- 2014-11-24 02:53:17.697047584 Z\n"
+  - - 181
+    - Request
+    - 71
+    - update
+    - '18'
+    - "---\nid: 71\ntitle: Set up BLAST server\nname: asela.dassanayake\ndescription:
+      Set up an internal BLAST server and BLAST the attached proteins against\n  all
+      bacterial genomes\nattachment: \ncreated_at: 2014-11-23 06:47:06.818524000 Z\nupdated_at:
+      2014-11-23 06:47:06.818524000 Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 02:53:29.245822'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      asela.dassanayake\nupdated_at:\n- 2014-11-23 06:47:06.818524000 Z\n- 2014-11-24
+      02:53:29.243816963 Z\n"
+  - - 182
+    - Request
+    - 70
+    - update
+    - '18'
+    - "---\nid: 70\ntitle: Model ORFs\nname: asela.dassanayake\ndescription: Build
+      models for CAETH_0420 and CAETHG_1586 using template 4KUG\nattachment: \ncreated_at:
+      2014-11-23 06:44:20.357299000 Z\nupdated_at: 2014-11-24 02:53:17.697047000 Z\nstatus:
+      Ongoing\nassignment: ''\nresult: Results attached\n"
+    - '2014-11-24 02:53:34.459922'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - ''
+      - asela.dassanayake
+      updated_at:
+      - 2014-11-24 02:53:17.697047000 Z
+      - 2014-11-24 02:53:34.456426905 Z
+  - - 183
+    - Request
+    - 60
+    - destroy
+    - '19'
+    - "---\nid: 60\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:06:01.868081000 Z\nupdated_at: 2014-11-20 17:06:01.868081000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:54:37.949125'
+    - 
+  - - 184
+    - Request
+    - 62
+    - destroy
+    - '19'
+    - "---\nid: 62\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:07:03.021012000 Z\nupdated_at: 2014-11-20 17:07:03.021012000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:54:49.628835'
+    - 
+  - - 185
+    - Request
+    - 61
+    - destroy
+    - '19'
+    - "---\nid: 61\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:06:33.883641000 Z\nupdated_at: 2014-11-20 17:06:33.883641000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:54:56.308205'
+    - 
+  - - 186
+    - Request
+    - 63
+    - destroy
+    - '19'
+    - "---\nid: 63\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:07:30.214015000 Z\nupdated_at: 2014-11-20 17:07:30.214015000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:55:01.645758'
+    - 
+  - - 187
+    - Request
+    - 64
+    - destroy
+    - '19'
+    - "---\nid: 64\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:07:55.317986000 Z\nupdated_at: 2014-11-20 17:07:55.317986000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:55:07.581513'
+    - 
+  - - 188
+    - Request
+    - 65
+    - destroy
+    - '19'
+    - "---\nid: 65\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:08:21.333507000 Z\nupdated_at: 2014-11-20 17:08:21.333507000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:55:12.800786'
+    - 
+  - - 189
+    - Request
+    - 66
+    - destroy
+    - '19'
+    - "---\nid: 66\ntitle: annotate two C.auto offs\nname: wayne.mitchell\ndescription:
+      Annotate C.auto DSM10061 CAETHG 0402 and CAETHG1586\nattachment: \ncreated_at:
+      2014-11-20 17:08:47.986377000 Z\nupdated_at: 2014-11-20 17:08:47.986377000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2014-11-24 11:55:18.293702'
+    - 
+  - - 190
+    - Request
+    - 37
+    - update
+    - '18'
+    - "---\nid: 37\ntitle: Analyse the mutations of the Kalashnikova strain\nname:
+      Bjorn Heijstra\ndescription: Analyse the effects at the protein level for the
+      mutations identified\n  on the Kalashnikova strain\nattachment: \ncreated_at:
+      2014-07-25 00:18:33.473994000 Z\nupdated_at: 2014-07-25 00:19:21.426556000 Z\nstatus:
+      Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2014-11-30 23:04:59.808617'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Asela
+      - ''
+      updated_at:
+      - 2014-07-25 00:19:21.426556000 Z
+      - 2014-11-30 23:04:59.806399767 Z
+  - - 191
+    - Request
+    - 33
+    - update
+    - '18'
+    - "---\nid: 33\ntitle: Contamination Alalysis\nname: Katie Smart\ndescription:
+      Analyse the DNA sequences from the F12 reactor that started producing\n  butanol\nattachment:
+      \ncreated_at: 2014-07-24 22:01:52.935221000 Z\nupdated_at: 2014-09-24 00:53:01.949854000
+      Z\nstatus: Ongoing\nassignment: Asela;Vini\nresult: ''\n"
+    - '2014-11-30 23:05:32.853695'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Asela;Vini
+      - ''
+      updated_at:
+      - 2014-09-24 00:53:01.949854000 Z
+      - 2014-11-30 23:05:32.851515728 Z
+  - - 192
+    - Request
+    - 28
+    - update
+    - '18'
+    - "---\nid: 28\ntitle: LZ1561 Vs Kalashnikova\nname: Asela Dassanayake\ndescription:
+      Identify the variants between the two strains from gDNA\nattachment: \ncreated_at:
+      2014-07-04 03:51:08.356042000 Z\nupdated_at: 2014-07-30 00:25:17.855607000 Z\nstatus:
+      Complete\nassignment: Asela\nresult: ''\n"
+    - '2014-11-30 23:05:56.988257'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - Asela
+      - asela.dassanayake;vini.reynoso
+      updated_at:
+      - 2014-07-30 00:25:17.855607000 Z
+      - 2014-11-30 23:05:56.986224724 Z
+  - - 193
+    - Request
+    - 15
+    - update
+    - '18'
+    - "---\nid: 15\ntitle: C.auto release factor 3\nname: Wayne Mitchell\ndescription:
+      \"There are three translation Release Factors annotated in C.auto. Normal\n
+      \ complement is two.\\r\\nPlease align the three at protein level to see if
+      its a duplication\n  or a possible new function.\\r\\n\\r\\nResults - http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome\"\nattachment:
+      \ncreated_at: 2014-05-18 21:29:11.143064000 Z\nupdated_at: 2014-05-19 02:02:15.741493000
+      Z\nstatus: Complete\nassignment: Asela\nresult: \n"
+    - '2014-12-01 02:12:09.153908'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\ndescription:\n- \"There
+      are three translation Release Factors annotated in C.auto. Normal complement\n
+      \ is two.\\r\\nPlease align the three at protein level to see if its a duplication
+      or\n  a possible new function.\\r\\n\\r\\nResults - http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome\"\n-
+      \"There are three translation Release Factors annotated in C.auto. Normal complement\n
+      \ is two.\\r\\nPlease align the three at protein level to see if its a duplication
+      or\n  a possible new function.\\r\\n\"\nassignment:\n- Asela\n- ''\nresult:\n-
+      \n- http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome\nupdated_at:\n-
+      2014-05-19 02:02:15.741493000 Z\n- 2014-12-01 02:12:09.151659487 Z\n"
+  - - 194
+    - Request
+    - 15
+    - update
+    - '18'
+    - "---\nid: 15\ntitle: C.auto release factor 3\nname: Wayne Mitchell\ndescription:
+      \"There are three translation Release Factors annotated in C.auto. Normal\n
+      \ complement is two.\\r\\nPlease align the three at protein level to see if
+      its a duplication\n  or a possible new function.\\r\\n\"\nattachment: \ncreated_at:
+      2014-05-18 21:29:11.143064000 Z\nupdated_at: 2014-12-01 02:12:09.151659000 Z\nstatus:
+      Complete\nassignment: ''\nresult: http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome\n"
+    - '2014-12-01 02:12:32.544171'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - http://192.168.46.146/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome
+      - http://blunt.lt.local/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome
+      updated_at:
+      - 2014-12-01 02:12:09.151659000 Z
+      - 2014-12-01 02:12:32.542079179 Z
+  - - 195
+    - Request
+    - 15
+    - update
+    - '18'
+    - "---\nid: 15\ntitle: C.auto release factor 3\nname: Wayne Mitchell\ndescription:
+      \"There are three translation Release Factors annotated in C.auto. Normal\n
+      \ complement is two.\\r\\nPlease align the three at protein level to see if
+      its a duplication\n  or a possible new function.\\r\\n\"\nattachment: \ncreated_at:
+      2014-05-18 21:29:11.143064000 Z\nupdated_at: 2014-12-01 02:12:32.542079000 Z\nstatus:
+      Complete\nassignment: ''\nresult: http://blunt.lt.local/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome\n"
+    - '2014-12-01 02:13:50.674250'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - http://blunt.lt.local/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome
+      - https://blunt.lt.local/wiki/index.php/Annotation_curation_of_Release_Factors_on_LZ1561_genome
+      updated_at:
+      - 2014-12-01 02:12:32.542079000 Z
+      - 2014-12-01 02:13:50.672177601 Z
+  - - 196
+    - Request
+    - 70
+    - update
+    - '18'
+    - "---\nid: 70\ntitle: Model ORFs\nname: asela.dassanayake\ndescription: Build
+      models for CAETH_0420 and CAETHG_1586 using template 4KUG\nattachment: \ncreated_at:
+      2014-11-23 06:44:20.357299000 Z\nupdated_at: 2014-11-24 02:53:34.456426000 Z\nstatus:
+      Ongoing\nassignment: asela.dassanayake\nresult: Results attached\n"
+    - '2014-12-04 01:13:45.958702'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-11-24 02:53:34.456426000 Z
+      - 2014-12-04 01:13:45.956658163 Z
+  - - 197
+    - Request
+    - 72
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:28:16.311788'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Optimized Cre Coding sequences\ndescription:\n- \n- 'DNA sequences encoding
+      Cre output from Gene Designer, '\nstatus:\n- Pending\n- Complete\nresult:\n-
+      \n- 'Best Two Sequences Delivered to Ching. '\ncreated_at:\n- \n- 2014-12-10
+      01:28:16.287401584 Z\nupdated_at:\n- \n- 2014-12-10 01:28:16.287401584 Z\nid:\n-
+      \n- 72\n"
+  - - 198
+    - Request
+    - 73
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:29:53.793931'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- optimized Sce Sequences\ndescription:\n- \n- Sce coding sequences as output
+      by GeneDesigner\nstatus:\n- Pending\n- Complete\nresult:\n- \n- Best 2 candidate
+      sequences delivered to Ching\ncreated_at:\n- \n- 2014-12-10 01:29:53.791910247
+      Z\nupdated_at:\n- \n- 2014-12-10 01:29:53.791910247 Z\nid:\n- \n- 73\n"
+  - - 199
+    - Request
+    - 74
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:33:25.535430'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Optimized GusA  Sequences\ndescription:\n- \n- \"GusA coding sequences output
+      from Gene Designer. Two 5' UTR contexts. \\r\\n5_UTR_pMTL82254-tetR-gusA\\r\\nbgaR-PgaL\"\nstatus:\n-
+      Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-12-10 01:33:25.533390662
+      Z\nupdated_at:\n- \n- 2014-12-10 01:33:25.533390662 Z\nid:\n- \n- 74\n"
+  - - 200
+    - Request
+    - 72
+    - update
+    - '19'
+    - "---\nid: 72\ntitle: Optimized Cre Coding sequences\nname: wayne.mitchell\ndescription:
+      'DNA sequences encoding Cre output from Gene Designer, '\nattachment: \ncreated_at:
+      2014-12-10 01:28:16.287401000 Z\nupdated_at: 2014-12-10 01:28:16.287401000 Z\nstatus:
+      Complete\nassignment: \nresult: 'Best Two Sequences Delivered to Ching. '\n"
+    - '2014-12-10 01:33:45.020647'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      wayne.mitchell\nupdated_at:\n- 2014-12-10 01:28:16.287401000 Z\n- 2014-12-10
+      01:33:45.018186708 Z\n"
+  - - 201
+    - Request
+    - 73
+    - update
+    - '19'
+    - "---\nid: 73\ntitle: optimized Sce Sequences\nname: wayne.mitchell\ndescription:
+      Sce coding sequences as output by GeneDesigner\nattachment: \ncreated_at: 2014-12-10
+      01:29:53.791910000 Z\nupdated_at: 2014-12-10 01:29:53.791910000 Z\nstatus: Complete\nassignment:
+      \nresult: Best 2 candidate sequences delivered to Ching\n"
+    - '2014-12-10 01:34:09.959919'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      wayne.mitchell\nupdated_at:\n- 2014-12-10 01:29:53.791910000 Z\n- 2014-12-10
+      01:34:09.957918837 Z\n"
+  - - 202
+    - Request
+    - 74
+    - update
+    - '19'
+    - "---\nid: 74\ntitle: Optimized GusA  Sequences\nname: wayne.mitchell\ndescription:
+      \"GusA coding sequences output from Gene Designer. Two 5' UTR contexts.\n  \\r\\n5_UTR_pMTL82254-tetR-gusA\\r\\nbgaR-PgaL\"\nattachment:
+      \ncreated_at: 2014-12-10 01:33:25.533390000 Z\nupdated_at: 2014-12-10 01:33:25.533390000
+      Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2014-12-10 01:34:19.667234'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      wayne.mitchell\nupdated_at:\n- 2014-12-10 01:33:25.533390000 Z\n- 2014-12-10
+      01:34:19.665110548 Z\n"
+  - - 203
+    - Request
+    - 40
+    - update
+    - '19'
+    - "---\nid: 40\ntitle: CRISPR Scaner\nname: Wayne Mitchell\ndescription: Scan
+      Genome for CRISPR targets then check for multiple instances of target;\n  see
+      specificatin\nattachment: \ncreated_at: 2014-08-07 16:42:03.807218000 Z\nupdated_at:
+      2014-08-12 23:08:44.229309000 Z\nstatus: Ongoing\nassignment: Stuart\nresult:
+      ''\n"
+    - '2014-12-10 01:35:47.457708'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Stuart
+      - ''
+      updated_at:
+      - 2014-08-12 23:08:44.229309000 Z
+      - 2014-12-10 01:35:47.455609023 Z
+  - - 204
+    - Request
+    - 71
+    - update
+    - '19'
+    - "---\nid: 71\ntitle: Set up BLAST server\nname: asela.dassanayake\ndescription:
+      Set up an internal BLAST server and BLAST the attached proteins against\n  all
+      bacterial genomes\nattachment: \ncreated_at: 2014-11-23 06:47:06.818524000 Z\nupdated_at:
+      2014-11-24 02:53:29.243816000 Z\nstatus: Ongoing\nassignment: asela.dassanayake\nresult:
+      ''\n"
+    - '2014-12-10 01:36:05.925991'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-11-24 02:53:29.243816000 Z
+      - 2014-12-10 01:36:05.924019100 Z
+  - - 205
+    - Request
+    - 41
+    - update
+    - '19'
+    - "---\nid: 41\ntitle: Design 4 Construct Sequences\nname: Rasmus Jensen\ndescription:
+      4 AA sequences submitted; need DNA sequence generated with good chance\n  of
+      expression\nattachment: \ncreated_at: 2014-09-06 01:02:48.131660000 Z\nupdated_at:
+      2014-09-06 01:02:48.131660000 Z\nstatus: Ongoing\nassignment: Wayne\nresult:
+      ''\n"
+    - '2014-12-10 01:37:17.453338'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Wayne
+      - ''
+      updated_at:
+      - 2014-09-06 01:02:48.131660000 Z
+      - 2014-12-10 01:37:17.427495156 Z
+  - - 206
+    - Request
+    - 75
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:39:28.603463'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Optimized and anti-optimized CatP\ndescription:\n- \n- 'Test Gene Designer
+      by creating ''good/ and ''bad'' CatP coding sequences -- '\nstatus:\n- Pending\n-
+      Ongoing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-12-10 01:39:28.599620996
+      Z\nupdated_at:\n- \n- 2014-12-10 01:39:28.599620996 Z\nid:\n- \n- 75\n"
+  - - 207
+    - Request
+    - 76
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:40:52.692366'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- PerR sequence in LZ1561\ndescription:\n- \n- Confirm existence and location
+      of PerR in LZ1561.\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-12-10 01:40:52.690375268 Z\nupdated_at:\n- \n- 2014-12-10 01:40:52.690375268
+      Z\nid:\n- \n- 76\n"
+  - - 208
+    - Request
+    - 77
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:50:21.586176'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- DSM10061 gDNA prep\ndescription:\n- \n- isolate DSM10061 genomics DNA for
+      sequencing\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2014-12-10 01:50:21.584220524 Z\nupdated_at:\n- \n- 2014-12-10 01:50:21.584220524
+      Z\nid:\n- \n- 77\n"
+  - - 209
+    - Request
+    - 77
+    - update
+    - '19'
+    - "---\nid: 77\ntitle: DSM10061 gDNA prep\nname: wayne.mitchell\ndescription:
+      isolate DSM10061 genomics DNA for sequencing\nattachment: \ncreated_at: 2014-12-10
+      01:50:21.584220000 Z\nupdated_at: 2014-12-10 01:50:21.584220000 Z\nstatus: Ongoing\nassignment:
+      \nresult: ''\n"
+    - '2014-12-10 01:50:41.158607'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      vini.reynoso\nupdated_at:\n- 2014-12-10 01:50:21.584220000 Z\n- 2014-12-10 01:50:41.156513666
+      Z\n"
+  - - 210
+    - Request
+    - 78
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:51:32.075559'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- LZ1561 genomics DNA prep\ndescription:\n- \n- isolate gDNA from LZ1561 for
+      sequencing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2014-12-10 01:51:32.073589769
+      Z\nupdated_at:\n- \n- 2014-12-10 01:51:32.073589769 Z\nid:\n- \n- 78\n"
+  - - 211
+    - Request
+    - 78
+    - update
+    - '19'
+    - "---\nid: 78\ntitle: LZ1561 genomics DNA prep\nname: wayne.mitchell\ndescription:
+      isolate gDNA from LZ1561 for sequencing\nattachment: \ncreated_at: 2014-12-10
+      01:51:32.073589000 Z\nupdated_at: 2014-12-10 01:51:32.073589000 Z\nstatus: Pending\nassignment:
+      \nresult: ''\n"
+    - '2014-12-10 01:51:43.833373'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- vini.reynoso\nupdated_at:\n- 2014-12-10 01:51:32.073589000
+      Z\n- 2014-12-10 01:51:43.831111970 Z\n"
+  - - 212
+    - Request
+    - 79
+    - create
+    - '19'
+    - 
+    - '2014-12-10 01:53:18.535183'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Reanalysis of LZ1561 assembly\ndescription:\n- \n- Sequencne analysis and
+      Illumine read map back LZ1561 assembly\nstatus:\n- Pending\n- Complete\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2014-12-10 01:53:18.530965532 Z\nupdated_at:\n- \n-
+      2014-12-10 01:53:18.530965532 Z\nid:\n- \n- 79\n"
+  - - 213
+    - Request
+    - 79
+    - update
+    - '19'
+    - "---\nid: 79\ntitle: Reanalysis of LZ1561 assembly\nname: wayne.mitchell\ndescription:
+      Sequencne analysis and Illumine read map back LZ1561 assembly\nattachment: \ncreated_at:
+      2014-12-10 01:53:18.530965000 Z\nupdated_at: 2014-12-10 01:53:18.530965000 Z\nstatus:
+      Complete\nassignment: \nresult: ''\n"
+    - '2014-12-10 01:53:37.499977'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      vini.reynoso\nupdated_at:\n- 2014-12-10 01:53:18.530965000 Z\n- 2014-12-10 01:53:37.497748706
+      Z\n"
+  - - 214
+    - Request
+    - 79
+    - update
+    - '19'
+    - "---\nid: 79\ntitle: Reanalysis of LZ1561 assembly\nname: wayne.mitchell\ndescription:
+      Sequencne analysis and Illumine read map back LZ1561 assembly\nattachment: \ncreated_at:
+      2014-12-10 01:53:18.530965000 Z\nupdated_at: 2014-12-10 01:53:37.497748000 Z\nstatus:
+      Complete\nassignment: vini.reynoso\nresult: ''\n"
+    - '2014-12-10 01:54:57.633734'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - ''
+      - approximate 20 kb region with no significant Illumina coverage -- probably indicates
+        an assembly error in Pac Bio assembly of LZ1561
+      updated_at:
+      - 2014-12-10 01:53:37.497748000 Z
+      - 2014-12-10 01:54:57.631681546 Z
+  - - 215
+    - Request
+    - 80
+    - create
+    - '19'
+    - 
+    - '2014-12-10 02:01:01.447754'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- 3-hydroxybutylryl-CoA dehydrogenase genes in DSM10061\ndescription:\n- \n-
+      \"A. CAETHG_0420\\r\\nB. CAETHG_1586\\r\\nAre they 3-hydroxybutylryl-CoA dehydrogenase\n
+      \ ?\"\nstatus:\n- Pending\n- Complete\nresult:\n- \n- \"CAETHG_0420 & CAETHG_1586
+      have conserved prosite motif -- possibel active site\n  -- very similar to   PDB
+      4KUG 3-hydroxybutylryl-CoA dehydrogenase from  C. butyricum;\\r\\n\\r\\nhomology\n
+      \ models of CAETHG_0420 & CAETHG_1586 on PDB 4KUG 3-hydroxybutylryl-CoA have
+      low RMSD\n  .\"\ncreated_at:\n- \n- 2014-12-10 02:01:01.444211405 Z\nupdated_at:\n-
+      \n- 2014-12-10 02:01:01.444211405 Z\nid:\n- \n- 80\n"
+  - - 216
+    - Request
+    - 74
+    - update
+    - '19'
+    - "---\nid: 74\ntitle: Optimized GusA  Sequences\nname: wayne.mitchell\ndescription:
+      \"GusA coding sequences output from Gene Designer. Two 5' UTR contexts.\n  \\r\\n5_UTR_pMTL82254-tetR-gusA\\r\\nbgaR-PgaL\"\nattachment:
+      \ncreated_at: 2014-12-10 01:33:25.533390000 Z\nupdated_at: 2014-12-10 01:34:19.665110000
+      Z\nstatus: Ongoing\nassignment: wayne.mitchell\nresult: ''\n"
+    - '2015-01-22 03:24:03.904488'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-12-10 01:34:19.665110000 Z
+      - 2015-01-22 03:24:03.901460028 Z
+  - - 217
+    - Request
+    - 81
+    - create
+    - '19'
+    - 
+    - '2015-01-22 03:30:01.196673'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- C. Auto Codon Adapted LeuA variants\ndescription:\n- \n- 'Using E.coli LeuA
+      as template, create C. auto codon adapted wild type sequence.\n  Then, modify
+      the wild type corona dapped sequence to introduce three different amino\n  acid
+      variants. '\nstatus:\n- Pending\n- Complete\nresult:\n- \n- Four sequences delivered
+      to Shilpa.\ncreated_at:\n- \n- 2015-01-22 03:30:01.194237296 Z\nupdated_at:\n-
+      \n- 2015-01-22 03:30:01.194237296 Z\nid:\n- \n- 81\n"
+  - - 218
+    - Request
+    - 81
+    - update
+    - '19'
+    - "---\nid: 81\ntitle: C. Auto Codon Adapted LeuA variants\nname: wayne.mitchell\ndescription:
+      'Using E.coli LeuA as template, create C. auto codon adapted wild type\n  sequence.
+      Then, modify the wild type corona dapped sequence to introduce three different\n
+      \ amino acid variants. '\nattachment: \ncreated_at: 2015-01-22 03:30:01.194237000
+      Z\nupdated_at: 2015-01-22 03:30:01.194237000 Z\nstatus: Complete\nassignment:
+      \nresult: Four sequences delivered to Shilpa.\n"
+    - '2015-01-22 03:30:45.447203'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      wayne.mitchell\nupdated_at:\n- 2015-01-22 03:30:01.194237000 Z\n- 2015-01-22
+      03:30:45.445116321 Z\n"
+  - - 219
+    - Request
+    - 81
+    - update
+    - '19'
+    - "---\nid: 81\ntitle: C. Auto Codon Adapted LeuA variants\nname: wayne.mitchell\ndescription:
+      'Using E.coli LeuA as template, create C. auto codon adapted wild type\n  sequence.
+      Then, modify the wild type corona dapped sequence to introduce three different\n
+      \ amino acid variants. '\nattachment: \ncreated_at: 2015-01-22 03:30:01.194237000
+      Z\nupdated_at: 2015-01-22 03:30:45.445116000 Z\nstatus: Complete\nassignment:
+      wayne.mitchell\nresult: Four sequences delivered to Shilpa.\n"
+    - '2015-01-22 03:31:34.312790'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - 'Using E.coli LeuA as template, create C. auto codon adapted wild type sequence.
+        Then, modify the wild type corona dapped sequence to introduce three different amino
+        acid variants. '
+      - 'Using E.coli LeuA as template, create C. auto codon adapted wild type sequence.
+        Then, modify the wild type codon adapted  sequence to introduce three different
+        amino acid variants. '
+      updated_at:
+      - 2015-01-22 03:30:45.445116000 Z
+      - 2015-01-22 03:31:34.309765646 Z
+  - - 220
+    - Request
+    - 82
+    - create
+    - '19'
+    - 
+    - '2015-01-22 03:33:34.643367'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- LeuBCD C auto codon adapted sequences\ndescription:\n- \n- C. auto codon
+      adapted sequences LeuB LeuC LeuD E. coli wildtype, adapted for expression\n
+      \ in C. aout\nstatus:\n- Pending\n- Complete\nresult:\n- \n- three sequences,
+      one each for LeuB, LeuC, LeuD wild type (E.coli) codon adapted\n  for C. auto
+      delivered to Shilpa\ncreated_at:\n- \n- 2015-01-22 03:33:34.641170121 Z\nupdated_at:\n-
+      \n- 2015-01-22 03:33:34.641170121 Z\nid:\n- \n- 82\n"
+  - - 221
+    - Request
+    - 36
+    - update
+    - '18'
+    - "---\nid: 36\ntitle: LZ1561 - Terminators\nname: Shilpa Nagaraju\ndescription:
+      Identify Terminator sequences on the LZ1561 genome.\nattachment: \ncreated_at:
+      2014-07-24 22:58:43.357361000 Z\nupdated_at: 2014-07-24 22:58:43.357361000 Z\nstatus:
+      Ongoing\nassignment: Asela\nresult: ''\n"
+    - '2015-01-26 19:50:12.736390'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Asela
+      - asela.dassanayake
+      updated_at:
+      - 2014-07-24 22:58:43.357361000 Z
+      - 2015-01-26 19:50:12.734205998 Z
+  - - 222
+    - Request
+    - 83
+    - create
+    - '25'
+    - 
+    - '2015-01-26 23:13:16.452805'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- james.behrendorff\ntitle:\n-
+      \n- codon optimisation nphT7\ndescription:\n- \n- \"codon optimisation with
+      Wayne's calculator. FASTA file of peptide sequence attached\\r\\nCheers!\"\ncreated_at:\n-
+      \n- 2015-01-26 23:13:16.451017079 Z\nupdated_at:\n- \n- 2015-01-26 23:13:16.451017079
+      Z\nid:\n- \n- 83\n"
+  - - 223
+    - Request
+    - 83
+    - update
+    - '19'
+    - "---\nid: 83\ntitle: codon optimisation nphT7\nname: james.behrendorff\ndescription:
+      \"codon optimisation with Wayne's calculator. FASTA file of peptide sequence\n
+      \ attached\\r\\nCheers!\"\nattachment: \ncreated_at: 2015-01-26 23:13:16.451017000
+      Z\nupdated_at: 2015-01-26 23:13:16.451017000 Z\nstatus: Pending\nassignment:
+      \nresult: \n"
+    - '2015-01-28 12:25:25.610529'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- wayne.mitchell\nresult:\n- \n- ''\nupdated_at:\n-
+      2015-01-26 23:13:16.451017000 Z\n- 2015-01-28 12:25:25.608291276 Z\n"
+  - - 224
+    - Request
+    - 84
+    - create
+    - '19'
+    - 
+    - '2015-01-28 12:38:28.931059'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Crickit.pl 2.1\ndescription:\n- \n- 'Add capability to cricket to allow
+      specific amino acid changes and correlated codon\n  changes to a a template
+      with minimum alteration of the underlying DNA template.\n  EG a wild type gene
+      xyzA might be codon adapted to C.auto to produce xyzA_ca. Then\n  specific AA
+      changes introduced such s G10A. A new DNA template will be output that\n  latest
+      on the minimum number of codons that to encode the new AA sequence with \"reasonable\"\n
+      \ coon pair features. '\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2015-01-28 12:38:28.927058891 Z\nupdated_at:\n- \n- 2015-01-28 12:38:28.927058891
+      Z\nid:\n- \n- 84\n"
+  - - 225
+    - Request
+    - 84
+    - update
+    - '19'
+    - "---\nid: 84\ntitle: Crickit.pl 2.1\nname: wayne.mitchell\ndescription: 'Add
+      capability to cricket to allow specific amino acid changes and correlated\n
+      \ codon changes to a a template with minimum alteration of the underlying DNA
+      template.\n  EG a wild type gene xyzA might be codon adapted to C.auto to produce
+      xyzA_ca. Then\n  specific AA changes introduced such s G10A. A new DNA template
+      will be output that\n  latest on the minimum number of codons that to encode
+      the new AA sequence with \"reasonable\"\n  coon pair features. '\nattachment:
+      \ncreated_at: 2015-01-28 12:38:28.927058000 Z\nupdated_at: 2015-01-28 12:38:28.927058000
+      Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-28 12:39:16.284074'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      wayne.mitchell\nupdated_at:\n- 2015-01-28 12:38:28.927058000 Z\n- 2015-01-28
+      12:39:16.281469613 Z\n"
+  - - 226
+    - Request
+    - 85
+    - create
+    - '19'
+    - 
+    - '2015-01-28 13:24:26.266650'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- BuRP 2.0\ndescription:\n- \n- updates and fixes to BuRP (Bioinformatics
+      request Portal)\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2015-01-28 13:24:26.262727687 Z\nupdated_at:\n- \n- 2015-01-28 13:24:26.262727687
+      Z\nid:\n- \n- 85\n"
+  - - 227
+    - Request
+    - 85
+    - update
+    - '19'
+    - "---\nid: 85\ntitle: BuRP 2.0\nname: wayne.mitchell\ndescription: updates and
+      fixes to BuRP (Bioinformatics request Portal)\nattachment: \ncreated_at: 2015-01-28
+      13:24:26.262727000 Z\nupdated_at: 2015-01-28 13:24:26.262727000 Z\nstatus: Ongoing\nassignment:
+      \nresult: ''\n"
+    - '2015-01-28 13:24:42.611212'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      stuart.bradley\nupdated_at:\n- 2015-01-28 13:24:26.262727000 Z\n- 2015-01-28
+      13:24:42.607728368 Z\n"
+  - - 228
+    - Request
+    - 86
+    - create
+    - '33'
+    - 
+    - '2015-01-28 16:08:14.617604'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- vinicio.reynoso\ntitle:\n-
+      \n- Assist with 2-HIB tolerant strain patent application\ndescription:\n- \n-
+      Add new sequencing data to the provisional application for the 2-HIB tolerant
+      strain\n  (LT100). Request involved making an excel file listing which functional
+      elements\n  in the 2-HIB tolerant strain are mutated relative to the LZ1561
+      pac bio reference.\n  For each element, both the reference and mutated sequences
+      (DNA and protein) were\n  listed.\ncreated_at:\n- \n- 2015-01-28 16:08:14.615805452
+      Z\nupdated_at:\n- \n- 2015-01-28 16:08:14.615805452 Z\nid:\n- \n- 86\n"
+  - - 229
+    - Request
+    - 86
+    - update
+    - '19'
+    - "---\nid: 86\ntitle: Assist with 2-HIB tolerant strain patent application\nname:
+      vinicio.reynoso\ndescription: Add new sequencing data to the provisional application
+      for the 2-HIB\n  tolerant strain (LT100). Request involved making an excel file
+      listing which functional\n  elements in the 2-HIB tolerant strain are mutated
+      relative to the LZ1561 pac bio\n  reference. For each element, both the reference
+      and mutated sequences (DNA and protein)\n  were listed.\nattachment: \ncreated_at:
+      2015-01-28 16:08:14.615805000 Z\nupdated_at: 2015-01-28 16:08:14.615805000 Z\nstatus:
+      Pending\nassignment: \nresult: \n"
+    - '2015-01-28 17:55:21.254064'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      vini.reynoso\nresult:\n- \n- ''\nupdated_at:\n- 2015-01-28 16:08:14.615805000
+      Z\n- 2015-01-28 17:55:21.251929013 Z\n"
+  - - 230
+    - Request
+    - 87
+    - create
+    - '18'
+    - 
+    - '2015-01-28 19:40:33.816307'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- testing email\ndescription:\n- \n- Testing email account\nresult:\n- \n-
+      ''\ncreated_at:\n- \n- 2015-01-28 19:40:33.814222561 Z\nupdated_at:\n- \n- 2015-01-28
+      19:40:33.814222561 Z\nid:\n- \n- 87\n"
+  - - 231
+    - Request
+    - 87
+    - update
+    - '18'
+    - "---\nid: 87\ntitle: testing email\nname: asela.dassanayake\ndescription: Testing
+      email account\nattachment: \ncreated_at: 2015-01-28 19:40:33.814222000 Z\nupdated_at:
+      2015-01-28 19:40:33.814222000 Z\nstatus: Pending\nassignment: \nresult: ''\n"
+    - '2015-01-28 19:52:44.303096'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- ''\nupdated_at:\n- 2015-01-28 19:40:33.814222000
+      Z\n- 2015-01-28 19:52:44.299068040 Z\n"
+  - - 232
+    - Request
+    - 87
+    - update
+    - '18'
+    - "---\nid: 87\ntitle: testing email\nname: asela.dassanayake\ndescription: Testing
+      email account\nattachment: \ncreated_at: 2015-01-28 19:40:33.814222000 Z\nupdated_at:
+      2015-01-28 19:52:44.299068000 Z\nstatus: Ongoing\nassignment: ''\nresult: ''\n"
+    - '2015-01-28 19:55:19.391120'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2015-01-28 19:52:44.299068000 Z
+      - 2015-01-28 19:55:19.387280073 Z
+  - - 233
+    - Request
+    - 38
+    - update
+    - '17'
+    - "---\nid: 38\ntitle: RE not in LZ\nname: James Behrendorff\ndescription: Find
+      RE sites that are not present in LZ1561\nattachment: \ncreated_at: 2014-07-29
+      23:26:20.720691000 Z\nupdated_at: 2014-08-13 00:55:10.468254000 Z\nstatus: Ongoing\nassignment:
+      Stuart\nresult: \"REs of the format: NNN or (a/b)NNN or NNN(a/b) have been searched,
+      only one\n  RE is missing from LZ1561:\\r\\n- GG/CGCGCC - AscI AscI RE-Mix®\\r\\nREs
+      of the format:\n  (-a/-b)NNN or NNN(-a/-b) are to be done upon further clarification.
+      \\r\\n\\r\\nOutput\n  CSV and source code attached.\"\n"
+    - '2015-01-28 19:56:00.170426'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Stuart
+      - stuart.bradley
+      updated_at:
+      - 2014-08-13 00:55:10.468254000 Z
+      - 2015-01-28 19:56:00.168123966 Z
+  - - 234
+    - Request
+    - 85
+    - update
+    - '17'
+    - "---\nid: 85\ntitle: BuRP 2.0\nname: wayne.mitchell\ndescription: updates and
+      fixes to BuRP (Bioinformatics request Portal)\nattachment: \ncreated_at: 2015-01-28
+      13:24:26.262727000 Z\nupdated_at: 2015-01-28 13:24:42.607728000 Z\nstatus: Ongoing\nassignment:
+      stuart.bradley\nresult: ''\n"
+    - '2015-01-28 19:57:05.284060'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - updates and fixes to BuRP (Bioinformatics request Portal)
+      - "updates and fixes to BuRP (Bioinformatics request Portal):\r\n\r\n1. make the table
+        sortable by column?\r\n2. add  columns for dates for status change\r\n        requested
+        (firsts ‘pending'\r\n        status changed to ongoing\r\n        states changed
+        to complete\r\nand automatically populate these columns as status changes\r\n3.
+        make it impossible to change status to ongoing w/out assigning a job to someone. "
+      updated_at:
+      - 2015-01-28 13:24:42.607728000 Z
+      - 2015-01-28 19:57:05.281848794 Z
+  - - 235
+    - Request
+    - 88
+    - create
+    - '17'
+    - 
+    - '2015-01-28 20:02:32.237367'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- stuart.bradley\ntitle:\n-
+      \n- Crickit Frontend\ndescription:\n- \n- 'Create a web portal front-end for
+      Wayne''s Gene Designer script. '\nstatus:\n- Pending\n- Ongoing\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2015-01-28 20:02:32.235299880 Z\nupdated_at:\n- \n-
+      2015-01-28 20:02:32.235299880 Z\nid:\n- \n- 88\n"
+  - - 236
+    - Request
+    - 89
+    - create
+    - '17'
+    - 
+    - '2015-01-28 20:03:28.317996'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- stuart.bradley\ntitle:\n-
+      \n- CRISPR Documentation\ndescription:\n- \n- 'The CRISPR webapp requires limited
+      documentation to remind users of its functionality. '\nstatus:\n- Pending\n-
+      Ongoing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2015-01-28 20:03:28.313872310
+      Z\nupdated_at:\n- \n- 2015-01-28 20:03:28.313872310 Z\nid:\n- \n- 89\n"
+  - - 237
+    - Request
+    - 89
+    - update
+    - '17'
+    - "---\nid: 89\ntitle: CRISPR Documentation\nname: stuart.bradley\ndescription:
+      'The CRISPR webapp requires limited documentation to remind users of\n  its
+      functionality. '\nattachment: \ncreated_at: 2015-01-28 20:03:28.313872000 Z\nupdated_at:
+      2015-01-28 20:03:28.313872000 Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-28 20:05:13.356691'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      stuart.bradley\nupdated_at:\n- 2015-01-28 20:03:28.313872000 Z\n- 2015-01-28
+      20:05:13.354616342 Z\n"
+  - - 238
+    - Request
+    - 88
+    - update
+    - '17'
+    - "---\nid: 88\ntitle: Crickit Frontend\nname: stuart.bradley\ndescription: 'Create
+      a web portal front-end for Wayne''s Gene Designer script. '\nattachment: \ncreated_at:
+      2015-01-28 20:02:32.235299000 Z\nupdated_at: 2015-01-28 20:02:32.235299000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-28 20:05:19.741315'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      stuart.bradley\nupdated_at:\n- 2015-01-28 20:02:32.235299000 Z\n- 2015-01-28
+      20:05:19.739185339 Z\n"
+  - - 239
+    - Request
+    - 87
+    - update
+    - '18'
+    - "---\nid: 87\ntitle: testing email\nname: asela.dassanayake\ndescription: Testing
+      email account\nattachment: \ncreated_at: 2015-01-28 19:40:33.814222000 Z\nupdated_at:
+      2015-01-28 19:55:19.387280000 Z\nstatus: Complete\nassignment: ''\nresult: ''\n"
+    - '2015-01-28 20:21:27.194211'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Complete
+      - Ongoing
+      updated_at:
+      - 2015-01-28 19:55:19.387280000 Z
+      - 2015-01-28 20:21:27.192132590 Z
+  - - 240
+    - Request
+    - 87
+    - update
+    - '18'
+    - "---\nid: 87\ntitle: testing email\nname: asela.dassanayake\ndescription: Testing
+      email account\nattachment: \ncreated_at: 2015-01-28 19:40:33.814222000 Z\nupdated_at:
+      2015-01-28 20:21:27.192132000 Z\nstatus: Ongoing\nassignment: ''\nresult: ''\n"
+    - '2015-01-28 20:22:12.689735'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2015-01-28 20:21:27.192132000 Z
+      - 2015-01-28 20:22:12.687599782 Z
+  - - 241
+    - Request
+    - 87
+    - update
+    - '18'
+    - "---\nid: 87\ntitle: testing email\nname: asela.dassanayake\ndescription: Testing
+      email account\nattachment: \ncreated_at: 2015-01-28 19:40:33.814222000 Z\nupdated_at:
+      2015-01-28 20:22:12.687599000 Z\nstatus: Complete\nassignment: ''\nresult: ''\n"
+    - '2015-01-28 20:27:25.039583'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Complete
+      - Ongoing
+      updated_at:
+      - 2015-01-28 20:22:12.687599000 Z
+      - 2015-01-28 20:27:25.037463666 Z
+  - - 242
+    - Request
+    - 90
+    - create
+    - '17'
+    - 
+    - '2015-01-28 20:31:01.107142'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- stuart.bradley\ntitle:\n-
+      \n- Email debugging\ndescription:\n- \n- Email system needs to be debugged to
+      return to automatic sending of emails.\nstatus:\n- Pending\n- Complete\nresult:\n-
+      \n- \"The Javascript :default hook appeared to be blocking the routing table.\\r\\n\\r\\nAdditionally\n
+      \ delayed_job has to be running!\\r\\n\\r\\n> bin/delayed_job start\\r\\n\\r\\nIt
+      can be cleared\n  to stop a million emails at once by running:\\r\\n\\r\\n>
+      rake jobs:clear\\r\\n\\r\\n\"\ncreated_at:\n- \n- 2015-01-28 20:31:01.104695806
+      Z\nupdated_at:\n- \n- 2015-01-28 20:31:01.104695806 Z\nid:\n- \n- 90\n"
+  - - 243
+    - Request
+    - 90
+    - update
+    - '17'
+    - "---\nid: 90\ntitle: Email debugging\nname: stuart.bradley\ndescription: Email
+      system needs to be debugged to return to automatic sending of emails.\nattachment:
+      \ncreated_at: 2015-01-28 20:31:01.104695000 Z\nupdated_at: 2015-01-28 20:31:01.104695000
+      Z\nstatus: Complete\nassignment: \nresult: \"The Javascript :default hook appeared
+      to be blocking the routing table.\\r\\n\\r\\nAdditionally\n  delayed_job has
+      to be running!\\r\\n\\r\\n> bin/delayed_job start\\r\\n\\r\\nIt can be cleared\n
+      \ to stop a million emails at once by running:\\r\\n\\r\\n> rake jobs:clear\\r\\n\\r\\n\"\n"
+    - '2015-01-28 20:33:09.251883'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      stuart.bradley;asela.dassanayake\nupdated_at:\n- 2015-01-28 20:31:01.104695000
+      Z\n- 2015-01-28 20:33:09.248865827 Z\n"
+  - - 244
+    - Request
+    - 87
+    - destroy
+    - '18'
+    - "---\nid: 87\ntitle: testing email\nname: asela.dassanayake\ndescription: Testing
+      email account\nattachment: \ncreated_at: 2015-01-28 19:40:33.814222000 Z\nupdated_at:
+      2015-01-28 20:27:25.037463000 Z\nstatus: Ongoing\nassignment: ''\nresult: ''\n"
+    - '2015-01-28 20:33:55.699567'
+    - 
+  - - 245
+    - Request
+    - 91
+    - create
+    - '18'
+    - 
+    - '2015-01-28 20:48:06.602194'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Start up script for blunt\ndescription:\n- \n- Write start up script using
+      Expect and Bash to mount the logical drive, start mysql,\n  apache and ssh daemons,
+      start rails server and start rails delayed_jobs script\nstatus:\n- Pending\n-
+      Ongoing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2015-01-28 20:48:06.600166858
+      Z\nupdated_at:\n- \n- 2015-01-28 20:48:06.600166858 Z\nid:\n- \n- 91\n"
+  - - 246
+    - Request
+    - 91
+    - update
+    - '18'
+    - "---\nid: 91\ntitle: Start up script for blunt\nname: asela.dassanayake\ndescription:
+      Write start up script using Expect and Bash to mount the logical drive,\n  start
+      mysql, apache and ssh daemons, start rails server and start rails delayed_jobs\n
+      \ script\nattachment: \ncreated_at: 2015-01-28 20:48:06.600166000 Z\nupdated_at:
+      2015-01-28 20:48:06.600166000 Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-28 20:48:22.332371'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      asela.dassanayake\nupdated_at:\n- 2015-01-28 20:48:06.600166000 Z\n- 2015-01-28
+      20:48:22.329983509 Z\n"
+  - - 247
+    - Request
+    - 58
+    - update
+    - '18'
+    - "---\nid: 58\ntitle: Pathway Tools\nname: Michael Koepke\ndescription: Download
+      and install pathway tools Pathway Tools 18.5\nattachment: \ncreated_at: 2014-11-16
+      00:14:46.903904000 Z\nupdated_at: 2014-11-17 20:55:24.047217000 Z\nstatus: Pending\nassignment:
+      asela.dassanayake\nresult: ''\n"
+    - '2015-01-28 21:31:23.811436'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2014-11-17 20:55:24.047217000 Z
+      - 2015-01-28 21:31:23.809355397 Z
+  - - 248
+    - Request
+    - 85
+    - update
+    - '17'
+    - "---\nid: 85\ntitle: BuRP 2.0\nname: wayne.mitchell\ndescription: \"updates
+      and fixes to BuRP (Bioinformatics request Portal):\\r\\n\\r\\n1.\n  make the
+      table sortable by column?\\r\\n2. add  columns for dates for status change\\r\\n\n
+      \ \\       requested (firsts ‘pending'\\r\\n        status changed to ongoing\\r\\n
+      \       states\n  changed to complete\\r\\nand automatically populate these
+      columns as status changes\\r\\n3.\n  make it impossible to change status to
+      ongoing w/out assigning a job to someone. \"\nattachment: \ncreated_at: 2015-01-28
+      13:24:26.262727000 Z\nupdated_at: 2015-01-28 19:57:05.281848000 Z\nstatus: Ongoing\nassignment:
+      stuart.bradley\nresult: ''\n"
+    - '2015-01-28 22:59:10.692217'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - "updates and fixes to BuRP (Bioinformatics request Portal):\r\n\r\n1. make the table
+        sortable by column?\r\n2. add  columns for dates for status change\r\n        requested
+        (firsts ‘pending'\r\n        status changed to ongoing\r\n        states changed
+        to complete\r\nand automatically populate these columns as status changes\r\n3.
+        make it impossible to change status to ongoing w/out assigning a job to someone. "
+      - "updates and fixes to BuRP (Bioinformatics request Portal):\r\n\r\n1. make the table
+        sortable by column?\r\n2. add  columns for dates for status change\r\n        requested
+        (firsts ‘pending'\r\n        status changed to ongoing\r\n        states changed
+        to complete\r\nand automatically populate these columns as status changes\r\n3.
+        make it impossible to change status to ongoing w/out assigning a job to someone.
+        \r\n4. Add Banner to pages "
+      updated_at:
+      - 2015-01-28 19:57:05.281848000 Z
+      - 2015-01-28 22:59:10.689681014 Z
+  - - 249
+    - Request
+    - 91
+    - update
+    - '18'
+    - "---\nid: 91\ntitle: Start up script for blunt\nname: asela.dassanayake\ndescription:
+      Write start up script using Expect and Bash to mount the logical drive,\n  start
+      mysql, apache and ssh daemons, start rails server and start rails delayed_jobs\n
+      \ script\nattachment: \ncreated_at: 2015-01-28 20:48:06.600166000 Z\nupdated_at:
+      2015-01-28 20:48:22.329983000 Z\nstatus: Ongoing\nassignment: asela.dassanayake\nresult:
+      ''\n"
+    - '2015-01-29 00:48:26.839206'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2015-01-28 20:48:22.329983000 Z
+      - 2015-01-29 00:48:26.834804239 Z
+  - - 250
+    - Request
+    - 92
+    - create
+    - '18'
+    - 
+    - '2015-01-29 00:53:00.233462'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Geneious DB connection for AlexJ\ndescription:\n- \n- 'AlexJ is unable to
+      connect to the Geneious shared DB. '\nstatus:\n- Pending\n- Ongoing\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2015-01-29 00:53:00.231002970 Z\nupdated_at:\n- \n-
+      2015-01-29 00:53:00.231002970 Z\nid:\n- \n- 92\n"
+  - - 251
+    - Request
+    - 92
+    - update
+    - '18'
+    - "---\nid: 92\ntitle: Geneious DB connection for AlexJ\nname: asela.dassanayake\ndescription:
+      'AlexJ is unable to connect to the Geneious shared DB. '\nattachment: \ncreated_at:
+      2015-01-29 00:53:00.231002000 Z\nupdated_at: 2015-01-29 00:53:00.231002000 Z\nstatus:
+      Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-29 00:53:10.122681'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Ongoing\n-
+      Complete\nassignment:\n- \n- ''\nupdated_at:\n- 2015-01-29 00:53:00.231002000
+      Z\n- 2015-01-29 00:53:10.120489753 Z\n"
+  - - 252
+    - Request
+    - 93
+    - create
+    - '18'
+    - 
+    - '2015-01-29 00:58:46.970754'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Blunt Security breach\ndescription:\n- \n- Blunt suffered a security breach.
+      Investigate.\nstatus:\n- Pending\n- Complete\nresult:\n- \n- \"​Starting on
+      18-01-2015 7.40am an intruder was successful in getting through an\n  open port
+      on the company firewall.\\r\\nThen started attacking the Blunt server and\n
+      \ trying to get access into the server.\\r\\nThis blunt server is administered
+      by asela\n  and host confidential information pertaining to research of SynBio
+      group. These\n  include, Geneious shared databases and Genetic Tools hand book.\\r\\nThe
+      attack went\n  on till 21-01-2015 5.30pm\\r\\nDue to the security measures put
+      into place on the\n  blunt server the intruder was UNsuccessful in gaining access
+      into or to any data\n  on the server.\\r\\nBut the intruder was grabbing packets
+      that were going in and out\n  from the server with the hope of using information
+      in those packets to get access\n  to the server.\\r\\nThis of course interrupted
+      \ communication between the server and\n  the other computers at Skokie giving
+      rise to the \\\"Link Failure errors\\\" faced by\n  Michael, AlexJ and Ryan.\\r\\nI
+      brought this to the attention of the IT team and they\n  were able to close
+      the open port on the firewall.\"\ncreated_at:\n- \n- 2015-01-29 00:58:46.967490083
+      Z\nupdated_at:\n- \n- 2015-01-29 00:58:46.967490083 Z\nid:\n- \n- 93\n"
+  - - 253
+    - Request
+    - 83
+    - update
+    - '19'
+    - "---\nid: 83\ntitle: codon optimisation nphT7\nname: james.behrendorff\ndescription:
+      \"codon optimisation with Wayne's calculator. FASTA file of peptide sequence\n
+      \ attached\\r\\nCheers!\"\nattachment: \ncreated_at: 2015-01-26 23:13:16.451017000
+      Z\nupdated_at: 2015-01-28 12:25:25.608291000 Z\nstatus: Ongoing\nassignment:
+      wayne.mitchell\nresult: ''\n"
+    - '2015-01-29 03:11:34.839624'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - 1000 nphT7 DNA sequences codon adapted to C. autoethanogenum, best (by free energy
+        of folding) to James B.
+      updated_at:
+      - 2015-01-28 12:25:25.608291000 Z
+      - 2015-01-29 03:11:34.837155060 Z
+  - - 254
+    - Request
+    - 93
+    - update
+    - '18'
+    - "---\nid: 93\ntitle: Blunt Security breach\nname: asela.dassanayake\ndescription:
+      Blunt suffered a security breach. Investigate.\nattachment: \ncreated_at: 2015-01-29
+      00:58:46.967490000 Z\nupdated_at: 2015-01-29 00:58:46.967490000 Z\nstatus: Complete\nassignment:
+      \nresult: \"​Starting on 18-01-2015 7.40am an intruder was successful in getting
+      through\n  an open port on the company firewall.\\r\\nThen started attacking
+      the Blunt server\n  and trying to get access into the server.\\r\\nThis blunt
+      server is administered by\n  asela and host confidential information pertaining
+      to research of SynBio group.\n  These include, Geneious shared databases and
+      Genetic Tools hand book.\\r\\nThe attack\n  went on till 21-01-2015 5.30pm\\r\\nDue
+      to the security measures put into place on\n  the blunt server the intruder
+      was UNsuccessful in gaining access into or to any\n  data on the server.\\r\\nBut
+      the intruder was grabbing packets that were going in\n  and out from the server
+      with the hope of using information in those packets to get\n  access to the
+      server.\\r\\nThis of course interrupted  communication between the server\n
+      \ and the other computers at Skokie giving rise to the \\\"Link Failure errors\\\"
+      faced\n  by Michael, AlexJ and Ryan.\\r\\nI brought this to the attention of
+      the IT team and\n  they were able to close the open port on the firewall.\"\n"
+    - '2015-01-29 03:26:10.430788'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      asela.dassanayake\nupdated_at:\n- 2015-01-29 00:58:46.967490000 Z\n- 2015-01-29
+      03:26:10.427522764 Z\n"
+  - - 255
+    - Request
+    - 92
+    - update
+    - '18'
+    - "---\nid: 92\ntitle: Geneious DB connection for AlexJ\nname: asela.dassanayake\ndescription:
+      'AlexJ is unable to connect to the Geneious shared DB. '\nattachment: \ncreated_at:
+      2015-01-29 00:53:00.231002000 Z\nupdated_at: 2015-01-29 00:53:10.120489000 Z\nstatus:
+      Complete\nassignment: ''\nresult: ''\n"
+    - '2015-01-29 03:26:18.918691'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - ''
+      - asela.dassanayake
+      updated_at:
+      - 2015-01-29 00:53:10.120489000 Z
+      - 2015-01-29 03:26:18.916579257 Z
+  - - 256
+    - Request
+    - 86
+    - update
+    - '19'
+    - "---\nid: 86\ntitle: Assist with 2-HIB tolerant strain patent application\nname:
+      vinicio.reynoso\ndescription: Add new sequencing data to the provisional application
+      for the 2-HIB\n  tolerant strain (LT100). Request involved making an excel file
+      listing which functional\n  elements in the 2-HIB tolerant strain are mutated
+      relative to the LZ1561 pac bio\n  reference. For each element, both the reference
+      and mutated sequences (DNA and protein)\n  were listed.\nattachment: \ncreated_at:
+      2015-01-28 16:08:14.615805000 Z\nupdated_at: 2015-01-28 17:55:21.251929000 Z\nstatus:
+      Pending\nassignment: vini.reynoso\nresult: ''\n"
+    - '2015-01-29 16:02:42.145733'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2015-01-28 17:55:21.251929000 Z
+      - 2015-01-29 16:02:42.141317476 Z
+  - - 257
+    - Request
+    - 94
+    - create
+    - '19'
+    - 
+    - '2015-01-29 16:04:56.966617'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Results Retrieval Issue in BuRP\ndescription:\n- \n- James B reports issues
+      retrieving results file\nstatus:\n- Pending\n- Ongoing\nresult:\n- \n- ''\ncreated_at:\n-
+      \n- 2015-01-29 16:04:56.963350807 Z\nupdated_at:\n- \n- 2015-01-29 16:04:56.963350807
+      Z\nid:\n- \n- 94\n"
+  - - 258
+    - Request
+    - 94
+    - update
+    - '19'
+    - "---\nid: 94\ntitle: Results Retrieval Issue in BuRP\nname: wayne.mitchell\ndescription:
+      James B reports issues retrieving results file\nattachment: \ncreated_at: 2015-01-29
+      16:04:56.963350000 Z\nupdated_at: 2015-01-29 16:04:56.963350000 Z\nstatus: Ongoing\nassignment:
+      \nresult: ''\n"
+    - '2015-01-29 16:05:08.561853'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      asela.dassanayake\nupdated_at:\n- 2015-01-29 16:04:56.963350000 Z\n- 2015-01-29
+      16:05:08.559537591 Z\n"
+  - - 259
+    - Request
+    - 78
+    - update
+    - '19'
+    - "---\nid: 78\ntitle: LZ1561 genomics DNA prep\nname: wayne.mitchell\ndescription:
+      isolate gDNA from LZ1561 for sequencing\nattachment: \ncreated_at: 2014-12-10
+      01:51:32.073589000 Z\nupdated_at: 2014-12-10 01:51:43.831111000 Z\nstatus: Ongoing\nassignment:
+      vini.reynoso\nresult: ''\n"
+    - '2015-01-29 18:26:05.041728'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-12-10 01:51:43.831111000 Z
+      - 2015-01-29 18:26:05.037384778 Z
+  - - 260
+    - Request
+    - 77
+    - update
+    - '19'
+    - "---\nid: 77\ntitle: DSM10061 gDNA prep\nname: wayne.mitchell\ndescription:
+      isolate DSM10061 genomics DNA for sequencing\nattachment: \ncreated_at: 2014-12-10
+      01:50:21.584220000 Z\nupdated_at: 2014-12-10 01:50:41.156513000 Z\nstatus: Ongoing\nassignment:
+      vini.reynoso\nresult: ''\n"
+    - '2015-01-29 18:27:01.274425'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2014-12-10 01:50:41.156513000 Z
+      - 2015-01-29 18:27:01.270836072 Z
+  - - 261
+    - Request
+    - 95
+    - create
+    - '19'
+    - 
+    - '2015-01-29 18:39:09.614800'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Off by one print issue in cricket output\ndescription:\n- \n- 'First line
+      of sequence output has 50 not 60 chars, while other lines have 60 chars.\n  This
+      makes it hard to locate sites for hand mutagenesis. '\nstatus:\n- Pending\n-
+      Ongoing\nresult:\n- \n- ''\ncreated_at:\n- \n- 2015-01-29 18:39:09.611900993
+      Z\nupdated_at:\n- \n- 2015-01-29 18:39:09.611900993 Z\nid:\n- \n- 95\n"
+  - - 262
+    - Request
+    - 95
+    - update
+    - '19'
+    - "---\nid: 95\ntitle: Off by one print issue in cricket output\nname: wayne.mitchell\ndescription:
+      'First line of sequence output has 50 not 60 chars, while other lines\n  have
+      60 chars. This makes it hard to locate sites for hand mutagenesis. '\nattachment:
+      \ncreated_at: 2015-01-29 18:39:09.611900000 Z\nupdated_at: 2015-01-29 18:39:09.611900000
+      Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-29 18:39:20.630301'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nassignment:\n- \n-
+      wayne.mitchell\nupdated_at:\n- 2015-01-29 18:39:09.611900000 Z\n- 2015-01-29
+      18:39:20.626507000 Z\n"
+  - - 263
+    - Request
+    - 95
+    - update
+    - '19'
+    - "---\nid: 95\ntitle: Off by one print issue in cricket output\nname: wayne.mitchell\ndescription:
+      'First line of sequence output has 50 not 60 chars, while other lines\n  have
+      60 chars. This makes it hard to locate sites for hand mutagenesis. '\nattachment:
+      \ncreated_at: 2015-01-29 18:39:09.611900000 Z\nupdated_at: 2015-01-29 18:39:20.626507000
+      Z\nstatus: Ongoing\nassignment: wayne.mitchell\nresult: ''\n"
+    - '2015-01-29 19:35:40.530853'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - "Change order  print statements in loop to:\r\n    for (my $i = 0; $i < @{$ra_seq};
+        $i++){\r\n      if (($i+1) % 60 == 0){\r\n        print $OUT ($ra_seq->[$i]);\r\n
+        \       print $OUT \"\\n\";\r\n      }else{\r\n        print $OUT ($ra_seq->[$i]);\r\n
+        \       print ($ra_seq->[$i]);\r\n      }\r\n    }\r\ni"
+      updated_at:
+      - 2015-01-29 18:39:20.626507000 Z
+      - 2015-01-29 19:35:40.528653757 Z
+  - - 264
+    - Request
+    - 95
+    - update
+    - '19'
+    - "---\nid: 95\ntitle: Off by one print issue in cricket output\nname: wayne.mitchell\ndescription:
+      'First line of sequence output has 50 not 60 chars, while other lines\n  have
+      60 chars. This makes it hard to locate sites for hand mutagenesis. '\nattachment:
+      \ncreated_at: 2015-01-29 18:39:09.611900000 Z\nupdated_at: 2015-01-29 19:35:40.528653000
+      Z\nstatus: Complete\nassignment: wayne.mitchell\nresult: \"Change order  print
+      statements in loop to:\\r\\n    for (my $i = 0; $i < @{$ra_seq};\n  $i++){\\r\\n
+      \     if (($i+1) % 60 == 0){\\r\\n        print $OUT ($ra_seq->[$i]);\\r\\n\n
+      \ \\       print $OUT \\\"\\\\n\\\";\\r\\n      }else{\\r\\n        print $OUT
+      ($ra_seq->[$i]);\\r\\n\n  \\       print ($ra_seq->[$i]);\\r\\n      }\\r\\n
+      \   }\\r\\ni\"\n"
+    - '2015-01-29 19:36:04.073315'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - "Change order  print statements in loop to:\r\n    for (my $i = 0; $i < @{$ra_seq};
+        $i++){\r\n      if (($i+1) % 60 == 0){\r\n        print $OUT ($ra_seq->[$i]);\r\n
+        \       print $OUT \"\\n\";\r\n      }else{\r\n        print $OUT ($ra_seq->[$i]);\r\n
+        \       print ($ra_seq->[$i]);\r\n      }\r\n    }\r\ni"
+      - "Change order  print statements in loop to:\r\n    for (my $i = 0; $i < @{$ra_seq};
+        $i++){\r\n      if (($i+1) % 60 == 0){\r\n        print $OUT ($ra_seq->[$i]);\r\n
+        \       print $OUT \"\\n\";\r\n      }else{\r\n        print $OUT ($ra_seq->[$i]);\r\n
+        \     }\r\n    }\r\ni"
+      updated_at:
+      - 2015-01-29 19:35:40.528653000 Z
+      - 2015-01-29 19:36:04.071237132 Z
+  - - 265
+    - Request
+    - 95
+    - update
+    - '19'
+    - "---\nid: 95\ntitle: Off by one print issue in cricket output\nname: wayne.mitchell\ndescription:
+      'First line of sequence output has 50 not 60 chars, while other lines\n  have
+      60 chars. This makes it hard to locate sites for hand mutagenesis. '\nattachment:
+      \ncreated_at: 2015-01-29 18:39:09.611900000 Z\nupdated_at: 2015-01-29 19:36:04.071237000
+      Z\nstatus: Complete\nassignment: wayne.mitchell\nresult: \"Change order  print
+      statements in loop to:\\r\\n    for (my $i = 0; $i < @{$ra_seq};\n  $i++){\\r\\n
+      \     if (($i+1) % 60 == 0){\\r\\n        print $OUT ($ra_seq->[$i]);\\r\\n\n
+      \ \\       print $OUT \\\"\\\\n\\\";\\r\\n      }else{\\r\\n        print $OUT
+      ($ra_seq->[$i]);\\r\\n\n  \\     }\\r\\n    }\\r\\ni\"\n"
+    - '2015-01-29 19:40:33.255969'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      description:
+      - 'First line of sequence output has 50 not 60 chars, while other lines have 60 chars.
+        This makes it hard to locate sites for hand mutagenesis. '
+      - 'First line of sequence output has 59 not 60 chars, while other lines have 60 chars.
+        This makes it hard to locate sites for hand mutagenesis. '
+      updated_at:
+      - 2015-01-29 19:36:04.071237000 Z
+      - 2015-01-29 19:40:33.253877582 Z
+  - - 266
+    - Request
+    - 96
+    - create
+    - '18'
+    - 
+    - '2015-01-29 20:59:19.624311'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- asela.dassanayake\ntitle:\n-
+      \n- Review server specs\ndescription:\n- \n- Review new server specs from the
+      quotations sent by Brian Brehart\nstatus:\n- Pending\n- Ongoing\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2015-01-29 20:59:19.622329338 Z\nupdated_at:\n- \n-
+      2015-01-29 20:59:19.622329338 Z\nid:\n- \n- 96\n"
+  - - 267
+    - Request
+    - 94
+    - update
+    - '17'
+    - "---\nid: 94\ntitle: Results Retrieval Issue in BuRP\nname: wayne.mitchell\ndescription:
+      James B reports issues retrieving results file\nattachment: \ncreated_at: 2015-01-29
+      16:04:56.963350000 Z\nupdated_at: 2015-01-29 16:05:08.559537000 Z\nstatus: Ongoing\nassignment:
+      asela.dassanayake\nresult: ''\n"
+    - '2015-01-29 21:03:04.827767'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      assignment:
+      - asela.dassanayake
+      - stuart.bradley;asela.dassanayake
+      updated_at:
+      - 2015-01-29 16:05:08.559537000 Z
+      - 2015-01-29 21:03:04.825814565 Z
+  - - 268
+    - Request
+    - 89
+    - update
+    - '17'
+    - "---\nid: 89\ntitle: CRISPR Documentation\nname: stuart.bradley\ndescription:
+      'The CRISPR webapp requires limited documentation to remind users of\n  its
+      functionality. '\nattachment: \ncreated_at: 2015-01-28 20:03:28.313872000 Z\nupdated_at:
+      2015-01-28 20:05:13.354616000 Z\nstatus: Ongoing\nassignment: stuart.bradley\nresult:
+      ''\n"
+    - '2015-01-29 21:03:52.484567'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - 'There is now a help button next to the input box. This produces a small popup explaining
+        the purpose of the site, and how to use it. '
+      updated_at:
+      - 2015-01-28 20:05:13.354616000 Z
+      - 2015-01-29 21:03:52.481437241 Z
+  - - 269
+    - Request
+    - 88
+    - update
+    - '17'
+    - "---\nid: 88\ntitle: Crickit Frontend\nname: stuart.bradley\ndescription: 'Create
+      a web portal front-end for Wayne''s Gene Designer script. '\nattachment: \ncreated_at:
+      2015-01-28 20:02:32.235299000 Z\nupdated_at: 2015-01-28 20:05:19.739185000 Z\nstatus:
+      Ongoing\nassignment: stuart.bradley\nresult: ''\n"
+    - '2015-01-29 21:06:04.723508'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - 'Front end is ready for final perl script. '
+      updated_at:
+      - 2015-01-28 20:05:19.739185000 Z
+      - 2015-01-29 21:06:04.718725798 Z
+  - - 270
+    - Request
+    - 94
+    - update
+    - '17'
+    - "---\nid: 94\ntitle: Results Retrieval Issue in BuRP\nname: wayne.mitchell\ndescription:
+      James B reports issues retrieving results file\nattachment: \ncreated_at: 2015-01-29
+      16:04:56.963350000 Z\nupdated_at: 2015-01-29 21:03:04.825814000 Z\nstatus: Ongoing\nassignment:
+      stuart.bradley;asela.dassanayake\nresult: ''\n"
+    - '2015-01-29 21:08:42.748669'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - 'Site wide authentication and redirecting is now in place for any url on requests. '
+      updated_at:
+      - 2015-01-29 21:03:04.825814000 Z
+      - 2015-01-29 21:08:42.746579073 Z
+  - - 271
+    - Request
+    - 96
+    - update
+    - '18'
+    - "---\nid: 96\ntitle: Review server specs\nname: asela.dassanayake\ndescription:
+      Review new server specs from the quotations sent by Brian Brehart\nattachment:
+      \ncreated_at: 2015-01-29 20:59:19.622329000 Z\nupdated_at: 2015-01-29 20:59:19.622329000
+      Z\nstatus: Ongoing\nassignment: \nresult: ''\n"
+    - '2015-01-29 22:54:13.647411'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Ongoing\n-
+      Complete\nassignment:\n- \n- ''\nupdated_at:\n- 2015-01-29 20:59:19.622329000
+      Z\n- 2015-01-29 22:54:13.644792630 Z\n"
+  - - 272
+    - Request
+    - 45
+    - update
+    - '19'
+    - "---\nid: 45\ntitle: Invista Report Genomics Update\nname: Michael Koepke\ndescription:
+      Add section on Genomics Results\nattachment: \ncreated_at: 2014-09-25 23:58:43.459608000
+      Z\nupdated_at: 2014-09-26 00:04:43.250178000 Z\nstatus: Ongoing\nassignment:
+      Wayne\nresult: ''\n"
+    - '2015-01-29 23:05:40.216272'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      assignment:
+      - Wayne
+      - ''
+      updated_at:
+      - 2014-09-26 00:04:43.250178000 Z
+      - 2015-01-29 23:05:40.213835093 Z
+  - - 273
+    - Request
+    - 69
+    - update
+    - '18'
+    - "---\nid: 69\ntitle: Genomes lacking soluble inorganic pyrophosphatase\nname:
+      james.behrendorff\ndescription: \"Looking for completed genomes that do NOT
+      have the soluble inorganic\n  pyrophosphatase (and therefore may rely on an
+      efficient membrane-bound proton-pumping\n  pyrophosphatase).\\r\\nSoluble inorganic
+      pyrophosphatase is often labelled ppaC in\n  genome annotations. I've attached
+      a FASTA file with some sequences, including some\n  membrane-bound proton-pumping
+      forms.\\r\\nAlso here is a link to one of the NCBI CDD\n  pages. The soluble
+      PPases can vary a lot in length (~150-~500 amino acids) http://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi?INPUT_TYPE=precalc&SEQUENCE=11056044\\r\\nUnfortunately\n
+      \ you may not be able to just exclude the pyrophosphatase superfamily - we want
+      to\n  exclude the common soluble form and enrich for genomes with only the membrane-bound\n
+      \ proton-pumping form.\\r\\nThe membrane-bound form is always larger (~600 amino
+      acids)\n  and contains several transmembrane domains identifiable by a Kyte-Doolittle
+      hydropathy\n  plot but shares some conserved catalytic residues related to the
+      PPi hydrolysis.\\r\\nLet\n  me know if there is something else I can provide.\"\nattachment:
+      \ncreated_at: 2014-11-21 16:13:24.671647000 Z\nupdated_at: 2014-11-21 16:13:24.671647000
+      Z\nstatus: Pending\nassignment: \nresult: \n"
+    - '2015-01-30 02:59:46.660611'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nstatus:\n- Pending\n-
+      Ongoing\nassignment:\n- \n- asela.dassanayake\nresult:\n- \n- ''\nupdated_at:\n-
+      2014-11-21 16:13:24.671647000 Z\n- 2015-01-30 02:59:46.658405813 Z\n"
+  - - 274
+    - Request
+    - 69
+    - update
+    - '19'
+    - "---\nid: 69\ntitle: Genomes lacking soluble inorganic pyrophosphatase\nname:
+      james.behrendorff\ndescription: \"Looking for completed genomes that do NOT
+      have the soluble inorganic\n  pyrophosphatase (and therefore may rely on an
+      efficient membrane-bound proton-pumping\n  pyrophosphatase).\\r\\nSoluble inorganic
+      pyrophosphatase is often labelled ppaC in\n  genome annotations. I've attached
+      a FASTA file with some sequences, including some\n  membrane-bound proton-pumping
+      forms.\\r\\nAlso here is a link to one of the NCBI CDD\n  pages. The soluble
+      PPases can vary a lot in length (~150-~500 amino acids) http://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi?INPUT_TYPE=precalc&SEQUENCE=11056044\\r\\nUnfortunately\n
+      \ you may not be able to just exclude the pyrophosphatase superfamily - we want
+      to\n  exclude the common soluble form and enrich for genomes with only the membrane-bound\n
+      \ proton-pumping form.\\r\\nThe membrane-bound form is always larger (~600 amino
+      acids)\n  and contains several transmembrane domains identifiable by a Kyte-Doolittle
+      hydropathy\n  plot but shares some conserved catalytic residues related to the
+      PPi hydrolysis.\\r\\nLet\n  me know if there is something else I can provide.\"\nattachment:
+      \ncreated_at: 2014-11-21 16:13:24.671647000 Z\nupdated_at: 2015-01-30 02:59:46.658405000
+      Z\nstatus: Ongoing\nassignment: asela.dassanayake\nresult: ''\n"
+    - '2015-01-30 15:05:27.595196'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      result:
+      - ''
+      - "James B no longer requires this result at this time\r\n30.02.2015"
+      updated_at:
+      - 2015-01-30 02:59:46.658405000 Z
+      - 2015-01-30 15:05:27.593064850 Z
+  - - 275
+    - Request
+    - 97
+    - create
+    - '19'
+    - 
+    - '2015-01-31 16:51:49.864580'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- Last2GO analysis DSM10061\ndescription:\n- \n- 'Run BLAST2GO on DSM10061
+      '\nstatus:\n- Pending\n- Ongoing\nassignment:\n- \n- wayne.mitchell\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2015-01-31 16:51:49.862146480 Z\nupdated_at:\n- \n-
+      2015-01-31 16:51:49.862146480 Z\nid:\n- \n- 97\n"
+  - - 276
+    - Request
+    - 97
+    - update
+    - '19'
+    - "---\nid: 97\ntitle: Last2GO analysis DSM10061\nname: wayne.mitchell\ndescription:
+      'Run BLAST2GO on DSM10061 '\nattachment: \ncreated_at: 2015-01-31 16:51:49.862146000
+      Z\nupdated_at: 2015-01-31 16:51:49.862146000 Z\nstatus: Ongoing\nassignment:
+      wayne.mitchell\nresult: ''\n"
+    - '2015-01-31 16:52:36.901626'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      title:
+      - Last2GO analysis DSM10061
+      - BLAST2GO analysis DSM10061
+      updated_at:
+      - 2015-01-31 16:51:49.862146000 Z
+      - 2015-01-31 16:52:36.897139281 Z
+  - - 277
+    - Request
+    - 98
+    - create
+    - '19'
+    - 
+    - '2015-01-31 21:14:28.145379'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- quickGO Client\ndescription:\n- \n- \"Local web app rthat allows user to
+      paste in ';' separated GO terms, which submits\n  these to the EMBL quickGO
+      web service and displays the response.\\r\\n\\r\\nquickGO\n  @ https://www.google.com/#q=quiqqckGO\\r\\n\\r\\nweb
+      service described @ \\r\\nhttp://www.ebi.ac.uk/QuickGO/WebServices.html\"\nassignment:\n-
+      \n- wayne.mitchell\nresult:\n- \n- ''\ncreated_at:\n- \n- 2015-01-31 21:14:28.143438471
+      Z\nupdated_at:\n- \n- 2015-01-31 21:14:28.143438471 Z\nid:\n- \n- 98\n"
+  - - 278
+    - Request
+    - 99
+    - create
+    - '19'
+    - 
+    - '2015-02-01 22:54:01.121659'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- wayne.mitchell\ntitle:\n-
+      \n- BuRP Feature\ndescription:\n- \n- Add am option \"Customer\" field for cases
+      where ModelSystemian launches a project\n  on behalf of someone else (the customer)\nassignment:\n-
+      \n- stuart.bradley\nresult:\n- \n- ''\ncreated_at:\n- \n- 2015-02-01 22:54:01.119672551
+      Z\nupdated_at:\n- \n- 2015-02-01 22:54:01.119672551 Z\nid:\n- \n- 99\n"
+  - - 279
+    - Request
+    - 85
+    - update
+    - '17'
+    - "---\nid: 85\ntitle: BuRP 2.0\nname: wayne.mitchell\ndescription: \"updates
+      and fixes to BuRP (Bioinformatics request Portal):\\r\\n\\r\\n1.\n  make the
+      table sortable by column?\\r\\n2. add  columns for dates for status change\\r\\n\n
+      \ \\       requested (firsts ‘pending'\\r\\n        status changed to ongoing\\r\\n
+      \       states\n  changed to complete\\r\\nand automatically populate these
+      columns as status changes\\r\\n3.\n  make it impossible to change status to
+      ongoing w/out assigning a job to someone.\n  \\r\\n4. Add Banner to pages \"\nattachment:
+      \ncreated_at: 2015-01-28 13:24:26.262727000 Z\nupdated_at: 2015-01-28 22:59:10.689681000
+      Z\nstatus: Ongoing\nassignment: stuart.bradley\nresult: ''\n"
+    - '2015-02-01 23:32:35.811907'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Ongoing
+      - Complete
+      updated_at:
+      - 2015-01-28 22:59:10.689681000 Z
+      - 2015-02-01 23:32:35.809906169 Z
+  - - 280
+    - Request
+    - 99
+    - update
+    - '17'
+    - "---\nid: 99\ntitle: BuRP Feature\nname: wayne.mitchell\ndescription: Add am
+      option \"Customer\" field for cases where ModelSystemian launches\n  a project
+      on behalf of someone else (the customer)\nattachment: \ncreated_at: 2015-02-01
+      22:54:01.119672000 Z\nupdated_at: 2015-02-01 22:54:01.119672000 Z\nstatus: Pending\nassignment:
+      stuart.bradley\nresult: ''\n"
+    - '2015-02-01 23:32:49.070405'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      updated_at:
+      - 2015-02-01 22:54:01.119672000 Z
+      - 2015-02-01 23:32:49.066754329 Z
+  - - 281
+    - Request
+    - 100
+    - create
+    - '17'
+    - 
+    - '2015-02-01 23:35:00.053039'
+    - "--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nname:\n- \n- stuart.bradley\ntitle:\n-
+      \n- Migrate BuRP to MySQL\ndescription:\n- \n- 'BuRP is currently on SQL lite,
+      being on MySQL would bring it in-line with the other\n  services we use, as
+      well as help it scale properly. '\nassignment:\n- \n- stuart.bradley;asela.dassanayake\nresult:\n-
+      \n- ''\ncreated_at:\n- \n- 2015-02-01 23:35:00.051023948 Z\nupdated_at:\n- \n-
+      2015-02-01 23:35:00.051023948 Z\nid:\n- \n- 100\n"
+  - - 282
+    - Request
+    - 100
+    - update
+    - '17'
+    - "---\nid: 100\ntitle: Migrate BuRP to MySQL\nname: stuart.bradley\ndescription:
+      'BuRP is currently on SQL lite, being on MySQL would bring it in-line\n  with
+      the other services we use, as well as help it scale properly. '\nattachment:
+      \ncreated_at: 2015-02-01 23:35:00.051023000 Z\nupdated_at: 2015-02-01 23:35:00.051023000
+      Z\nstatus: Pending\nassignment: stuart.bradley;asela.dassanayake\nresult: ''\n"
+    - '2015-02-01 23:49:52.598647'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      status:
+      - Pending
+      - Ongoing
+      result:
+      - ''
+      - https://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql
+      updated_at:
+      - 2015-02-01 23:35:00.051023000 Z
+      - 2015-02-01 23:49:52.595005325 Z
+  - - 283
+    - Request
+    - 100
+    - update
+    - '17'
+    - "---\nid: 100\ntitle: Migrate BuRP to MySQL\nname: stuart.bradley\ndescription:
+      'BuRP is currently on SQL lite, being on MySQL would bring it in-line\n  with
+      the other services we use, as well as help it scale properly. '\nattachment:
+      \ncreated_at: 2015-02-01 23:35:00.051023000 Z\nupdated_at: 2015-02-01 23:49:52.595005000
+      Z\nstatus: Ongoing\nassignment: stuart.bradley;asela.dassanayake\nresult: https://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql\n"
+    - '2015-02-01 23:50:07.300418'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - https://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql
+      - ''
+      updated_at:
+      - 2015-02-01 23:49:52.595005000 Z
+      - 2015-02-01 23:50:07.298301164 Z
+  - - 284
+    - Request
+    - 85
+    - update
+    - '17'
+    - "---\nid: 85\ntitle: BuRP 2.0\nname: wayne.mitchell\ndescription: \"updates
+      and fixes to BuRP (Bioinformatics request Portal):\\r\\n\\r\\n1.\n  make the
+      table sortable by column?\\r\\n2. add  columns for dates for status change\\r\\n\n
+      \ \\       requested (firsts ‘pending'\\r\\n        status changed to ongoing\\r\\n
+      \       states\n  changed to complete\\r\\nand automatically populate these
+      columns as status changes\\r\\n3.\n  make it impossible to change status to
+      ongoing w/out assigning a job to someone.\n  \\r\\n4. Add Banner to pages \"\nattachment:
+      \ncreated_at: 2015-01-28 13:24:26.262727000 Z\nupdated_at: 2015-02-01 23:32:35.809906000
+      Z\nstatus: Complete\nassignment: stuart.bradley\nresult: ''\n"
+    - '2015-02-02 00:27:57.554785'
+    - |
+      --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+      result:
+      - ''
+      - 'Complete, this awaits testing on Reily before deployment to Blunt. '
+      updated_at:
+      - 2015-02-01 23:32:35.809906000 Z
+      - 2015-02-02 00:27:57.551586543 Z
