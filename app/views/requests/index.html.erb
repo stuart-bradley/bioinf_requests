@@ -41,7 +41,12 @@
       <tr>
         <td><%= request.id %></td>
       	<td><%= request.title %></td>
-        <td><%= request.get_name %></td>
+        <td>
+          <%= request.get_name %>
+          <% if request.customer? %>
+            <br />(<%= User.where(:login => request.customer).first.get_name %>)
+          <% end %> 
+        </td>
         <td style="white-space: pre-wrap;"><%= request.description %></td>
         <td>
         <% request.data_files.each do |p| %>
@@ -66,7 +71,7 @@
         <td>
         <% if request.name == current_user.login || current_user.admin %> 
           <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
-          <%= button_to "Delete", request, method: :delete, class: "btn btn-default", confirm: "Are you sure that you wish to delete #{request.title}?" %>
+          <%= button_to "Delete", request, method: :delete, class: "btn btn-default", data: { confirm:  "Are you sure that you wish to delete #{request.title}?" } %>
        	<% end %>
         </td>
       </tr>
