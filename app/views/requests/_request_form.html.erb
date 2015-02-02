@@ -32,7 +32,7 @@
       <%= f.label :status %><br />
       <%= f.select :status, [['Pending','Pending'],['Ongoing','Ongoing'],['Complete','Complete']] %><br /><br />
       <%= f.label :assignment %><br />
-      <%= f.select :assignment, options_from_collection_for_select(User.all, :login, :login, {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]'} %><br /><br />
+      <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, :login, {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]'} %><br /><br />
       <%= f.label :result %><br />
       <%= f.text_area :result, :size => "50x10" %><br /><br />
       <%= f.label :attachment_uploader, 'Results' %><%= f.file_field :attachment_uploader, :multiple => true, name: "result_files[attachment_uploader][]" %><br />
