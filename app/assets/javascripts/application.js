@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-//= Hides and shows elements based on click. 
+// Hides and shows elements based on click. 
 function toggle_visibility(id) {
    var e = document.getElementById(id);
    if(e.style.display == 'none')
@@ -24,7 +24,7 @@ function toggle_visibility(id) {
       e.style.display = 'none';
 }
 
-//= Helps to correctly handle nested models. 
+// Helps to correctly handle nested models. 
 $("form").submit(function() {
     $(this).submit(function() {
         return false;
@@ -32,7 +32,7 @@ $("form").submit(function() {
     return true;
 });
 
-//= Handles DataTable bootup function. 
+// Handles DataTable bootup function. 
 $(document).ready( function () {
     $('#main_table').DataTable({
 	    "paging": false,
@@ -46,3 +46,9 @@ $(document).ready( function () {
       	"order": [[ 0, "desc" ]]
     });
 } );
+
+// Bootstrap 3 filebuttons. 
+$(document).ready( function () {
+  $('input[type=file]').bootstrapFileInput();
+  $('.file-inputs').bootstrapFileInput();
+});
