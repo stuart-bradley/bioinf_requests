@@ -30,50 +30,30 @@ class Emailer < ActionMailer::Base
       return
     end
 
-  	if @request.assignment != nil
-      emails = []
-      User.where(login: @request.get_users).each do |u|
-        emails << u.email
-      end
-
-      if @request.customer != nil
-        cust = User.where(login: @request.customer).first
-        emails << cust.email
-      end 
-      mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been edited"
-  	end 
-  end 
-
-  def edit_status(id)
-    @request = Request.find(id)
-    employee = User.where(login: @request.name).first
-    
-    edit_type_status = @request.check_version_attribute_change("Status")
-
-    if edit_type_status.length > 0
-      if employee != nil
-        mail :to => employee.email, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
-      end 
+    emails = []
+    User.where(login: @request.get_users).each do |u|
+      emails << u.email
     end
-  end
 
-  def edit_assignment(id)
-    @request = Request.find(id)
-    employee = User.where(login: @request.name).first
-    
+    if @request.customer != nil
+      cust = User.where(login: @request.customer).first
+      emails << cust.email
+    end 
+
     edit_type_assignment = @request.check_version_attribute_change("Assignment")
-
     if edit_type_assignment.length > 0
-      if employee != nil
-        emails = []
-        emails << employee.email
-        User.where(login: @request.get_users).each do |u|
-          emails << u.email
-        end
-        mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
-      end 
+      mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
+      return 
     end
-  end
+
+    edit_type_status = @request.check_version_attribute_change("Status")
+    if edit_type_status.length > 0
+      mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
+      return
+    end
+
+    mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been edited"
+  end 
 
   def new_model_request()
     emails = []
