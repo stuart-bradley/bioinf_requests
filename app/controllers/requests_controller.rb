@@ -48,9 +48,9 @@ class RequestsController < ApplicationController
     if @request.update_attributes(request_params)
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 
+      # Emailer.delay.edit_status(@request.id)
+      # Emailer.delay.edit_assignment(@request.id)
       Emailer.delay.edit_request(@request.id)
-      Emailer.delay.edit_status(@request.id)
-      Emailer.delay.edit_assignment(@request.id)
       if params[:data_files]
         params[:data_files]['attachment_uploader'].each do |a|
           @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)

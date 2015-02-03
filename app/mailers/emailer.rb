@@ -14,6 +14,12 @@ class Emailer < ActionMailer::Base
     if employee != nil
       emails << employee.email
     end
+
+    if @request.customer != nil
+      cust = User.where(login: @request.customer).first
+      emails << cust.email
+    end 
+
    	mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "New Request: '#{@request.title}'"
   end
 
@@ -29,6 +35,11 @@ class Emailer < ActionMailer::Base
       User.where(login: @request.get_users).each do |u|
         emails << u.email
       end
+
+      if @request.customer != nil
+        cust = User.where(login: @request.customer).first
+        emails << cust.email
+      end 
       mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been edited"
   	end 
   end 
