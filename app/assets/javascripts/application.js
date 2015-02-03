@@ -35,7 +35,6 @@ $("form").submit(function() {
 // Handles DataTable bootup function. 
 $(document).ready( function () {
     $('#main_table').DataTable({
-	    "paging": false,
       	"columnDefs": [
       		{ "width": "8%", "targets": 2 },
       		{ "width": "11%", "targets": 4 },
