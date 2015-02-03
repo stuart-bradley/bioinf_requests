@@ -93,6 +93,13 @@
 			      <% end %>
 		      </div>
 		    <% end %>
+		    <div class = "checkbox-inline">
+      			<label>
+      				<%= hidden_field_tag :email_check, true %>
+        			<%= check_box_tag(:email_check, params[:email_check], checked = false) %> Don't send email   						
+      			</label>
+      		</div>
+      		<br />
 		    <%= f.submit "Submit", class: "btn btn-default" %>
 		    <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
 		    <hr style="background-color:black;color:black;border-color:black">

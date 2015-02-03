@@ -41,12 +41,13 @@ class Emailer < ActionMailer::Base
     end 
 
     edit_type_assignment = @request.check_version_attribute_change("Assignment")
-    if edit_type_assignment.length > 0
+    edit_type_status = @request.check_version_attribute_change("Status")
+    
+    if edit_type_assignment.length > 0 
       mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
       return 
     end
 
-    edit_type_status = @request.check_version_attribute_change("Status")
     if edit_type_status.length > 0
       mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
       return
