@@ -14,7 +14,7 @@ class RequestsController < ApplicationController
     @request.name = current_user.login
   	if @request.save
   	  # Emails are placed Async.
-      if params[:email_check] == false
+      if params[:email_check] == true
         Emailer.delay.new_request(@request.id)
       end
       if params[:data_files]
