@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201213315) do
+ActiveRecord::Schema.define(version: 20150202213518) do
 
   create_table "data_files", force: true do |t|
     t.integer  "request_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150201213315) do
     t.string   "assignment"
     t.text     "result"
     t.string   "stathist"
+    t.string   "customer"
   end
 
   create_table "result_files", force: true do |t|

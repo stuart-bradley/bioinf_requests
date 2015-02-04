@@ -8,24 +8,42 @@
     </ul>
   </div>
 <% end %>
-<div class="well">
-<img src="/assets/BurP.png">
-  <%= nested_form_for @request, html: { multipart: true } do |f| %>
-  	<%= f.label :title, class: 'mandatory' %><br />
-    <%= f.text_field :title %><br /><br />
-    <%= f.hidden_field :name %> 
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :size => "50x10" %><br /><br />
-    <%= f.label :attachment_uploader, 'Attachments' %><%= f.file_field :attachment_uploader, :multiple => true, name: "data_files[attachment_uploader][]" %><br />
-    <% unless @request.data_files.empty? %>
-      <%= f.label :attachment_uploader, 'Current Attachments:' %><br />
-    <% end %>
-    <%= f.fields_for :data_files do |attachment| %>
-      <% if !attachment.object.new_record? %>
-        <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
-        <%= attachment.check_box :_destroy %>
-      <% end %>
-    <% end %>
+	<div class="well">
+		<%= nested_form_for @request, html: { multipart: true } do |f| %>
+		  <form>
+		  	<div class="form-group">
+		  		<img src="/assets/BurP.png">
+		  	</div>
+		  	<div class="form-group">
+			  	<%= f.label :title %>
+			  	<div class="row">
+			  		<div class="col-xs-2">
+			    		<%= f.text_field :title, class: "form-control", type: 'text'  %>
+			    	</div>
+			    </div>
+		    </div>
+		    <%= f.hidden_field :name %> 
+		    <div class="form-group">
+		    	<%= f.label :description %>
+		    	<div class="row">
+			  		<div class="col-xs-2">
+		    			<%= f.text_area :description, :size => "50x10", class: "form-control", type: 'text' %>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="form-group">
+			    <%= f.label :attachment_uploader, 'Attachments' %><br />
+			    <%= f.file_field :attachment_uploader, :multiple => true, name: "data_files[attachment_uploader][]", type: 'file' %><br />
+			    <% unless @request.data_files.empty? %><br />
+			      <%= f.label :attachment_uploader, 'Current Attachments:' %><br />
+			    <% end %>
+			    <%= f.fields_for :data_files do |attachment| %>
+			      <% if !attachment.object.new_record? %>
+			        <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
+			        <%= attachment.check_box :_destroy %>
+			      <% end %>
+			    <% end %>
+		    </div>
 
     <% if can? :read, request %>
       <br />
@@ -57,4 +75,71 @@
     <% end %>
   <% end %>
 </div>
+</div>
+=======
+		    <% if can? :read, request %>
+		    	<hr style="background-color:black;color:black;border-color:black">
+		    	<div class="form-group">
+		      		<%= f.label :status %>
+		      		<div class="row">
+			  			<div class="col-xs-2">
+		      				<%= f.select :status, [['Pending','Pending'],['Ongoing','Ongoing'],['Complete','Complete']], {}, {class: 'form-control'} %>
+		      			</div>
+		      		</div>
+		      	</div>
+		      	<div class="form-group">
+		      		<%= f.label :assignment %>
+		      		<div class="row">
+			  			<div class="col-xs-2">
+		      				<%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
+		      			</div>
+		      		</div>
+		      	</div>
+		      	<div class="form-group">
+			      <%= f.label :customer %>
+			      <div class="row">
+			  			<div class="col-xs-2">
+			      			<%= f.select :customer, options_from_collection_for_select(User.where(:admin => false), :login, 'get_name', {:selected => @request.customer}), { include_blank: true }, {class: 'form-control'} %>
+			      		</div>
+			      	</div>
+			    </div>
+			    <div class="form-group">
+		      		<%= f.label :result %>
+		      		<div class="row">
+			  			<div class="col-xs-2">
+		      				<%= f.text_area :result, :size => "50x10", class: "form-control", type: 'text' %>
+		      			</div>
+		      		</div>
+		      	</div>
+		      	<div class="form-group">
+			      <%= f.label :attachment_uploader, 'Results' %><br />
+			      <%= f.file_field :attachment_uploader, :multiple => true, name: "result_files[attachment_uploader][]", type: 'file' %><br />
+			      <% unless @request.result_files.empty? %><br />
+			         <%= f.label :attachment_uploader, 'Current Results:' %><br />
+			      <% end %>
+			      <%= f.fields_for :result_files do |attachment| %>
+			        <% if !attachment.object.new_record? %>
+			          <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
+			          <%= attachment.check_box :_destroy %>
+			        <% end %>
+			      <% end %>
+		      </div>
+		    <% end %>
+		    <div class = "checkbox-inline">
+      			<label>
+      				<%= hidden_field_tag :email_check, true %>
+        			<%= check_box_tag(:email_check, params[:email_check], checked = false) %> Don't send email   						
+      			</label>
+      		</div>
+      		<br />
+		    <%= f.submit "Submit", class: "btn btn-default" %>
+		    <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
+		    <hr style="background-color:black;color:black;border-color:black">
+		    <%= f.label :version, 'Versions:' %>
+		    <% @request.get_versions.each do |v| %>
+		     <td style="white-space: pre-wrap;"><%= simple_format(v) %></td>
+		    <% end %>
+		   </form>
+		<% end %>
+	</div>
 </div>
