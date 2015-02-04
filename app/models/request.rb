@@ -60,14 +60,6 @@ class Request < ActiveRecord::Base
     number_of_edits_total = latest_version.lines.count
     number_of_edits_non_essential = 1 #0 + 1 to ignore updated_at
 
-    if check_version_attribute_change("Status").length > 0
-      number_of_edits_non_essential += 1
-    end
-
-    if check_version_attribute_change("Assignment").length > 0
-      number_of_edits_non_essential += 1
-    end 
-
     if number_of_edits_total - number_of_edits_non_essential > 0
       return true
     else 
