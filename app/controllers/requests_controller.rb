@@ -14,7 +14,7 @@ class RequestsController < ApplicationController
     @request.name = current_user.login
   	if @request.save
   	  # Emails are placed Async.
-      if params[:email_check] == true
+      if !(params[:email_check])
         Emailer.delay.new_request(@request.id)
       end
       if params[:data_files]
@@ -50,7 +50,7 @@ class RequestsController < ApplicationController
     if @request.update_attributes(request_params)
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 
-      if params[:email_check] == true
+      if !(params[:email_check])
         Emailer.delay.edit_request(@request.id)
       end
       if params[:data_files]
