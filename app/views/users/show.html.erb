@@ -1,3 +1,8 @@
+<%= stylesheet_link_tag "jquery.dataTables.css", media: "all" %>
+<%= javascript_include_tag "jquery.dataTables.js" %>
+<%= stylesheet_link_tag "dataTables.bootstrap.css", media: "all" %>
+<%= javascript_include_tag "dataTables.bootstrap.js" %>
+
 <% if !flash[:notice].blank? %>
   <div class="alert alert-info">
   <%= flash[:notice] %>

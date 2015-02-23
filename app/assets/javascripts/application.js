@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.dataTables
+//= require dataTables.bootstrap
 //= require_tree .
 
 // Hides and shows elements based on click. 
