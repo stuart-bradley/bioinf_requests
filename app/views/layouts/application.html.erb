@@ -2,7 +2,7 @@
 <html>
 <p class="navbar-text pull-right">
   <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.get_name %></strong>.
+    Logged in as <strong><%= link_to current_user.get_name, current_user %></strong>.
     <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
   <% end %>
 </p>
