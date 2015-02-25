@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @requests = Request.select {|x| x.name == current_user.login}
+    @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login}
   end
 
   # GET /users/new
