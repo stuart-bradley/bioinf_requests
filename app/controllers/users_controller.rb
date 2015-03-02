@@ -10,7 +10,12 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login}
+    if current_user == nil 
+      @requests = []
+    else
+      @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login}
+    end 
+    @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
   end
 
   # GET /users/new
