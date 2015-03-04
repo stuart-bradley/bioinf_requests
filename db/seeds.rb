@@ -16,6 +16,8 @@ User.create!({:login => "stuart.bradley", :admin => true})
 User.create!({:login => "asela.dassanayake", :admin => true})
 User.create!({:login => "james.daniell", :admin => true})
 User.create!({:login => "vinicio.reynoso", :admin => true})
+User.create!({:login => "audrey.harris", :admin => true})
+
 
 # Synthetic Biology
 User.create!({:login => "james.behrendorff", :admin => false})
