@@ -21,11 +21,7 @@ class RequestsController < ApplicationController
   	if @request.save
   	  # Emails are placed Async.
       if !(params[:email_check])
-        begin 
-          Emailer.delay.new_request(@request.id)
-        rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
-          logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map{|s| "\t#{s}"}
-        end
+        Emailer.delay.new_request(@request.id)
       end
       if params[:data_files]
       	# Attachments are created from the nested attributes.
@@ -61,11 +57,7 @@ class RequestsController < ApplicationController
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 
       if !(params[:email_check])
-        begin
         Emailer.delay.edit_request(@request.id)
-        rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
-          logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map{|s| "\t#{s}"}
-        end
       end
       if params[:data_files]
         params[:data_files]['attachment_uploader'].each do |a|
