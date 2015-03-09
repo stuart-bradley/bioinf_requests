@@ -109,7 +109,7 @@ class Request < ActiveRecord::Base
   	  end    	  	
   	  cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "\n"
   	end
-  	return cleaned_version
+  	return cleaned_version.force_encoding("UTF-8")
   end
 
   def get_version_latest
@@ -131,6 +131,6 @@ class Request < ActiveRecord::Base
       end         
       cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "<br />"
     end
-    return cleaned_version
+    return cleaned_version.force_encoding("UTF-8")
   end
 end
