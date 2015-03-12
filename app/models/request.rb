@@ -109,6 +109,28 @@ class Request < ActiveRecord::Base
   	  end    	  	
   	  cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "\n"
   	end
-  	return cleaned_version
+  	return cleaned_version.force_encoding("UTF-8")
+  end
+
+  def get_version_latest
+    self.versions.last.changeset.each do |key|
+      single_version << key
+    end
+    return cleanup_version_html(single_version) 
+  end
+
+  def cleanup_version_html (version)
+    cleaned_version = ''
+    version.each do |change|
+      prev_version = change[1][0]
+      curr_version = change[1][1]
+      if prev_version.nil?
+        prev_version = 'NO VALUE'
+      elsif curr_version.nil?
+        curr_version = 'NO VALUE'
+      end         
+      cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "<br />"
+    end
+    return cleaned_version.force_encoding("UTF-8")
   end
 end

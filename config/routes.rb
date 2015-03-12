@@ -17,6 +17,7 @@ BioinfRequests::Application.routes.draw do
   devise_for :users
   resources :requests, only: [:index, :new, :create, :destroy, :update, :edit]
   resources :modellings
+  resources :users, only: [:show]
 
   root "requests#index"
   # The priority is based upon order of creation: first created -> highest priority.

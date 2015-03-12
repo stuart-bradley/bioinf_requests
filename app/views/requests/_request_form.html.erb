@@ -45,7 +45,7 @@
 			    <% end %>
 		    </div>
 
-		    <% if can? :read, request %>
+		    <% if (can? :read, request) || current_user.nil? %>
 		    	<hr style="background-color:black;color:black;border-color:black">
 		    	<div class="form-group">
 		      		<%= f.label :status %>

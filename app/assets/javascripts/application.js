@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.dataTables
+//= require dataTables.bootstrap
 //= require_tree .
 
 // Hides and shows elements based on click. 
@@ -43,6 +45,19 @@ $(document).ready( function () {
       		{ "width": "8%", "targets": 10 }
       	],
       	"order": [[ 0, "desc" ]]
+    });
+} );
+
+$(document).ready( function () {
+    $('#user_table').DataTable({
+        "columnDefs": [
+          { "width": "8%", "targets": 2 },
+          { "width": "11%", "targets": 4 },
+          { "width": "7%", "targets": 6 },
+          { "width": "8%", "targets": 9 },
+          { "width": "8%", "targets": 10 }
+        ],
+        "order": [[ 0, "desc" ]]
     });
 } );
 
