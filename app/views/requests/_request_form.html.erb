@@ -104,7 +104,7 @@
 		    <hr style="background-color:black;color:black;border-color:black">
 		    <%= f.label :version, 'Versions:' %>
 		    <% @request.get_versions.each do |v| %>
-		     <td style="white-space: pre-wrap;"><%= v %></td>
+		     <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
 		    <% end %>
 		   </form>
 		<% end %>
