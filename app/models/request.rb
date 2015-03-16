@@ -92,7 +92,7 @@ class Request < ActiveRecord::Base
     	version.changeset.each do |key|
     	  single_version << key
     	end
-    	versions << cleanup_version(single_version) 
+    	versions << cleanup_version_html(single_version) 
     end
   return versions.reverse
   end
@@ -109,7 +109,7 @@ class Request < ActiveRecord::Base
   	  end    	  	
   	  cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "\n"
   	end
-  	return cleaned_version.force_encoding("UTF-8")
+  	return cleaned_version
   end
 
   def get_version_latest
@@ -131,6 +131,6 @@ class Request < ActiveRecord::Base
       end         
       cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "<br />"
     end
-    return cleaned_version.force_encoding("UTF-8")
+    return cleaned_version
   end
 end
