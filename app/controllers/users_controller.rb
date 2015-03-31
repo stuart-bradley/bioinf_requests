@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if current_user == nil 
       @requests = []
     else
-      @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login}
+      @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login ||x.get_users.include? current_user.login}
     end 
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
   end
