@@ -66,10 +66,3 @@ $(document).ready( function () {
   $('input[type=file]').bootstrapFileInput();
   $('.file-inputs').bootstrapFileInput();
 });
-
-//popover, by default, activated with clicking {toggle}
- $('body').popover({   
-   selector: '[data-toggle=popover]',
-   container: 'body'
- });
-});
