@@ -14,13 +14,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if alert %>
+    <p class="alert alert-error"><%= alert %></p>
+  <% end %>
 
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
-
-
-<%= yield %>
-
+  <div style="margin-right:10px;margin-left:10px;margin-top:10px;margin-bottom:10px;">
+    <%= yield %>
+  </div>
 </body>
 </html>
