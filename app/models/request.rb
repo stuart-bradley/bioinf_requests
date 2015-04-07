@@ -14,12 +14,21 @@ class Request < ActiveRecord::Base
 
   # Updates the versioning for the status.
   def set_stathist
-    if self.stathist.nil?
-      self.stathist = self.status + ": " + Date.today.to_s + "\n"
-      return
-    end 
-    if self.status_changed? 
-      self.stathist += self.status + ": " + Date.today.to_s + "\n"
+    stats = ["Pending", "Ongoing", "Complete"]
+    if self.stathist.nil? or self.status_changed?
+      res = ""
+      stats.each do |sta|
+        if sta == self.status
+          if self.stathist.nil?
+            self.stathist = res + sta + ": " + Date.today.to_s + "\n"
+          else
+            self.stathist += res + sta + ": " + Date.today.to_s + "\n"
+          end
+          return
+        elsif self.stathist.nil? or not self.stathist.include? sta
+          res += sta + ": " + Date.today.to_s + "\n"
+        end
+      end
     end
   end
 
