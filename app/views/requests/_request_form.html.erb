@@ -102,10 +102,12 @@
 		    <%= f.submit "Submit", class: "btn btn-default" %>
 		    <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
 		    <hr style="background-color:black;color:black;border-color:black">
-		    <%= f.label :version, 'Versions:' %>
-		    <% @request.get_versions.each do |v| %>
-		     <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
-		    <% end %>
+		    <a href="#versions_div" onclick="toggle_visibility('versions_div');"><h3>Versions:</h3></a>
+		    <div id="versions_div" style="display:none;">
+			    <% @request.get_versions.each do |v| %>
+			     <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
+			    <% end %>
+		    </div>
 		   </form>
 		<% end %>
 	</div>
