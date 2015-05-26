@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   def index
   	@requests = Request.all
+    @user_nil = User.where(:id => 39).first
   end
 
   def new
