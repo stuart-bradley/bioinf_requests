@@ -12,6 +12,26 @@ class Request < ActiveRecord::Base
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
   accepts_nested_attributes_for :employee
 
+  # Given two dates, return a number of results.
+  def self.manager_analytics (min, max)
+    min = min.to_date.to_datetime
+    max = max.to_date.to_datetime
+
+    # Before.
+    before_pending = Request.where("created_at <= ? AND status = ?", min, "Pending")
+    before_ongoing = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
+    before_completed_in_period = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
+
+    # During.
+    during_pending = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
+    during_ongoing = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
+    return during_completed = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
+
+    # Totals.
+    ongoing_pending = before_pending.count + before_ongoing.count + during_pending.count + during_ongoing.count
+    completed = before_completed_in_period.count + during_completed.count
+  end
+
   # Updates the versioning for the status.
   def set_stathist
     stats = ["Pending", "Ongoing", "Complete"]
