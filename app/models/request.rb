@@ -12,6 +12,21 @@ class Request < ActiveRecord::Base
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
   accepts_nested_attributes_for :employee
 
+  # Get priority items for modal. 
+  def self.priority_widget
+    high_p = Request.where("priority = ? AND status = ?", "High Priority", "Pending").order! 'created_at DESC'
+    normal_p = Request.where("priority = ? AND status = ?", "Priority", "Pending").order! 'created_at DESC'
+    low_p = Request.where("priority = ? AND status = ?", "Low Priority", "Pending").order! 'created_at DESC'
+    time_perm = Request.where("priority = ? AND status = ?", "Time Permitting", "Pending").order! 'created_at DESC'
+
+    return priority_list = {
+      "high" => high_p,
+      "normal" => normal_p,
+      "low" => low_p,
+      "time_permitting" => time_perm
+    }
+  end
+
   # Given two dates, return a number of results.
   def self.manager_analytics (min, max)
     min = min.to_date.to_datetime
@@ -25,11 +40,22 @@ class Request < ActiveRecord::Base
     # During.
     during_pending = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
     during_ongoing = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
-    return during_completed = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
+    during_completed = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
 
     # Totals.
     ongoing_pending = before_pending.count + before_ongoing.count + during_pending.count + during_ongoing.count
     completed = before_completed_in_period.count + during_completed.count
+
+    return analytics_list = {
+      "before_pending" => before_pending,
+      "before_ongoing" => before_ongoing,
+      "before_completed_in_period" => before_completed_in_period,
+      "during_pending" =>  during_pending,
+      "during_ongoing" => during_ongoing,
+      "during_completed" => during_completed,
+      "ongoing_pending" => ongoing_pending,
+      "completed" => completed
+    }
   end
 
   # Updates the versioning for the status.

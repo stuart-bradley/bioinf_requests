@@ -13,23 +13,17 @@
   <br />
 <% end %>
 <img src="/assets/BurP.png">
-
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
-
 <div style="text-align: center;">
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#priority_modal">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  </button>
   <%= link_to "New bioinformatics requests", new_request_path, class: "btn btn-default btn-lg " %>
   <%= link_to "Modeling requests", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
   <!--<%= link_to "New modeling request", new_modelling_path, class: "btn btn-warning btn-lg" %>-->
+</div>
+
+<div class="modal fade" id="priority_modal" tabindex="-1" role="dialog" aria-labelledby="Priority Requests" aria-hidden="true">
+  <%= render 'priority' %>
 </div>
 
 <br />
@@ -46,6 +40,7 @@
       <th>Result Files</th>
       <th>Status</th>
       <th>Status History</th>
+      <th>Priority</th>
       <th>Job Assignment</th>
       <th>&nbsp;</th>
     </tr>
@@ -81,6 +76,7 @@
           <td style="background-color:#EEA236;color:white"><%= request.status %></td>
         <% end %>
         <td><%= simple_format(request.stathist) %></td>
+        <td><%= request.priority %></td>
         <td><%= request.get_users_for_view %></td>
         <td>
         <% if current_user.nil? || request.name == current_user.login || current_user.admin %> 
