@@ -29,33 +29,28 @@ class Request < ActiveRecord::Base
 
   # Given two dates, return a number of results.
   def self.manager_analytics (min, max)
-    min = min.to_date.to_datetime
-    max = max.to_date.to_datetime
+    analytics_list = {}
 
-    # Before.
-    before_pending = Request.where("created_at <= ? AND status = ?", min, "Pending")
-    before_ongoing = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
-    before_completed_in_period = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
+    if min != "" and max != ""
+      min = min.to_date.to_datetime
+      max = max.to_date.to_datetime
 
-    # During.
-    during_pending = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
-    during_ongoing = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
-    during_completed = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
+      # Before.
+      analytics_list["before_pending"] = Request.where("created_at <= ? AND status = ?", min, "Pending")
+      analytics_list["before_ongoing"] = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
+      analytics_list["before_completed_in_period"] = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
 
-    # Totals.
-    ongoing_pending = before_pending.count + before_ongoing.count + during_pending.count + during_ongoing.count
-    completed = before_completed_in_period.count + during_completed.count
+      # During.
+      analytics_list["during_pending"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
+      analytics_list["during_ongoing"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
+      analytics_list["during_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
 
-    return analytics_list = {
-      "before_pending" => before_pending,
-      "before_ongoing" => before_ongoing,
-      "before_completed_in_period" => before_completed_in_period,
-      "during_pending" =>  during_pending,
-      "during_ongoing" => during_ongoing,
-      "during_completed" => during_completed,
-      "ongoing_pending" => ongoing_pending,
-      "completed" => completed
-    }
+      # Totals.
+      analytics_list["ongoing_pending"] = analytics_list["before_pending"].count + analytics_list["before_ongoing"].count + analytics_list["during_pending"].count + analytics_list["during_ongoing"].count
+      analytics_list["completed"] = analytics_list["before_completed_in_period"].count + analytics_list["during_completed"].count
+    end
+
+    return analytics_list
   end
 
   # Updates the versioning for the status.

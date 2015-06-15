@@ -1,0 +1,66 @@
+<table class="table table-bordered">
+	<tr class="active">
+        <th colspan="2">Requests Before</th>
+    </tr>
+    <tr>
+    	<td style="font-weight:bold" width="8.25%">Pending</td>
+    	<td>
+    		<% @analysis["before_pending"].each do |p| %>
+    			<%= link_to p.id, edit_request_path(p)%>
+    		<% end %>
+    	</td>
+    </tr>
+    <tr>
+    	<td style="font-weight:bold" width="8.25%">Ongoing</td>
+    	<td>
+    		<% @analysis["before_ongoing"].each do |p| %>
+    			<%= link_to p.id, edit_request_path(p)%>
+    		<% end %>
+    	</td>
+    </tr>
+    <tr>
+    	<td style="font-weight:bold" width="8.25%">Completed</td>
+    	<td>
+    		<% @analysis["before_completed_in_period"].each do |p| %>
+    			<%= link_to p.id, edit_request_path(p)%>
+    		<% end %>
+    	</td>
+    </tr>
+
+    <tr class="active">
+        <th colspan="2">Requests During</th>
+    </tr>
+    <tr>
+    	<td style="font-weight:bold" width="8.25%">Pending</td>
+    	<td>
+    		<% @analysis["during_pending"].each do |p| %>
+    			<%= link_to p.id, edit_request_path(p)%>
+    		<% end %>
+    	</td>
+    </tr>
+    <tr>
+    	<td style="font-weight:bold" width="8.25%">Ongoing</td>
+    	<td>
+    		<% @analysis["during_ongoing"].each do |p| %>
+    			<%= link_to p.id, edit_request_path(p)%>
+    		<% end %>
+    	</td>
+    </tr>
+    <tr>
+    	<td style="font-weight:bold" width="8.25%">Completed</td>
+    	<td>
+    		<% @analysis["during_completed"].each do |p| %>
+    			<%= link_to p.id, edit_request_path(p)%>
+    		<% end %>
+    	</td>
+    </tr>
+
+    <tr class="active">
+        <th>Ongoing and Pending</th>
+        <th>Completed</th>
+    </tr>
+    <tr>
+    	<td><%= @analysis["ongoing_pending"] %></td>
+    	<td><%= @analysis["completed"] %></td>
+    </tr>
+</table>

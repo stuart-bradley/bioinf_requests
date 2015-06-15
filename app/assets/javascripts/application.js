@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require jquery.dataTables
 //= require dataTables.bootstrap
+//= require bootstrap-datepicker
 //= require_tree .
 
 // Hides and shows elements based on click. 
