@@ -5,6 +5,8 @@ class Request < ActiveRecord::Base
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
   validates_with OngoingValidator
+  validates_presence_of :esthours, :if => lambda {self.status == "Ongoing"}
+  validates_presence_of :tothours, :if => lambda {self.status == "Complete"}
   has_many :data_files
   has_many :result_files
   has_one :employee
