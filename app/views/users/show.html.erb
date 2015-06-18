@@ -109,7 +109,7 @@
     </div>
   <% end %>
   <br />
-  <% if not @analysis.empty? %>
+  <% if @analysis and not @analysis.empty? %>
     <%= render 'analysis' %>
   <% end %> 
 <% end %>
