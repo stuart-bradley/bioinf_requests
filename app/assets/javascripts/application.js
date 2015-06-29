@@ -72,6 +72,19 @@ $(document).ready( function () {
 });
 
 $(document).ready(function(){
+   if($("#request_status").val() == "Pending") {
+          $("#esthours_div").fadeOut('fast');   
+          $("#tothours_div").fadeOut('fast');
+        } else if ($("#request_status").val() == "Ongoing") {   
+          $("#tothours_div").fadeOut('fast',function(){
+            $("#esthours_div").fadeIn('fast');
+          });
+        } else if ($("#request_status").val() == "Complete") {
+          $("#esthours_div").fadeOut('fast', function() {
+            $("#tothours_div").fadeIn('fast');
+          });   
+        } 
+
   $("#request_status").change(function(){
       if($("#request_status").val() == "Pending") {
         $("#esthours_div").fadeOut('fast');   
