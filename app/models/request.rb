@@ -14,25 +14,6 @@ class Request < ActiveRecord::Base
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
   accepts_nested_attributes_for :employee
 
-  HUMANIZED_ATTRIBUTES = {
-    :name => "Name",
-    :title => "Title",
-    :description => "Description",
-    :status => "Status",
-    :assignment => "Assignment",
-    :result => "Result",
-    :stathist => "Status History",
-    :customer => "Customer",
-    :priority => "Priority",
-    :esthours => "Estimated Hours",
-    :tothours => "Total Hours"
-  }
-
-  # Humanized Attribute for Error messages.
-  def self.human_attribute_name(attr)
-    HUMANIZED_ATTRIBUTES[attr.to_sym] || super
-  end
-
   # Get priority items for modal. 
   def self.priority_widget
     high_p = Request.where("priority = ? AND status = ?", "High Priority", "Pending").order! 'created_at DESC'
