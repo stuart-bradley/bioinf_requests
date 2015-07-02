@@ -11,11 +11,18 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     if current_user == nil 
+      @user_nil = User.where(:id => 39).first
+      @manager = @user_nil
       @requests = []
     else
-      @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login}
+      @requests = Request.select {|x| x.name == current_user.login || x.customer == current_user.login ||x.get_users.include?(current_user.login)}
+      @manager = current_user
     end 
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
+
+    if params[:min] and params[:max]
+      @analysis = Request.manager_analytics(params[:min], params[:max])
+    end
   end
 
   # GET /users/new

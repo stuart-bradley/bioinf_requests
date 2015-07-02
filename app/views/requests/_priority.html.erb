@@ -1,0 +1,51 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h3 class="modal-title">Priority Requests</h3>
+    </div>
+    <div class="modal-body">
+      <table class="table table-bordered">
+        <tr class="active">
+          <th colspan="2">High Priority</th>
+        </tr>
+        <% @priority_modal["high"].each do |p| %>
+          <tr>
+            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= p.created_at.to_date %></td>
+          </tr>
+        <% end %>
+
+        <tr class="active">
+          <th colspan="2">Priority</th>
+        </tr>
+        <% @priority_modal["normal"].each do |p| %>
+          <tr>
+            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= p.created_at.to_date %></td>
+          </tr>
+        <% end %>
+
+        <tr class="active">
+          <th colspan="2">Low Priority</th>
+        </tr>
+        <% @priority_modal["low"].each do |p| %>
+          <tr>
+            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= p.created_at.to_date %></td>
+          </tr>
+        <% end %>
+
+        <tr class="active">
+          <th colspan="2">Time Permitting</th>
+        </tr>
+        <% @priority_modal["time_permitting"].each do |p| %>
+          <tr>
+            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= p.created_at.to_date %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

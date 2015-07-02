@@ -5,6 +5,8 @@ class Request < ActiveRecord::Base
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
   validates_with OngoingValidator
+  validates_presence_of :esthours, :if => lambda {self.status == "Ongoing"}
+  validates_presence_of :tothours, :if => lambda {self.status == "Complete"}
   has_many :data_files
   has_many :result_files
   has_one :employee
@@ -12,14 +14,64 @@ class Request < ActiveRecord::Base
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
   accepts_nested_attributes_for :employee
 
+  # Get priority items for modal. 
+  def self.priority_widget
+    high_p = Request.where("priority = ? AND status = ?", "High Priority", "Pending").order! 'created_at DESC'
+    normal_p = Request.where("priority = ? AND status = ?", "Priority", "Pending").order! 'created_at DESC'
+    low_p = Request.where("priority = ? AND status = ?", "Low Priority", "Pending").order! 'created_at DESC'
+    time_perm = Request.where("priority = ? AND status = ?", "Time Permitting", "Pending").order! 'created_at DESC'
+
+    return priority_list = {
+      "high" => high_p,
+      "normal" => normal_p,
+      "low" => low_p,
+      "time_permitting" => time_perm
+    }
+  end
+
+  # Given two dates, return a number of results.
+  def self.manager_analytics (min, max)
+    analytics_list = {}
+
+    if min != "" and max != ""
+      min = min.to_date.to_datetime
+      max = max.to_date.to_datetime
+
+      # Before.
+      analytics_list["before_pending"] = Request.where("created_at <= ? AND status = ?", min, "Pending")
+      analytics_list["before_ongoing"] = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
+      analytics_list["before_completed_in_period"] = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
+
+      # During.
+      analytics_list["during_pending"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
+      analytics_list["during_ongoing"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
+      analytics_list["during_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
+
+      # Totals.
+      analytics_list["ongoing_pending"] = analytics_list["before_pending"].count + analytics_list["before_ongoing"].count + analytics_list["during_pending"].count + analytics_list["during_ongoing"].count
+      analytics_list["completed"] = analytics_list["before_completed_in_period"].count + analytics_list["during_completed"].count
+    end
+
+    return analytics_list
+  end
+
   # Updates the versioning for the status.
   def set_stathist
-    if self.stathist.nil?
-      self.stathist = self.status + ": " + Date.today.to_s + "\n"
-      return
-    end 
-    if self.status_changed? 
-      self.stathist += self.status + ": " + Date.today.to_s + "\n"
+    stats = ["Pending", "Ongoing", "Complete"]
+    if self.stathist.nil? or self.status_changed?
+      res = ""
+      stats.each do |sta|
+        if sta == self.status
+          if self.stathist.nil?
+            self.stathist = res + sta + ": " + Date.today.to_s + "\n"
+          else
+            self.stathist += res + sta + ": " + Date.today.to_s + "\n"
+          end
+          return
+        elsif self.stathist.nil? or not self.stathist.include? sta
+          res += sta + ": " + Date.today.to_s + "\n"
+        end
+      end
     end
   end
 

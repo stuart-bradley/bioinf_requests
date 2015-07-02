@@ -17,7 +17,7 @@
 		  	<div class="form-group">
 			  	<%= f.label :title %>
 			  	<div class="row">
-			  		<div class="col-xs-2">
+			  		<div class="col-md-2">
 			    		<%= f.text_field :title, class: "form-control", type: 'text'  %>
 			    	</div>
 			    </div>
@@ -26,9 +26,17 @@
 		    <div class="form-group">
 		    	<%= f.label :description %>
 		    	<div class="row">
-			  		<div class="col-xs-2">
+			  		<div class="col-md-2">
 		    			<%= f.text_area :description, :size => "50x10", class: "form-control", type: 'text' %>
 		    		</div>
+		    	</div>
+		    </div>
+		    <div class="form-group">
+		    	<div class="row">
+			    	<div class="col-md-2">
+			    	<%= f.label :priority %>
+			    	<%= f.select :priority, [['Time Permitting','Time Permitting'],['Low Priority','Low Priority'],['Priority','Priority'],['High Priority','High Priority']], {}, {class: 'form-control'}%>
+			    	</div>
 		    	</div>
 		    </div>
 		    <div class="form-group">
@@ -50,15 +58,31 @@
 		    	<div class="form-group">
 		      		<%= f.label :status %>
 		      		<div class="row">
-			  			<div class="col-xs-2">
+			  			<div class="col-md-2">
 		      				<%= f.select :status, [['Pending','Pending'],['Ongoing','Ongoing'],['Complete','Complete']], {}, {class: 'form-control'} %>
+		      			</div>
+		      		</div>
+		      	</div>
+		      	<div class="form-group" id="esthours_div" style="display: none;">
+		      		<%= f.label :esthours, "Estimated Hours" %>
+		      		<div class="row">
+			  			<div class="col-md-2">
+		      				<%= f.text_field :esthours, class: 'form-control', type: 'number' %>
+		      			</div>
+		      		</div>
+		      	</div>
+		      	<div class="form-group" id="tothours_div" style="display: none;">
+		      		<%= f.label :tothours, "Total Hours" %>
+		      		<div class="row">
+			  			<div class="col-md-2">
+		      				<%= f.text_field :tothours, class: 'form-control', type: 'number' %>
 		      			</div>
 		      		</div>
 		      	</div>
 		      	<div class="form-group">
 		      		<%= f.label :assignment %>
 		      		<div class="row">
-			  			<div class="col-xs-2">
+			  			<div class="col-md-2">
 		      				<%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
 		      			</div>
 		      		</div>
@@ -66,7 +90,7 @@
 		      	<div class="form-group">
 			      <%= f.label :customer %>
 			      <div class="row">
-			  			<div class="col-xs-2">
+			  			<div class="col-md-2">
 			      			<%= f.select :customer, options_from_collection_for_select(User.where(:admin => false), :login, 'get_name', {:selected => @request.customer}), { include_blank: true }, {class: 'form-control'} %>
 			      		</div>
 			      	</div>
@@ -74,7 +98,7 @@
 			    <div class="form-group">
 		      		<%= f.label :result %>
 		      		<div class="row">
-			  			<div class="col-xs-2">
+			  			<div class="col-md-2">
 		      				<%= f.text_area :result, :size => "50x10", class: "form-control", type: 'text' %>
 		      			</div>
 		      		</div>
@@ -102,10 +126,12 @@
 		    <%= f.submit "Submit", class: "btn btn-default" %>
 		    <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
 		    <hr style="background-color:black;color:black;border-color:black">
-		    <%= f.label :version, 'Versions:' %>
-		    <% @request.get_versions.each do |v| %>
-		     <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
-		    <% end %>
+		    <a href="#versions_div" onclick="toggle_visibility('versions_div');"><h3>Versions:</h3></a>
+		    <div id="versions_div" style="display:none;">
+			    <% @request.get_versions.each do |v| %>
+			     <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
+			    <% end %>
+		    </div>
 		   </form>
 		<% end %>
 	</div>

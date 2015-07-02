@@ -77,6 +77,8 @@
 </table>
 <% if (can? :manage, :all) || current_user.nil? %>
   <hr style="background-color:black;color:black;border-color:black">
+  <h3> Manager Section </h3>
+  <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
   <table class="table table-bordered table-striped" id = "manager_table">
     <thead>
       <tr>
@@ -91,4 +93,23 @@
       <% end %>
     </tbody>
   </table>
+
+  <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
+
+  <%= form_tag(user_path(@manager), :method => "get", class: "form-inline") do %>
+    <div class="form-group">
+      <div class="input-daterange input-group" id="datepicker" data-provide="datepicker" data-date-format="yyyy/mm/dd" data-date-todayHighlight="1">
+        <%= text_field_tag :min, params[:min], type: "text", class: "input-sm form-control" %>
+        <span class="input-group-addon">to</span>
+        <%= text_field_tag :max, params[:max], type: "text", class: "input-sm form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+    <%= submit_tag "View", class: "btn btn-default btn-sm" %>
+    </div>
+  <% end %>
+  <br />
+  <% if @analysis and not @analysis.empty? %>
+    <%= render 'analysis' %>
+  <% end %> 
 <% end %>

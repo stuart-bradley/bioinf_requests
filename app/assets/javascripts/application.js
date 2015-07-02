@@ -13,8 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require jquery.dataTables
 //= require dataTables.bootstrap
+//= require bootstrap-datepicker
 //= require_tree .
 
 // Hides and shows elements based on click. 
@@ -41,6 +43,7 @@ $(document).ready( function () {
       		{ "width": "8%", "targets": 2 },
       		{ "width": "11%", "targets": 4 },
       		{ "width": "7%", "targets": 6 },
+          { "width": "9%", "targets": 8 },
       		{ "width": "8%", "targets": 9 },
       		{ "width": "8%", "targets": 10 }
       	],
@@ -54,6 +57,7 @@ $(document).ready( function () {
           { "width": "8%", "targets": 2 },
           { "width": "11%", "targets": 4 },
           { "width": "7%", "targets": 6 },
+          { "width": "9%", "targets": 8 },
           { "width": "8%", "targets": 9 },
           { "width": "8%", "targets": 10 }
         ],
@@ -65,4 +69,34 @@ $(document).ready( function () {
 $(document).ready( function () {
   $('input[type=file]').bootstrapFileInput();
   $('.file-inputs').bootstrapFileInput();
+});
+
+$(document).ready(function(){
+   if($("#request_status").val() == "Pending") {
+          $("#esthours_div").fadeOut('fast');   
+          $("#tothours_div").fadeOut('fast');
+        } else if ($("#request_status").val() == "Ongoing") {   
+          $("#tothours_div").fadeOut('fast',function(){
+            $("#esthours_div").fadeIn('fast');
+          });
+        } else if ($("#request_status").val() == "Complete") {
+          $("#esthours_div").fadeOut('fast', function() {
+            $("#tothours_div").fadeIn('fast');
+          });   
+        } 
+
+  $("#request_status").change(function(){
+      if($("#request_status").val() == "Pending") {
+        $("#esthours_div").fadeOut('fast');   
+        $("#tothours_div").fadeOut('fast');
+      } else if ($("#request_status").val() == "Ongoing") {   
+        $("#tothours_div").fadeOut('fast',function(){
+          $("#esthours_div").fadeIn('fast');
+        });
+      } else if ($("#request_status").val() == "Complete") {
+        $("#esthours_div").fadeOut('fast', function() {
+          $("#tothours_div").fadeIn('fast');
+        });   
+      }
+  });        
 });

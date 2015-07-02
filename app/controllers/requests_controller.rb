@@ -1,6 +1,8 @@
 class RequestsController < ApplicationController
   def index
   	@requests = Request.all
+    @user_nil = User.where(:id => 39).first
+    @priority_modal = Request.priority_widget
   end
 
   def new
@@ -78,6 +80,6 @@ class RequestsController < ApplicationController
   # Allowed params include nested attachments, results, and employee names. 
   private 
     def request_params
-      params.require(:request).permit(:name, :title,:description, :status, :stathist, :customer, {:assignment =>[]}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader], result_files_attributes: [:id, :request_id, :attachment_uploader], employee_attributes: [:id, :request_id, :name, :email])
+      params.require(:request).permit(:name, :title,:description, :status, :stathist, :customer, :priority, :esthours, :tothours, {:assignment =>[]}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader], result_files_attributes: [:id, :request_id, :attachment_uploader], employee_attributes: [:id, :request_id, :name, :email])
     end
 end
