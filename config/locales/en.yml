@@ -20,4 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      request:
+        name: "Name"
+        title: "Title"
+        description: "Description"
+        status: "Status"
+        assignment: "Assignment"
+        result: "Result"
+        stathist: "Status History"
+        customer: "Customer"
+        priority: "Priority"
+        esthours: "Estimated Hours"
+        tothours: "Total Hours"

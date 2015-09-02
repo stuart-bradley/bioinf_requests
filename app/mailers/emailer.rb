@@ -18,7 +18,9 @@ class Emailer < ActionMailer::Base
 
       if @request.customer != nil
         cust = User.where(login: @request.customer).first
-        emails << cust.email
+        if cust != nil
+          emails << cust.email
+        end
       end 
 
      	mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "New Request: '#{@request.title}'"
@@ -42,7 +44,9 @@ class Emailer < ActionMailer::Base
 
       if @request.customer != nil
         cust = User.where(login: @request.customer).first
-        emails << cust.email
+        if cust != nil
+          emails << cust.email
+        end
       end 
 
       edit_type_assignment = @request.check_version_attribute_change("Assignment")
