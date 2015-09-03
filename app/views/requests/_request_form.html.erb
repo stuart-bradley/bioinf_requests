@@ -40,7 +40,7 @@
 		    	</div>
 		    </div>
 		    <div class="form-group">
-			    <%= f.label :attachment_uploader, 'Attachments' %><br />
+			    <%= f.label :attachment_uploader, 'Attachments [Submit to save file(s)]' %><br />
 			    <%= f.file_field :attachment_uploader, :multiple => true, name: "data_files[attachment_uploader][]", type: 'file' %><br />
 			    <% unless @request.data_files.empty? %><br />
 			      <%= f.label :attachment_uploader, 'Current Attachments:' %><br />
@@ -104,7 +104,7 @@
 		      		</div>
 		      	</div>
 		      	<div class="form-group">
-			      <%= f.label :attachment_uploader, 'Results' %><br />
+			      <%= f.label :attachment_uploader, 'Results [Submit to save file(s)]' %><br />
 			      <%= f.file_field :attachment_uploader, :multiple => true, name: "result_files[attachment_uploader][]", type: 'file' %><br />
 			      <% unless @request.result_files.empty? %><br />
 			         <%= f.label :attachment_uploader, 'Current Results:' %><br />
