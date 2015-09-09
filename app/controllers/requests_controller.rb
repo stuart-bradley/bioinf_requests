@@ -85,7 +85,7 @@ class RequestsController < ApplicationController
     end
   end
 
-  def update_data_files
+  def update_result_files
     @request.result_files.each(&:destroy) if @request.result_files.present?
     params[:result_files]['attachment_uploader'].each do |a|
       @result_file = @request.result_files.create!(:attachment_uploader => a, :request_id => @request.id)
