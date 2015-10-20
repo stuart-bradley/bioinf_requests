@@ -129,7 +129,11 @@
 		    <a href="#versions_div" onclick="toggle_visibility('versions_div');"><h3>Versions:</h3></a>
 		    <div id="versions_div" style="display:none;">
 			    <% @request.get_versions.each do |v| %>
-			     <td style="white-space: pre-wrap;"><%= simple_format(v.force_encoding('UTF-8'), options = {:sanitize => false}) %></td>
+			      <% begin %> 
+			     	<td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
+			      <% rescue %>
+			      	<td style="white-space: pre-wrap;">FORMAT ERROR</td>
+			      <% end %>
 			    <% end %>
 		    </div>
 		   </form>

@@ -57,7 +57,5 @@ gem 'net-ldap'
 gem "devise_ldap_authenticatable"
 gem 'yaml_db'
 gem "daemons"
-gem "mysql"
 gem 'jquery-turbolinks'
 gem 'figaro'
-gem 'string-scrub'
