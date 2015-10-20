@@ -177,8 +177,8 @@ DEPENDENCIES
   devise_ldap_authenticatable
   jbuilder (~> 1.2)
   jquery-rails
-  mysql
   jquery-turbolinks
+  mysql
   nested_form
   net-ldap
   paper_trail

@@ -57,8 +57,5 @@ gem 'net-ldap'
 gem "devise_ldap_authenticatable"
 gem 'yaml_db'
 gem "daemons"
-<<<<<<< HEAD
 gem "mysql"
-=======
 gem 'jquery-turbolinks'
->>>>>>> 53fd73872948192b7507da6c481bb343dc494e6c
