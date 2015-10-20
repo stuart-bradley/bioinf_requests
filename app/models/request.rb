@@ -138,7 +138,6 @@ class Request < ActiveRecord::Base
 	def get_versions
     versions = []
     single_version = []
-
     self.versions.each do |version|
     	single_version = []
     	version.changeset.each do |key|
@@ -147,21 +146,6 @@ class Request < ActiveRecord::Base
     	versions << cleanup_version_html(single_version) 
     end
   return versions.reverse
-  end
-
-  def cleanup_version (version)
-  	cleaned_version = ''
-  	version.each do |change|
-  	  prev_version = change[1][0]
-  	  curr_version = change[1][1]
-  	  if prev_version.nil?
-  	  	prev_version = 'NO VALUE'
-  	  elsif curr_version.nil?
-  	  	curr_version = 'NO VALUE'
-  	  end    	  	
-  	  cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "\n"
-  	end
-  	return cleaned_version
   end
 
   def get_version_latest
@@ -181,7 +165,7 @@ class Request < ActiveRecord::Base
       elsif curr_version.nil?
         curr_version = 'NO VALUE'
       end         
-      cleaned_version += change[0].capitalize + ': ' + prev_version.to_s + ' -> ' + curr_version.to_s + "<br />"
+      cleaned_version += change[0].capitalize.scrub + ': ' + prev_version.to_s.scrub + ' -> ' + curr_version.to_s.scrub + "<br />"
     end
     return cleaned_version
   end

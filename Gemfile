@@ -59,3 +59,4 @@ gem 'yaml_db'
 gem "daemons"
 gem 'jquery-turbolinks'
 gem 'figaro'
+gem 'string-scrub'
