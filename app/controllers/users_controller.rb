@@ -11,13 +11,18 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     if current_user == nil 
-      @user_nil = User.where(:id => 39).first
-      @manager = @user_nil
-      @requests = []
+      @user_nil = User.where(:login => 'wayne.mitchell').first
+      @user = @user_nil
     else
-      @requests = Request.select {|x| (x.assignment != nil || x.customer != nil) && x.name == current_user.login || x.customer == current_user.login || (x.get_users != nil && x.get_users.include?(current_user.login))}
-      @manager = current_user
-    end 
+      @user = current_user
+    end
+
+    if params[:id] != @user.id
+      non_manager_user = User.where(:id => params[:id]).first
+      @requests = Request.select {|x| (x.assignment != nil || x.customer != nil) && x.name == non_manager_user.login || x.customer == non_manager_user.login || (x.get_users != nil && x.get_users.include?(non_manager_user.login))}
+    else
+      @requests = Request.select {|x| (x.assignment != nil || x.customer != nil) && x.name == @user.login || x.customer == @user.login || (x.get_users != nil && x.get_users.include?(@user.login))}
+    end
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
 
     if params[:min] and params[:max]

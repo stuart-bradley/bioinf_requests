@@ -5,7 +5,9 @@
       Logged in as <strong><%= link_to current_user.get_name, current_user %></strong>.
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
     <% else %>
-      <%= link_to "Manager Debug Mode", user_path(@user_nil)%>
+      <% if false %>
+        <%= link_to "Manager Debug Mode", user_path(@user_nil)%>
+      <% end %>
     <% end %>
   </p>
   <head>
