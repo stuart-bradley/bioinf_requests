@@ -8,8 +8,10 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!, if: :not_in_dev_mode
 
-  # POST /my_controller/become {'email': 'test@example.com'}
   def not_in_dev_mode
+    # Always return true if in normal mode.
+    return true
+
     return true unless Rails.env == 'development'
     if not user_signed_in?
       sign_in User.find_by_login('wayne.mitchell')
