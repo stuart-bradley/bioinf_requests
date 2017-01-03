@@ -6,16 +6,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :authenticate_user!, if: :become
+  before_action :authenticate_user!, if: :not_in_dev_mode
 
   # POST /my_controller/become {'email': 'test@example.com'}
-  def become
+  def not_in_dev_mode
     return true unless Rails.env == 'development'
-    if user_signed_in?
-      return false
-    else
+    if not user_signed_in?
       sign_in User.find_by_login('wayne.mitchell')
-      redirect_to "/requests"
+      redirect_to root_url
     end
     return false
   end
