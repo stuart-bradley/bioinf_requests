@@ -1,7 +1,7 @@
 class RequestsController < ApplicationController
   def index
   	@requests = Request.all
-    @user_nil = User.where(:id => 39).first
+    @user_nil = User.where(:login => 'wayne.mitchell').first
     @priority_modal = Request.priority_widget
   end
 
