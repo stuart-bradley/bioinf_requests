@@ -1,7 +1,6 @@
 class RequestsController < ApplicationController
   def index
   	@requests = Request.all
-    @user_nil = User.where(:login => 'wayne.mitchell').first
     @priority_modal = Request.priority_widget
   end
 
@@ -14,13 +13,10 @@ class RequestsController < ApplicationController
     params.permit!
   	@request = Request.new(request_params)
 
-    if ! current_user.nil?
-      @request.name = current_user.login
-    else
-      @request.name = 'nil'
-    end
-    
-  	if @request.save
+    @request.name = current_user.login
+
+
+    if @request.save
   	  # Emails are placed Async.
       if !(params[:email_check])
         Emailer.delay.new_request(@request.id)

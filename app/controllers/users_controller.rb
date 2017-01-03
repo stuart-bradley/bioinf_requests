@@ -10,14 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    if current_user == nil 
-      @user_nil = User.where(:login => 'wayne.mitchell').first
-      @manager = @user_nil
-      @requests = []
-    else
-      @requests = Request.select {|x| (x.assignment != nil || x.customer != nil) && x.name == current_user.login || x.customer == current_user.login || (x.get_users != nil && x.get_users.include?(current_user.login))}
-      @manager = current_user
-    end 
+    @requests = Request.select { |x| (x.assignment != nil || x.customer != nil) && x.name == current_user.login || x.customer == current_user.login || (x.get_users != nil && x.get_users.include?(current_user.login)) }
+    @manager = current_user
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
 
     if params[:min] and params[:max]

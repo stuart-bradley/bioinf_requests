@@ -79,7 +79,7 @@
         <td><%= request.priority %></td>
         <td><%= request.get_users_for_view %></td>
         <td>
-        <% if current_user.nil? || request.name == current_user.login || current_user.admin %> 
+          <% if request.name == current_user.login || current_user.admin %>
           <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
           <%= button_to "Delete", request, method: :delete, class: "btn btn-default", data: { confirm:  "Are you sure that you wish to delete #{request.title}?" } %>
        	<% end %>
