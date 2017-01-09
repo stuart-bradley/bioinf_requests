@@ -15,7 +15,9 @@ class UsersController < ApplicationController
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
 
     if params[:min] and params[:max]
-      @analysis = Request.manager_analytics(params[:min], params[:max])
+      @analysis = User.manager_analytics(params[:min], params[:max])
+    else
+      @analysis = User.manager_analytics((Date.today - 1.months), Date.today.to_s)
     end
   end
 

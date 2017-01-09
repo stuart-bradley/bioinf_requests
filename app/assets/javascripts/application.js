@@ -100,3 +100,27 @@ $(document).ready(function(){
       }
   });        
 });
+
+$(document).ready(function () {
+    $("#specific_dates").change(function () {
+        var d = new Date();
+        $("#date_max").val(dateToYMD(d))
+        if ($("#specific_dates").val() == "1 Month") {
+            d = new Date(d.setMonth(d.getMonth() - 1));
+        } else if ($("#specific_dates").val() == "3 Months") {
+            d = new Date(d.setMonth(d.getMonth() - 3));
+        } else if ($("#specific_dates").val() == "6 Months") {
+            d = new Date(d.setMonth(d.getMonth() - 6));
+        } else {
+            d = new Date(d.setYear(d.getYear() - 1));
+        }
+        $("#date_min").val(dateToYMD(d))
+    });
+});
+
+function dateToYMD(date) {
+    var d = date.getDate();
+    var m = date.getMonth() + 1;
+    var y = date.getFullYear();
+    return '' + y + '-' + (m <= 9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+}
