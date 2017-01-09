@@ -13,23 +13,22 @@ class User < ActiveRecord::Base
     self.login.sub('.', ' ').split.map(&:capitalize).join(' ')
   end
 
-  def self.user_analytics(min, max)
+  def user_analytics(requests)
     analytics_list = {}
-    analytics_list["requests"] = Request.where("created_at >= ? AND created_at <= ? AND assignment like ?", min, max, self.login)
+    analytics_list["requests"] = requests
     analytics_list["requests_launched"] = analytics_list["requests"].length
-    analytics_list["requests_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ? AND assignment like ?", min, max, "Completed", self.login)
-    time_spent_per_project = []
-    time_spent_per_project << ["Total time spent", "Less Estimated Time"]
+    requests_completed = analytics_list["requests"].select { |x| x.status == "Complete" }
+    analytics_list["requests_completed"] = requests_completed.length
+    time_spent_per_request = []
 
     time_spent_per_stage = []
-    time_spent_per_stage << ["Pending to Ongoing", "Ongoing to Complete"]
 
-    analytics_list["requests"].each do |r|
-      time_spent_per_project << [r.tothours, (r.tothours - r.esthours)]
+    requests_completed.each do |r|
+      time_spent_per_request << [r.title, r.tothours, r.esthours]
       time_spent_per_stage << determine_pending_and_ongoing_times(r)
     end
 
-    analytics_list["time_spent_per_project"] = time_spent_per_project
+    analytics_list["time_spent_per_request"] = time_spent_per_request
     analytics_list["time_spent_per_stage"] = time_spent_per_stage
 
     return analytics_list
@@ -51,7 +50,7 @@ class User < ActiveRecord::Base
   end
 
   # Given two dates, return a number of results.
-  def self.manager_analytics (min, max)
+  def manager_analytics (min, max)
     analytics_list = {}
 
     if min != "" and max != ""

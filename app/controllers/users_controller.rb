@@ -10,15 +10,21 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if not params.has_key?(:min)
+      params[:min] = (Date.today - 1.months)
+    end
+
+    if not params.has_key?(:max)
+      params[:max] = Date.today
+    end
+
     @requests = Request.select { |x| (x.assignment != nil || x.customer != nil) && x.name == current_user.login || x.customer == current_user.login || (x.get_users != nil && x.get_users.include?(current_user.login)) }
+    @requests = @requests.select { |x| x.updated_at >= params[:min] && x.updated_at <= params[:max] }
     @manager = current_user
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
 
-    if params[:min] and params[:max]
-      @analysis = User.manager_analytics(params[:min], params[:max])
-    else
-      @analysis = User.manager_analytics((Date.today - 1.months), Date.today.to_s)
-    end
+    @analysis = current_user.manager_analytics(params[:min], params[:max])
+    @user_metrics = current_user.user_analytics(@requests)
   end
 
   # GET /users/new

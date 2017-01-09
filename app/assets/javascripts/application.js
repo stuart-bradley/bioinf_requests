@@ -101,20 +101,28 @@ $(document).ready(function(){
   });        
 });
 
+// Datepicker functions.
 $(document).ready(function () {
     $("#specific_dates").change(function () {
         var d = new Date();
-        $("#date_max").val(dateToYMD(d))
+        var allowed_change = false
         if ($("#specific_dates").val() == "1 Month") {
             d = new Date(d.setMonth(d.getMonth() - 1));
+            allowed_change = true
         } else if ($("#specific_dates").val() == "3 Months") {
             d = new Date(d.setMonth(d.getMonth() - 3));
+            allowed_change = true
         } else if ($("#specific_dates").val() == "6 Months") {
             d = new Date(d.setMonth(d.getMonth() - 6));
-        } else {
-            d = new Date(d.setYear(d.getYear() - 1));
+            allowed_change = true
+        } else if ($("#specific_dates").val() == "1 Year") {
+            d = new Date(d.setYear(d.getFullYear() - 1));
+            allowed_change = true
         }
-        $("#date_min").val(dateToYMD(d))
+        if (allowed_change) {
+            $("#date_max").val(dateToYMD(new Date()))
+            $("#date_min").val(dateToYMD(d))
+        }
     });
 });
 
