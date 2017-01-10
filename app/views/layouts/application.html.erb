@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BioinfRequests</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag  "nested_form" %>
-    <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <% if alert %>
-      <p class="alert alert-error"><%= alert %></p>
-    <% end %>
-    <% if !flash[:notice].blank? %>
-      <div class="alert alert-info">
-        <%= flash[:notice] %>
-      </div>
-  <% end %>
-  <p class="navbar-text pull-right">
-    <% if user_signed_in? %>
-        Logged in as <strong><%= link_to current_user.get_name, current_user %></strong>.
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-    <% end %>
-  </p>
-
-  <div class="container-fluid">
-    <img src="/assets/BurP.png">
-    <br/>
-    <br/>
-      <%= yield %>
+<head>
+  <title>BioinfRequests</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "nested_form" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<% if alert %>
+    <p class="alert alert-error"><%= alert %></p>
+<% end %>
+<% if !flash[:notice].blank? %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
     </div>
-  </body>
-  <p class="navbar-text navbar-left">
-    For bug reports, comments, or suggestions please contact <%= mail_to "Stuart.Bradley@lanzatech.com", "Stuart Bradley", class: "navbar-link" %>.
-  </p>
+<% end %>
+<p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+      Logged in as <strong><%= link_to current_user.get_name, current_user %></strong>.
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+  <% end %>
+</p>
+
+<div class="container-fluid">
+  <%= link_to(image_tag("/assets/BurP.png"), root_path) %>
+  <br/>
+  <br/>
+  <%= yield %>
+</div>
+</body>
+<p class="navbar-text navbar-left">
+  For bug reports, comments, or suggestions please
+  contact <%= mail_to "Stuart.Bradley@lanzatech.com", "Stuart Bradley", class: "navbar-link" %>.
+</p>
 </html>

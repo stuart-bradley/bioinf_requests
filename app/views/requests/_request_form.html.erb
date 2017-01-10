@@ -1,139 +1,141 @@
 <div class="request_form">
-<% if !@request.errors.empty? %>
-  <div class="alert alert-error">
-    <ul>
-      <% @request.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+  <% if !@request.errors.empty? %>
+      <div class="alert alert-error">
+        <ul>
+          <% @request.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
   <div class="well" style="margin-top:10px">
-		<%= nested_form_for @request, html: { multipart: true } do |f| %>
-		  <form>
-		  	<div class="form-group">
-			  	<%= f.label :title %>
-			  	<div class="row">
-			  		<div class="col-md-2">
-			    		<%= f.text_field :title, class: "form-control", type: 'text'  %>
-			    	</div>
-			    </div>
-		    </div>
-		    <%= f.hidden_field :name %> 
-		    <div class="form-group">
-		    	<%= f.label :description %>
-		    	<div class="row">
-			  		<div class="col-md-2">
-		    			<%= f.text_area :description, :size => "50x10", class: "form-control", type: 'text' %>
-		    		</div>
-		    	</div>
-		    </div>
-		    <div class="form-group">
-		    	<div class="row">
-			    	<div class="col-md-2">
-			    	<%= f.label :priority %>
-			    	<%= f.select :priority, [['Time Permitting','Time Permitting'],['Low Priority','Low Priority'],['Priority','Priority'],['High Priority','High Priority']], {}, {class: 'form-control'}%>
-			    	</div>
-		    	</div>
-		    </div>
-		    <div class="form-group">
-			    <%= f.label :attachment_uploader, 'Attachments [Submit to save file(s)]' %><br />
-			    <%= f.file_field :attachment_uploader, :multiple => true, name: "data_files[attachment_uploader][]", type: 'file' %><br />
-			    <% unless @request.data_files.empty? %><br />
-			      <%= f.label :attachment_uploader, 'Current Attachments:' %><br />
-			    <% end %>
-			    <%= f.fields_for :data_files do |attachment| %>
-			      <% if !attachment.object.new_record? %>
-			        <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
-			        <%= attachment.check_box :_destroy %>
-			      <% end %>
-			    <% end %>
-		    </div>
+    <%= nested_form_for @request, html: {multipart: true} do |f| %>
+        <form>
+          <div class="form-group">
+            <%= f.label :title %>
+            <div class="row">
+              <div class="col-md-2">
+                <%= f.text_field :title, class: "form-control", type: 'text' %>
+              </div>
+            </div>
+          </div>
+          <%= f.hidden_field :name %>
+          <div class="form-group">
+            <%= f.label :description %>
+            <div class="row">
+              <div class="col-md-2">
+                <%= f.text_area :description, :size => "50x10", class: "form-control", type: 'text' %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-2">
+                <%= f.label :priority %>
+                <%= f.select :priority, [['Time Permitting', 'Time Permitting'], ['Low Priority', 'Low Priority'], ['Priority', 'Priority'], ['High Priority', 'High Priority']], {}, {class: 'form-control'} %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :attachment_uploader, 'Attachments [Submit to save file(s)]' %><br/>
+            <%= f.file_field :attachment_uploader, :multiple => true, name: "data_files[attachment_uploader][]", type: 'file' %>
+            <br/>
+            <% unless @request.data_files.empty? %><br/>
+                <%= f.label :attachment_uploader, 'Current Attachments:' %><br/>
+            <% end %>
+            <%= f.fields_for :data_files do |attachment| %>
+                <% if !attachment.object.new_record? %>
+                    <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
+                    <%= attachment.check_box :_destroy %>
+                <% end %>
+            <% end %>
+          </div>
 
-		    <% if (can? :read, request) || current_user.nil? %>
-		    	<hr style="background-color:black;color:black;border-color:black">
-		    	<div class="form-group">
-		      		<%= f.label :status %>
-		      		<div class="row">
-			  			<div class="col-md-2">
-		      				<%= f.select :status, [['Pending','Pending'],['Ongoing','Ongoing'],['Complete','Complete']], {}, {class: 'form-control'} %>
-		      			</div>
-		      		</div>
-		      	</div>
-		      	<div class="form-group" id="esthours_div" style="display: none;">
-		      		<%= f.label :esthours, "Estimated Hours" %>
-		      		<div class="row">
-			  			<div class="col-md-2">
-		      				<%= f.text_field :esthours, class: 'form-control', type: 'number' %>
-		      			</div>
-		      		</div>
-		      	</div>
-		      	<div class="form-group" id="tothours_div" style="display: none;">
-		      		<%= f.label :tothours, "Total Hours" %>
-		      		<div class="row">
-			  			<div class="col-md-2">
-		      				<%= f.text_field :tothours, class: 'form-control', type: 'number' %>
-		      			</div>
-		      		</div>
-		      	</div>
-		      	<div class="form-group">
-		      		<%= f.label :assignment %>
-		      		<div class="row">
-			  			<div class="col-md-2">
-		      				<%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
-		      			</div>
-		      		</div>
-		      	</div>
-		      	<div class="form-group">
-			      <%= f.label :customer %>
-			      <div class="row">
-			  			<div class="col-md-2">
-			      			<%= f.select :customer, options_from_collection_for_select(User.where(:admin => false), :login, 'get_name', {:selected => @request.customer}), { include_blank: true }, {class: 'form-control'} %>
-			      		</div>
-			      	</div>
-			    </div>
-			    <div class="form-group">
-		      		<%= f.label :result %>
-		      		<div class="row">
-			  			<div class="col-md-2">
-		      				<%= f.text_area :result, :size => "50x10", class: "form-control", type: 'text' %>
-		      			</div>
-		      		</div>
-		      	</div>
-		      	<div class="form-group">
-			      <%= f.label :attachment_uploader, 'Results [Submit to save file(s)]' %><br />
-			      <%= f.file_field :attachment_uploader, :multiple => true, name: "result_files[attachment_uploader][]", type: 'file' %><br />
-			      <% unless @request.result_files.empty? %><br />
-			         <%= f.label :attachment_uploader, 'Current Results:' %><br />
-			      <% end %>
-			      <%= f.fields_for :result_files do |attachment| %>
-			        <% if !attachment.object.new_record? %>
-			          <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
-			          <%= attachment.check_box :_destroy %>
-			        <% end %>
-			      <% end %>
-		      </div>
-		    <% end %>
-		    <div class = "checkbox-inline">
-      			<label>
-        			<%= check_box_tag(:email_check, params[:email_check], checked = false) %> Don't send email   						
-      			</label>
-      		</div>
-      		<br />
-		    <%= f.submit "Submit", class: "btn btn-default" %>
-		    <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
-		    <hr style="background-color:black;color:black;border-color:black">
-		    <a href="#versions_div" onclick="toggle_visibility('versions_div');"><h3>Versions:</h3></a>
-		    <div id="versions_div" style="display:none;">
-			    <% @request.get_versions.each do |v| %>
-			      <% begin %> 
-			     	<td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
-			      <% rescue %>
-			      	<td style="white-space: pre-wrap;">FORMAT ERROR</td>
-			      <% end %>
-			    <% end %>
-		    </div>
-		   </form>
-		<% end %>
-	</div>
+          <% if (can? :read, request) || current_user.nil? %>
+              <hr style="background-color:black;color:black;border-color:black">
+              <div class="form-group">
+                <%= f.label :status %>
+                <div class="row">
+                  <div class="col-md-2">
+                    <%= f.select :status, [['Pending', 'Pending'], ['Ongoing', 'Ongoing'], ['Complete', 'Complete']], {}, {class: 'form-control'} %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="esthours_div" style="display: none;">
+                <%= f.label :esthours, "Estimated Hours" %>
+                <div class="row">
+                  <div class="col-md-2">
+                    <%= f.text_field :esthours, class: 'form-control', type: 'number' %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="tothours_div" style="display: none;">
+                <%= f.label :tothours, "Total Hours" %>
+                <div class="row">
+                  <div class="col-md-2">
+                    <%= f.text_field :tothours, class: 'form-control', type: 'number' %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :assignment %>
+                <div class="row">
+                  <div class="col-md-2">
+                    <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :customer %>
+                <div class="row">
+                  <div class="col-md-2">
+                    <%= f.select :customer, options_from_collection_for_select(User.where(:admin => false), :login, 'get_name', {:selected => @request.customer}), {include_blank: true}, {class: 'form-control'} %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :result %>
+                <div class="row">
+                  <div class="col-md-2">
+                    <%= f.text_area :result, :size => "50x10", class: "form-control", type: 'text' %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :attachment_uploader, 'Results [Submit to save file(s)]' %><br/>
+                <%= f.file_field :attachment_uploader, :multiple => true, name: "result_files[attachment_uploader][]", type: 'file' %>
+                <br/>
+                <% unless @request.result_files.empty? %><br/>
+                    <%= f.label :attachment_uploader, 'Current Results:' %><br/>
+                <% end %>
+                <%= f.fields_for :result_files do |attachment| %>
+                    <% if !attachment.object.new_record? %>
+                        <%= attachment.label :attachment_uploader, 'Delete: ' + attachment.object.attachment_uploader_url.split("/").last %>
+                        <%= attachment.check_box :_destroy %>
+                    <% end %>
+                <% end %>
+              </div>
+          <% end %>
+          <div class="checkbox-inline">
+            <label>
+              <%= check_box_tag(:email_check, params[:email_check], checked = false) %> Don't send email
+            </label>
+          </div>
+          <br/>
+          <%= f.submit "Submit", class: "btn btn-default" %>
+          <%= link_to 'Cancel', :root, class: "btn btn-warning" %>
+          <hr style="background-color:black;color:black;border-color:black">
+          <a href="#versions_div" onclick="toggle_visibility('versions_div');"><h3>Versions:</h3></a>
+          <div id="versions_div" style="display:none;">
+            <% @request.get_versions.each do |v| %>
+                <% begin %>
+                    <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
+                <% rescue %>
+                    <td style="white-space: pre-wrap;">FORMAT ERROR</td>
+                <% end %>
+            <% end %>
+          </div>
+        </form>
+    <% end %>
+  </div>
 </div>
