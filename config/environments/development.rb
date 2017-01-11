@@ -26,4 +26,26 @@ BioinfRequests::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  ActionMailer::Base.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+      :address => "smtp.office365.com",
+      :port => 587,
+      :domain => "lanzatech.com",
+      :user_name => ENV['EMAIL'],
+      :password => ENV['PASSWORD'],
+      :authentication => :login,
+      :enable_starttls_auto => true
+  }
+
+  # ActionMailer::Base.smtp_settings = {
+  #       :address              => "smtp.gmail.com",
+  #       :port                 => 587,
+  #       :domain               => "gmail.com",
+  #       :user_name            => ENV['EMAIL'],
+  #       :password             => ENV['PASSWORD'],
+  #       :authentication       => :plain,
+  #       :enable_starttls_auto => true
+  # }
 end
