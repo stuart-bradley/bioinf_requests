@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616214512) do
+ActiveRecord::Schema.define(version: 20170111205910) do
 
   create_table "data_files", force: true do |t|
     t.integer  "request_id"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20150616214512) do
     t.datetime "updated_at"
     t.boolean  "admin"
     t.boolean  "manager"
+    t.string "group"
   end
 
   add_index "users", ["login"], name: "index_users_on_login", unique: true
