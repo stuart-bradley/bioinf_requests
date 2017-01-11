@@ -172,6 +172,6 @@
   }
 </script>
 
-<% if (can? :manage, :all) || current_user.nil? %>
+<% if (can? :manage, :all) %>
     <%= render 'manager' %>
 <% end %>
