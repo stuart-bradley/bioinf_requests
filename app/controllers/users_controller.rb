@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     end
 
     @requests = Request.select { |x| (x.assignment != nil || x.customer != nil) && x.name == current_user.login || x.customer == current_user.login || (x.get_users != nil && x.get_users.include?(current_user.login)) }
-    @requests = @requests.select { |x| x.updated_at >= params[:min] && x.updated_at <= params[:max] }
+    @requests = @requests.select { |x| x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max] }
     @manager = current_user
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
 

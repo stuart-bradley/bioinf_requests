@@ -36,14 +36,17 @@ class User < ActiveRecord::Base
 
   def determine_pending_and_ongoing_times(r)
     res = []
+    res << r.title
     stathist = r.stathist
-    pending = r.created_at.to_time
+    pending = r.created_at.to_date
 
-    ongoing = stathist.match(/Ongoing:\s(\d+-\d+-\d+)/)[-1].to_time
-    res << (ongoing - pending)
+    ongoing = Date.parse stathist.match(/Ongoing:\s(\d+-\d+-\d+)/)[-1]
+    res << (pending..ongoing).count
 
-    complete = stathist.match(/Complete:\s(\d+-\d+-\d+)/)[-1].to_time
-    res << (complete - ongoing)
+    complete = Date.parse stathist.match(/Complete:\s(\d+-\d+-\d+)/)[-1]
+    res << (ongoing..complete).count
+
+    puts pending, ongoing, complete
 
     return res
 
