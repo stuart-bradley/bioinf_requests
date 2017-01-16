@@ -1,5 +1,76 @@
 <div class="row">
   <div class="col-md-12">
+    <table class="table table-bordered table-striped" id="user_table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Submitted By</th>
+        <th>Description</th>
+        <th>Download Attachment</th>
+        <th>Results</th>
+        <th>Result Files</th>
+        <th>Status</th>
+        <th>Status History</th>
+        <th>Job Assignment</th>
+        <th>&nbsp;</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% user_metrics["requests"].reverse.each do |request| %>
+          <tr>
+            <td><%= request.id %></td>
+            <td><%= request.title %></td>
+            <td>
+              <%= request.get_name %>
+              <% if request.customer? %>
+                  <br/>(<%= User.where(:login => request.customer).first.get_name %>)
+              <% end %>
+            </td>
+            <td style="white-space: pre-wrap;"><%= request.description %></td>
+            <td>
+              <% request.data_files.each do |p| %>
+                  <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
+                  <br/>
+              <% end %>
+            </td>
+            <td style="white-space: pre-wrap;"><%= request.result %></td>
+            <td>
+              <% request.result_files.each do |p| %>
+                  <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
+                  <br/>
+              <% end %>
+            </td>
+            <% if request.status == "Complete" %>
+                <td style="background-color:#4CAE4C;color:white"><%= request.status %></td>
+            <% elsif request.status == "Ongoing" %>
+                <td style="background-color:#46B8DA;color:white"><%= request.status %></td>
+            <% else %>
+                <td style="background-color:#EEA236;color:white"><%= request.status %></td>
+            <% end %>
+            <td><%= simple_format(request.stathist) %></td>
+            <td><%= request.get_users_for_view %></td>
+            <td>
+              <% if current_user.nil? || request.name == current_user.login || current_user.admin %>
+                  <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
+                  <%= button_to "Delete", request, method: :delete, class: "btn btn-default", data: {confirm: "Are you sure that you wish to delete #{request.title}?"} %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
     <h4>Projects Launched: <%= user_metrics["requests_launched"] %> </h4>
     <h4>Projects Completed: <%= user_metrics["requests_completed"] %> </h4>
   </div>

@@ -46,9 +46,7 @@ class UsersController < ApplicationController
 
     render locals: {
         user: user,
-        requests: requests,
         non_manager_metrics: non_manager_metrics,
-        non_manager_requests: non_manager_requests,
         user_metrics: user_metrics,
         analysis: analysis
     }
