@@ -90,8 +90,9 @@
 
 <script type="text/javascript">
   google.charts.load('current', {packages: ['corechart', 'bar']});
+  main_div = document.getElementById('time_spent_per_request_<%= user_name_link %>');
   google.charts.setOnLoadCallback(drawCompletedRequests);
-  google.charts.setOnLoadCallback(drawCompletedStages)
+  google.charts.setOnLoadCallback(drawCompletedStages);
 
   function drawCompletedRequests() {
     var data = new google.visualization.DataTable();
@@ -110,6 +111,7 @@
         title: 'Hours'
       },
       colors: ['#428bca', '#46B8DA'],
+      width: $(window).width() * 0.95
     };
 
     var chart = new google.visualization.ColumnChart(
@@ -135,6 +137,7 @@
         title: 'Days'
       },
       colors: ['#EEA236', '#46B8DA'],
+      width: $(window).width() * 0.95
     };
 
     var chart = new google.visualization.ColumnChart(

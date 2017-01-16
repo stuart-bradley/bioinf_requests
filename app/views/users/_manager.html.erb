@@ -23,7 +23,7 @@
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
+    <div class="tab-content" id="tabs">
       <% non_manager_metrics.each do |user, value| %>
           <% if user == "Total" %>
               <div role="tabpanel" class="tab-pane active" id="Total">
