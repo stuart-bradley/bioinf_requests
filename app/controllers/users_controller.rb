@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
     user = User.find(params[:id])
 
-    requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
+    requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && (x.updated_at.to_date >= params[:min].to_date && x.updated_at.to_date <= params[:max].to_date) }
     non_managers = User.select { |x| x.admin == true && (x.manager == false || x.manager == nil) }
 
     non_manager_metrics = ActiveSupport::OrderedHash.new
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       non_manager_metrics["Total"] = []
       non_manager_requests["Total"] = []
       non_managers.each do |non_manager|
-        user_requests = Request.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
+        user_requests = Request.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) && (x.updated_at.to_date >= params[:min].to_date && x.updated_at.to_date <= params[:max].to_date) }
         non_manager_requests[non_manager] = user_requests
         non_manager_requests["Total"].push(*user_requests)
         n_m_m = non_manager.user_analytics(user_requests)
