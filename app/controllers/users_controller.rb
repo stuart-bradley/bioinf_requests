@@ -27,10 +27,15 @@ class UsersController < ApplicationController
       @analysis = current_user.manager_analytics(params[:min], params[:max])
       @non_manager_metrics = ActiveSupport::OrderedHash.new
       @non_manager_requests = ActiveSupport::OrderedHash.new
+      @non_manager_metrics["total"] = []
+      @non_manager_requests["total"] = []
       @non_manager.each do |non_manager|
         user_requests = Request.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
         @non_manager_requests[non_manager.login] = user_requests
-        @non_manager_metrics[non_manager.login] = non_manager.user_analytics(user_requests)
+        @non_manager_requests["total"].push(*user_requests)
+        n_m_m = non_manager.user_analytics(user_requests)
+        @non_manager_metrics[non_manager.login] = n_m_m
+        @non_manager_metrics["total"].push(n_m_m)
       end
     end
     @user_metrics = current_user.user_analytics(@requests)
