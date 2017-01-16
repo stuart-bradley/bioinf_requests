@@ -18,12 +18,21 @@ class UsersController < ApplicationController
       params[:max] = Date.today
     end
 
-    @requests = Request.select { |x| (x.assignment != nil || x.customer != nil) && x.name == current_user.login || x.customer == current_user.login || (x.get_users != nil && x.get_users.include?(current_user.login)) }
-    @requests = @requests.select { |x| x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max] }
-    @manager = current_user
+    user = User.find(params[:id])
+
+    @requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
     @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
 
-    @analysis = current_user.manager_analytics(params[:min], params[:max])
+    if can? :manage, :all
+      @analysis = current_user.manager_analytics(params[:min], params[:max])
+      @non_manager_metrics = ActiveSupport::OrderedHash.new
+      @non_manager_requests = ActiveSupport::OrderedHash.new
+      @non_manager.each do |non_manager|
+        user_requests = Request.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
+        @non_manager_requests[non_manager.login] = user_requests
+        @non_manager_metrics[non_manager.login] = non_manager.user_analytics(user_requests)
+      end
+    end
     @user_metrics = current_user.user_analytics(@requests)
   end
 
