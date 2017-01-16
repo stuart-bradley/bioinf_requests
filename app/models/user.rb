@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
     self.login.sub('.', ' ').split.map(&:capitalize).join(' ')
   end
 
+  def get_name_link
+    self.login.sub('.', '')
+  end
+
   def user_analytics(requests)
     analytics_list = {}
     analytics_list["requests"] = requests

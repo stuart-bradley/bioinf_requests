@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-md-12">
+    <h4>Projects Launched: <%= user_metrics["requests_launched"] %> </h4>
+    <h4>Projects Completed: <%= user_metrics["requests_completed"] %> </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="time_spent_per_request_<%= user_name_link %>"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="time_spent_per_stage_<%= user_name_link %>"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawCompletedRequests);
+  google.charts.setOnLoadCallback(drawCompletedStages)
+
+  function drawCompletedRequests() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Request Title');
+    data.addColumn('number', 'Total Hours');
+    data.addColumn('number', 'Estimated Hours');
+
+    data.addRows(<%= raw user_metrics["time_spent_per_request"].to_json %>);
+
+    var options = {
+      title: 'Time Spent per Completed Request',
+      hAxis: {
+        title: 'Request Title', showTextEvery: 1, textStyle: {fontSize: 14.5}, titleTextStyle: {fontSize: 17.5}
+      },
+      vAxis: {
+        title: 'Hours'
+      },
+      colors: ['#428bca', '#46B8DA'],
+    };
+
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('time_spent_per_request_<%= user_name_link %>'));
+    chart.draw(data, options);
+  }
+
+  function drawCompletedStages() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Request Title');
+    data.addColumn('number', 'Pending to Ongoing');
+    data.addColumn('number', 'Ongoing to Complete');
+
+    data.addRows(<%= raw user_metrics["time_spent_per_stage"].to_json %>);
+
+    var options = {
+      title: 'Days Spent per Stage',
+      isStacked: true,
+      hAxis: {
+        title: 'Request Title', showTextEvery: 1, textStyle: {fontSize: 14.5}, titleTextStyle: {fontSize: 17.5}
+      },
+      vAxis: {
+        title: 'Days'
+      },
+      colors: ['#EEA236', '#46B8DA'],
+    };
+
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('time_spent_per_stage_<%= user_name_link %>'));
+    chart.draw(data, options);
+  }
+</script>

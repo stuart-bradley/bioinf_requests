@@ -20,25 +20,38 @@ class UsersController < ApplicationController
 
     user = User.find(params[:id])
 
-    @requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
-    @non_manager = User.select {|x| x.admin == true && (x.manager == false || x.manager == nil)}
+    requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
+    non_managers = User.select { |x| x.admin == true && (x.manager == false || x.manager == nil) }
+
+    non_manager_metrics = ActiveSupport::OrderedHash.new
+    non_manager_requests = ActiveSupport::OrderedHash.new
+    analysis = []
 
     if can? :manage, :all
-      @analysis = current_user.manager_analytics(params[:min], params[:max])
-      @non_manager_metrics = ActiveSupport::OrderedHash.new
-      @non_manager_requests = ActiveSupport::OrderedHash.new
-      @non_manager_metrics["total"] = []
-      @non_manager_requests["total"] = []
-      @non_manager.each do |non_manager|
+      analysis = current_user.manager_analytics(params[:min], params[:max])
+      non_manager_metrics = ActiveSupport::OrderedHash.new
+      non_manager_requests = ActiveSupport::OrderedHash.new
+      non_manager_metrics["Total"] = []
+      non_manager_requests["Total"] = []
+      non_managers.each do |non_manager|
         user_requests = Request.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) && (x.updated_at.to_date >= params[:min] && x.updated_at.to_date <= params[:max]) }
-        @non_manager_requests[non_manager.login] = user_requests
-        @non_manager_requests["total"].push(*user_requests)
+        non_manager_requests[non_manager] = user_requests
+        non_manager_requests["Total"].push(*user_requests)
         n_m_m = non_manager.user_analytics(user_requests)
-        @non_manager_metrics[non_manager.login] = n_m_m
-        @non_manager_metrics["total"].push(n_m_m)
+        non_manager_metrics[non_manager] = n_m_m
+        non_manager_metrics["Total"].push(n_m_m)
       end
     end
-    @user_metrics = current_user.user_analytics(@requests)
+    user_metrics = current_user.user_analytics(requests)
+
+    render locals: {
+        user: user,
+        requests: requests,
+        non_manager_metrics: non_manager_metrics,
+        non_manager_requests: non_manager_requests,
+        user_metrics: user_metrics,
+        analysis: analysis
+    }
   end
 
   # GET /users/new

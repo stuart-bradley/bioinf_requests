@@ -7,21 +7,34 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
-    <table class="table table-bordered table-striped" id="manager_table">
-      <thead>
-      <tr>
-        <th>User</th>
-      </tr>
-      </thead>
-      <tbody>
-      <% @non_manager.each do |user| %>
-          <tr>
-            <td><%= link_to user.get_name, user %></td>
-          </tr>
+  <div class="col-md-12 bordered-tab-contents">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" id="myTabs">
+      <% non_manager_metrics.each do |user, value| %>
+          <% if user == "Total" %>
+              <li role="presentation" class="active">
+                <a href="#Total" aria-controls="Total" role="tab" data-toggle="tab">Total</a></li>
+          <% else %>
+              <li role="presentation">
+                <a href="#<%= user.get_name_link %>" aria-controls="<%= user.get_name_link %>" role="tab" data-toggle="tab"><%= user.get_name %></a>
+              </li>
+          <% end %>
       <% end %>
-      </tbody>
-    </table>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <% non_manager_metrics.each do |user, value| %>
+          <% if user == "Total" %>
+              <div role="tabpanel" class="tab-pane active" id="Total">
+              </div>
+          <% else %>
+              <div role="tabpanel" class="tab-pane" id="<%= user.get_name_link %>">
+                <%= render 'user_metrics', user_metrics: value, user_name_link: user.get_name_link %>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -35,8 +48,8 @@
 
 <div class="row">
   <div class="col-md-12">
-    <% if @analysis and not @analysis.empty? %>
-        <%= render 'analysis' %>
+    <% if analysis and not analysis.empty? %>
+        <%= render 'analysis', analysis: analysis %>
     <% end %>
   </div>
 </div>
