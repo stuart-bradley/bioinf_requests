@@ -6,6 +6,7 @@ $(document).ready(function () {
     var user_tables = [
         "#user_table_Total",
         "#user_table_waynemitchell",
+        "#user_table_stuartbradley",
         "#user_table_aseladassanayake",
         "#user_table_jamesdaniell",
         "#user_table_vinicioreynoso"
