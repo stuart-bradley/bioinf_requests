@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <table class="table table-bordered table-striped" id="user_table">
+    <table class="table table-bordered table-striped" id="user_table_<%= user_name_link %>">
       <thead>
       <tr>
         <th>ID</th>
@@ -145,3 +145,17 @@
     chart.draw(data, options);
   }
 </script>
+
+<div class="row">
+  <div class="col-md-12">
+    <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
+  </div>
+</div>
+
+<% if user_name_link == "Total" %>
+    <div class="row">
+      <div class="col-md-12">
+        <%= render 'analysis', analysis: analysis %>
+      </div>
+    </div>
+<% end %>

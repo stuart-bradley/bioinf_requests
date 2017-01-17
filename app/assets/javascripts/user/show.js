@@ -3,16 +3,25 @@
  */
 
 $(document).ready(function () {
-    $('#user_table').DataTable({
-        "columnDefs": [
-            {"width": "8%", "targets": 2},
-            {"width": "11%", "targets": 4},
-            {"width": "7%", "targets": 6},
-            {"width": "9%", "targets": 8},
-            {"width": "8%", "targets": 9},
-            {"width": "8%", "targets": 10}
-        ],
-        "order": [[0, "desc"]]
+    var user_tables = [
+        "#user_table_Total",
+        "#user_table_waynemitchell",
+        "#user_table_aseladassanayake",
+        "#user_table_jamesdaniell",
+        "#user_table_vinicioreynoso"
+    ];
+    $.each(user_tables, function (index, value) {
+        $(value).DataTable({
+            "columnDefs": [
+                {"width": "8%", "targets": 2},
+                {"width": "11%", "targets": 4},
+                {"width": "7%", "targets": 6},
+                {"width": "9%", "targets": 8},
+                {"width": "8%", "targets": 9},
+                {"width": "8%", "targets": 10}
+            ],
+            "order": [[0, "desc"]]
+        });
     });
 });
 

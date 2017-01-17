@@ -20,28 +20,23 @@ class UsersController < ApplicationController
 
     user = User.find(params[:id])
 
-    requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && (x.updated_at.to_date >= params[:min].to_date && x.updated_at.to_date <= params[:max].to_date) }
+    requests = Request.select { |x| x.updated_at.to_date >= params[:min].to_date && x.updated_at.to_date <= params[:max].to_date }
     non_managers = User.select { |x| x.admin == true && (x.manager == false || x.manager == nil) }
 
     non_manager_metrics = ActiveSupport::OrderedHash.new
-    non_manager_requests = ActiveSupport::OrderedHash.new
     analysis = []
 
     if can? :manage, :all
       analysis = current_user.manager_analytics(params[:min], params[:max])
       non_manager_metrics = ActiveSupport::OrderedHash.new
-      non_manager_requests = ActiveSupport::OrderedHash.new
       non_manager_metrics["Total"] = []
-      non_manager_requests["Total"] = []
       non_managers.each do |non_manager|
-        user_requests = Request.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) && (x.updated_at.to_date >= params[:min].to_date && x.updated_at.to_date <= params[:max].to_date) }
-        non_manager_requests[non_manager] = user_requests
-        non_manager_requests["Total"].push(*user_requests)
-        n_m_m = non_manager.user_analytics(user_requests)
-        non_manager_metrics[non_manager] = n_m_m
-        non_manager_metrics["Total"].push(n_m_m)
+        user_requests = requests.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) }
+        non_manager_metrics[non_manager] = non_manager.user_analytics(user_requests)
       end
+      non_manager_metrics["Total"] = user.user_analytics(requests)
     end
+    user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) }
     user_metrics = current_user.user_analytics(requests)
 
     render locals: {
