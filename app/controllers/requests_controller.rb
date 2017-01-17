@@ -1,7 +1,10 @@
 class RequestsController < ApplicationController
   def index
   	@requests = Request.all
-    @priority_modal = Request.priority_widget
+    priority_modal = Request.priority_widget
+    render locals: {
+        priority_modal: priority_modal
+    }
   end
 
   def new
