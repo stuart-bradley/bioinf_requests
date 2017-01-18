@@ -73,7 +73,7 @@ class Request < ActiveRecord::Base
   # Splits user string into array.
   def get_users
     if self.assignment
-      self.assignment.split(';')
+      return self.assignment.split(';')
     end
   end
 
