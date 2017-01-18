@@ -11,7 +11,7 @@
         </tr>
         <% priority_modal["high"].each do |p| %>
           <tr>
-            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= link_to truncate(p.title, :length => 15), edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %></td>
             <td><%= p.created_at.to_date %></td>
           </tr>
         <% end %>
@@ -21,7 +21,7 @@
         </tr>
         <% priority_modal["normal"].each do |p| %>
           <tr>
-            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= link_to truncate(p.title, :length => 15), edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %></td>
             <td><%= p.created_at.to_date %></td>
           </tr>
         <% end %>
@@ -31,7 +31,7 @@
         </tr>
         <% priority_modal["low"].each do |p| %>
           <tr>
-            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= link_to truncate(p.title, :length => 15), edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %></td>
             <td><%= p.created_at.to_date %></td>
           </tr>
         <% end %>
@@ -41,7 +41,7 @@
         </tr>
         <% priority_modal["time_permitting"].each do |p| %>
           <tr>
-            <td><%= link_to p.title, edit_request_path(p)%></td>
+            <td><%= link_to truncate(p.title, :length => 15), edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %></td>
             <td><%= p.created_at.to_date %></td>
           </tr>
         <% end %>
