@@ -16,7 +16,7 @@
               <td><%= user %></td>
               <% requests.each_with_index do |r, i| %>
                   <td>
-                    <%= link_to r.title, edit_request_path(r) %>
+                    <%= link_to truncate(r.title, :length => 15), edit_request_path(r) %>
                   </td>
               <% end %>
               <% if requests.length < max_length %>
