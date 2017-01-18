@@ -54,3 +54,8 @@
 .bordered-tab-contents > .nav-tabs {
   margin-bottom: 0;
 }
+
+.modal-dialog {
+  width: auto;
+  min-width: 300px;
+}
