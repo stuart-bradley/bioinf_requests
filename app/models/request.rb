@@ -34,7 +34,7 @@ class Request < ActiveRecord::Base
     ongoing_requests = ActiveSupport::OrderedHash.new
     max_length = 1
     User.where("admin = ?", true).each do |user|
-      requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && x.status == "Ongoing" || (puts "FAIL ID: " + x.id.to_s) }.sort_by &:updated_at
+      requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && x.status == "Ongoing" || (logger.debug "FAIL ID: " + x.id.to_s) }.sort_by &:updated_at
       if requests.length > max_length
         max_length = requests.length
       end
@@ -73,9 +73,8 @@ class Request < ActiveRecord::Base
   # Splits user string into array.
   def get_users
     if self.assignment
-      return self.assignment.split(';')
+      self.assignment.split(';')
     end
-    return self.assignment
   end
 
   # Gets users in a view ready format. Adds captitalisation etc.
