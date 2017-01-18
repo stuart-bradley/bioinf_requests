@@ -75,6 +75,7 @@ class Request < ActiveRecord::Base
     if self.assignment
       return self.assignment.split(';')
     end
+    return self.assignment
   end
 
   # Gets users in a view ready format. Adds captitalisation etc.
