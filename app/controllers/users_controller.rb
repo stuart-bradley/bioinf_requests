@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       end
       non_manager_metrics["Total"] = user.user_analytics(requests)
     end
-    user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || x.assignment.include?(user.login)) }
+    user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || (x.assignment.include?(user.login) rescue false)) }
     user_metrics = user.user_analytics(user_requests)
 
     render locals: {
