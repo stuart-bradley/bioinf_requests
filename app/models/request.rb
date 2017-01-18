@@ -31,7 +31,16 @@ class Request < ActiveRecord::Base
 
   # Get ongoing requests.
   def self.active_requests
-    ongoing_requests = Request.where("status = ?", "Ongoing")
+    ongoing_requests = ActiveSupport::OrderedHash.new
+    max_length = 1
+    User.where("admin = ?", true).each do |user|
+      requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && x.status == "Ongoing" }.sort_by &:updated_at
+      if requests.length > max_length
+        max_length = requests.length
+      end
+      ongoing_requests[user.get_name] = requests
+    end
+    return ongoing_requests, max_length
   end
 
   # Updates the versioning for the status.

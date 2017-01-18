@@ -6,6 +6,9 @@
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#priority_modal">
       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     </button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#active_modal">
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+    </button>
     <%= link_to "New bioinformatics request", new_request_path, class: "btn btn-default btn-lg " %>
     <%= link_to "Modeling requests", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
     <!--<%= link_to "New modeling request", new_modelling_path, class: "btn btn-warning btn-lg" %>-->
@@ -16,6 +19,14 @@
   <div class="col-md-12">
     <div class="modal fade" id="priority_modal" tabindex="-1" role="dialog" aria-labelledby="Priority Requests" aria-hidden="true">
       <%= render 'priority', priority_modal: priority_modal %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="modal fade" id="active_modal" tabindex="-1" role="dialog" aria-labelledby="Active Requests" aria-hidden="true">
+      <%= render 'active', active_requests: active_requests, max_length: max_length %>
     </div>
   </div>
 </div>
@@ -92,6 +103,9 @@
   <div class="col-md-12">
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#priority_modal">
       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    </button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#active_modal">
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
     </button>
     <%= link_to "New bioinformatics request", new_request_path, class: "btn btn-default btn-lg " %>
     <%= link_to "New modeling request", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>

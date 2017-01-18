@@ -2,10 +2,12 @@ class RequestsController < ApplicationController
   def index
   	@requests = Request.all
     priority_modal = Request.priority_widget
-    active_requests = Request.active_requests
+    active_requests, max_length = Request.active_requests
+    puts active_requests
     render locals: {
         priority_modal: priority_modal,
-        active_requests: active_requests
+        active_requests: active_requests,
+        max_length: max_length
     }
   end
 
