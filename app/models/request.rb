@@ -29,6 +29,11 @@ class Request < ActiveRecord::Base
     }
   end
 
+  # Get ongoing requests.
+  def self.active_requests
+    ongoing_requests = Request.where("status = ?", "Ongoing")
+  end
+
   # Updates the versioning for the status.
   def set_stathist
     stats = ["Pending", "Ongoing", "Complete"]
