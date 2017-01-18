@@ -6,27 +6,29 @@
       <h3 class="modal-title">Ongoing Requests</h3>
     </div>
     <div class="modal-body">
-      <table class="table table-bordered">
-        <tr>
-          <th>User</th>
-          <th colspan="<%= max_length %>">Ongoing Requests (Sorted by Most Recent)</th>
-        </tr>
-        <% active_requests.each do |user, requests| %>
-            <tr>
-              <td><%= user %></td>
-              <% requests.each_with_index do |r, i| %>
-                  <td>
-                    <%= link_to truncate(r.title, :length => 15), edit_request_path(r), 'data-toggle' => 'tool-tip', title: r.title %>
-                  </td>
-              <% end %>
-              <% if requests.length < max_length %>
-                  <% (max_length - requests.length).times do |n| %>
-                      <td></td>
-                  <% end %>
-              <% end %>
-            </tr>
-        <% end %>
-      </table>
+      <div style="overflow-x:auto;">
+        <table class="table table-bordered">
+          <tr>
+            <th>User</th>
+            <th colspan="<%= max_length %>">Ongoing Requests (Sorted by Most Recent)</th>
+          </tr>
+          <% active_requests.each do |user, requests| %>
+              <tr>
+                <td><%= user %></td>
+                <% requests.each_with_index do |r, i| %>
+                    <td>
+                      <%= link_to truncate(r.title, :length => 15), edit_request_path(r), 'data-toggle' => 'tool-tip', title: r.title %>
+                    </td>
+                <% end %>
+                <% if requests.length < max_length %>
+                    <% (max_length - requests.length).times do |n| %>
+                        <td></td>
+                    <% end %>
+                <% end %>
+              </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
   </div>
 </div>
