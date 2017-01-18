@@ -5,8 +5,20 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  # For debugging set user to self.
-  before_action :authenticate_user!
+
+  before_action :authenticate_user!, if: :not_in_dev_mode
+
+  def not_in_dev_mode
+    # Always return true if in normal mode.
+    return true
+
+    return true unless Rails.env == 'development'
+    if not user_signed_in?
+      sign_in User.find_by_login('wayne.mitchell')
+      redirect_to root_url
+    end
+    return false
+  end
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 

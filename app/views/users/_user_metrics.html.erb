@@ -1,0 +1,161 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered table-striped" id="user_table_<%= user_name_link %>">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Submitted By</th>
+        <th>Description</th>
+        <th>Download Attachment</th>
+        <th>Results</th>
+        <th>Result Files</th>
+        <th>Status</th>
+        <th>Status History</th>
+        <th>Job Assignment</th>
+        <th>&nbsp;</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% user_metrics["requests"].reverse.each do |request| %>
+          <tr>
+            <td><%= request.id %></td>
+            <td><%= request.title %></td>
+            <td>
+              <%= request.get_name %>
+              <% if request.customer? %>
+                  <br/>(<%= User.where(:login => request.customer).first.get_name %>)
+              <% end %>
+            </td>
+            <td style="white-space: pre-wrap;"><%= request.description %></td>
+            <td>
+              <% request.data_files.each do |p| %>
+                  <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
+                  <br/>
+              <% end %>
+            </td>
+            <td style="white-space: pre-wrap;"><%= request.result %></td>
+            <td>
+              <% request.result_files.each do |p| %>
+                  <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
+                  <br/>
+              <% end %>
+            </td>
+            <% if request.status == "Complete" %>
+                <td style="background-color:#4CAE4C;color:white"><%= request.status %></td>
+            <% elsif request.status == "Ongoing" %>
+                <td style="background-color:#46B8DA;color:white"><%= request.status %></td>
+            <% else %>
+                <td style="background-color:#EEA236;color:white"><%= request.status %></td>
+            <% end %>
+            <td><%= simple_format(request.stathist) %></td>
+            <td><%= request.get_users_for_view %></td>
+            <td>
+              <% if current_user.nil? || request.name == current_user.login || current_user.admin %>
+                  <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
+                  <%= button_to "Delete", request, method: :delete, class: "btn btn-default", data: {confirm: "Are you sure that you wish to delete #{request.title}?"} %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h4>Projects Launched: <%= user_metrics["requests_launched"] %> </h4>
+    <h4>Projects Completed: <%= user_metrics["requests_completed"] %> </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="time_spent_per_request_<%= user_name_link %>"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="time_spent_per_stage_<%= user_name_link %>"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  main_div = document.getElementById('time_spent_per_request_<%= user_name_link %>');
+  google.charts.setOnLoadCallback(drawCompletedRequests);
+  google.charts.setOnLoadCallback(drawCompletedStages);
+
+  function drawCompletedRequests() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Request Title');
+    data.addColumn('number', 'Total Hours');
+    data.addColumn('number', 'Estimated Hours');
+
+    data.addRows(<%= raw user_metrics["time_spent_per_request"].to_json %>);
+
+    var options = {
+      title: 'Time Spent per Completed Request',
+      hAxis: {
+        title: 'Request Title', showTextEvery: 1, textStyle: {fontSize: 14.5}, titleTextStyle: {fontSize: 17.5}
+      },
+      vAxis: {
+        title: 'Hours'
+      },
+      colors: ['#428bca', '#46B8DA'],
+      width: $(window).width() * 0.95
+    };
+
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('time_spent_per_request_<%= user_name_link %>'));
+    chart.draw(data, options);
+  }
+
+  function drawCompletedStages() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Request Title');
+    data.addColumn('number', 'Pending to Ongoing');
+    data.addColumn('number', 'Ongoing to Complete');
+
+    data.addRows(<%= raw user_metrics["time_spent_per_stage"].to_json %>);
+
+    var options = {
+      title: 'Days Spent per Stage',
+      isStacked: true,
+      hAxis: {
+        title: 'Request Title', showTextEvery: 1, textStyle: {fontSize: 14.5}, titleTextStyle: {fontSize: 17.5}
+      },
+      vAxis: {
+        title: 'Days'
+      },
+      colors: ['#EEA236', '#46B8DA'],
+      width: $(window).width() * 0.95
+    };
+
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('time_spent_per_stage_<%= user_name_link %>'));
+    chart.draw(data, options);
+  }
+</script>
+
+<div class="row">
+  <div class="col-md-12">
+    <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
+  </div>
+</div>
+
+<% if user_name_link == "Total" %>
+    <div class="row">
+      <div class="col-md-12">
+        <%= render 'analysis', analysis: analysis %>
+      </div>
+    </div>
+<% end %>

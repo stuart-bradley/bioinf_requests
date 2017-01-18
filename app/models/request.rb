@@ -29,30 +29,18 @@ class Request < ActiveRecord::Base
     }
   end
 
-  # Given two dates, return a number of results.
-  def self.manager_analytics (min, max)
-    analytics_list = {}
-
-    if min != "" and max != ""
-      min = min.to_date.to_datetime
-      max = max.to_date.to_datetime
-
-      # Before.
-      analytics_list["before_pending"] = Request.where("created_at <= ? AND status = ?", min, "Pending")
-      analytics_list["before_ongoing"] = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
-      analytics_list["before_completed_in_period"] = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
-
-      # During.
-      analytics_list["during_pending"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
-      analytics_list["during_ongoing"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
-      analytics_list["during_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
-
-      # Totals.
-      analytics_list["ongoing_pending"] = analytics_list["before_pending"].count + analytics_list["before_ongoing"].count + analytics_list["during_pending"].count + analytics_list["during_ongoing"].count
-      analytics_list["completed"] = analytics_list["before_completed_in_period"].count + analytics_list["during_completed"].count
+  # Get ongoing requests.
+  def self.active_requests
+    ongoing_requests = ActiveSupport::OrderedHash.new
+    max_length = 1
+    User.where("admin = ?", true).each do |user|
+      requests = Request.select { |x| (x.name == user.login || x.customer == user.login || x.get_users.include?(user.login)) && x.status == "Ongoing" }.sort_by &:updated_at
+      if requests.length > max_length
+        max_length = requests.length
+      end
+      ongoing_requests[user.get_name] = requests
     end
-
-    return analytics_list
+    return ongoing_requests, max_length
   end
 
   # Updates the versioning for the status.
@@ -78,7 +66,7 @@ class Request < ActiveRecord::Base
   # Deals with the multiple user assignment, joins user array into string.
   def handle_assignment
     if assignment
-      self.assignment = self.assignment.select(&:present?).join(';') 
+      self.assignment = self.assignment.reject(&:blank?).join(";")
     end
   end
 

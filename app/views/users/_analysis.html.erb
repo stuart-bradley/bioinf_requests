@@ -5,7 +5,7 @@
     <tr>
     	<td style="font-weight:bold" width="9%">Pending</td>
     	<td>
-    		<% @analysis["before_pending"].each do |p| %>
+        <% analysis["before_pending"].each do |p| %>
     			<%= link_to p.id, edit_request_path(p)%>
     		<% end %>
     	</td>
@@ -13,7 +13,7 @@
     <tr>
     	<td style="font-weight:bold" width="9%">Ongoing</td>
     	<td>
-    		<% @analysis["before_ongoing"].each do |p| %>
+        <% analysis["before_ongoing"].each do |p| %>
     			<%= link_to p.id, edit_request_path(p)%>
     		<% end %>
     	</td>
@@ -21,7 +21,7 @@
     <tr>
     	<td style="font-weight:bold" width="9%">Completed</td>
     	<td>
-    		<% @analysis["before_completed_in_period"].each do |p| %>
+        <% analysis["before_completed_in_period"].each do |p| %>
     			<%= link_to p.id, edit_request_path(p)%>
     		<% end %>
     	</td>
@@ -33,7 +33,7 @@
     <tr>
     	<td style="font-weight:bold" width="9%">Pending</td>
     	<td>
-    		<% @analysis["during_pending"].each do |p| %>
+        <% analysis["during_pending"].each do |p| %>
     			<%= link_to p.id, edit_request_path(p)%>
     		<% end %>
     	</td>
@@ -41,7 +41,7 @@
     <tr>
     	<td style="font-weight:bold" width="9%">Ongoing</td>
     	<td>
-    		<% @analysis["during_ongoing"].each do |p| %>
+        <% analysis["during_ongoing"].each do |p| %>
     			<%= link_to p.id, edit_request_path(p)%>
     		<% end %>
     	</td>
@@ -49,10 +49,10 @@
     <tr>
     	<td style="font-weight:bold" width="9%">Completed</td>
     	<td>
-    		<% @analysis["during_completed"].each do |p| %>
+        <% analysis["during_completed"].each do |p| %>
     			<%= link_to p.id, edit_request_path(p)%>
     		<% end %>
-    	</td
+      </td>
     </tr>
 
     <tr class="active">
@@ -60,7 +60,7 @@
         <th>Completed</th>
     </tr>
     <tr>
-    	<td><%= @analysis["ongoing_pending"] %></td>
-    	<td><%= @analysis["completed"] %></td>
+      <td><%= analysis["ongoing_pending"] %></td>
+      <td><%= analysis["completed"] %></td>
     </tr>
 </table>

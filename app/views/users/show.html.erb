@@ -1,115 +1,34 @@
 <%= stylesheet_link_tag "jquery.dataTables.css", media: "all" %>
-<%= javascript_include_tag "jquery.dataTables.js" %>
 <%= stylesheet_link_tag "dataTables.bootstrap.css", media: "all" %>
-<%= javascript_include_tag "dataTables.bootstrap.js" %>
 
-<% if !flash[:notice].blank? %>
-<div class="alert alert-info">
-<%= flash[:notice] %>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_tag(user_path(user), :method => "get", class: "form-inline") do %>
+        <div class="form-group">
+          <div class="input-daterange input-group" id="datepicker" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-todayHighlight="1">
+            <%= text_field_tag :min, params[:min], type: "text", class: "form-control", id: "date_min" %>
+            <span class="input-group-addon">to</span>
+            <%= text_field_tag :max, params[:max], type: "text", class: "form-control", id: "date_max" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= select_tag "specific_dates", options_for_select([["Select Preset", ""], ['1 Month', '1 Month'], ['3 Months', '3 Months'], ['6 Months', '6 Months'], ['1 Year', '1 Year']]), class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= submit_tag "View", class: "btn btn-default" %>
+        </div>
+    <% end %>
+  </div>
 </div>
-<% else %>
-<br />
-<br />
-<br />
-<% end %>
-<img src="/assets/BurP.png">
 
-<br />
-<br />
+<div class="row">
+  <div class="col-md-12">
+    <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
+  </div>
+</div>
 
-<table class="table table-bordered table-striped" id = "user_table">
-<thead>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Submitted By</th>
-    <th>Description</th>
-    <th>Download Attachment</th>
-    <th>Results</th>
-    <th>Result Files</th>
-    <th>Status</th>
-    <th>Status History</th>
-    <th>Job Assignment</th>
-    <th>&nbsp;</th>
-  </tr>
-</thead>
-<tbody>
-  <% @requests.reverse.each do |request| %>
-    <tr>
-      <td><%= request.id %></td>
-    	<td><%= request.title %></td>
-      <td>
-        <%= request.get_name %>
-        <% if request.customer? %>
-          <br />(<%= User.where(:login => request.customer).first.get_name %>)
-        <% end %> 
-      </td>
-      <td style="white-space: pre-wrap;"><%= request.description %></td>
-      <td>
-      <% request.data_files.each do |p| %>
-        <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %><br />
-      <% end %>
-      </td>
-      <td style="white-space: pre-wrap;"><%= request.result %></td>
-      <td>
-      <% request.result_files.each do |p| %>
-        <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %><br />
-      <% end %>
-      </td>
-      <% if request.status == "Complete" %>
-        <td style="background-color:#4CAE4C;color:white"><%= request.status %></td>
-      <% elsif request.status == "Ongoing" %> 
-        <td style="background-color:#46B8DA;color:white"><%= request.status %></td>
-      <% else %>
-        <td style="background-color:#EEA236;color:white"><%= request.status %></td>
-      <% end %>
-      <td><%= simple_format(request.stathist) %></td>
-      <td><%= request.get_users_for_view %></td>
-      <td>
-      <% if current_user.nil? || request.name == current_user.login || current_user.admin %> 
-        <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
-        <%= button_to "Delete", request, method: :delete, class: "btn btn-default", data: { confirm:  "Are you sure that you wish to delete #{request.title}?" } %>
-     	<% end %>
-      </td>
-    </tr>
-  <% end %>
-</tbody>
-</table>
-<% if (can? :manage, :all) || current_user.nil? %>
-  <hr style="background-color:black;color:black;border-color:black">
-  <h3> Manager Section </h3>
-  <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
-  <table class="table table-bordered table-striped" id = "manager_table">
-    <thead>
-      <tr>
-        <th>User</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @non_manager.each do |user| %>
-        <tr>
-          <td><%= link_to user.get_name, user %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<%= render 'user_metrics', user_metrics: user_metrics, user_name_link: user.get_name_link %>
 
-  <hr style="background-color:LightGray;color:LightGray;border-color:LightGray">
-
-  <%= form_tag(user_path(@manager), :method => "get", class: "form-inline") do %>
-    <div class="form-group">
-      <div class="input-daterange input-group" id="datepicker" data-provide="datepicker" data-date-format="yyyy/mm/dd" data-date-todayHighlight="1">
-        <%= text_field_tag :min, params[:min], type: "text", class: "input-sm form-control" %>
-        <span class="input-group-addon">to</span>
-        <%= text_field_tag :max, params[:max], type: "text", class: "input-sm form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-    <%= submit_tag "View", class: "btn btn-default btn-sm" %>
-    </div>
-  <% end %>
-  <br />
-  <% if @analysis and not @analysis.empty? %>
-    <%= render 'analysis' %>
-  <% end %> 
+<% if (can? :manage, :all) %>
+    <%= render 'manager', non_manager_metrics: non_manager_metrics, analysis: analysis %>
 <% end %>
