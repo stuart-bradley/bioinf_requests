@@ -26,7 +26,7 @@ end
 
 user_groups.each do |key, value|
   value.each do |name|
-    user = User.where("login == ?", name).first
+    user = User.where("login = ?", name).first
     if user
       user.update!(:group => key)
     else
