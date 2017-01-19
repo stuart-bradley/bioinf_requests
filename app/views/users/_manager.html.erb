@@ -13,7 +13,12 @@
       <% non_manager_metrics.each do |user, value| %>
           <% if user == "Total" %>
               <li role="presentation" class="active">
-                <a href="#Total" aria-controls="Total" role="tab" data-toggle="tab">Total</a></li>
+                <a href="#Total" aria-controls="Total" role="tab" data-toggle="tab">Total</a>
+              </li>
+          <% elsif user == "Department" %>
+              <li role="presentation">
+                <a href="#Department" aria-controls="Department" role="tab" data-toggle="tab">Department</a>
+              </li>
           <% else %>
               <li role="presentation">
                 <a href="#<%= user.get_name_link %>" aria-controls="<%= user.get_name_link %>" role="tab" data-toggle="tab"><%= user.get_name %></a>
@@ -28,6 +33,10 @@
           <% if user == "Total" %>
               <div role="tabpanel" class="tab-pane active" id="Total">
                 <%= render 'user_metrics', user_metrics: value, user_name_link: "Total", analysis: analysis %>
+              </div>
+          <% elsif user == "Department" %>
+              <div role="tabpanel" class="tab-pane" id="Department">
+                <%= render 'department_metrics', user_metrics: value, user_name_link: "Department" %>
               </div>
           <% else %>
               <div role="tabpanel" class="tab-pane" id="<%= user.get_name_link %>">

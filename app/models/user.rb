@@ -17,7 +17,30 @@ class User < ActiveRecord::Base
     self.login.sub('.', '')
   end
 
-  def user_analytics(requests)
+  # Creates a departmental breakdown of requests.
+  def self.requests_by_group(requests)
+    analytics_list = {
+        "Synthetic Biology" => 0,
+        "Engineering" => 0,
+        "Process Engineering" => 0,
+        "Fermentation" => 0,
+        "Bioinformatics" => 0,
+        "Process Validation" => 0,
+        "CSO" => 0
+    }
+    requests.each do |r|
+      if r.customer.present?
+        analytics_list[User.where("login = ?", r.customer).first.group] += 1
+      else
+        analytics_list[User.where("login = ?", r.name).first.group] += 1
+      end
+    end
+    analytics_list.to_a
+  end
+
+  # Returns requests launched and completed as well as data for per stage
+  # and per request times over a set of requests.
+  def self.user_analytics(requests)
     analytics_list = {}
     analytics_list["requests"] = requests
     analytics_list["requests_launched"] = analytics_list["requests"].length
@@ -29,7 +52,7 @@ class User < ActiveRecord::Base
 
     requests_completed.each do |r|
       time_spent_per_request << [r.title, r.tothours, r.esthours]
-      time_spent_per_stage << determine_pending_and_ongoing_times(r)
+      time_spent_per_stage << self.determine_pending_and_ongoing_times(r)
     end
 
     analytics_list["time_spent_per_request"] = time_spent_per_request
@@ -38,7 +61,8 @@ class User < ActiveRecord::Base
     return analytics_list
   end
 
-  def determine_pending_and_ongoing_times(r)
+  # Determines the pending and ongoing times of a request.
+  def self.determine_pending_and_ongoing_times(r)
     res = []
     res << r.title
     stathist = r.stathist
@@ -57,7 +81,7 @@ class User < ActiveRecord::Base
   end
 
   # Given two dates, return a number of results.
-  def manager_analytics (min, max)
+  def self.manager_analytics (min, max)
     analytics_list = {}
 
     if min != "" and max != ""

@@ -27,17 +27,19 @@ class UsersController < ApplicationController
     analysis = []
 
     if can? :manage, :all
-      analysis = current_user.manager_analytics(params[:min], params[:max])
+      analysis = User.manager_analytics(params[:min], params[:max])
       non_manager_metrics = ActiveSupport::OrderedHash.new
       non_manager_metrics["Total"] = []
+      non_manager_metrics["Department"] = []
       non_managers.each do |non_manager|
         user_requests = requests.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) }
-        non_manager_metrics[non_manager] = non_manager.user_analytics(user_requests)
+        non_manager_metrics[non_manager] = User.user_analytics(user_requests)
       end
-      non_manager_metrics["Total"] = user.user_analytics(requests)
+      non_manager_metrics["Total"] = User.user_analytics(requests)
+      non_manager_metrics["Department"] = User.requests_by_group(requests)
     end
     user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || (x.get_users.include?(user.login) rescue false)) }
-    user_metrics = user.user_analytics(user_requests)
+    user_metrics = User.user_analytics(user_requests)
 
     render locals: {
         user: user,
