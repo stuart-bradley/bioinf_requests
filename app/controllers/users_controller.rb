@@ -20,9 +20,9 @@ class UsersController < ApplicationController
     end
 
     if params[:max].blank?
-      params[:max] = Date.today + 1.day
+      params[:max] = Date.today
     else
-      params[:max] = params[:max].to_date + 1.day
+      params[:max] = params[:max].to_date
     end
 
     is_manager = false
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       is_manager = true
     end
 
-    non_manager_metrics, user_metrics, analysis = User.get_show_metrics(user, params[:min], params[:max], is_manager)
+    non_manager_metrics, user_metrics, analysis = User.get_show_metrics(user, params[:min], (params[:max] + 1.day), is_manager)
 
     render locals: {
         user: user,
