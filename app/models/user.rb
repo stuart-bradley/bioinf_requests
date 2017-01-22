@@ -17,25 +17,60 @@ class User < ActiveRecord::Base
     self.login.sub('.', '')
   end
 
-  # Creates a departmental breakdown of requests.
-  def self.requests_by_group(requests)
-    analytics_list = {
-        "Synthetic Biology" => 0,
-        "Engineering" => 0,
-        "Process Engineering" => 0,
-        "Fermentation" => 0,
-        "Bioinformatics" => 0,
-        "Process Validation" => 0,
-        "CSO" => 0
-    }
-    requests.each do |r|
-      if r.customer.present?
-        analytics_list[User.where("login = ?", r.customer).first.group] += 1
-      else
-        analytics_list[User.where("login = ?", r.name).first.group] += 1
+  # Gets various metrics for user_show.
+  def self.get_show_metrics(user, min_date, max_date, is_manager)
+
+    requests = Request.where("updated_at >= ? AND updated_at <= ?", min_date, max_date)
+    puts "REQUEST LENGTH: " + requests.length.to_s
+
+    # Blank objects in case user isn't manager.
+    non_manager_metrics = ActiveSupport::OrderedHash.new
+    analysis = []
+
+    if is_manager
+      analysis = User.manager_analytics(min_date, max_date)
+      non_manager_metrics["Total"] = []
+      non_manager_metrics["Department"] = []
+      non_manager_metrics["Total"] = User.user_analytics(requests)
+      non_manager_metrics["Department"] = User.requests_by_group(requests)
+
+      non_managers = User.where("admin = ? AND (manager = ? OR manager IS ?)", true, false, nil)
+      non_managers.each do |non_manager|
+        user_requests = requests.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) }
+        non_manager_metrics[non_manager] = User.user_analytics(user_requests)
       end
     end
-    analytics_list.to_a
+
+    user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || (x.get_users.include?(user.login) rescue false)) }
+    user_metrics = User.user_analytics(user_requests)
+
+    return non_manager_metrics, user_metrics, analysis
+  end
+
+  # Given two dates, return a number of results.
+  def self.manager_analytics (min, max)
+    analytics_list = {}
+
+    if min != "" and max != ""
+      min = min.to_datetime
+      max = max.to_datetime
+
+      # Before.
+      analytics_list["before_pending"] = Request.where("created_at <= ? AND status = ?", min, "Pending")
+      analytics_list["before_ongoing"] = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
+      analytics_list["before_completed_in_period"] = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
+
+      # During.
+      analytics_list["during_pending"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
+      analytics_list["during_ongoing"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
+      analytics_list["during_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
+
+      # Totals.
+      analytics_list["ongoing_pending"] = analytics_list["before_pending"].count + analytics_list["before_ongoing"].count + analytics_list["during_pending"].count + analytics_list["during_ongoing"].count
+      analytics_list["completed"] = analytics_list["before_completed_in_period"].count + analytics_list["during_completed"].count
+    end
+
+    return analytics_list
   end
 
   # Returns requests launched and completed as well as data for per stage
@@ -74,36 +109,27 @@ class User < ActiveRecord::Base
     complete = Date.parse stathist.match(/Complete:\s(\d+-\d+-\d+)/)[-1]
     res << (ongoing..complete).count
 
-    puts pending, ongoing, complete
-
     return res
-
   end
 
-  # Given two dates, return a number of results.
-  def self.manager_analytics (min, max)
-    analytics_list = {}
+  # Creates a departmental breakdown of requests.
+  def self.requests_by_group(requests)
 
-    if min != "" and max != ""
-      min = min.to_date.to_datetime
-      max = max.to_date.to_datetime
+    analytics_list = ActiveSupport::OrderedHash.new
 
-      # Before.
-      analytics_list["before_pending"] = Request.where("created_at <= ? AND status = ?", min, "Pending")
-      analytics_list["before_ongoing"] = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
-      analytics_list["before_completed_in_period"] = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
-
-      # During.
-      analytics_list["during_pending"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
-      analytics_list["during_ongoing"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
-      analytics_list["during_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
-
-      # Totals.
-      analytics_list["ongoing_pending"] = analytics_list["before_pending"].count + analytics_list["before_ongoing"].count + analytics_list["during_pending"].count + analytics_list["during_ongoing"].count
-      analytics_list["completed"] = analytics_list["before_completed_in_period"].count + analytics_list["during_completed"].count
+    analytics_list["Synthetic Biology"] = 0
+    analytics_list["Engineering"] = 0
+    analytics_list["Process Engineering"] = 0
+    analytics_list["Fermentation"] = 0
+    analytics_list["Bioinformatics"] = 0
+    analytics_list["Process Validation"] = 0
+    analytics_list["CSO"] = 0
+    customer_requests = requests.select { |x| x.customer.present? }
+    analytics_list["Bioinformatics"] = requests.length - customer_requests.length
+    customer_requests.each do |r|
+      analytics_list[User.where("login = ?", r.customer).first.group] += 1
     end
-
-    return analytics_list
+    analytics_list.to_a
   end
 
   # Include default devise modules. Others available are:

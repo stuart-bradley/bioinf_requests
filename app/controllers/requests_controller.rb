@@ -3,7 +3,6 @@ class RequestsController < ApplicationController
   	@requests = Request.all
     priority_modal = Request.priority_widget
     active_requests, max_length = Request.active_requests
-    puts active_requests
     render locals: {
         priority_modal: priority_modal,
         active_requests: active_requests,
@@ -25,7 +24,7 @@ class RequestsController < ApplicationController
 
     if @request.save
   	  # Emails are placed Async.
-      if !(params[:email_check])
+      unless params[:dont_send_emails]
         Emailer.delay.new_request(@request.id)
       end
       save_data_files if params[:data_files]
@@ -52,7 +51,7 @@ class RequestsController < ApplicationController
     if @request.update_attributes(request_params)
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 
-      if !(params[:email_check])
+      unless params[:dont_send_emails]
         Emailer.delay.edit_request(@request.id)
       end
       update_data_files if params[:data_files]
