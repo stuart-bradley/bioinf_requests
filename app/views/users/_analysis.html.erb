@@ -6,7 +6,7 @@
     	<td style="font-weight:bold" width="9%">Pending</td>
     	<td>
         <% analysis["before_pending"].each do |p| %>
-    			<%= link_to p.id, edit_request_path(p)%>
+            <%= link_to p.id, edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %>
     		<% end %>
     	</td>
     </tr>
@@ -14,7 +14,7 @@
     	<td style="font-weight:bold" width="9%">Ongoing</td>
     	<td>
         <% analysis["before_ongoing"].each do |p| %>
-    			<%= link_to p.id, edit_request_path(p)%>
+            <%= link_to p.id, edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %>
     		<% end %>
     	</td>
     </tr>
@@ -22,7 +22,7 @@
     	<td style="font-weight:bold" width="9%">Completed</td>
     	<td>
         <% analysis["before_completed_in_period"].each do |p| %>
-    			<%= link_to p.id, edit_request_path(p)%>
+            <%= link_to p.id, edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %>
     		<% end %>
     	</td>
     </tr>
@@ -34,7 +34,7 @@
     	<td style="font-weight:bold" width="9%">Pending</td>
     	<td>
         <% analysis["during_pending"].each do |p| %>
-    			<%= link_to p.id, edit_request_path(p)%>
+            <%= link_to p.id, edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %>
     		<% end %>
     	</td>
     </tr>
@@ -42,7 +42,7 @@
     	<td style="font-weight:bold" width="9%">Ongoing</td>
     	<td>
         <% analysis["during_ongoing"].each do |p| %>
-    			<%= link_to p.id, edit_request_path(p)%>
+            <%= link_to p.id, edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %>
     		<% end %>
     	</td>
     </tr>
@@ -50,7 +50,7 @@
     	<td style="font-weight:bold" width="9%">Completed</td>
     	<td>
         <% analysis["during_completed"].each do |p| %>
-    			<%= link_to p.id, edit_request_path(p)%>
+            <%= link_to p.id, edit_request_path(p), 'data-toggle' => 'tool-tip', title: p.title %>
     		<% end %>
       </td>
     </tr>

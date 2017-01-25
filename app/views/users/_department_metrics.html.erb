@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <div id="department_request_makeup"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(drawDepartmentBreakdown);
+
+  function drawDepartmentBreakdown() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', "Department");
+    data.addColumn('number', "Requests")
+
+    data.addRows(<%= raw user_metrics.to_json %>);
+
+    var options = {
+      title: 'Breakdown of all Requests by Department',
+      width: $(window).width() * 0.50,
+      height: $(window).width() * 0.25,
+      pieSliceText: "none"
+    };
+
+    var chart = new google.visualization.PieChart(
+        document.getElementById('department_request_makeup'));
+    chart.draw(data, options);
+  }
+</script>

@@ -10,34 +10,28 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    if not params.has_key?(:min)
-      params[:min] = (Date.today - 1.months)
-    end
-
-    if not params.has_key?(:max)
-      params[:max] = Date.today
-    end
-
     user = User.find(params[:id])
 
-    requests = Request.select { |x| x.updated_at.to_date >= params[:min].to_date && x.updated_at.to_date <= params[:max].to_date }
-    non_managers = User.select { |x| x.admin == true && (x.manager == false || x.manager == nil) }
+    # Checks if min/max dates are blank, sets defaults and sets them to date types.
+    if params[:min].blank?
+      params[:min] = (Date.today - 1.months)
+    else
+      params[:min] = params[:min].to_date
+    end
 
-    non_manager_metrics = ActiveSupport::OrderedHash.new
-    analysis = []
+    if params[:max].blank?
+      params[:max] = Date.today
+    else
+      params[:max] = params[:max].to_date
+    end
+
+    is_manager = false
 
     if can? :manage, :all
-      analysis = current_user.manager_analytics(params[:min], params[:max])
-      non_manager_metrics = ActiveSupport::OrderedHash.new
-      non_manager_metrics["Total"] = []
-      non_managers.each do |non_manager|
-        user_requests = requests.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) }
-        non_manager_metrics[non_manager] = non_manager.user_analytics(user_requests)
-      end
-      non_manager_metrics["Total"] = user.user_analytics(requests)
+      is_manager = true
     end
-    user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || (x.get_users.include?(user.login) rescue false)) }
-    user_metrics = user.user_analytics(user_requests)
+
+    non_manager_metrics, user_metrics, analysis = User.get_show_metrics(user, params[:min], (params[:max] + 1.day), is_manager)
 
     render locals: {
         user: user,
