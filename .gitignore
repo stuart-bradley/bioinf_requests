@@ -30,3 +30,4 @@ config/local_env.yml
 
 # Ignore application configuration
 /config/application.yml
+/config/local_env.yml
