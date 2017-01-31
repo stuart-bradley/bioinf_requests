@@ -30,3 +30,10 @@ config/local_env.yml
 
 # Ignore application configuration
 /config/application.yml
+.idea/.generators
+.idea/.rakeTasks
+.idea/bioinf_requests.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations/
+.idea/workspace.xml
