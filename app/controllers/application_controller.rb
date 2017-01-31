@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
     return true unless Rails.env == 'development'
     if not user_signed_in?
       sign_in User.find_by_login('wayne.mitchell')
-      redirect_to root_url
     end
     return false
   end
