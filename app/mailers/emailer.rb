@@ -21,9 +21,9 @@ class Emailer < ActionMailer::Base
         if cust != nil
           emails << cust.email
         end
-      end 
+      end
 
-     	mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "New Request: '#{@request.title}'"
+      mail :to => emails, :from => ENV['EMAIL'], :subject => "New Request: '#{@request.title}'"
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map{|s| "\t#{s}"}
     end
@@ -52,17 +52,17 @@ class Emailer < ActionMailer::Base
       edit_type_assignment = @request.check_version_attribute_change("Assignment")
       edit_type_status = @request.check_version_attribute_change("Status")
       
-      if edit_type_assignment.length > 0 
-        mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
+      if edit_type_assignment.length > 0
+        mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
         return 
       end
 
       if edit_type_status.length > 0
-        mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
+        mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
         return
       end
 
-      mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "Request: '#{@request.title}' has been edited"
+      mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map{|s| "\t#{s}"}
     end
