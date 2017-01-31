@@ -1,3 +1,3 @@
-The request: <%= @request.title %>, has now been assigned to: <%= @request.assignment.sub('.', ' ').split.map(&:capitalize).join(' ') %>
+The request: <%= @request.title %>[<%= @request.id %>], has now been assigned to: <%= @request.assignment.sub('.', ' ').split.map(&:capitalize).join(' ') %>
 <br />
 To view the change go to: <%= link_to @request.title, root_url + "requests" %>
