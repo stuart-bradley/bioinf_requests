@@ -60,3 +60,4 @@ gem "daemons"
 gem 'jquery-turbolinks'
 gem 'figaro'
 gem 'string-scrub'
+gem 'whenever'

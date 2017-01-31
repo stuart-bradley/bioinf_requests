@@ -1,0 +1,17 @@
+Hi <%= @user.get_name %>,
+
+Here is your weekly summary of your current ongoing and pending requests:
+
+Pending:
+
+<% @pending.each do |request| %>
+    - <%= request.title %>[<%= request.id %>]
+<% end %>
+
+Ongoing:
+
+<% @ongoing.each do |request| %>
+    - <%= request.title %>[<%= request.id %>]
+<% end %>
+
+To view your pending and ongoing requests in BuRP click <%= link_to "here", root_url + "users/" + @user.id.to_s %>.
