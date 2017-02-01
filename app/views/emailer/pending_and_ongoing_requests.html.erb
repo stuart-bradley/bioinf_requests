@@ -38,13 +38,15 @@
   <tr>
     <td>ID</td>
     <td>Title</td>
+    <td>Last Update</td>
   </tr>
   </thead>
   <tbody>
-  <% @pending.each do |request| %>
+  <% @pending.reverse.each do |request| %>
       <tr>
         <td><%= request.id %></td>
         <td><%= request.title %></td>
+        <td><%= request.updated_at.to_date %></td>
       </tr>
   <% end %>
   </tbody>
@@ -56,13 +58,15 @@
   <tr>
     <td>ID</td>
     <td>Title</td>
+    <td>Last Update</td>
   </tr>
   </thead>
   <tbody>
-  <% @ongoing.each do |request| %>
+  <% @ongoing.reverse.each do |request| %>
       <tr>
         <td><%= request.id %></td>
         <td><%= request.title %></td>
+        <td><%= request.updated_at.to_date %></td>
       </tr>
   <% end %>
   </tbody>
