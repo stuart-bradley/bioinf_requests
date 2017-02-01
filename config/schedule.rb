@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every :monday, :at => '7am' do
-  rake email: pending_and_ongoing
+  rake "email:pending_and_ongoing"
 end
