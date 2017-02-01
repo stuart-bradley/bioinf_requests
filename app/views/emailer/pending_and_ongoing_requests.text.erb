@@ -4,14 +4,14 @@ Here is your weekly summary of your current ongoing and pending requests:
 
 Pending:
 
-<% @pending.each do |request| %>
-    - <%= request.title %>[<%= request.id %>]
+<% @pending.reverse.each do |request| %>
+    - <%= request.title %>[<%= request.id %>][<%= request.updated_at.to_date %>]
 <% end %>
 
 Ongoing:
 
-<% @ongoing.each do |request| %>
-    - <%= request.title %>[<%= request.id %>]
+<% @ongoing.reverse.each do |request| %>
+    - <%= request.title %>[<%= request.id %>][<%= request.updated_at.to_date %>]
 <% end %>
 
 To view your pending and ongoing requests in BuRP click <%= link_to "here", root_url + "users/" + @user.id.to_s %>.
