@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  <style type="text/css">
+    table {
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    th {
+      border-bottom: 5px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    thead td {
+      font-weight: bold;
+    }
+
+    td {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<p>
+  Hi <%= @user.get_name %>,
+  <br/><br/>
+  Here is your weekly summary of your current ongoing and pending requests:
+</p>
+
+<h3>Pending:</h3>
+<table>
+  <thead>
+  <tr>
+    <td>ID</td>
+    <td>Title</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @pending.each do |request| %>
+      <tr>
+        <td><%= request.id %></td>
+        <td><%= request.title %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<h3>Ongoing:</h3>
+<table>
+  <thead>
+  <tr>
+    <td>ID</td>
+    <td>Title</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @ongoing.each do |request| %>
+      <tr>
+        <td><%= request.id %></td>
+        <td><%= request.title %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<p>
+  To view your pending and ongoing requests in BuRP click <%= link_to "here", root_url + "users/" + @user.id.to_s %>.
+</p>
+</body>
+</html>

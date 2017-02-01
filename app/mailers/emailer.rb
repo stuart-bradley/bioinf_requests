@@ -1,16 +1,16 @@
 class Emailer < ActionMailer::Base
 
-  ActionMailer::Base.default_url_options[:host] = "http://blunt.lt.local:3000/" 
+  ActionMailer::Base.default_url_options[:host] = "http://blunt.lt.local:3000/"
 
   ActionMailer::Base.default_url_options[:port] = 3000
-  
+
   def new_request(id)
-    begin 
-    	@request = Request.find(id)
-    	emails = []
-    	User.where(admin: true).each do |u|
-    	  emails << u.email
-    	end
+    begin
+      @request = Request.find(id)
+      emails = []
+      User.where(admin: true).each do |u|
+        emails << u.email
+      end
       employee = User.where(login: @request.name).first
       if employee != nil
         emails << employee.email
@@ -25,7 +25,7 @@ class Emailer < ActionMailer::Base
 
       mail :to => emails, :from => ENV['EMAIL'], :subject => "New Request: '#{@request.title}'"
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
-      logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map{|s| "\t#{s}"}
+      logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
   end
 
@@ -47,14 +47,14 @@ class Emailer < ActionMailer::Base
         if cust != nil
           emails << cust.email
         end
-      end 
+      end
 
       edit_type_assignment = @request.check_version_attribute_change("Assignment")
       edit_type_status = @request.check_version_attribute_change("Status")
-      
+
       if edit_type_assignment.length > 0
         mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
-        return 
+        return
       end
 
       if edit_type_status.length > 0
@@ -64,15 +64,26 @@ class Emailer < ActionMailer::Base
 
       mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
-      logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map{|s| "\t#{s}"}
+      logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
-  end 
+  end
 
-  def new_model_request()
+  def new_model_request(user, requests)
     emails = []
     User.where(admin: true).each do |u|
       emails << u.email
     end
     mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "New Model Request"
+  end
+
+  def pending_and_ongoing_requests(u, o, p)
+    begin
+      @user = u
+      @ongoing = o.sort_by &:updated_at
+      @pending = p.sort_by &:updated_at
+      mail :to => @user.email, :from => ENV['EMAIL'], :subject => "Weekly Request Summary", template_name: 'pending_and_ongoing_requests'
+    rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+      logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
+    end
   end
 end

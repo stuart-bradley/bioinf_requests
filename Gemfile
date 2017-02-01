@@ -61,3 +61,4 @@ gem "mysql"
 gem 'jquery-turbolinks'
 gem 'figaro'
 gem 'string-scrub'
+gem 'whenever'
