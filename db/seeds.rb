@@ -8,14 +8,15 @@
 
 User.delete_all
 
-# Manager
+# Managers
 User.create!({:login => "wayne.mitchell", :admin => true, :manager => true})
+User.create!({:login => "asela.dassanayake", :admin => true, :manager => true})
 
 # Admins
 User.create!({:login => "stuart.bradley", :admin => true})
-User.create!({:login => "asela.dassanayake", :admin => true})
 User.create!({:login => "james.daniell", :admin => true})
 User.create!({:login => "vinicio.reynoso", :admin => true})
+User.create!({:login => "sahil.shetye", :admin => true})
 
 # Synthetic Biology
 User.create!({:login => "james.behrendorff", :admin => false})
