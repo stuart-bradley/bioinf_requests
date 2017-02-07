@@ -9,8 +9,8 @@ Devise.setup do |config|
   config.ldap_auth_username_builder = Proc.new() {|attribute, login, ldap| "lt\\#{login}"}
   # config.ldap_check_group_membership = false
   # config.ldap_check_attributes = false
-  # config.ldap_use_admin_to_bind = false
-  
+  # config.ldap_use_admin_to_bind = true
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
