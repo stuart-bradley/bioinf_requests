@@ -19,6 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
+set :environment, "development"
+
 every :monday, :at => '7am' do
   rake "email:pending_and_ongoing"
 end
