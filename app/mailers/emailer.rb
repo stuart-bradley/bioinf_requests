@@ -12,13 +12,13 @@ class Emailer < ActionMailer::Base
         emails << u.email
       end
       employee = User.where(login: @request.name).first
-      if employee != nil
+      if employee.present?
         emails << employee.email
       end
 
-      if @request.customer != nil
+      if @request.customer.present?
         cust = User.where(login: @request.customer).first
-        if cust != nil
+        if cust.present?
           emails << cust.email
         end
       end
@@ -42,9 +42,9 @@ class Emailer < ActionMailer::Base
         emails << u.email
       end
 
-      if @request.customer != nil
+      if @request.customer.present?
         cust = User.where(login: @request.customer).first
-        if cust != nil
+        if cust.present?
           emails << cust.email
         end
       end
