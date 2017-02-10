@@ -27,14 +27,14 @@
                   <br/>(<%= User.where(:login => request.customer).first.get_name %>)
               <% end %>
             </td>
-            <td style="white-space: pre-wrap;"><%= request.description %></td>
+            <td style="white-space: pre-wrap;"><%= sanitize(request.description.to_s.force_encoding("UTF-8")) %></td>
             <td>
               <% request.data_files.each do |p| %>
                   <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
                   <br/>
               <% end %>
             </td>
-            <td style="white-space: pre-wrap;"><%= request.result %></td>
+            <td style="white-space: pre-wrap;"><%= sanitize(request.result.to_s.force_encoding("UTF-8")) %></td>
             <td>
               <% request.result_files.each do |p| %>
                   <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
