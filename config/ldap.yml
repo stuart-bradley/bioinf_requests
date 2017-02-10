@@ -16,8 +16,8 @@ authorizations: &AUTHORIZATIONS
 development:
   host: 10.10.40.10
   port: 636
-  attribute: uid
-  base: cn=Synthetic Biology,ou=Distribution Lists,ou=Lanzatech Groups,dc=lt,dc=local​
+  attribute: cn
+  base: dc=lt,dc=local​
  #admin_user: cn=admin,dc=test,dc=com
  #admin_password: admin_password
   ssl: true

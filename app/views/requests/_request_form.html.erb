@@ -14,7 +14,7 @@
           <div class="form-group">
             <%= f.label :title %>
             <div class="row">
-              <div class="col-md-2">
+              <div class="col-md-4">
                 <%= f.text_field :title, class: "form-control", type: 'text' %>
               </div>
             </div>
@@ -23,14 +23,14 @@
           <div class="form-group">
             <%= f.label :description %>
             <div class="row">
-              <div class="col-md-2">
-                <%= f.text_area :description, :size => "50x10", class: "form-control", type: 'text' %>
+              <div class="col-md-4">
+                <%= f.text_area :description, class: "form-control wysihtml5", type: 'text' %>
               </div>
             </div>
           </div>
           <div class="form-group">
             <div class="row">
-              <div class="col-md-2">
+              <div class="col-md-4">
                 <%= f.label :priority %>
                 <%= f.select :priority, [['Time Permitting', 'Time Permitting'], ['Low Priority', 'Low Priority'], ['Priority', 'Priority'], ['High Priority', 'High Priority']], {}, {class: 'form-control'} %>
               </div>
@@ -56,7 +56,7 @@
               <div class="form-group">
                 <%= f.label :status %>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-4">
                     <%= f.select :status, [['Pending', 'Pending'], ['Ongoing', 'Ongoing'], ['Complete', 'Complete']], {}, {class: 'form-control'} %>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
               <div class="form-group" id="esthours_div" style="display: none;">
                 <%= f.label :esthours, "Estimated Hours" %>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-4">
                     <%= f.text_field :esthours, class: 'form-control', type: 'number' %>
                   </div>
                 </div>
@@ -72,7 +72,7 @@
               <div class="form-group" id="tothours_div" style="display: none;">
                 <%= f.label :tothours, "Total Hours" %>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-4">
                     <%= f.text_field :tothours, class: 'form-control', type: 'number' %>
                   </div>
                 </div>
@@ -80,7 +80,7 @@
               <div class="form-group">
                 <%= f.label :assignment %>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-4">
                     <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
                   </div>
                 </div>
@@ -88,7 +88,7 @@
               <div class="form-group">
                 <%= f.label :customer %>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-4">
                     <%= f.select :customer, options_from_collection_for_select(User.where(:admin => false), :login, 'get_name', {:selected => @request.customer}), {include_blank: true}, {class: 'form-control'} %>
                   </div>
                 </div>
@@ -96,8 +96,8 @@
               <div class="form-group">
                 <%= f.label :result %>
                 <div class="row">
-                  <div class="col-md-2">
-                    <%= f.text_area :result, :size => "50x10", class: "form-control", type: 'text' %>
+                  <div class="col-md-4">
+                    <%= f.text_area :result, class: "form-control wysihtml5", type: 'text' %>
                   </div>
                 </div>
               </div>

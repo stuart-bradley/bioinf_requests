@@ -2,11 +2,17 @@ A new request has been submitted by <%= @request.name.sub('.', ' ').split.map(&:
 
 Title:
 
-<%= @request.title %>[<%= @request.id %>]
+<%= @request.title %> [<%= @request.id %>]
 
 Description: 
 
 <%= @request.description %>
+
+<% if @request.assignment.present? %>
+    Assignment:
+
+    <%= @request.get_users_for_view %>
+<% end %>
 
 To view the new request go to: <%= link_to @request.title, root_url + "requests" %>
 

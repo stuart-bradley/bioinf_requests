@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-	</head>
-	<body>
-		<p>
-      A new request has been submitted by <%= @request.name.sub('.', ' ').split.map(&:capitalize).join(' ') %>.
-		</p>
-		<h3>Title:</h3>
-		<p>
-      <%= @request.title %>[<%= @request.id %>]
-		</p>
-		<h3>Description:</h3>
-		<p>
-			<%= @request.description %>
-		</p>
-		<p>
-			To view the new request go to: <%= link_to @request.title, root_url + "requests" %>
-		</p>
-	</body>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+<p>
+  A new request has been submitted by <%= @request.name.sub('.', ' ').split.map(&:capitalize).join(' ') %>.
+</p>
+<h3>Title:</h3>
+<p>
+  <%= @request.title %> [<%= @request.id %>]
+</p>
+<h3>Description:</h3>
+<p>
+  <%= @request.description %>
+</p>
+<% if @request.assignment.present? %>
+    <h3>Assignment:</h3>
+    <p>
+      <%= @request.get_users_for_view %>
+    </p>
+<% end %>
+<p>
+  To view the new request go to: <%= link_to @request.title, root_url + "requests" %>
+</p>
+</body>
 </html>
