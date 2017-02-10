@@ -18,5 +18,4 @@
 //= require dataTables.bootstrap
 //= require bootstrap-datepicker
 //= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/locales
 //= require_tree .
