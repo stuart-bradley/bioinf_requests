@@ -94,7 +94,7 @@ class Request < ActiveRecord::Base
   end
 
   # Determines whether a true edit has been made, as opposed
-  # to just a modified or updated change. 
+  # to just a modified or updated change.
   def check_for_edits_email
     latest_version = get_versions[0]
     number_of_edits_total = latest_version.lines.count
@@ -102,59 +102,43 @@ class Request < ActiveRecord::Base
 
     if number_of_edits_total - number_of_edits_non_essential > 0
       return true
-    else 
+    else
       return false
     end
   end
 
-  # Checks to see if the change is a new addition or not.
-  # New additions are defined by prev_version "NO VALUE".
-  def check_version_attribute_change(attribute)
-    latest_version = get_versions[0]
-    if latest_version.match(/^#{attribute}/i)
-      relevant_string = latest_version[/^#{attribute}(.+)/i]
-      if relevant_string.split.last == "NO VALUE"
-        return ""
-      else 
-        return relevant_string.split.last
-      end
-    else 
-      return ""
-    end
+  # Returns changes from papertrail, minus the excepted ones.
+  def get_changed_attributes
+    return self.versions.last.changeset.except("updated_at", "created_at", "stathist")
   end
 
+  # Gets all versions for form view.
 	def get_versions
     versions = []
-    single_version = []
-    self.versions.each do |version|
-    	single_version = []
-    	version.changeset.each do |key|
-    	  single_version << key
-    	end
-    	versions << cleanup_version_html(single_version) 
+    self.versions.reverse.each do |version|
+      versions << cleanup_version_html(version.changeset)
     end
-  return versions.reverse
+    return versions
   end
 
+  # Gets last version.
   def get_version_latest
-    self.versions.last.changeset.each do |key|
-      single_version << key
-    end
-    return cleanup_version_html(single_version) 
+    return cleanup_version_html(get_changed_attributes)
   end
 
+  # Converts versions to HTML readable format.
   def cleanup_version_html (version)
     cleaned_version = ''
-    version.each do |change|
-      prev_version = change[1][0]
-      curr_version = change[1][1]
-      if prev_version.nil?
+    version.each do |key, changes|
+      prev_version = changes.first
+      curr_version = changes.last
+      if prev_version.nil? || prev_version.to_s.empty?
         prev_version = 'NO VALUE'
-      elsif curr_version.nil?
+      elsif curr_version.nil? || curr_version.to_s.empty?
         curr_version = 'NO VALUE'
-      end         
-      cleaned_version += change[0].capitalize.scrub + ': ' + prev_version.to_s.scrub + ' -> ' + curr_version.to_s.scrub + "<br />"
+      end
+      cleaned_version += "<h4>" + key.capitalize.scrub + ':</h4> ' + prev_version.to_s.scrub + ' <b> => </b> ' + curr_version.to_s.scrub
     end
-    return cleaned_version
+    return cleaned_version + "<hr>"
   end
 end

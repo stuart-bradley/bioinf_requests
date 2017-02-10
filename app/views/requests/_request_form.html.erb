@@ -129,7 +129,7 @@
           <div id="versions_div" style="display:none;">
             <% @request.get_versions.each do |v| %>
                 <% begin %>
-                    <td style="white-space: pre-wrap;"><%= simple_format(v, options = {:sanitize => false}) %></td>
+                    <td style="white-space: pre-wrap;"><%= sanitize(v.to_s.force_encoding("UTF-8")) %></td>
                 <% rescue %>
                     <td style="white-space: pre-wrap;">FORMAT ERROR</td>
                 <% end %>
