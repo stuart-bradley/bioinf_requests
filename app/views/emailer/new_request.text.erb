@@ -4,9 +4,9 @@ Title:
 
 <%= @request.title %> [<%= @request.id %>]
 
-Description: 
+Description:
 
-<%= @request.description %>
+<%= sanitize(@request.description.to_s.force_encoding("UTF-8")) %>
 
 <% if @request.assignment.present? %>
     Assignment:

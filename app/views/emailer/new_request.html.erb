@@ -13,7 +13,7 @@
 </p>
 <h3>Description:</h3>
 <p>
-  <%= @request.description %>
+  <%= sanitize(@request.description.to_s.force_encoding("UTF-8")) %>
 </p>
 <% if @request.assignment.present? %>
     <h3>Assignment:</h3>
