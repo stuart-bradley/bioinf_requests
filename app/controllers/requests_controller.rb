@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def index
-  	@requests = Request.all
+    @requests = Request.all
     priority_modal = Request.priority_widget
     active_requests, max_length = Request.active_requests
     render locals: {
@@ -11,34 +11,34 @@ class RequestsController < ApplicationController
   end
 
   def new
-  	@request = Request.new
+    @request = Request.new
     #@data_file = @request.data_files.build
   end
 
   def create
     params.permit!
-  	@request = Request.new(request_params)
+    @request = Request.new(request_params)
 
     @request.name = current_user.login
 
 
     if @request.save
-  	  # Emails are placed Async.
+      # Emails are placed Async.
       unless params[:dont_send_emails]
         Emailer.delay.new_request(@request.id)
       end
-      save_data_files if params[:data_files]
+      save_data_files
       save_result_files if params[:result_files]
-  		redirect_to requests_path, notice: "The request #{@request.title} has been uploaded."
-  	else
-  		render "new"
-  	end
+      redirect_to requests_path, notice: "The request #{@request.title} has been uploaded."
+    else
+      render "new"
+    end
   end
 
   def destroy
-  	@request = Request.find(params[:id])
-  	@request.destroy
-  	redirect_to requests_path, notice: "The request #{@request.title} has been deleted."
+    @request = Request.find(params[:id])
+    @request.destroy
+    redirect_to requests_path, notice: "The request #{@request.title} has been deleted."
   end
 
   def edit
@@ -54,8 +54,8 @@ class RequestsController < ApplicationController
       unless params[:dont_send_emails]
         Emailer.delay.edit_request(@request.id)
       end
-      update_data_files if params[:data_files]
-      update_result_files if params[:result_files]
+      save_data_files
+      save_result_files
       redirect_to requests_path, notice: "The request #{@request.title} has been updated."
     else
       render 'edit'
@@ -63,34 +63,26 @@ class RequestsController < ApplicationController
   end
 
   # Allowed params include nested attachments, results, and employee names. 
-  private 
-    def request_params
-      params.require(:request).permit(:name, :title,:description, :status, :stathist, :customer, :priority, :esthours, :tothours, {:assignment =>[]}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader, :_destroy], result_files_attributes: [:id, :request_id, :attachment_uploader, :_destroy], employee_attributes: [:id, :request_id, :name, :email])
-    end
-
-  def save_data_files
-    params[:data_files]['attachment_uploader'].each do |a|
-      @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)
-    end
+  private
+  def request_params
+    params.require(:request).permit(:name, :title, :description, :status, :stathist, :customer, :priority, :esthours, :tothours, {:assignment => []}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader, :_destroy], result_files_attributes: [:id, :request_id, :attachment_uploader, :_destroy])
   end
 
-  def update_data_files
-    @request.data_files.each(&:destroy) if @request.data_files.present?
-    params[:data_files]['attachment_uploader'].each do |a|
-      @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)
+  def save_data_files
+    DataFile.where(:id => params["data_files_delete"]).destroy_all
+    if params[:data_files]
+      params[:data_files]['attachment_uploader'].each do |a|
+        @data_file = @request.data_files.create!(:attachment_uploader => a, :request_id => @request.id)
+      end
     end
   end
 
   def save_result_files
-    params[:result_files]['attachment_uploader'].each do |a|
-      @result_file = @request.result_files.create!(:attachment_uploader => a, :request_id => @request.id)
-    end
-  end
-
-  def update_result_files
-    @request.result_files.each(&:destroy) if @request.result_files.present?
-    params[:result_files]['attachment_uploader'].each do |a|
-      @result_file = @request.result_files.create!(:attachment_uploader => a, :request_id => @request.id)
+    DataFile.where(:id => params["result_files_delete"]).destroy_all
+    if params[:result_files]
+      params[:result_files]['attachment_uploader'].each do |a|
+        @result_file = @request.result_files.create!(:attachment_uploader => a, :request_id => @request.id)
+      end
     end
   end
 end

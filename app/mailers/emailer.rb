@@ -23,7 +23,7 @@ class Emailer < ActionMailer::Base
         end
       end
 
-        #mail :to => emails, :from => ENV['EMAIL'], :subject => "New Request: '#{@request.title}'"
+      mail :to => emails, :from => ENV['EMAIL'], :subject => "New Request: '#{@request.title}'"
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
@@ -58,7 +58,7 @@ class Emailer < ActionMailer::Base
             mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
           end
         else
-          mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
+          #mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
         end
       end
 
