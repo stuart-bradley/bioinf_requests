@@ -42,16 +42,14 @@ namespace :add_user_groups do
     ldap = Net::LDAP.new :host => "10.10.40.10",
                          :port => 636,
                          :encryption => :simple_tls,
-                         :base => "DC=lt,DC=local",
+                         :base => "OU=Lanzatech Users,DC=lt,DC=local",
                          :auth => {
                              :method => :simple,
-                             :username => "",
-                             :password => ""
+                             :username => ENV['LDAP_LOGIN'],
+                             :password => ENV['LDAP_PASSWORD']
                          }
     if ldap.bind
-      # Redundant? Sure - the code will be 0 and the message will be "Success".
-      puts "Connection successful!  Code:  #{ldap.get_operation_result.code}, message: #{ldap.get_operation_result.message}"
-      ldap.search(:base => "OU=Lanzatech Users,DC=lt,DC=local", :filter => Net::LDAP::Filter.eq("cn", "Sahil*"), :attributes => ["cn", "department"], :return_result => false) do |entry|
+      ldap.search(:base => "OU=Lanzatech Users,DC=lt,DC=local", :filter => Net::LDAP::Filter.eq("sAMAccountName", "stuart.bradley"), :attributes => ["sAMAccountName", "department"], :return_result => false) do |entry|
         entry.each do |attr, values|
           puts "#{attr}: #{values.first}"
         end
