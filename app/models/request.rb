@@ -9,10 +9,8 @@ class Request < ActiveRecord::Base
   validates_presence_of :tothours, :if => lambda {self.status == "Complete"}
   has_many :data_files
   has_many :result_files
-  has_one :employee
   accepts_nested_attributes_for :data_files, :allow_destroy => true
 	accepts_nested_attributes_for :result_files, :allow_destroy => true
-  accepts_nested_attributes_for :employee
 
   # Get priority items for modal. 
   def self.priority_widget

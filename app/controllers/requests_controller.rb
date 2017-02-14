@@ -51,7 +51,7 @@ class RequestsController < ApplicationController
     if @request.update_attributes(request_params)
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 
-      unless params[:dont_send_emails]
+      unless params[:dont_send_emails] and params[:data_files] and params[:result_files]
         Emailer.delay.edit_request(@request.id)
       end
       update_data_files if params[:data_files]
