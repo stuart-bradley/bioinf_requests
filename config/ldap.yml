@@ -16,10 +16,10 @@ authorizations: &AUTHORIZATIONS
 development:
   host: 10.10.40.10
   port: 636
-  attribute: cn
-  base: dc=lt,dc=local​
- #admin_user: cn=admin,dc=test,dc=com
- #admin_password: admin_password
+  attribute: sAMAccountName
+  base: ou=Lanzatech Users, dc=lt,dc=local​
+  admin_user: <%= ENV['LDAP_LOGIN'] %>
+  admin_password: <%= ENV['LDAP_PASSWORD'] %>
   ssl: true
   # <<: *AUTHORIZATIONS
 

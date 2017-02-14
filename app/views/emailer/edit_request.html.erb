@@ -9,7 +9,7 @@
 		</p>
 		<h3>The following fields have been edited:</h3>
 		<p>
-      <%= @request.get_version_latest %>
+      <%= sanitize(@request.get_version_latest.to_s.force_encoding("UTF-8")) %>
 		</p>
 		<p>
 			To view the change go to: <%= link_to @request.title, root_url + "requests" %>
