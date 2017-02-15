@@ -49,16 +49,16 @@ class Emailer < ActionMailer::Base
       changes = @request.get_changed_attributes
 
       if changes.any?
-        if changes.length == 1
+        if changes.length > 0
           if changes.has_key?("assignment")
             mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
           elsif changes.has_key?("status")
             mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
           else
-            mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
+            #mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
           end
         else
-          mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
+          #mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
         end
       end
 
