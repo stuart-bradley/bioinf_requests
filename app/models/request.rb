@@ -10,6 +10,7 @@ class Request < ActiveRecord::Base
   has_many :result_files
   accepts_nested_attributes_for :data_files, :allow_destroy => true
   accepts_nested_attributes_for :result_files, :allow_destroy => true
+  serialize :current_changes
 
   # Get priority items for modal. 
   def self.priority_widget
@@ -38,6 +39,15 @@ class Request < ActiveRecord::Base
       ongoing_requests[user.get_name] = requests
     end
     return ongoing_requests, max_length
+  end
+
+  def send_edit_email
+    changes = self.get_changed_attributes
+    puts "", changes, self.current_changes, ""
+    if changes != self.current_changes
+      Emailer.delay.edit_request(self.id)
+    end
+    self.update_column(:current_changes, changes.to_yaml)
   end
 
   # Updates the versioning for the status.

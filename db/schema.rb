@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111205910) do
+ActiveRecord::Schema.define(version: 20170215022232) do
 
   create_table "data_files", force: true do |t|
     t.integer  "request_id"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20170111205910) do
     t.string   "attachment"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",      default: "Pending"
+    t.string "status", default: "Pending"
     t.string   "assignment"
     t.text     "result"
     t.string   "stathist"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170111205910) do
     t.string   "priority"
     t.integer  "esthours"
     t.integer  "tothours"
+    t.text "current_changes"
   end
 
   create_table "result_files", force: true do |t|
