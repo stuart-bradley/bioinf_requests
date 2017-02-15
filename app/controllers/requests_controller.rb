@@ -51,7 +51,7 @@ class RequestsController < ApplicationController
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 
       unless params[:dont_send_emails]
-        Emailer.delay.edit_request(@request.id)
+        @request.send_edit_email
       end
       DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
       ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)

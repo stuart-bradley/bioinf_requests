@@ -1,0 +1,693 @@
+rake aborted!
+Gem::LoadError: You have already activated rake 12.0.0, but your Gemfile requires rake 11.2.2. Prepending `bundle exec` to your command may solve this.
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler/runtime.rb:34:in `block in setup'
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler/runtime.rb:19:in `setup'
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler.rb:122:in `setup'
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler/setup.rb:18:in `<top (required)>'
+/data1/bioinf_requests/config/boot.rb:4:in `<top (required)>'
+/data1/bioinf_requests/config/application.rb:1:in `<top (required)>'
+/data1/bioinf_requests/Rakefile:4:in `<top (required)>'
+/var/lib/gems/1.9.1/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+Gem::LoadError: You have already activated rake 12.0.0, but your Gemfile requires rake 11.2.2. Prepending `bundle exec` to your command may solve this.
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler/runtime.rb:34:in `block in setup'
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler/runtime.rb:19:in `setup'
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler.rb:122:in `setup'
+/var/lib/gems/1.9.1/gems/bundler-1.9.1/lib/bundler/setup.rb:18:in `<top (required)>'
+/data1/bioinf_requests/config/boot.rb:4:in `<top (required)>'
+/data1/bioinf_requests/config/application.rb:1:in `<top (required)>'
+/data1/bioinf_requests/Rakefile:4:in `<top (required)>'
+/var/lib/gems/1.9.1/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+(See full trace by running task with --trace)
+[Worker(host:ILBLUNT01 pid:14882)] Starting job worker
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=903) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=903) COMPLETED after 12.2522
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (5 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (6 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=904) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=904) COMPLETED after 3.5227
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=905) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=905) COMPLETED after 10.3092
+[Worker(host:ILBLUNT01 pid:14882)] 5 jobs processed at 0.1893 j/s, 2 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=906) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=906) COMPLETED after 8.8459
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1127 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=907) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=907) COMPLETED after 4.8571
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2048 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=908) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=908) COMPLETED after 5.7980
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1703 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=909) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=909) COMPLETED after 5.1992
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1912 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (6 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 15.2572 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=910) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=910) COMPLETED after 11.8182
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0844 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=911) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=911) COMPLETED after 4.5263
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2197 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (7 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 9.4581 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (7 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 15.9967 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (8 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 8.6640 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (8 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 18.0319 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=912) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=912) COMPLETED after 5.1567
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1931 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (9 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 8.6280 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (9 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 8.7289 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (10 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.9375 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (10 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.8364 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (11 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 8.2701 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (11 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 7.9267 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (12 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 18.3907 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (12 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.5240 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=913) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=913) COMPLETED after 10.2239
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0971 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=914) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=914) COMPLETED after 11.5358
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0865 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=915) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=915) COMPLETED after 6.8520
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=916) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=916) COMPLETED after 5.0163
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=917) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=917) COMPLETED after 3.7145
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=918) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=918) COMPLETED after 11.0024
+[Worker(host:ILBLUNT01 pid:14882)] 4 jobs processed at 0.1461 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=919) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=919) COMPLETED after 5.0648
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=920) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=920) COMPLETED after 5.2000
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=921) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=921) COMPLETED after 4.0369
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=922) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=922) COMPLETED after 6.0213
+[Worker(host:ILBLUNT01 pid:14882)] 4 jobs processed at 0.1897 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (13 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.7805 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (13 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.5242 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (14 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 14.2694 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (14 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.3666 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (15 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 6.8933 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (15 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.8417 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (16 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.3847 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (16 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.4197 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=923) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=923) COMPLETED after 12.8750
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0775 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=924) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=924) COMPLETED after 11.2137
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0890 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=925) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=925) COMPLETED after 12.1203
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0824 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=926) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=926) COMPLETED after 12.3349
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0809 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=927) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=927) COMPLETED after 12.4556
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0801 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=928) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=928) COMPLETED after 11.8530
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0842 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=929) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=929) COMPLETED after 10.2730
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0971 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=930) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=930) COMPLETED after 10.5675
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0944 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=931) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=931) COMPLETED after 10.3226
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0967 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=932) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=932) COMPLETED after 12.9423
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0771 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=933) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=933) COMPLETED after 9.6159
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1037 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=934) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=934) COMPLETED after 14.6954
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0679 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=935) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=935) COMPLETED after 12.5053
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0798 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=936) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=936) COMPLETED after 13.3948
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0745 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=937) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=937) COMPLETED after 9.7949
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1019 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=938) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=938) COMPLETED after 9.7304
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1025 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=939) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=939) COMPLETED after 11.5160
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0867 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=940) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=940) COMPLETED after 8.8394
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=941) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=941) COMPLETED after 9.2819
+[Worker(host:ILBLUNT01 pid:14882)] 2 jobs processed at 0.1101 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=942) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=942) COMPLETED after 10.1487
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0983 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=943) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=943) COMPLETED after 9.6553
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1033 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=944) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=944) COMPLETED after 9.3772
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1063 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (17 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 7.9393 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (17 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 18.1451 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=945) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=945) COMPLETED after 5.7492
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1725 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=946) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=946) COMPLETED after 3.9645
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2505 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=947) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=947) COMPLETED after 5.7620
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1729 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=948) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=948) COMPLETED after 4.0011
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2398 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=949) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=949) COMPLETED after 3.5363
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2804 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=950) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=950) COMPLETED after 4.8742
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2043 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=951) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=951) COMPLETED after 11.8088
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0845 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=952) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=952) COMPLETED after 4.0817
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2437 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=953) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=953) COMPLETED after 11.1493
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0895 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=954) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=954) COMPLETED after 7.1398
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1397 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (18 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 15.6887 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (18 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.8031 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=955) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=955) COMPLETED after 10.1319
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0982 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=956) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=956) COMPLETED after 4.6471
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2140 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=957) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=957) COMPLETED after 9.6060
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1019 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=958) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=958) COMPLETED after 13.6622
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0724 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (0 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000006f436d8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.8885 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (1 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000007057998>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.6496 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (2 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x000000068b2fa8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.6812 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (3 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x000000064c3528>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.6783 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (4 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000006f15288>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.5542 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (5 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000007351450>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.5385 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (6 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000006e27240>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.6241 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=960) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=960) COMPLETED after 11.5673
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0863 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=961) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=961) COMPLETED after 0.3297
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.7802 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=962) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=962) COMPLETED after 6.1362
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1624 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (7 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000763d790>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.4595 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=963) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=963) COMPLETED after 9.0911
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1097 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (8 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000006fad010>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9971 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (9 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000006e996d8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.8991 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (10 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000754e230>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.6161 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (19 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.8104 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (11 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000007b9d3e8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.5393 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (19 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.1768 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (12 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000007c60b90>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.5480 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=964) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=964) COMPLETED after 0.1498
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.7269 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=965) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=965) COMPLETED after 10.9063
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0890 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=966) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=966) COMPLETED after 10.8389
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0921 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (13 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x000000076c08e8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.4657 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=967) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=967) COMPLETED after 17.7207
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0564 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=968) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=968) COMPLETED after 11.4858
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0869 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=969) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=969) COMPLETED after 10.8639
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0919 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=970) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=970) COMPLETED after 11.0850
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0899 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (14 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x000000080dbc38>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.3884 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=971) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=971) COMPLETED after 11.3641
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0878 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=972) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=972) COMPLETED after 12.2909
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0812 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=973) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=973) COMPLETED after 10.1260
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0985 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=974) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=974) COMPLETED after 10.4339
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0956 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=975) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=975) COMPLETED after 11.9897
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0832 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=976) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=976) COMPLETED after 9.0595
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1101 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=977) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=977) COMPLETED after 18.9082
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0528 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (15 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000813ee00>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.8974 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=978) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=978) COMPLETED after 17.5674
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0568 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=979) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=979) COMPLETED after 12.9065
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0773 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (20 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.4792 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (20 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.7643 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=980) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=980) COMPLETED after 11.7998
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0846 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (16 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x000000084eddd0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.8551 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=981) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=981) COMPLETED after 10.5755
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0943 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=982) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=982) COMPLETED after 0.1543
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.5788 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=983) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=983) COMPLETED after 15.0066
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0665 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=984) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=984) COMPLETED after 11.4809
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0869 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=985) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=985) COMPLETED after 13.0716
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0763 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=986) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=986) COMPLETED after 5.2547
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1895 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=987) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=987) COMPLETED after 9.4764
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1053 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (17 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009027b60>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9523 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=988) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=988) COMPLETED after 12.6849
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0787 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=989) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=989) COMPLETED after 11.9650
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0834 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=990) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=990) COMPLETED after 11.8935
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0839 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=991) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=991) COMPLETED after 0.1604
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.4657 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=992) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=992) COMPLETED after 5.1331
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1940 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=993) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=993) COMPLETED after 6.0232
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1653 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=994) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=994) COMPLETED after 0.4170
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.2777 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=995) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=995) COMPLETED after 10.0753
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0990 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=996) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=996) COMPLETED after 0.4241
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.2392 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=997) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=997) COMPLETED after 0.1530
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.5201 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=998) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=998) COMPLETED after 10.3009
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0969 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=999) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=999) COMPLETED after 21.7416
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0459 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1000) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1000) COMPLETED after 15.8604
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0630 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (21 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.6776 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (21 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.9123 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (18 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009b2d3e8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0005 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1001) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1001) COMPLETED after 11.8857
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0840 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1002) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1002) COMPLETED after 11.5484
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0864 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (0 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a01a50>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9559 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (1 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a788250>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9734 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (2 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a6de458>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0748 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (3 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a1eb748>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9610 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1004) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1004) COMPLETED after 0.1479
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.8893 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (4 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a71a750>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0081 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (0 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a0da30>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1178 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (1 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a475c8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0269 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (2 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a1cfcf0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.0168 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (3 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a6db140>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1866 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (0 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a1d0858>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9367 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (1 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a0ed18>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0115 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (2 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a030a8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9204 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (3 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a71f7a0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0390 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (4 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a71c708>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0419 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (5 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a16f40>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1084 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (4 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a9baf78>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1195 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (5 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a1e5d8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9971 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (5 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a1b5b8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9271 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (6 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a7338e0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0098 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (6 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a0afff0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0653 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (6 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a0c1e80>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.2370 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (7 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a756750>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 2.0195 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (7 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a7551c0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9936 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (7 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a0429f0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.2310 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (8 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a5ff6e0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1038 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (8 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a9cd268>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1579 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (8 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a608128>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1305 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (9 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a72d350>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9921 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (9 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a626218>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0742 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (9 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a698728>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0895 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (10 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a7b2af0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1333 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (10 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a26a08>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.8527 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (10 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009a08ee0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9194 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (11 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a037a28>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.7798 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (11 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a87a9b0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0834 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (11 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a6e72d8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0730 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) FAILED (19 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a77b320>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0716 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (12 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a517318>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1703 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (12 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a7e0568>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.1120 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (12 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a855408>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0976 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (13 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009fe1628>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.7255 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (13 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009d03de8>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.4072 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (13 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009d38a70>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.9459 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (22 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 14.9090 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (22 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.9441 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) FAILED (14 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009f060a0>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0069 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) FAILED (14 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x0000000a44ea80>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.0260 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) FAILED (14 prior attempts) with ActionView::Template::Error: undefined local variable or method `single_version' for #<Request:0x00000009e58798>
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 4.7928 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1007) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1007) COMPLETED after 10.5446
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0946 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1008) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1008) COMPLETED after 10.3347
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0965 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1009) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1009) COMPLETED after 9.9221
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1006 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1010) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1010) COMPLETED after 11.0962
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0899 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1011) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1011) COMPLETED after 15.8291
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0631 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1012) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1012) COMPLETED after 3.2732
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1013) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1013) COMPLETED after 14.2880
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1014) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1014) COMPLETED after 4.8444
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1015) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1015) COMPLETED after 5.1007
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1016) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1016) COMPLETED after 7.1861
+[Worker(host:ILBLUNT01 pid:14882)] 5 jobs processed at 0.1344 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1017) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1017) COMPLETED after 4.1195
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1018) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1018) COMPLETED after 2.3223
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1019) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1019) COMPLETED after 2.9706
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1020) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1020) COMPLETED after 3.6931
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1021) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1021) COMPLETED after 3.8047
+[Worker(host:ILBLUNT01 pid:14882)] 5 jobs processed at 0.2521 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1022) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1022) COMPLETED after 6.2617
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1591 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1023) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1023) COMPLETED after 10.4810
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0952 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1024) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1024) COMPLETED after 5.5264
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1801 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1025) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1025) COMPLETED after 3.8309
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2593 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1026) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1026) COMPLETED after 3.8333
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2594 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1027) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1027) COMPLETED after 3.3338
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2980 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1028) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1028) COMPLETED after 3.5683
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2786 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1029) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1029) COMPLETED after 3.5002
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2836 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1030) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1030) COMPLETED after 4.0047
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2482 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1003) COMPLETED after 4.8800
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2040 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1005) COMPLETED after 4.6168
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2153 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1031) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1031) COMPLETED after 10.8563
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0919 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1006) COMPLETED after 4.2083
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2364 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1032) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1032) COMPLETED after 10.9656
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0908 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1033) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1033) COMPLETED after 10.5997
