@@ -1,16 +1,15 @@
 class Request < ActiveRecord::Base
-  before_save :handle_assignment
-  before_save :set_stathist
-	has_paper_trail
+  before_save :handle_assignment, :set_stathist
+  has_paper_trail
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
   validates_with OngoingValidator
-  validates_presence_of :esthours, :if => lambda {self.status == "Ongoing"}
-  validates_presence_of :tothours, :if => lambda {self.status == "Complete"}
+  validates_presence_of :esthours, :if => lambda { self.status == "Ongoing" }
+  validates_presence_of :tothours, :if => lambda { self.status == "Complete" }
   has_many :data_files
   has_many :result_files
   accepts_nested_attributes_for :data_files, :allow_destroy => true
-	accepts_nested_attributes_for :result_files, :allow_destroy => true
+  accepts_nested_attributes_for :result_files, :allow_destroy => true
 
   # Get priority items for modal. 
   def self.priority_widget
@@ -20,10 +19,10 @@ class Request < ActiveRecord::Base
     time_perm = Request.where("priority = ? AND status = ?", "Time Permitting", "Pending").order! 'created_at DESC'
 
     return priority_list = {
-      "high" => high_p,
-      "normal" => normal_p,
-      "low" => low_p,
-      "time_permitting" => time_perm
+        "high" => high_p,
+        "normal" => normal_p,
+        "low" => low_p,
+        "time_permitting" => time_perm
     }
   end
 
@@ -64,7 +63,7 @@ class Request < ActiveRecord::Base
   # Deals with the multiple user assignment, joins user array into string.
   def handle_assignment
     if assignment
-      self.assignment = self.assignment.reject(&:blank?).join(";")
+      self.assignment = self.assignment.reject(&:blank?).join(";") if self.assignment.kind_of?(Array)
     end
   end
 
@@ -80,7 +79,7 @@ class Request < ActiveRecord::Base
     if self.assignment
       assign = self.assignment.split(';')
       st = ''
-      assign.each do |a| 
+      assign.each do |a|
         st += a.sub('.', ' ').split.map(&:capitalize).join(' ') + ', '
       end
       st[0..-3]
@@ -111,7 +110,7 @@ class Request < ActiveRecord::Base
   end
 
   # Gets all versions for form view.
-	def get_versions
+  def get_versions
     versions = []
     self.versions.reverse.each do |version|
       versions << cleanup_version_html(version.changeset)
