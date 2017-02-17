@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+  before_save :downcase_login
+
+  def downcase_login
+    self.login = self.login.downcase
+  end
 
   def email
     self.login + "@lanzatech.com"
