@@ -55,12 +55,13 @@ namespace :add_user_groups do
           puts "#{user.login} updated. Group: #{result.first}"
         elsif result.length > 1
           @users_with_multiple_groups[user.login] = result
+        elsif result.empty?
+          Emailer.delay.no_user_group(user.login)
         end
       else
         puts "#{name} not found."
       end
     end
-    puts print_remaining_users
   end
 
   def get_all_users_and_groups
@@ -139,8 +140,8 @@ namespace :add_user_groups do
   end
 
   def print_remaining_users
-    puts "USers with multiple groups:", @users_with_multiple_groups
-    puts "Users with no group:", User.where(:group => nil)
+    puts "Users with multiple groups:", @users_with_multiple_groups
+    puts "Users with no group:", User.where(:group => nil).collect(&:login)
   end
 end
 
