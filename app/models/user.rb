@@ -1,8 +1,6 @@
-require 'rake'
-
 class User < ActiveRecord::Base
   before_save :downcase_login
-  #after_create :add_user_group
+  after_create :add_user_group
 
   def downcase_login
     self.login = self.login.downcase
@@ -21,8 +19,7 @@ class User < ActiveRecord::Base
   end
 
   def add_user_group
-    load File.join(Rails.root, 'lib', 'tasks', 'add_user_groups.rake')
-    Rake::Task["add_user_groups:some"].invoke(self.login)
+    UserGroups.delay.some([self.login])
   end
 
   # Gets various metrics for user_show.
