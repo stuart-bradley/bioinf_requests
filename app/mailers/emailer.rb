@@ -75,9 +75,13 @@ class Emailer < ActionMailer::Base
     mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "New Model Request"
   end
 
-  def pending_and_ongoing_requests(u, o, p)
+  def pending_and_ongoing_requests(u)
     begin
       @user = u
+      requests = Request.where("status = ? OR status = ?", "Pending", "Ongoing")
+      user_requests = requests.select { |x| (x.name == u.login || (x.get_users.include?(u.login) rescue false)) }
+      o = user_requests.select { |x| x.status == "Ongoing" }
+      p = user_requests.select { |x| x.status == "Pending" }
       @ongoing = o.sort_by &:updated_at
       @pending = p.sort_by &:updated_at
       mail :to => @user.email, :from => ENV['EMAIL'], :subject => "Weekly Request Summary", template_name: 'pending_and_ongoing_requests'
