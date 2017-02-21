@@ -1,8 +1,8 @@
 require 'rake'
-BioinfRequests::Application.load_tasks
+
 class User < ActiveRecord::Base
   before_save :downcase_login
-  after_create :add_user_group
+  #after_create :add_user_group
 
   def downcase_login
     self.login = self.login.downcase
