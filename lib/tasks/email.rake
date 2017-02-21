@@ -8,7 +8,7 @@ namespace :email do
         #if u.login == "stuart.bradley"
         ongoing = user_requests.select { |x| x.status == "Ongoing" }
         pending = user_requests.select { |x| x.status == "Pending" }
-        Emailer.delay.pending_and_ongoing_requests(u, ongoing, pending)
+        Emailer.pending_and_ongoing_requests(u, ongoing, pending)
       end
     end
 

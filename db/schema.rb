@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.datetime "updated_at"
   end
 
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "modellings", force: true do |t|
     t.datetime "created_at"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.string   "attachment"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "status", default: "Pending"
+    t.string   "status",          default: "Pending"
     t.string   "assignment"
     t.text     "result"
     t.string   "stathist"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.string   "priority"
     t.integer  "esthours"
     t.integer  "tothours"
-    t.text "current_changes"
+    t.text     "current_changes"
   end
 
   create_table "result_files", force: true do |t|
@@ -78,10 +78,10 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.datetime "updated_at"
     t.boolean  "admin"
     t.boolean  "manager"
-    t.string "group"
+    t.string   "group"
   end
 
-  add_index "users", ["login"], name: "index_users_on_login", unique: true
+  add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree
 
   create_table "versions", force: true do |t|
     t.string   "item_type",      null: false
@@ -93,6 +93,6 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.text     "object_changes"
   end
 
-  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
+  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
 end

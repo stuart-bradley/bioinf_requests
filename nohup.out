@@ -691,3 +691,97 @@ Gem::LoadError: You have already activated rake 12.0.0, but your Gemfile require
 [Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0908 j/s, 0 failed
 [Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1033) RUNNING
 [Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1033) COMPLETED after 10.5997
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0941 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1034) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1034) COMPLETED after 11.0093
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0903 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1035) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1035) COMPLETED after 0.4948
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.9353 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1036) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1036) COMPLETED after 10.1825
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0980 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1037) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1037) COMPLETED after 5.1552
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1931 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1038) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1038) COMPLETED after 3.2754
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.3032 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1039) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1039) COMPLETED after 5.5084
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1803 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1040) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1040) COMPLETED after 4.3596
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2282 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1041) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1041) COMPLETED after 0.1487
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 5.6955 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=959) COMPLETED after 4.8870
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2037 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1042) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1042) COMPLETED after 5.9791
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1666 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1043) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1043) COMPLETED after 16.0107
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0621 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1044) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1044) COMPLETED after 11.0827
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0900 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1045) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1045) FAILED (0 prior attempts) with ActiveRecord::StatementInvalid: Mysql::Error: The number of columns in the result set differs from the number of bound buffers. You must reset the statement, rebind the result set columns, and execute the statement again: SELECT  `requests`.* FROM `requests`  WHERE `requests`.`id` = ? LIMIT 1
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 11.3846 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1045) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1045) COMPLETED after 4.3376
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2290 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1046) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1046) COMPLETED after 0.5490
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.7403 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1047) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1047) COMPLETED after 11.6040
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0860 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1048) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1048) COMPLETED after 3.7362
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2661 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1049) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1049) COMPLETED after 3.8529
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2577 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1050) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1050) COMPLETED after 4.5260
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2195 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1051) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1051) COMPLETED after 10.6806
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0934 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1052) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1052) COMPLETED after 10.7892
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0925 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1053) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1053) COMPLETED after 3.2525
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.3055 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1054) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1054) COMPLETED after 10.3232
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0967 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1055) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1055) FAILED (0 prior attempts) with Errno::ECONNRESET: Connection reset by peer
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0248 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1055) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1055) COMPLETED after 27.1772
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0368 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1056) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1056) COMPLETED after 10.0535
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0992 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1057) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1057) COMPLETED after 0.5656
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 1.7000 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1058) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1058) COMPLETED after 5.8430
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1704 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (23 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 16.5240 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (23 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.4657 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1059) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1059) COMPLETED after 4.0217
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2473 j/s, 0 failed
