@@ -1,4 +1,12 @@
+require 'rake'
+BioinfRequests::Application.load_tasks
 class User < ActiveRecord::Base
+  before_save :downcase_login
+  after_create :add_user_group
+
+  def downcase_login
+    self.login = self.login.downcase
+  end
 
   def email
     self.login + "@lanzatech.com"
@@ -12,11 +20,15 @@ class User < ActiveRecord::Base
     self.login.sub('.', '')
   end
 
+  def add_user_group
+    load File.join(Rails.root, 'lib', 'tasks', 'add_user_groups.rake')
+    Rake::Task["add_user_groups:some"].invoke(self.login)
+  end
+
   # Gets various metrics for user_show.
   def self.get_show_metrics(user, min_date, max_date, is_manager)
 
     requests = Request.where("updated_at >= ? AND updated_at <= ?", min_date, max_date)
-    puts "REQUEST LENGTH: " + requests.length.to_s
 
     # Blank objects in case user isn't manager.
     non_manager_metrics = ActiveSupport::OrderedHash.new

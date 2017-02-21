@@ -85,4 +85,13 @@ class Emailer < ActionMailer::Base
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
   end
+
+  def no_user_group(name)
+    begin
+      @name = name
+      mail :to => "stuart.bradley@lanzatech.com", :from => ENV['EMAIL'], :subject => "[DEV] Missing User Group", template_name: 'no_user_group'
+    rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+      logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
+    end
+  end
 end
