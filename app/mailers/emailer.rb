@@ -80,11 +80,13 @@ class Emailer < ActionMailer::Base
       @user = u
       requests = Request.where("status = ? OR status = ?", "Pending", "Ongoing")
       user_requests = requests.select { |x| (x.name == u.login || (x.get_users.include?(u.login) rescue false)) }
-      o = user_requests.select { |x| x.status == "Ongoing" }
-      p = user_requests.select { |x| x.status == "Pending" }
-      @ongoing = o.sort_by &:updated_at
-      @pending = p.sort_by &:updated_at
-      mail :to => @user.email, :from => ENV['EMAIL'], :subject => "Weekly Request Summary", template_name: 'pending_and_ongoing_requests'
+      if user_requests.length > 0
+        o = user_requests.select { |x| x.status == "Ongoing" }
+        p = user_requests.select { |x| x.status == "Pending" }
+        @ongoing = o.sort_by &:updated_at
+        @pending = p.sort_by &:updated_at
+        mail :to => @user.email, :from => ENV['EMAIL'], :subject => "Weekly Request Summary", template_name: 'pending_and_ongoing_requests'
+      end
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
