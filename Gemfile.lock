@@ -197,11 +197,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-<<<<<<< HEAD
-  mysql
-=======
   mysql2 (~> 0.3.11)
->>>>>>> 26620852684e1ffc03e05c23cf96ab351cea310b
   nested_form
   net-ldap
   paper_trail
