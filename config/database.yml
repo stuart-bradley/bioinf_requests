@@ -4,13 +4,13 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: bioinf_requestsDev
+  database: <%= ENV['MYSQL_DATABASE'] %>
   pool: 5
-  username: BuRPadmin
-  password: $urrrrp
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
