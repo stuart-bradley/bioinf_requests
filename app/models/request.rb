@@ -14,11 +14,11 @@ class Request < ActiveRecord::Base
 
   # Get priority items for modal. 
   def self.priority_widget
-    high_p = Request.where("priority = ? AND status = ?", "High Priority", "Pending").order! 'created_at DESC'
-    normal_p = Request.where("priority = ? AND status = ?", "Priority", "Pending").order! 'created_at DESC'
-    low_p = Request.where("priority = ? AND status = ?", "Low Priority", "Pending").order! 'created_at DESC'
-    time_perm = Request.where("priority = ? AND status = ?", "Time Permitting", "Pending").order! 'created_at DESC'
-
+    pending = Request.where("status = ?", "Pending").order! 'created_at DESC'
+    high_p = pending.where("priority = ?", "High Priority")
+    normal_p = pending.where("priority = ?", "Priority")
+    low_p = pending.where("priority = ?", "Low Priority")
+    time_perm = pending.where("priority = ?", "Time Permitting")
     return priority_list = {
         "high" => high_p,
         "normal" => normal_p,
@@ -32,7 +32,7 @@ class Request < ActiveRecord::Base
     ongoing_requests = ActiveSupport::OrderedHash.new
     max_length = 1
     User.where("admin = ?", true).each do |user|
-      requests = Request.select { |x| (x.name == user.login || x.customer == user.login || (x.get_users.include?(user.login) rescue false)) && x.status == "Ongoing" }.sort_by &:updated_at
+      requests = Request.where("name = ? OR customer = ? OR assignment like ?", user.login, user.login, user.login).sort_by &:updated_at
       if requests.length > max_length
         max_length = requests.length
       end

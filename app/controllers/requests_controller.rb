@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.all
+    @requests = Request.includes(:data_files, :result_files).all
     priority_modal = Request.priority_widget
     active_requests, max_length = Request.active_requests
     render locals: {
