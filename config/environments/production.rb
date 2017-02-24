@@ -77,4 +77,16 @@ BioinfRequests::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  ActionMailer::Base.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+      :address => "smtp.office365.com",
+      :port => 587,
+      :domain => "lanzatech.com",
+      :user_name => ENV['EMAIL'],
+      :password => ENV['PASSWORD'],
+      :authentication => :login,
+      :enable_starttls_auto => true
+  }
 end
