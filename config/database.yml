@@ -7,7 +7,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: <%= ENV['MYSQL_DATABASE'] %>
+  database: <%= ENV['MYSQL_DATABASE_DEV'] %>
   pool: 5
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
@@ -25,15 +25,10 @@ test:
   password: $urrrrp
 
 production:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: bioinf_requests
+  database: <%= ENV['MYSQL_DATABASE'] %>
   pool: 5
-  username: BuRPadmin
-  password: $urrrrp
-  
-  
-  
-  
-
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>

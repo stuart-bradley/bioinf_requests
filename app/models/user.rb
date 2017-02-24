@@ -40,12 +40,12 @@ class User < ActiveRecord::Base
 
       non_managers = User.where("admin = ? AND (manager = ? OR manager IS ?)", true, false, nil)
       non_managers.each do |non_manager|
-        user_requests = requests.select { |x| (x.name == non_manager.login || x.customer == non_manager.login || x.get_users.include?(non_manager.login)) }
+        user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", non_manager.login, non_manager.login, non_manager.login)
         non_manager_metrics[non_manager] = User.user_analytics(user_requests)
       end
     end
 
-    user_requests = requests.select { |x| (x.name == user.login || x.customer == user.login || (x.get_users.include?(user.login) rescue false)) }
+    user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", user.login, user.login, user.login)
     user_metrics = User.user_analytics(user_requests)
 
     return non_manager_metrics, user_metrics, analysis
@@ -60,14 +60,16 @@ class User < ActiveRecord::Base
       max = max.to_datetime
 
       # Before.
-      analytics_list["before_pending"] = Request.where("created_at <= ? AND status = ?", min, "Pending")
-      analytics_list["before_ongoing"] = Request.where("created_at <= ? AND status = ?", min, "Ongoing")
-      analytics_list["before_completed_in_period"] = Request.where("created_at <= ? AND updated_at >= ? AND updated_at <= ? AND status = ?", min, min, max, "Complete")
+      before = Request.where("created_at <= ?", min)
+      analytics_list["before_pending"] = before.where("status = ?", "Pending")
+      analytics_list["before_ongoing"] = before.where("status = ?", "Ongoing")
+      analytics_list["before_completed_in_period"] = before.where("updated_at >= ? AND updated_at <= ? AND status = ?", min, max, "Complete")
 
       # During.
-      analytics_list["during_pending"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Pending")
-      analytics_list["during_ongoing"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Ongoing")
-      analytics_list["during_completed"] = Request.where("created_at >= ? AND created_at <= ? AND status = ?", min, max, "Complete")
+      during = Request.where("created_at >= ? AND created_at <= ?", min, max)
+      analytics_list["during_pending"] = during.where("status = ?", "Pending")
+      analytics_list["during_ongoing"] = during.where("status = ?", "Ongoing")
+      analytics_list["during_completed"] = during.where("status = ?", "Complete")
 
       # Totals.
       analytics_list["ongoing_pending"] = analytics_list["before_pending"].count + analytics_list["before_ongoing"].count + analytics_list["during_pending"].count + analytics_list["during_ongoing"].count
@@ -107,11 +109,16 @@ class User < ActiveRecord::Base
     stathist = r.stathist
     pending = r.created_at.to_date
 
-    ongoing = Date.parse stathist.match(/Ongoing:\s(\d+-\d+-\d+)/)[-1]
-    res << (pending..ongoing).count
+    begin
+      ongoing = Date.parse stathist.match(/Ongoing:\s(\d+-\d+-\d+)/)[-1]
+      res << (pending..ongoing).count
 
-    complete = Date.parse stathist.match(/Complete:\s(\d+-\d+-\d+)/)[-1]
-    res << (ongoing..complete).count
+      complete = Date.parse stathist.match(/Complete:\s(\d+-\d+-\d+)/)[-1]
+      res << (ongoing..complete).count
+    rescue NoMethodError => exception
+      res << 0
+      res << 0
+    end
 
     return res
   end

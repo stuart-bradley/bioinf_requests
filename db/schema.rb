@@ -1,3 +1,4 @@
+
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -48,7 +49,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.string   "attachment"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",          default: "Pending"
+    t.string "status", default: "Pending"
     t.string   "assignment"
     t.text     "result"
     t.string   "stathist"
@@ -56,7 +57,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.string   "priority"
     t.integer  "esthours"
     t.integer  "tothours"
-    t.text     "current_changes"
+    t.text "current_changes"
   end
 
   create_table "result_files", force: true do |t|
@@ -78,7 +79,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.datetime "updated_at"
     t.boolean  "admin"
     t.boolean  "manager"
-    t.string   "group"
+    t.string "group"
   end
 
   add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree

@@ -785,3 +785,92 @@ Gem::LoadError: You have already activated rake 12.0.0, but your Gemfile require
 [Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1059) RUNNING
 [Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1059) COMPLETED after 4.0217
 [Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2473 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1060) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1060) COMPLETED after 5.1410
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1920 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1061) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1061) COMPLETED after 6.4784
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1536 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1062) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1062) COMPLETED after 8.4983
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1174 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1063) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1063) COMPLETED after 4.7933
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2075 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1064) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1064) COMPLETED after 5.0907
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1954 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1065) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1065) COMPLETED after 4.8122
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.2067 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1066) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1066) COMPLETED after 11.2411
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0888 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1067) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1067) COMPLETED after 6.0791
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1639 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1068) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1068) COMPLETED after 6.0712
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1641 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1069) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1069) COMPLETED after 5.2328
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1902 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) FAILED (24 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=900) REMOVED permanently because of 25 consecutive failures
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 18.2705 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) FAILED (24 prior attempts) with ActiveRecord::RecordNotFound: Couldn't find Request with id=545
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=901) REMOVED permanently because of 25 consecutive failures
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 17.2550 j/s, 1 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1070) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1070) COMPLETED after 3.5401
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1071) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1071) COMPLETED after 4.3170
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1072) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1072) COMPLETED after 5.4858
+[Worker(host:ILBLUNT01 pid:14882)] 3 jobs processed at 0.1926 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1073) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1073) COMPLETED after 15.1758
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0658 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1074) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1074) COMPLETED after 4.5080
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1075) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1075) COMPLETED after 5.5098
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1076) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1076) COMPLETED after 4.7585
+[Worker(host:ILBLUNT01 pid:14882)] 3 jobs processed at 0.1712 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1077) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1077) COMPLETED after 8.8486
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1078) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1078) COMPLETED after 3.6360
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1079) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1079) COMPLETED after 4.5797
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1080) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1080) COMPLETED after 0.0343
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1081) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1081) COMPLETED after 14.6308
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1082) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1082) COMPLETED after 4.1736
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1083) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1083) COMPLETED after 16.7236
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1084) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1084) COMPLETED after 10.4395
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1085) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1085) COMPLETED after 5.0091
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1086) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1086) COMPLETED after 0.0334
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1087) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1087) COMPLETED after 3.3917
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1088) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.pending_and_ongoing_requests (id=1088) COMPLETED after 2.7720
+[Worker(host:ILBLUNT01 pid:14882)] 12 jobs processed at 0.1611 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1089) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1089) COMPLETED after 8.9752
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.1111 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1090) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.edit_request (id=1090) COMPLETED after 3.2244
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.3076 j/s, 0 failed
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1091) RUNNING
+[Worker(host:ILBLUNT01 pid:14882)] Job Emailer.new_request (id=1091) COMPLETED after 14.1468
+[Worker(host:ILBLUNT01 pid:14882)] 1 jobs processed at 0.0706 j/s, 0 failed

@@ -12,7 +12,8 @@ module UserGroups
   @users_with_multiple_groups = {}
 
   @special_cases = {"Heijstra" => "bjorn.heijstra",
-                    "Sean Simpson" => "sean"}
+                    "Sean Simpson" => "sean",
+                    "Sashini De Tissera" => "sashini.detissera"}
 
   def self.all
     user_groups = get_all_users_and_groups
