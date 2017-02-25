@@ -19,6 +19,9 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
 
     @request.name = current_user.login
+    if @request.tothours and not @request.esthours
+      @request.esthours = @request.tothours
+    end
     if @request.save
       # Emails are placed Async.
       unless params[:dont_send_emails]
@@ -47,6 +50,9 @@ class RequestsController < ApplicationController
   def update
     params.permit!
     @request = Request.find(params[:id])
+    if @request.tothours and not @request.esthours
+      @request.esthours = @request.tothours
+    end
     if @request.update_attributes(request_params)
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 

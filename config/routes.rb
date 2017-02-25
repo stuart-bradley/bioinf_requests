@@ -1,12 +1,4 @@
 BioinfRequests::Application.routes.draw do
-  
-
-  #resources :employees, :to => "requests#index"
-
-  #resources :data_files, :to => "requests#index"
-
-  #resources :result_files, :to => "requests#index"
-
   get "requests/edit", :to => "requests#index"
   get "requests/show", :to => "requests#index"
   get "requests/update", :to => "request#index"
@@ -16,7 +8,6 @@ BioinfRequests::Application.routes.draw do
 
   devise_for :users
   resources :requests, only: [:index, :new, :create, :destroy, :update, :edit]
-  resources :modellings
   resources :users, only: [:show]
 
   root "requests#index"

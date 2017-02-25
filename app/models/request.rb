@@ -32,22 +32,13 @@ class Request < ActiveRecord::Base
     ongoing_requests = ActiveSupport::OrderedHash.new
     max_length = 1
     User.where("admin = ?", true).each do |user|
-      requests = Request.where("name = ? OR customer = ? OR assignment like ?", user.login, user.login, user.login).sort_by &:updated_at
+      requests = Request.where("(name = ? OR customer = ? OR assignment like ?) AND status = ?", user.login, user.login, user.login, "Ongoing").sort_by &:updated_at
       if requests.length > max_length
         max_length = requests.length
       end
       ongoing_requests[user.get_name] = requests
     end
     return ongoing_requests, max_length
-  end
-
-  def send_edit_email
-    changes = self.get_changed_attributes
-    puts "", changes, self.current_changes, ""
-    if changes != self.current_changes
-      Emailer.delay.edit_request(self.id)
-    end
-    self.update_column(:current_changes, changes.to_yaml)
   end
 
   # Updates the versioning for the status.
@@ -113,6 +104,15 @@ class Request < ActiveRecord::Base
       return false
     end
   end
+
+  def send_edit_email
+    changes = self.get_changed_attributes
+    if changes != self.current_changes
+      Emailer.delay.edit_request(self.id)
+    end
+    self.update_column(:current_changes, changes.to_yaml)
+  end
+
 
   # Returns changes from papertrail, minus the excepted ones.
   def get_changed_attributes

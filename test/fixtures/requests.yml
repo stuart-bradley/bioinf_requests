@@ -1,13 +1,111 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  name: MyString
-  description: MyText
-  attachment: MyString
+request_pending_assigned:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now %>
 
-two:
-  title: MyString
-  name: MyString
-  description: MyText
-  attachment: MyString
+request_pending_unassigned:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  updated_at: <%= DateTime.now %>
+
+request_ongoing:
+  title: 'Ongoing Request'
+  name: 'stuart.bradley'
+  description: 'Complete Request'
+  status: 'Ongoing'
+  esthours: 1
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now %>
+
+request_ongoing_wayne:
+  title: 'Ongoing Request'
+  name: 'wayne.mitchell'
+  description: 'Complete Request'
+  status: 'Ongoing'
+  esthours: 1
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now %>
+
+request_complete:
+  title: 'Complete Request'
+  name: 'stuart.bradley'
+  description: 'Complete Request'
+  status: 'Ongoing'
+  esthours: 1
+  tothours: 1
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now %>
+
+request_pending_assigned_1_month_old:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now - 3.months %>
+
+request_pending_unassigned_1_month_old:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  updated_at: <%= DateTime.now - 3.months %>
+
+request_ongoing_1_month_old:
+  title: 'Ongoing Request'
+  name: 'stuart.bradley'
+  description: 'Complete Request'
+  status: 'Ongoing'
+  esthours: 1
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now - 3.months %>
+
+request_complete_1_month_old:
+  title: 'Complete Request'
+  name: 'stuart.bradley'
+  description: 'Complete Request'
+  status: 'Ongoing'
+  esthours: 1
+  tothours: 1
+  assignment: 'stuart.bradley'
+  updated_at: <%= DateTime.now - 3.months %>
+
+request_pending_time_permitting:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  priority: 'Time Permitting'
+  assignment: 'stuart.bradley'
+
+request_pending_time_low_priority:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  esthours: 1
+  priority: 'Low Priority'
+  assignment: 'stuart.bradley'
+
+request_pending_priority:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  priority: 'Priority'
+  assignment: 'stuart.bradley'
+
+request_pending_high_priority:
+  title: 'Pending Request'
+  name: 'stuart.bradley'
+  description: 'Pending Request'
+  status: 'Pending'
+  priority: 'High Priority'
+  assignment: 'stuart.bradley'
