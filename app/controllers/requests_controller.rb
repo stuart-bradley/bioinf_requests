@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.includes(:data_files, :result_files).all
+    @requests = Request.includes(:data_files, :result_files).load
     priority_modal = Request.priority_widget
     active_requests, max_length = Request.active_requests
     render locals: {
@@ -19,9 +19,6 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
 
     @request.name = current_user.login
-    if @request.tothours and not @request.esthours
-      @request.esthours = @request.tothours
-    end
     if @request.save
       # Emails are placed Async.
       unless params[:dont_send_emails]
@@ -31,7 +28,7 @@ class RequestsController < ApplicationController
       DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
       ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)
 
-      redirect_to requests_path, notice: "The request #{@request.title} has been uploaded."
+      redirect_to requests_path, notice: "The request #{@request.title} has been created."
     else
       render "new"
     end
@@ -50,9 +47,6 @@ class RequestsController < ApplicationController
   def update
     params.permit!
     @request = Request.find(params[:id])
-    if @request.tothours and not @request.esthours
-      @request.esthours = @request.tothours
-    end
     if @request.update_attributes(request_params)
       # The email send logic is contained within each edit type, as to 
       # avoid sending emails where no changes have occured. 

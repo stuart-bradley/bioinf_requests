@@ -1,5 +1,5 @@
 class Request < ActiveRecord::Base
-  before_save :handle_assignment, :set_stathist
+  before_save :handle_assignment, :set_stathist, :handle_est_hours
   has_paper_trail
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
@@ -39,6 +39,13 @@ class Request < ActiveRecord::Base
       ongoing_requests[user.get_name] = requests
     end
     return ongoing_requests, max_length
+  end
+
+  #
+  def handle_est_hours
+    if self.tothours and not self.esthours
+      self.esthours = self.tothours
+    end
   end
 
   # Updates the versioning for the status.

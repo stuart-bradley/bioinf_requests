@@ -64,12 +64,33 @@ class RequestTest < ActiveSupport::TestCase
     end
   end
 
+  test "handle_est_hours should add esthours if tothours is present and it's not" do
+    request = Request.new
+    request.title = 'test'
+    request.name = 'stuart.bradley'
+    request.status = 'Complete'
+    request.tothours = 1
+
+    request.handle_est_hours
+    assert_equal request.tothours, request.esthours, "est and tot hours are not equal"
+
+    request = Request.new
+    request.title = 'test'
+    request.name = 'stuart.bradley'
+    request.status = 'Complete'
+    request.esthours = 1
+    request.tothours = 2
+
+    request.handle_est_hours
+    assert_not_equal request.tothours, request.esthours, "est and tot hours are equal"
+  end
+
   test "set_stathist should set stathist to a specific string" do
     request = Request.new
     request.title = 'test'
     request.name = 'stuart.bradley'
     request.status = 'Ongoing'
-    request.tothours = 1
+    request.esthours = 1
     request.set_stathist
     assert_equal "Pending: #{Date.today.to_s}\nOngoing: #{Date.today.to_s}\n", request.stathist, "Unexpected stathist string."
   end
