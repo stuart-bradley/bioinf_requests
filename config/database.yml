@@ -7,10 +7,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: <%= ENV['MYSQL_DATABASE_DEV'] %>
+  database: <%= Rails.application.secrets.MYSQL_database %>
   pool: 5
-  username: <%= ENV['MYSQL_USER'] %>
-  password: <%= ENV['MYSQL_PASSWORD'] %>
+  username: <%= Rails.application.secrets.MYSQL_user %>
+  password: <%= Rails.application.secrets.MYSQL_password %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,7 +28,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: <%= ENV['MYSQL_DATABASE'] %>
+  database: <%= Rails.application.secrets.MYSQL_database %>
   pool: 5
-  username: <%= ENV['MYSQL_USER'] %>
-  password: <%= ENV['MYSQL_PASSWORD'] %>
+  username: <%= Rails.application.secrets.MYSQL_user %>
+  password: <%= Rails.application.secrets.MYSQL_password %>

@@ -12,4 +12,17 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  # Model helpers - rake test  "test/models/**/*_test.rb"
+  def create_changed_request
+    request = Request.new
+    request.title = 'Request'
+    request.name = 'stuart.bradley'
+    request.status = 'Pending'
+    request.save
+
+    request.title = 'Request Changed'
+    request.save
+    request
+  end
 end

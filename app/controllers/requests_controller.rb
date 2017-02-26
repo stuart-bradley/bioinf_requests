@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.includes(:data_files, :result_files).all
+    @requests = Request.includes(:data_files, :result_files).load
     priority_modal = Request.priority_widget
     active_requests, max_length = Request.active_requests
     render locals: {
@@ -28,7 +28,7 @@ class RequestsController < ApplicationController
       DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
       ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)
 
-      redirect_to requests_path, notice: "The request #{@request.title} has been uploaded."
+      redirect_to requests_path, notice: "The request #{@request.title} has been created."
     else
       render "new"
     end

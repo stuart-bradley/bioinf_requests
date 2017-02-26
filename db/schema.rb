@@ -1,4 +1,3 @@
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -35,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.datetime "updated_at"
   end
 
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "modellings", force: true do |t|
     t.datetime "created_at"
@@ -82,7 +81,7 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.string "group"
   end
 
-  add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree
+  add_index "users", ["login"], name: "index_users_on_login", unique: true
 
   create_table "versions", force: true do |t|
     t.string   "item_type",      null: false
@@ -94,6 +93,6 @@ ActiveRecord::Schema.define(version: 20170215022232) do
     t.text     "object_changes"
   end
 
-  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
+  add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
 
 end

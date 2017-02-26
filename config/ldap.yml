@@ -18,8 +18,8 @@ development:
   port: 636
   attribute: sAMAccountName
   base: ou=Lanzatech Users, dc=lt,dc=local​
-  admin_user: <%= ENV['LDAP_LOGIN'] %>
-  admin_password: <%= ENV['LDAP_PASSWORD'] %>
+  admin_user: <%= Rails.application.secrets.LDAP_login %>
+  admin_password: <%= Rails.application.secrets.LDAP_password %>
   ssl: true
   # <<: *AUTHORIZATIONS
 
@@ -38,7 +38,7 @@ production:
   port: 636
   attribute: sAMAccountName
   base: ou=Lanzatech Users, dc=lt,dc=local​
-  admin_user: <%= ENV['LDAP_LOGIN'] %>
-  admin_password: <%= ENV['LDAP_PASSWORD'] %>
+  admin_user: <%= Rails.application.secrets.LDAP_login %>
+  admin_password: <%= Rails.application.secrets.LDAP_password %>
   ssl: true
   # <<: *AUTHORIZATIONS

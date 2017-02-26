@@ -8,7 +8,6 @@
     </button>
     <%= link_to "New bioinformatics request", new_request_path, class: "btn btn-default btn-lg " %>
     <%= link_to "Modeling requests", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
-    <!--<%= link_to "New modeling request", new_modelling_path, class: "btn btn-warning btn-lg" %>-->
   </div>
 </div>
 
@@ -86,7 +85,7 @@
             <td>
               <% if request.name == current_user.login || current_user.admin %>
                   <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
-                  <%= button_to "Delete", request, method: :delete, class: "btn btn-default", data: {confirm: "Are you sure that you wish to delete #{request.title}?"} %>
+                  <%= button_to "Delete", request_path(request), method: :delete, class: "btn btn-default", data: {confirm: "Are you sure that you wish to delete #{request.title}?"} %>
               <% end %>
             </td>
           </tr>
@@ -106,7 +105,6 @@
     </button>
     <%= link_to "New bioinformatics request", new_request_path, class: "btn btn-default btn-lg " %>
     <%= link_to "New modeling request", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
-    <!--<%= link_to "Modeling requests", new_modelling_path, class: "btn btn-warning btn-lg" %>-->
   </div>
 </div>
 
