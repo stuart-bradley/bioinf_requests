@@ -1,4 +1,4 @@
-BioinfRequests::Application.routes.draw do
+Rails.application.routes.draw do
   get "requests/edit", :to => "requests#index"
   get "requests/show", :to => "requests#index"
   get "requests/update", :to => "request#index"
@@ -51,7 +51,7 @@ BioinfRequests::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

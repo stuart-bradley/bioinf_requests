@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class RequestsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   def setup
     sign_in User.where(:login => 'wayne.mitchell').first

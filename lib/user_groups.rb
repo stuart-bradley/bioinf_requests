@@ -121,8 +121,8 @@ module UserGroups
                   :base => "OU=Lanzatech Users,DC=lt,DC=local",
                   :auth => {
                       :method => :simple,
-                      :username => ENV['LDAP_LOGIN'],
-                      :password => ENV['LDAP_PASSWORD']
+                      :username => Rails.application.secrets.LDAP_login,
+                      :password => Rails.application.secrets.LDAP_password
                   }
   end
 

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.11'
@@ -51,15 +51,12 @@ gem 'devise'
 gem 'cancan'
 gem "nested_form"
 gem 'paper_trail'
-gem "resque"
-gem 'resque_mailer'
 gem 'delayed_job_active_record'
 gem 'net-ldap'
 gem "devise_ldap_authenticatable"
 gem 'yaml_db'
 gem "daemons"
 gem 'jquery-turbolinks'
-gem 'figaro'
-gem 'string-scrub'
 gem 'whenever'
 gem 'bootstrap-wysihtml5-rails'
+gem 'tzinfo-data'

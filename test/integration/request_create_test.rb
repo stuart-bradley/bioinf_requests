@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class RequestCreateTest < ActionDispatch::IntegrationTest
-  include Devise::TestHelpers
+  include Devise::Test::IntegrationHelpers
 
   def setup
     sign_in User.where(:login => 'wayne.mitchell').first
