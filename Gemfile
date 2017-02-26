@@ -56,7 +56,6 @@ gem 'net-ldap'
 gem "devise_ldap_authenticatable"
 gem 'yaml_db'
 gem "daemons"
-gem "mysql"
 gem 'jquery-turbolinks'
 gem 'whenever'
 gem 'bootstrap-wysihtml5-rails'
