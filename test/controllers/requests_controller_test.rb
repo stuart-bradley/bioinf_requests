@@ -13,7 +13,7 @@ class RequestsControllerTest < ActionController::TestCase
 
   test "should get index" do
     get :index
-    assert_response :success
+    assert_response :success, "Could not access index page."
   end
 
   test "should create request" do
@@ -21,15 +21,15 @@ class RequestsControllerTest < ActionController::TestCase
       post :create, {request: {id: (Request.last.id + 1), title: 'New Request', name: 'stuart.bradley'}}
     end
 
-    assert_redirected_to requests_path
-    assert_equal "The request New Request has been created.", flash[:notice]
+    assert_redirected_to requests_path, "Redirect was not successful."
+    assert_equal "The request New Request has been created.", flash[:notice], "Flash notice did not appear."
   end
 
   test "should not create request" do
     assert_no_difference('Request.count') do
       post :create, request: {id: (Request.last.id + 1), name: 'stuart.bradley'}
     end
-    assert_select "div[class=?]", "alert alert-error"
+    assert_select "div.alert", true, "No errors appeared."
   end
 
 
@@ -38,10 +38,10 @@ class RequestsControllerTest < ActionController::TestCase
 
     patch :update, id: request, request: {title: "updated"}
 
-    assert_redirected_to requests_path
+    assert_redirected_to requests_path, "Redirecty was not successful."
     request.reload
-    assert_equal "updated", request.title
-    assert_equal "The request updated has been updated.", flash[:notice]
+    assert_equal "updated", request.title, "Title is not correct."
+    assert_equal "The request updated has been updated.", flash[:notice], "Flash notice did not appear."
   end
 
 
@@ -51,7 +51,7 @@ class RequestsControllerTest < ActionController::TestCase
       delete :destroy, id: request
     end
 
-    assert_redirected_to requests_path
+    assert_redirected_to requests_path, "Redirect was not successful."
   end
 
 end
