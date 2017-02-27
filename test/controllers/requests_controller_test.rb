@@ -18,7 +18,9 @@ class RequestsControllerTest < ActionController::TestCase
 
   test "should create request" do
     assert_difference('Request.count') do
-      post :create, {request: {id: (Request.last.id + 1), title: 'New Request', name: 'stuart.bradley'}}
+      assert_difference('Delayed::Job.count') do
+        post :create, {request: {id: (Request.last.id + 1), title: 'New Request', name: 'stuart.bradley'}}
+      end
     end
 
     assert_redirected_to requests_path, "Redirect was not successful."
@@ -27,7 +29,9 @@ class RequestsControllerTest < ActionController::TestCase
 
   test "should not create request" do
     assert_no_difference('Request.count') do
-      post :create, request: {id: (Request.last.id + 1), name: 'stuart.bradley'}
+      assert_no_difference('Delayed::Job.count') do
+        post :create, request: {id: (Request.last.id + 1), name: 'stuart.bradley'}
+      end
     end
     assert_select "div.alert", true, "No errors appeared."
   end
@@ -36,7 +40,9 @@ class RequestsControllerTest < ActionController::TestCase
   test "should update request" do
     request = Request.first
 
-    patch :update, id: request, request: {title: "updated"}
+    assert_difference('Delayed::Job.count') do
+      patch :update, id: request, request: {title: "updated"}
+    end
 
     assert_redirected_to requests_path, "Redirecty was not successful."
     request.reload
