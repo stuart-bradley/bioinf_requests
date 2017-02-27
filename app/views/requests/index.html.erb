@@ -55,7 +55,7 @@
             <td>
               <%= request.get_name %>
               <% if request.customer? %>
-                  <br/>(<%= request.customer.sub('.', ' ').split.map(&:capitalize).join(' ') %>)
+                  <br/>(<%= User.where(:login => request.customer).first.get_name %>)
               <% end %>
             </td>
             <td style="white-space: pre-wrap;"><%= sanitize(request.description.to_s.force_encoding("UTF-8")) %></td>
@@ -104,7 +104,6 @@
       <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
     </button>
     <%= link_to "New bioinformatics request", new_request_path, class: "btn btn-default btn-lg " %>
-    <%= link_to "New modeling request", 'http://Reilly.local/modelling/request', class: "btn btn-default btn-lg" %>
   </div>
 </div>
 
