@@ -25,4 +25,8 @@ class ActiveSupport::TestCase
     request.save
     request
   end
+
+  def same_elements?(array1, array2)
+    array1.to_set == array2.to_set
+  end
 end

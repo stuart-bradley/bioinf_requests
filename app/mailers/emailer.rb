@@ -11,6 +11,7 @@ class Emailer < ActionMailer::Base
       User.where(admin: true).each do |u|
         emails << u.email
       end
+
       employee = User.where(login: @request.name).first
       if employee.present?
         emails << employee.email
@@ -23,7 +24,7 @@ class Emailer < ActionMailer::Base
         end
       end
 
-      mail :to => emails.uniq, :from => ENV['EMAIL'], :subject => "New Request: '#{@request.title}'"
+      mail :to => emails.uniq, :from => Rails.application.secrets.mailer_email, :subject => "New Request: '#{@request.title}'"
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
@@ -39,6 +40,11 @@ class Emailer < ActionMailer::Base
         emails << u.email
       end
 
+      employee = User.where(login: @request.name).first
+      if employee.present?
+        emails << employee.email
+      end
+
       if @request.customer.present?
         cust = User.where(login: @request.customer).first
         if cust.present?
@@ -51,14 +57,14 @@ class Emailer < ActionMailer::Base
       if changes.any?
         if changes.length == 1
           if changes.has_key?("assignment")
-            mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
+            mail :to => emails.uniq, :from => Rails.application.secrets.mailer_email, :subject => "Request: '#{@request.title}' has been assigned", template_name: 'edit_assignment'
           elsif changes.has_key?("status")
-            mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
+            mail :to => emails.uniq, :from => Rails.application.secrets.mailer_email, :subject => "Request: '#{@request.title}' has changed status", template_name: 'edit_status'
           else
-            mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
+            mail :to => emails.uniq, :from => Rails.application.secrets.mailer_email, :subject => "Request: '#{@request.title}' has been edited"
           end
         else
-          mail :to => emails, :from => ENV['EMAIL'], :subject => "Request: '#{@request.title}' has been edited"
+          mail :to => emails.uniq, :from => Rails.application.secrets.mailer_email, :subject => "Request: '#{@request.title}' has been edited"
         end
       end
 
@@ -67,25 +73,17 @@ class Emailer < ActionMailer::Base
     end
   end
 
-  def new_model_request(user, requests)
-    emails = []
-    User.where(admin: true).each do |u|
-      emails << u.email
-    end
-    mail :to => emails, :from => "SynBioAdmin@lanzatech.onmicrosoft.com", :subject => "New Model Request"
-  end
-
   def pending_and_ongoing_requests(u)
     begin
       @user = u
       requests = Request.where("status = ? OR status = ?", "Pending", "Ongoing")
-      user_requests = requests.select { |x| (x.name == u.login || (x.get_users.include?(u.login) rescue false)) }
+      user_requests = requests.where("name = ? OR assignment like ?", u.login, u.login)
       if user_requests.length > 0
         o = user_requests.select { |x| x.status == "Ongoing" }
         p = user_requests.select { |x| x.status == "Pending" }
         @ongoing = o.sort_by &:updated_at
         @pending = p.sort_by &:updated_at
-        mail :to => @user.email, :from => ENV['EMAIL'], :subject => "Weekly Request Summary", template_name: 'pending_and_ongoing_requests'
+        mail :to => @user.email, :from => Rails.application.secrets.mailer_email, :subject => "Weekly Request Summary", template_name: 'pending_and_ongoing_requests'
       end
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
@@ -95,7 +93,7 @@ class Emailer < ActionMailer::Base
   def no_user_group(name)
     begin
       @name = name
-      mail :to => "stuart.bradley@lanzatech.com", :from => ENV['EMAIL'], :subject => "[DEV] Missing User Group", template_name: 'no_user_group'
+      mail :to => "stuart.bradley@lanzatech.com", :from => Rails.application.secrets.mailer_email, :subject => "[DEV] Missing User Group", template_name: 'no_user_group'
     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
       logger.debug "#{e.backtrace.first}: #{e.message} (#{e.class})", e.backtrace.drop(1).map { |s| "\t#{s}" }
     end
