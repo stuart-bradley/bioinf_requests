@@ -32,7 +32,7 @@ class Request < ActiveRecord::Base
     ongoing_requests = ActiveSupport::OrderedHash.new
     max_length = 1
     User.where("admin = ?", true).each do |user|
-      requests = Request.where("(name = ? OR customer = ? OR assignment like ?) AND status = ?", user.login, user.login, "%#{non_manager.login}%", "Ongoing").sort_by &:updated_at
+      requests = Request.where("(name = ? OR customer = ? OR assignment like ?) AND status = ?", user.login, user.login, "%#{user.login}%", "Ongoing").sort_by &:updated_at
       if requests.length > max_length
         max_length = requests.length
       end
