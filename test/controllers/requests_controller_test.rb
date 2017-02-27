@@ -44,7 +44,7 @@ class RequestsControllerTest < ActionController::TestCase
       patch :update, id: request, request: {title: "updated"}
     end
 
-    assert_redirected_to requests_path, "Redirecty was not successful."
+    assert_redirected_to requests_path, "Redirect was not successful."
     request.reload
     assert_equal "updated", request.title, "Title is not correct."
     assert_equal "The request updated has been updated.", flash[:notice], "Flash notice did not appear."
@@ -58,6 +58,7 @@ class RequestsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to requests_path, "Redirect was not successful."
+    assert_equal "The request #{request.title} has been deleted.", flash[:notice], "Flash notice did not appear."
   end
 
 end
