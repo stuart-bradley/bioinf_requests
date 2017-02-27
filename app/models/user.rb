@@ -40,12 +40,12 @@ class User < ActiveRecord::Base
 
       non_managers = User.where("admin = ? AND (manager = ? OR manager IS ?)", true, false, nil)
       non_managers.each do |non_manager|
-        user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", non_manager.login, non_manager.login, non_manager.login)
+        user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", non_manager.login, non_manager.login, "%#{non_manager.login}%")
         non_manager_metrics[non_manager] = User.user_analytics(user_requests)
       end
     end
 
-    user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", user.login, user.login, user.login)
+    user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", user.login, user.login, "%#{user.login}%")
     user_metrics = User.user_analytics(user_requests)
 
     return non_manager_metrics, user_metrics, analysis

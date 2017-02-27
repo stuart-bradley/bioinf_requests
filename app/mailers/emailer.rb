@@ -77,7 +77,7 @@ class Emailer < ActionMailer::Base
     begin
       @user = u
       requests = Request.where("status = ? OR status = ?", "Pending", "Ongoing")
-      user_requests = requests.where("name = ? OR assignment like ?", u.login, u.login)
+      user_requests = requests.where("name = ? OR assignment like ?", u.login, "%#{u.login}%")
       if user_requests.length > 0
         o = user_requests.select { |x| x.status == "Ongoing" }
         p = user_requests.select { |x| x.status == "Pending" }
