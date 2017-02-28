@@ -70,8 +70,12 @@ class Request < ActiveRecord::Base
 
   # Deals with the multiple user assignment, joins user array into string.
   def handle_assignment
-    if assignment
-      self.assignment = self.assignment.reject(&:blank?).join(";") if self.assignment.kind_of?(Array)
+    if self.assignment
+      res = ""
+      self.assignment.scan(/[\\\"]?([\w\.]+)[\\\"]?/).each do |login|
+        res += login.first + ";"
+      end
+      self.assignment = res.chomp(';')
     end
   end
 
@@ -115,7 +119,7 @@ class Request < ActiveRecord::Base
   def send_edit_email
     changes = self.get_changed_attributes
     if changes != self.current_changes
-      Emailer.delay.edit_request(self.id)
+      Emailer.edit_request(self.id).deliver_later!
     end
     self.update_column(:current_changes, changes.to_yaml)
   end

@@ -22,7 +22,7 @@ class RequestsController < ApplicationController
     if @request.save
       # Emails are placed Async.
       unless params[:dont_send_emails]
-        Emailer.delay.new_request(@request.id)
+        Emailer.new_request(@request.id).deliver_later!
       end
 
       DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)

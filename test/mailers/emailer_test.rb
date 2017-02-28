@@ -6,7 +6,7 @@ class EmailerTest < ActionMailer::TestCase
     email = Emailer.new_request(request.id)
 
     assert_emails 1 do
-      email.deliver!
+      email.deliver_now!
     end
 
     assert_equal [Rails.application.secrets.mailer_email], email.from, "Sender is incorrect."
@@ -19,7 +19,7 @@ class EmailerTest < ActionMailer::TestCase
     email = Emailer.edit_request(request.id)
 
     assert_emails 1 do
-      email.deliver!
+      email.deliver_now!
     end
 
     assert_equal [Rails.application.secrets.mailer_email], email.from, "Sender is incorrect."
@@ -32,7 +32,7 @@ class EmailerTest < ActionMailer::TestCase
     email = Emailer.edit_request(request.id)
 
     assert_emails 1 do
-      email.deliver!
+      email.deliver_now!
     end
     assert_equal "Request: '#{request.title}' has been assigned", email.subject, "Subject is incorrect."
 
@@ -47,7 +47,7 @@ class EmailerTest < ActionMailer::TestCase
     email = Emailer.edit_request(request.id)
 
     assert_emails 1 do
-      email.deliver!
+      email.deliver_now!
     end
     assert_equal "Request: '#{request.title}' has changed status", email.subject, "Subject is incorrect."
   end
@@ -57,7 +57,7 @@ class EmailerTest < ActionMailer::TestCase
     email = Emailer.pending_and_ongoing_requests(user)
 
     assert_emails 1 do
-      email.deliver!
+      email.deliver_now!
     end
 
     assert_equal [Rails.application.secrets.mailer_email], email.from, "Sender is incorrect."
@@ -69,7 +69,7 @@ class EmailerTest < ActionMailer::TestCase
     email = Emailer.no_user_group('stuart.bradley')
 
     assert_emails 1 do
-      email.deliver!
+      email.deliver_now!
     end
 
     assert_equal [Rails.application.secrets.mailer_email], email.from, "Sender is incorrect."

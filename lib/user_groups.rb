@@ -52,7 +52,7 @@ module UserGroups
         elsif result.length > 1
           @users_with_multiple_groups[user.login] = result
         elsif result.empty?
-          Emailer.delay.no_user_group(user.login)
+          Emailer.no_user_group(user.login).deliver_later!
         end
       else
         puts "#{name} not found."
