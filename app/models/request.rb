@@ -87,9 +87,9 @@ class Request < ActiveRecord::Base
   end
 
   # Gets users in a view ready format. Adds captitalisation etc.
-  def get_users_for_view
-    if self.assignment
-      assign = self.assignment.split(';')
+  def get_users_for_view(assignment = self.assignment)
+    if assignment
+      assign = assignment.split(';')
       st = ''
       assign.each do |a|
         st += a.sub('.', ' ').split.map(&:capitalize).join(' ') + ', '
@@ -150,6 +150,10 @@ class Request < ActiveRecord::Base
     version.each do |key, changes|
       prev_version = changes.first
       curr_version = changes.last
+      if key == "assignment"
+        prev_version = self.get_users_for_view prev_version
+        curr_version = self.get_users_for_view curr_version
+      end
       if prev_version.nil? || prev_version.to_s.empty?
         prev_version = 'NO VALUE'
       elsif curr_version.nil? || curr_version.to_s.empty?
