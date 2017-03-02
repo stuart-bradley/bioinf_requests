@@ -1,11 +1,13 @@
 <div class="border-form-div">
 <h2>Sign into Requests</h2>
+  <h5><I>Use Windows Credentials</I></h5>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :login %><br />
-  <%= f.text_field :login, :class => "form-control", :autofocus => true %></div>
+      <div><%= f.label :login, "Login" %><br/>
+        <%= f.text_field :login, :class => "form-control", :autofocus => true, :placeholder => "firstname.lastname" %>
+      </div>
 
   <div><%= f.label :password %><br />
-  <%= f.password_field :password, :class => "form-control" %></div>
+    <%= f.password_field :password, :class => "form-control", :placeholder => "Windows password" %></div>
 
   <% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
