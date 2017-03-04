@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   before_save :downcase_login
   after_create :add_user_group
 

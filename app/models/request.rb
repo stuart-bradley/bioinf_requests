@@ -1,4 +1,4 @@
-class Request < ActiveRecord::Base
+class Request < ApplicationRecord
   before_save :handle_assignment, :set_stathist, :handle_est_hours
   has_paper_trail
   validates :name, presence: true # Make sure the owner's name is present.

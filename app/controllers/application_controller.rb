@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
     return false
   end
 
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
 

@@ -16,7 +16,7 @@ class RequestUpdateTest < ActionDispatch::IntegrationTest
     get "/requests/#{request.id}/edit/"
     assert_response :success
 
-    patch "/requests/#{request.id}", request: {title: "updated"}
+    patch "/requests/#{request.id}", params: {request: {title: "updated"}}
     assert_response :redirect
     follow_redirect!
     assert_response :success

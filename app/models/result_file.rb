@@ -1,4 +1,4 @@
-class ResultFile < ActiveRecord::Base
+class ResultFile < ApplicationRecord
 	mount_uploader :attachment_uploader, AttachmentUploader
 	belongs_to :request
 

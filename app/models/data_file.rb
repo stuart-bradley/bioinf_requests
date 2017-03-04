@@ -1,4 +1,4 @@
-class DataFile < ActiveRecord::Base
+class DataFile < ApplicationRecord
 	mount_uploader :attachment_uploader, AttachmentUploader
 	belongs_to :request
 

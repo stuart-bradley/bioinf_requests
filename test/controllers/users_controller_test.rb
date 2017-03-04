@@ -6,7 +6,7 @@ class UsersControllerTest < ActionController::TestCase
   test "show non_manager userpage" do
     user = User.where(:login => 'stuart.bradley').first
     sign_in user
-    get :show, :id => user.id
+    get :show, params: {id: user.id}
     assert_response :success, "Route was not successful."
 
     assert_select "div#datepicker", true, "Datepicker did not appear."
@@ -17,7 +17,7 @@ class UsersControllerTest < ActionController::TestCase
   test "show manager userpage" do
     user = User.where(:login => 'wayne.mitchell').first
     sign_in user
-    get :show, :id => user.id
+    get :show, params: {id: user.id}
     assert_response :success, "Route was not successful."
 
     assert_select "div#datepicker", true, "Datepicker did not appear."

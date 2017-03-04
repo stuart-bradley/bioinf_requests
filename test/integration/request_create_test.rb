@@ -15,7 +15,7 @@ class RequestCreateTest < ActionDispatch::IntegrationTest
     get "/requests/new"
     assert_response :success
 
-    post "/requests", {request: {id: (Request.last.id + 1), title: 'New Request', name: 'stuart.bradley'}}
+    post "/requests", params: {request: {id: (Request.last.id + 1), title: 'New Request', name: 'stuart.bradley'}}
     assert_response :redirect
     follow_redirect!
     assert_response :success
