@@ -24,7 +24,7 @@
             <%= f.label :description %>
             <div class="row">
               <div class="col-md-4">
-                <%= f.text_area :description, class: "form-control wysihtml5", type: 'text' %>
+                <%= f.text_area :description, class: "form-control summernote", type: 'text', id: 'summernote' %>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
                 <%= f.label :result %>
                 <div class="row">
                   <div class="col-md-4">
-                    <%= f.text_area :result, class: "form-control wysihtml5", type: 'text' %>
+                    <%= f.text_area :result, class: "form-control summernote", type: 'text' %>
                   </div>
                 </div>
               </div>

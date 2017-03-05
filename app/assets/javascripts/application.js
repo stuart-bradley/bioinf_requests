@@ -17,5 +17,5 @@
 //= require jquery.dataTables
 //= require dataTables.bootstrap
 //= require bootstrap-datepicker
-//= require bootstrap-wysihtml5
+//= require summernote
 //= require_tree .

@@ -62,5 +62,5 @@ gem 'yaml_db'
 gem "daemons"
 gem 'jquery-turbolinks'
 gem 'whenever'
-gem 'bootstrap-wysihtml5-rails'
+gem 'summernote-rails'
 gem 'tzinfo-data'
