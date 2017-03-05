@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!, if: :not_in_dev_mode
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
   def not_in_dev_mode
     # Always return true if in normal mode.
     return true
@@ -18,10 +22,6 @@ class ApplicationController < ActionController::Base
     end
     return false
   end
-
-  before_action :configure_permitted_parameters, if: :devise_controller?
-
-  protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_in, keys: [:login, :username, :email, :password, :remember_me])
