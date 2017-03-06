@@ -72,10 +72,13 @@ class Request < ApplicationRecord
   def handle_assignment
     if self.assignment
       res = ""
-      self.assignment.scan(/[\\\"]?([\w\.]+)[\\\"]?/).each do |login|
-        res += login.first + ";"
+      assignment_yaml = YAML.load(self.assignment)
+      if assignment_yaml.kind_of? Array
+        assignment_yaml.each do |login|
+          res += login + ";"
+        end
+        self.assignment = res.chomp(';')
       end
-      self.assignment = res.chomp(';')
     end
   end
 
