@@ -99,9 +99,18 @@ class RequestTest < ActiveSupport::TestCase
     request = Request.new
     request.title = 'test'
     request.name = 'stuart.bradley'
-    request.assignment = ['stuart.bradley', 'wayne.mitchell']
+    request.assignment = "[\"stuart.bradley\", \"wayne.mitchell\"]"
     request.handle_assignment
     assert_equal 'stuart.bradley;wayne.mitchell', request.assignment, "Assignment did not stringify correctly."
+  end
+
+  test "handle_assignment should turn assignment string into string" do
+    request = Request.new
+    request.title = 'test'
+    request.name = 'stuart.bradley'
+    request.assignment = "stuart.bradley"
+    request.handle_assignment
+    assert_equal 'stuart.bradley', request.assignment, "Assignment did not stringify correctly."
   end
 
   test "get_users should return user login array" do
