@@ -1,4 +1,5 @@
 class Emailer < ActionMailer::Base
+  helper RequestsHelper
 
   ActionMailer::Base.default_url_options[:host] = "http://blunt.lt.local:3000/"
 
