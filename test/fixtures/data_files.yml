@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  request_id: request_pending_assigned
+  attachment_uploader: MyString
+
+two:
+  request_id: request_pending_assigned
+  attachment_uploader: MyString
