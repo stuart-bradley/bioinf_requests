@@ -28,6 +28,8 @@ class RequestsController < ApplicationController
       DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
       ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)
 
+      #Assignment.handle_request(@request.id, @request.name, @request.customer, @request.assignment)
+
       redirect_to requests_path, notice: "The request #{@request.title} has been created."
     else
       render "new"
@@ -53,8 +55,11 @@ class RequestsController < ApplicationController
       unless params[:dont_send_emails]
         @request.send_edit_email
       end
+
       DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
       ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)
+
+      #Assignment.handle_request(@request.id, @request.name, @request.customer, @request.assignment)
 
       redirect_to requests_path, notice: "The request #{@request.title} has been updated."
     else
