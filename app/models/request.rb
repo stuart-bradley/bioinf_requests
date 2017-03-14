@@ -8,8 +8,6 @@ class Request < ApplicationRecord
   validates_presence_of :tothours, :if => lambda { self.status == "Complete" }
   has_many :data_files
   has_many :result_files
-  accepts_nested_attributes_for :assignments, :allow_destroy => true
-  accepts_nested_attributes_for :users
   accepts_nested_attributes_for :data_files, :allow_destroy => true
   accepts_nested_attributes_for :result_files, :allow_destroy => true
   serialize :current_changes
