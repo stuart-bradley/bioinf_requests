@@ -1,5 +1,5 @@
 class Request < ApplicationRecord
-  before_save :handle_assignment, :set_stathist, :handle_est_hours
+  before_save :set_stathist, :handle_est_hours
   has_paper_trail
   validates :name, presence: true # Make sure the owner's name is present.
   validates :title, presence: true
@@ -11,6 +11,7 @@ class Request < ApplicationRecord
   accepts_nested_attributes_for :data_files, :allow_destroy => true
   accepts_nested_attributes_for :result_files, :allow_destroy => true
   serialize :current_changes
+  serialize :assignment
 
   # Get priority items for modal. 
   def self.priority_widget
@@ -68,41 +69,15 @@ class Request < ApplicationRecord
     end
   end
 
-  # Deals with the multiple user assignment, joins user array into string.
-  def handle_assignment
-    if self.assignment
-      res = ""
-      assignment_yaml = YAML.load(self.assignment)
-      if assignment_yaml.kind_of? Array
-        assignment_yaml.each do |login|
-          res += login + ";"
-        end
-        self.assignment = res.chomp(';')
-      end
-    end
-  end
-
-  # Splits user string into array.
-  def get_users
-    if self.assignment
-      self.assignment.split(';')
-    end
-  end
-
   # Gets users in a view ready format. Adds captitalisation etc.
   def get_users_for_view(assignment = self.assignment)
     if assignment
-      assign = assignment.split(';')
-      st = ''
-      assign.each do |a|
-        st += a.sub('.', ' ').split.map(&:capitalize).join(' ') + ', '
-      end
-      st[0..-3]
+      Array(assignment).map { |a| get_name(a) }.join(", ")
     end
   end
 
-  def get_name
-    self.name.sub('.', ' ').split.map(&:capitalize).join(' ')
+  def get_name(name = self.name)
+    name.sub('.', ' ').split.map(&:capitalize).join(' ')
   end
 
   # Determines whether a true edit has been made, as opposed

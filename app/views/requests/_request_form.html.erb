@@ -81,7 +81,7 @@
                 <%= f.label :assignment %>
                 <div class="row">
                   <div class="col-md-4">
-                    <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
+                    <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.assignment}), {}, {:multiple => true, :name => 'request[assignment][]', class: 'form-control'} %>
                   </div>
                 </div>
               </div>

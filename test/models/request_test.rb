@@ -95,37 +95,11 @@ class RequestTest < ActiveSupport::TestCase
     assert_equal "Pending: #{Date.today.to_s}\nOngoing: #{Date.today.to_s}\n", request.stathist, "Unexpected stathist string."
   end
 
-  test "handle_assignment should turn assignment array into string" do
-    request = Request.new
-    request.title = 'test'
-    request.name = 'stuart.bradley'
-    request.assignment = "[\"stuart.bradley\", \"wayne.mitchell\"]"
-    request.handle_assignment
-    assert_equal 'stuart.bradley;wayne.mitchell', request.assignment, "Assignment did not stringify correctly."
-  end
-
-  test "handle_assignment should turn assignment string into string" do
-    request = Request.new
-    request.title = 'test'
-    request.name = 'stuart.bradley'
-    request.assignment = "stuart.bradley"
-    request.handle_assignment
-    assert_equal 'stuart.bradley', request.assignment, "Assignment did not stringify correctly."
-  end
-
-  test "get_users should return user login array" do
-    request = Request.new
-    request.title = 'test'
-    request.name = 'stuart.bradley'
-    request.assignment = 'stuart.bradley;wayne.mitchell'
-    assert_equal ['stuart.bradley', 'wayne.mitchell'], request.get_users, "Assignment did not destringify correctly."
-  end
-
   test "get_users_for_view should return a prettified string" do
     request = Request.new
     request.title = 'test'
     request.name = 'stuart.bradley'
-    request.assignment = 'stuart.bradley;wayne.mitchell'
+    request.assignment = ['stuart.bradley', 'wayne.mitchell']
     assert_equal 'Stuart Bradley, Wayne Mitchell', request.get_users_for_view, "Assignment did not prettify correctly."
   end
 

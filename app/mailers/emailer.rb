@@ -37,7 +37,7 @@ class Emailer < ActionMailer::Base
       @request = Request.find(id)
 
       emails = []
-      User.where(login: @request.get_users).each do |u|
+      User.where(login: @request.assignment).each do |u|
         emails << u.email
       end
 

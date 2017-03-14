@@ -32,7 +32,8 @@
       <%= f.label :status %><br />
       <%= f.select :status, [['Pending','Pending'],['Ongoing','Ongoing'],['Complete','Complete']] %><br /><br />
       <%= f.label :assignment %><br />
-      <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.get_users}), {}, {:multiple => true, :name => 'request[assignment][]'} %><br /><br />
+          <%= f.select :assignment, options_from_collection_for_select(User.where(:admin => true), :login, 'get_name', {:selected => @request.assignment}), {}, {:multiple => true, :name => 'request[assignment][]'} %>
+          <br/><br/>
       <%= f.label :customer %><br />
       <%= f.select :customer, options_from_collection_for_select(User.where(:admin => false), :login, 'get_name', {:selected => @request.customer}), { include_blank: true }%><br /><br />
       <%= f.label :result %><br />

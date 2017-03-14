@@ -25,8 +25,8 @@ class RequestsController < ApplicationController
         Emailer.new_request(@request.id).deliver_later!
       end
 
-      DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
-      ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)
+      DataFile.save_data_files(params[:data_files], params[:data_files_delete], @request)
+      ResultFile.save_result_files(params[:result_files], params[:result_files_delete], @request)
 
       redirect_to requests_path, notice: "The request #{@request.title} has been created."
     else
@@ -53,8 +53,8 @@ class RequestsController < ApplicationController
       unless params[:dont_send_emails]
         @request.send_edit_email
       end
-      DataFile.save_data_files(params[:data_files], params["data_files_delete"], @request)
-      ResultFile.save_result_files(params[:result_files], params["result_files_delete"], @request)
+      DataFile.save_data_files(params[:data_files], params[:data_files_delete], @request)
+      ResultFile.save_result_files(params[:result_files], params[:result_files_delete], @request)
 
       redirect_to requests_path, notice: "The request #{@request.title} has been updated."
     else
@@ -65,6 +65,6 @@ class RequestsController < ApplicationController
   # Allowed params include nested attachments, results, and employee names. 
   private
   def request_params
-    params.require(:request).permit(:name, :title, :description, :status, :stathist, :customer, :priority, :esthours, :tothours, {:assignment => []}, :result, data_files_attributes: [:id, :request_id, :attachment_uploader, :_destroy], result_files_attributes: [:id, :request_id, :attachment_uploader, :_destroy])
+    params.require(:request).permit(:name, :title, :description, :status, :stathist, :customer, :priority, :esthours, :tothours, :result, {:assignment => []}, data_files: [:id, :request_id, :attachment_uploader, :_destroy], result_files: [:id, :request_id, :attachment_uploader, :_destroy])
   end
 end
