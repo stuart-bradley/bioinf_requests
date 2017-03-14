@@ -13,7 +13,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
-  # Model helpers - rake test  "test/models/**/*_test.rb"
+  # Model helpers - rake test  "test/models/**/*_test.rb"#
   def create_changed_request
     request = Request.new
     request.title = 'Request'
