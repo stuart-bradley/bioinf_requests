@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :assignments
+  has_many :requests, :through => :assignments
   before_save :downcase_login
   after_create :add_user_group
 
