@@ -18,7 +18,7 @@ namespace :database_changes do
     Request.all.each do |r|
       if r.assignment.present?
         array = r.assignment.split(";")
-        r.update_column(:assignment, array.to_yaml)
+        r.update_attribute(:assignment, array)
       end
     end
   end
@@ -28,17 +28,7 @@ namespace :database_changes do
     Request.all.each do |r|
       if r.assignment.present?
         string = r.assignment.join(";")
-        r.update_column(:assignment, string)
-      end
-    end
-  end
-
-  desc "Removes applied up serialize_up to fix encoding issue."
-  task assignment_serialize_encode: :environment do
-    Request.all.each do |r|
-      if r.assignment.present?
-        result = YAML.load r.assignment
-        r.update_attribute(:assignment, result)
+        r.update_attribute(:assignment, string)
       end
     end
   end
