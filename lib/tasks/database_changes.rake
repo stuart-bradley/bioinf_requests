@@ -13,7 +13,7 @@ namespace :database_changes do
     end
   end
 
-  desc "Retractively adds last change set to current changes"
+  desc "Retractively serializes :assignment"
   task assignment_serialize_up: :environment do
     Request.all.each do |r|
       if r.assignment.present?
@@ -23,12 +23,22 @@ namespace :database_changes do
     end
   end
 
-  desc "Removes retroactive current_change param."
+  desc "Removes retroactive serialization of assignment"
   task assignment_serialize_down: :environment do
     Request.all.each do |r|
       if r.assignment.present?
         string = r.assignment.join(";")
         r.update_column(:assignment, string)
+      end
+    end
+  end
+
+  desc "Removes applied up serialize_up to fix encoding issue."
+  task assignment_serialize_encode: :environment do
+    Request.all.each do |r|
+      if r.assignment.present?
+        result = YAML.load r.assignment
+        r.update_attribute(:assignment, result)
       end
     end
   end
