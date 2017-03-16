@@ -72,6 +72,11 @@ class Request < ApplicationRecord
   # Gets users in a view ready format. Adds captitalisation etc.
   def get_users_for_view(assignment = self.assignment)
     if assignment
+      begin
+        assignment = YAML.load assignment
+      rescue
+        assignment = assignment
+      end
       Array(assignment).map { |a| get_name(a) }.reject { |c| c.empty? }.join(", ")
     end
   end
