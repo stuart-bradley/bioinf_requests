@@ -77,7 +77,6 @@ class Request < ApplicationRecord
   end
 
   def get_name(name = self.name)
-    puts "#{self.id}, #{self.name}, #{self.title}"
     name.sub('.', ' ').split.map(&:capitalize).join(' ')
   end
 
