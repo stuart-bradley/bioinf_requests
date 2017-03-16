@@ -27,8 +27,8 @@ namespace :database_changes do
   task assignment_serialize_down: :environment do
     Request.all.each do |r|
       if r.assignment.present?
-        string = r.assignment.join(";")
-        r.update_attribute(:assignment, string)
+        string = r.assignment
+        r.update_attribute(:assignment, string.join(";"))
       end
     end
   end
