@@ -138,7 +138,10 @@ class User < ApplicationRecord
     customer_requests = requests.select { |x| x.customer.present? }
     analytics_list["Bioinformatics"] = requests.length - customer_requests.length
     customer_requests.each do |r|
-      analytics_list[User.where("login = ?", r.customer).first.group] += 1
+      customer = User.where("login = ?", r.customer).first
+      if customer.group
+        analytics_list[User.where("login = ?", r.customer).first.group] += 1
+      end
     end
     analytics_list.to_a
   end
