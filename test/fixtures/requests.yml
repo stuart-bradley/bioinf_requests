@@ -90,7 +90,6 @@ request_pending_time_low_priority:
   name: 'stuart.bradley'
   description: 'Pending Request'
   status: 'Pending'
-  esthours: 1
   priority: 'Low Priority'
   assignment: 'stuart.bradley'
 
@@ -109,3 +108,23 @@ request_pending_high_priority:
   status: 'Pending'
   priority: 'High Priority'
   assignment: 'stuart.bradley'
+
+request_customer_has_no_group:
+  title: 'Ongoing customer no group Request'
+  name: 'stuart.bradley'
+  description: 'Ongoing customer no group Request'
+  status: 'Pending'
+  esthours: 1
+  priority: 'High Priority'
+  assignment: 'stuart.bradley'
+  customer: 'john_nogroup'
+
+request_customer:
+  title: 'Ongoing customer no group Request'
+  name: 'stuart.bradley'
+  description: 'Ongoing customer no group Request'
+  status: 'Pending'
+  esthours: 1
+  priority: 'High Priority'
+  assignment: 'stuart.bradley'
+  customer: 'sean'

@@ -17,7 +17,12 @@ wayne_mitchell:
   group: 'Bioinformatics'
 
 sean_simpson:
-  login: 'sean.simpson'
+  login: 'sean'
   admin: false
   manager: false
   group: 'CSO'
+
+john_nogroup:
+  login: 'john_nogroup'
+  admin: false
+  manager: false
