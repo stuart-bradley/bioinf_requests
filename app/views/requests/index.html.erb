@@ -57,8 +57,8 @@
                   <br/>(<%= User.where(:login => request.customer).first.get_name %>)
               <% end %>
             </td>
-            <td style="white-space: pre-wrap;">
-              <div style="overflow-y:auto;max-height:300px;"><%= sanatize_wysihtml request.description %></div>
+            <td>
+              <div style="white-space: pre-wrap;overflow-y:auto;max-height:300px;"><%= sanatize_wysihtml request.description %></div>
             </td>
             <td>
               <% request.data_files.each do |p| %>
@@ -66,8 +66,8 @@
                   <br/>
               <% end %>
             </td>
-            <td style="white-space: pre-wrap">
-              <div style="overflow-y:auto;max-height:300px;"><%= sanatize_wysihtml request.result %></div>
+            <td>
+              <div style="white-space: pre-wrap;overflow-y:auto;max-height:300px;"><%= sanatize_wysihtml request.result %></div>
             </td>
             <td>
               <% request.result_files.each do |p| %>
