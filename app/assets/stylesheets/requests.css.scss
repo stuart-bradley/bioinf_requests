@@ -10,3 +10,10 @@
 .button_to div {
   display: inline;
 }
+
+.long-text-td div {
+  white-space: pre-wrap;
+  overflow-y: auto;
+  max-height: 300px;
+}
+

@@ -58,7 +58,7 @@
               <% end %>
             </td>
             <td>
-              <div style="white-space: pre-wrap;overflow-y:auto;max-height:300px;"><%= sanatize_wysihtml request.description %></div>
+              <div class="long-text-td"><%= sanatize_wysihtml request.description %></div>
             </td>
             <td>
               <% request.data_files.each do |p| %>
@@ -67,7 +67,7 @@
               <% end %>
             </td>
             <td>
-              <div style="white-space: pre-wrap;overflow-y:auto;max-height:300px;"><%= sanatize_wysihtml request.result %></div>
+              <div class="long-text-td"><%= sanatize_wysihtml request.result %></div>
             </td>
             <td>
               <% request.result_files.each do |p| %>
