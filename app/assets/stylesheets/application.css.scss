@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-datepicker3";
-@import "dataTables.bootstrap";
+@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
 @import "summernote";
 
 .border-form-div {

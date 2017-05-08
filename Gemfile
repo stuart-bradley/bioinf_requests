@@ -64,3 +64,5 @@ gem 'jquery-turbolinks'
 gem 'whenever'
 gem 'summernote-rails'
 gem 'tzinfo-data'
+
+gem 'jquery-datatables-rails'

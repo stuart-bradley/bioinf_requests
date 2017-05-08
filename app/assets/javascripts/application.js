@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
-//= require jquery.dataTables
-//= require dataTables.bootstrap
 //= require bootstrap-datepicker
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require summernote
 //= require_tree .
