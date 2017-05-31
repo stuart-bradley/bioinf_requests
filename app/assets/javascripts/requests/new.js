@@ -19,10 +19,26 @@ $("form").submit(function () {
     return true;
 });
 
-// Handles DataTable bootup function.
 $(document).ready(function () {
-    $('#main_table').DataTable({
-        "order": [[0, "desc"]]
+    $('#requests-table').dataTable({
+        "processing": true,
+        "serverSide": true,
+        "ajax": $('#requests-table').data('source'),
+        "pagingType": "full_numbers",
+        "columns": [
+            {data: 'id'},
+            {data: 'title'},
+            {data: 'submitted_by'},
+            {data: 'description', className: 'long-text-td'},
+            {data: 'download_attachment'},
+            {data: 'results', className: 'long-text-td'},
+            {data: 'result_files'},
+            {data: 'status'},
+            {data: 'status_history'},
+            {data: 'priority'},
+            {data: 'job_assignment'},
+            {data: 'buttons'}
+        ]
     });
 });
 

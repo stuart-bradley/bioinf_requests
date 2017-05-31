@@ -28,6 +28,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.6'
 
+gem 'puma'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -65,4 +67,5 @@ gem 'whenever'
 gem 'summernote-rails'
 gem 'tzinfo-data'
 
-gem 'jquery-datatables-rails'
+gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'ajax-datatables-rails', '~> 0.4.0'

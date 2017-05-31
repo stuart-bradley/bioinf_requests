@@ -1,13 +1,17 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.includes(:data_files, :result_files).load
-    priority_modal = Request.priority_widget
-    active_requests, max_length = Request.active_requests
-    render locals: {
-        priority_modal: priority_modal,
-        active_requests: active_requests,
-        max_length: max_length
-    }
+    respond_to do |format|
+      format.html {
+        priority_modal = Request.priority_widget
+        active_requests, max_length = Request.active_requests
+        render locals: {
+            priority_modal: priority_modal,
+            active_requests: active_requests,
+            max_length: max_length
+        }
+      }
+      format.json { render json: RequestDatatable.new(view_context, {current_user: current_user}) }
+    end
   end
 
   def new

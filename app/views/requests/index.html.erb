@@ -27,9 +27,10 @@
 </div>
 
 <br/>
+
 <div class="row">
   <div class="col-md-12">
-    <table class="table table-bordered table-striped" id="main_table">
+    <table id="requests-table" data-source="<%= requests_path(format: :json) %>" class="table table-bordered table-striped">
       <thead>
       <tr>
         <th>ID</th>
@@ -47,52 +48,6 @@
       </tr>
       </thead>
       <tbody>
-      <% @requests.each do |request| %>
-          <tr>
-            <td><%= request.id %></td>
-            <td><%= request.title %></td>
-            <td>
-              <%= request.get_name %>
-              <% if request.customer? %>
-                  <br/>(<%= User.where(:login => request.customer).first.get_name %>)
-              <% end %>
-            </td>
-            <td>
-              <div class="long-text-td"><%= sanatize_wysihtml request.description %></div>
-            </td>
-            <td>
-              <% request.data_files.each do |p| %>
-                  <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
-                  <br/>
-              <% end %>
-            </td>
-            <td>
-              <div class="long-text-td"><%= sanatize_wysihtml request.result %></div>
-            </td>
-            <td>
-              <% request.result_files.each do |p| %>
-                  <%= link_to truncate("#{p.attachment_uploader_url.split("/").last}", :length => 20), p.attachment_uploader_url, {:title => "#{p.attachment_uploader_url.split("/").last}"} %>
-                  <br/>
-              <% end %>
-            </td>
-            <% if request.status == "Complete" %>
-                <td style="background-color:#4CAE4C;color:white"><%= request.status %></td>
-            <% elsif request.status == "Ongoing" %>
-                <td style="background-color:#46B8DA;color:white"><%= request.status %></td>
-            <% else %>
-                <td style="background-color:#EEA236;color:white"><%= request.status %></td>
-            <% end %>
-            <td><%= simple_format(request.stathist) %></td>
-            <td><%= request.priority %></td>
-            <td><%= request.get_users_for_view %></td>
-            <td>
-              <% if request.name == current_user.login || current_user.admin %>
-                  <%= link_to "Edit", edit_request_path(request), class: "btn btn-default" %>
-                  <%= button_to "Delete", request_path(request), method: :delete, class: "btn btn-default", data: {confirm: "Are you sure that you wish to delete #{request.title}?"} %>
-              <% end %>
-            </td>
-          </tr>
-      <% end %>
       </tbody>
     </table>
   </div>
