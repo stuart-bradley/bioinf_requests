@@ -25,15 +25,30 @@ $(document).ready(function () {
         "serverSide": true,
         "ajax": $('#requests-table').data('source'),
         "pagingType": "full_numbers",
+        "autoWidth": false,
         "columns": [
             {data: 'id'},
             {data: 'title'},
             {data: 'submitted_by'},
-            {data: 'description', className: 'long-text-td'},
+            {
+                data: 'description', "createdCell": function (td, cellData, rowData, row, col) {
+                $(td).addClass('long-text-td');
+            }
+            },
             {data: 'download_attachment'},
             {data: 'results', className: 'long-text-td'},
             {data: 'result_files'},
-            {data: 'status'},
+            {
+                data: 'status', "createdCell": function (td, cellData, rowData, row, col) {
+                if (cellData == "Complete") {
+                    $(td).css('background-color', "#4CAE4C").css('color', 'white');
+                } else if (cellData == "Ongoing") {
+                    $(td).css('background-color', "#46B8DA").css('color', 'white');
+                } else {
+                    $(td).css('background-color', "#EEA236").css('color', 'white');
+                }
+            }
+            },
             {data: 'status_history'},
             {data: 'priority'},
             {data: 'job_assignment'},
