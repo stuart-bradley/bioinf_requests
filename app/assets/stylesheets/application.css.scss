@@ -62,8 +62,10 @@
   min-width: 300px;
 }
 
-.long-text-td {
+div.scrollable-div {
   white-space: pre-wrap;
   overflow-y: auto;
+  margin: 0;
+  padding: 0;
   max-height: 300px;
 }

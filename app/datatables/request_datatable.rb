@@ -26,9 +26,9 @@ class RequestDatatable < AjaxDatatablesRails::Base
           id: record.id,
           title: record.title,
           submitted_by: data_tables_get_name(record),
-          description: sanatize_wysihtml(record.description),
+          description: scrollable_wrap(sanatize_wysihtml(record.description)),
           download_attachment: data_tables_files(record.data_files),
-          results: sanatize_wysihtml(record.result),
+          results: scrollable_wrap(sanatize_wysihtml(record.result)),
           result_files: data_tables_files(record.result_files),
           status: record.status,
           status_history: simple_format(record.stathist),
@@ -63,6 +63,13 @@ class RequestDatatable < AjaxDatatablesRails::Base
     if record.customer?
       result += "<br/> (" + User.where(:login => record.customer).first.get_name + ")"
     end
+    return raw result
+  end
+
+  def scrollable_wrap(item)
+    result = '<div class="scrollable-div">'
+    result += item
+    result += '</div>'
     return raw result
   end
 

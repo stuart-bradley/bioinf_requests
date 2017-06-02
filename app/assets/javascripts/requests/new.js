@@ -30,13 +30,9 @@ $(document).ready(function () {
             {data: 'id'},
             {data: 'title'},
             {data: 'submitted_by'},
-            {
-                data: 'description', "createdCell": function (td, cellData, rowData, row, col) {
-                $(td).addClass('long-text-td');
-            }
-            },
+            {data: 'description'},
             {data: 'download_attachment'},
-            {data: 'results', className: 'long-text-td'},
+            {data: 'results'},
             {data: 'result_files'},
             {
                 data: 'status', "createdCell": function (td, cellData, rowData, row, col) {

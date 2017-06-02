@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def not_in_dev_mode
     # Always return true if in normal mode.
-    return true
+    #return true
 
     return true unless Rails.env == 'development'
     if not user_signed_in?
