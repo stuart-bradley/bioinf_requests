@@ -1,6 +1,6 @@
 class RequestDatatable < AjaxDatatablesRails::Base
 
-  def_delegators :@view, :link_to, :button_to, :edit_request_path, :request_path
+  def_delegators :@view, :link_to, :button_to, :edit_request_path, :request_path, :content_tag
   def_delegators :@view, :sanatize_wysihtml, :truncate, :raw, :simple_format, :current_user
 
   def view_columns
@@ -67,10 +67,7 @@ class RequestDatatable < AjaxDatatablesRails::Base
   end
 
   def scrollable_wrap(item)
-    result = '<div class="scrollable-div">'
-    result += item
-    result += '</div>'
-    return raw result
+    content_tag(:div, item, class: 'scrollable-div')
   end
 
   def data_tables_files(record_files)
