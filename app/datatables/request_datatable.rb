@@ -7,16 +7,16 @@ class RequestDatatable < AjaxDatatablesRails::Base
     @view_columns ||= {
         id: {source: "Request.id", cond: :eq},
         title: {source: "Request.title"},
-        submitted_by: {source: "Request.submitted_by"},
+        submitted_by: {source: "Request.name"},
         description: {source: "Request.description"},
-        download_attachment: {source: "Request.download_attachment"},
-        results: {source: "Request.results"},
-        result_files: {source: "Request.result_files"},
+        download_attachment: {source: "DataFile.attachment_uploader"},
+        results: {source: "Request.result"},
+        result_files: {source: "ResultFile.attachment_uploader"},
         status: {source: "Request.status"},
-        status_history: {source: "Request.status_history"},
+        status_history: {source: "Request.stathist"},
         priority: {source: "Request.priority"},
-        job_assignment: {source: "Request.job_assignment"},
-        buttons: {source: "Request.buttons"}
+        job_assignment: {source: "Request.assignment"},
+        buttons: {source: "Request.id"}
     }
   end
 
@@ -42,7 +42,7 @@ class RequestDatatable < AjaxDatatablesRails::Base
   private
 
   def get_raw_records
-    Request.includes(:data_files, :result_files).order('id desc').load
+    Request.joins(:data_files, :result_files).order('id desc')
   end
 
   # ==== These methods represent the basic operations to perform on records
