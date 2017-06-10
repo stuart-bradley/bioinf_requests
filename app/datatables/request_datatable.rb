@@ -42,7 +42,7 @@ class RequestDatatable < AjaxDatatablesRails::Base
   private
 
   def get_raw_records
-    Request.joins(:data_files, :result_files).order('id desc')
+    Request.left_joins(:data_files, :result_files).order('id desc')
   end
 
   # ==== These methods represent the basic operations to perform on records
