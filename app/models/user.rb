@@ -38,7 +38,7 @@ class User < ApplicationRecord
       non_manager_metrics["Total"] = User.user_analytics(requests)
       non_manager_metrics["Department"] = User.requests_by_group(requests)
 
-      non_managers = User.where("admin = ? AND (manager = ? OR manager IS ?)", true, false, nil)
+      non_managers = User.where("admin = ? AND login != ?", true, user.login)
       non_managers.each do |non_manager|
         user_requests = requests.where("name = ? OR customer = ? OR assignment like ?", non_manager.login, non_manager.login, "%#{non_manager.login}%")
         non_manager_metrics[non_manager] = User.user_analytics(user_requests)
