@@ -9,7 +9,7 @@
 User.delete_all
 
 # Managers
-User.create!({:login => "wayne.mitchell", :admin => true, :manager => true})
+User.create!({:login => "wayne.mitchell", :admin => true, :manager => true, :director => true})
 User.create!({:login => "asela.dassanayake", :admin => true, :manager => true})
 
 # Admins
