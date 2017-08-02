@@ -5,3 +5,8 @@ sudo bundle install
 rake db:reset db:migrate
 rake db:seed
 rake db:data:load
+
+Example server boot instructions:
+
+rails server -p 3000 -d -e production -b 10.10.56.42
+RAILS_ENV=production bin/delayed_job start
