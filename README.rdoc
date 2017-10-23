@@ -1,8 +1,0 @@
-== Bioinf Requests
-
-
-Bioinf Requests is a system designed to allow users to submit requests. These requests are then taken up by admins, that complete the tasks submitted.
-
-This is done with full email support, as well as an ldap login system.
-
-The original purpose was to allow non-technical users to submit technical requests (along with any data required), and to recieve results back. Without ever having to talk to the technical department.

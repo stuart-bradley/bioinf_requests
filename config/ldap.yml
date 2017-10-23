@@ -14,10 +14,10 @@ authorizations: &AUTHORIZATIONS
 ## Enviornments
 
 development:
-  host: 10.10.40.10
+  host: <%= Rails.application.secrets.LDAP_IP %>
   port: 389
   attribute: sAMAccountName
-  base: ou=Lanzatech Users, dc=lt,dc=local​
+  base: <%= Rails.application.secrets.LDAP_user_base %>
   admin_user: <%= Rails.application.secrets.LDAP_login %>
   admin_password: <%= Rails.application.secrets.LDAP_password %>
   ssl: start_tls
@@ -34,10 +34,10 @@ test:
   # <<: *AUTHORIZATIONS
 
 production:
-  host: 10.10.40.10
+  host: <%= Rails.application.secrets.LDAP_IP %>
   port: 389
   attribute: sAMAccountName
-  base: ou=Lanzatech Users, dc=lt,dc=local​
+  base: <%= Rails.application.secrets.LDAP_user_base %>
   admin_user: <%= Rails.application.secrets.LDAP_login %>
   admin_password: <%= Rails.application.secrets.LDAP_password %>
   ssl: start_tls

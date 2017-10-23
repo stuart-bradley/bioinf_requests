@@ -7,9 +7,9 @@ Rails.application.initialize!
 ActionMailer::Base.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {
-    :address => "smtp.office365.com",
-    :port => 587,
-    :domain => "lanzatech.com",
+    :address => Rails.application.secrets.mailer_smtp_address,
+    :port => Rails.application.secrets.mailer_smtp_port,
+    :domain => Rails.application.secrets.mailer_smtp_domain,
     :user_name => Rails.application.secrets.mailer_email,
     :password => Rails.application.secrets.mailer_password,
     :authentication => :login,

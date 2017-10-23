@@ -1,9 +1,9 @@
 class Emailer < ActionMailer::Base
   helper RequestsHelper
 
-  ActionMailer::Base.default_url_options[:host] = "http://blunt.lt.local:3000/"
+  ActionMailer::Base.default_url_options[:host] = Rails.application.secrets.mailer_host
 
-  ActionMailer::Base.default_url_options[:port] = 3000
+  ActionMailer::Base.default_url_options[:port] = Rails.application.secrets.mailer_port
 
   def new_request(id)
     begin

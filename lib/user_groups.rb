@@ -1,4 +1,7 @@
 module UserGroups
+
+  # Change these variables. They're exemplary for GIT only.
+
   @ldap_groups = {
       "Team_BioInformatics" => "Bioinformatics",
       "Team_Fermentation" => "Fermentation",
@@ -9,11 +12,17 @@ module UserGroups
       "Team_Process Validation" => "Process Validation"
   }
 
-  @users_with_multiple_groups = {}
+  @admin_group = "Bioinformatics"
+  @managers = ["wayne.mitchell", "asela.dassanayake"]
+  @directors = ["wayne.mitchell"]
+
 
   @special_cases = {"Heijstra" => "bjorn.heijstra",
                     "Sean Simpson" => "sean",
                     "Sashini De Tissera" => "sashini.detissera"}
+
+  # This variable is used by the module. Leave blank.
+  @users_with_multiple_groups = {}
 
   def self.all
     user_groups = get_all_users_and_groups
@@ -29,11 +38,10 @@ module UserGroups
         user.update!(:group => value)
         puts "#{user.login} updated. Group: #{value}"
       else
-        is_admin = false
-        if value == "Bioinformatics"
-          is_admin = true
-        end
-        User.create!({:login => key, :admin => is_admin, :group => value})
+        is_admin = (value == @admin_group) ? true : false
+        is_manager = (@managers.include? key) ? true : false
+        is_director = (@managers.include? key) ? true : false
+        User.create!({:login => key, :admin => is_admin, :group => value, :manager => is_manager, :director => is_director})
         puts "#{key} created. Group: #{value}"
       end
     end
@@ -65,7 +73,7 @@ module UserGroups
     ldap = ldap_setup
     if ldap.bind
       @ldap_groups.keys.each do |group|
-        ldap.search(:base => "CN=#{group},OU=Departments,OU=Lanzatech Groups,DC=lt,DC=local", :attributes => ["member"], :return_result => false) do |entry|
+        ldap.search(:base => "CN=#{group},#{Rails.application.secrets.LDAP_group_base}", :attributes => ["member"], :return_result => false) do |entry|
           entry.each do |attr, values|
             if attr == "dn"
               next
@@ -94,7 +102,7 @@ module UserGroups
     ldap = ldap_setup
     groups = []
     if ldap.bind
-      ldap.search(:base => "OU=Lanzatech Users,DC=lt,DC=local", :filter => Net::LDAP::Filter.eq("sAMAccountName", user.login), :attributes => ["memberOf"], :return_result => false) do |entry|
+      ldap.search(:base => Rails.application.secrets.LDAP_user_base, :filter => Net::LDAP::Filter.eq("sAMAccountName", user.login), :attributes => ["memberOf"], :return_result => false) do |entry|
         entry.each do |attr, values|
           if attr == "dn"
             next
@@ -115,10 +123,10 @@ module UserGroups
   end
 
   def self.ldap_setup
-    Net::LDAP.new :host => "10.10.40.10",
+    Net::LDAP.new :host => Rails.application.secrets.LDAP_IP,
                   :port => 636,
                   :encryption => :simple_tls,
-                  :base => "OU=Lanzatech Users,DC=lt,DC=local",
+                  :base => Rails.application.secrets.LDAP_user_base,
                   :auth => {
                       :method => :simple,
                       :username => Rails.application.secrets.LDAP_login,
