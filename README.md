@@ -1,5 +1,5 @@
 
-<img style="vertical-align: middle;" width="150" src="https://raw.githubusercontent.com/lutrasdebtra/bioinf_requests/master/public/assets/BurP.png">
+<img style="vertical-align: middle;" width="500" src="https://raw.githubusercontent.com/lutrasdebtra/bioinf_requests/master/public/assets/BurP.png">
 
 
 ## BuRP (Bioinformatics Request Portal) - Overview
