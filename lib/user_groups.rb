@@ -147,4 +147,8 @@ module UserGroups
     puts "Users with multiple groups:", @users_with_multiple_groups
     puts "Users with no group:", User.where(:group => nil).collect(&:login)
   end
+
+  def self.get_user_groups_values
+    return @ldap_groups.values
+  end
 end
