@@ -145,7 +145,7 @@ the file.
 It then creates non-existent users and updates their groups and other information accordingly. 
 Pre-existing users (such as those added manually or in `seeds.rb`), will only have their groups modified. 
 The command then lists users with multiple groups (which have to be dealt with manually), and any existing users without groups.
-* `rails add_user_groups:some user.name1 user.name2` - Searches LDAP for **only** users provided and updates groups accordingly. 
+* `rails add_user_groups:some[user.name1,user.name2]` - Searches LDAP for **only** users provided and updates groups accordingly. 
 This is useful for when a new user has logged in post the `all` command, and needs to be updated. An email is sent if such a user logs in
 to admins, so that they are aware this needs to happen. 
 
@@ -206,3 +206,68 @@ RAILS_ENV=production bin/delayed_job start
 ```
 
 Port and IP are examples.
+
+### Rake Commands
+
+**Note:** The lack of space between the arguments is **required**. `[arg1,arg2]` will work, but `[arg1, arg2]` will fail. 
+
+#### `database_changes.rake`
+ 
+This `rake` file contains two database changes that we're required during migrations of the `current_changes` and 
+`assignment` fields. These are not required for general use, but are kept for posterity. 
+
+#### `add_user_groups.rake`
+
+Sets the `group` field for users, by querying `lib/user_groups.rb`. See **LDAP User Setup** above for further information.
+`add_user_groups:some[user.name1,user.name2]` is likely to be used post initial setup. 
+
+#### `users.rake`
+
+The `users.rake` file allows for the modification and creation of users and their privileges. In its simplest form it 
+can be run like so:
+
+```
+rails users:modify[login=user.name]
+```
+
+Which runs the database command:
+
+```
+user = where("login = ?", user.name).first
+user.update!({:admin => false, :manager => false, :director => false})
+```
+
+As `false` is the default value for privileges. 
+
+To change the defaults the command is run like so:
+
+
+```
+# Updates user to an admin.
+rails users:modify[login=user.name,admin=true]
+```
+
+To modify a user's `group`, the value must match one already found in `lib/user_groups`:
+
+```
+# Updates user's group to Bioinformatics.
+rails users:modify[login=user.name,group=Bioinformatics]
+```
+
+If the user does not exist, it is possible to create them, using the `--create` flag:
+
+```
+rails users:modify[login=user.name,admin=true,--create]
+```
+
+Which runs the database command:
+
+```
+User.create!({:login => user.name, :admin => true, :manager => false, :director => false})
+```
+
+Finally, the `--help` flag prints out the argument information inside the rails console:
+
+```
+rails users:modify[--help]
+```
