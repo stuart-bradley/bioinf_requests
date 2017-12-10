@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170711023638) do
+ActiveRecord::Schema.define(version: 20171210022741) do
 
   create_table "data_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "request_id"
@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(version: 20170711023638) do
   create_table "requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "title"
     t.string   "name"
-    t.text "description", limit: 65535
+    t.text "description", limit: 4294967295
     t.string   "attachment"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string "status", default: "Pending"
     t.text "assignment", limit: 65535
-    t.text "result", limit: 65535
+    t.text "result", limit: 4294967295
     t.string   "stathist"
     t.string   "customer"
     t.string   "priority"
@@ -86,9 +86,9 @@ ActiveRecord::Schema.define(version: 20170711023638) do
     t.integer "item_id", null: false
     t.string "event", null: false
     t.string   "whodunnit"
-    t.text "object", limit: 65535
+    t.text "object", limit: 4294967295
     t.datetime "created_at"
-    t.text "object_changes", limit: 65535
+    t.text "object_changes", limit: 4294967295
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
   end
 
