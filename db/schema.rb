@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20171210022741) do
     t.string   "priority"
     t.integer  "esthours"
     t.integer  "tothours"
-    t.text "current_changes", limit: 65535
+    t.text "current_changes", limit: 4294967295
   end
 
   create_table "result_files", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
